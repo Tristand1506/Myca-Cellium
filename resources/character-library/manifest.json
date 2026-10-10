@@ -1,0 +1,4369 @@
+{
+  "schema_version": "1.0",
+  "assets": [
+    {
+      "sha256": "ad0f58813af6342c16d3ab5e9e0b74476f2f827514d601cbef8d328ff06c61b5",
+      "size_bytes": 2885166,
+      "resource_path": "resources/ad0f58813af6342c/R34 Additional membrane candidates summary.png",
+      "original_filename": "R34 Additional membrane candidates summary.png",
+      "stored_filename": "R34 Additional membrane candidates summary.png",
+      "filename_aliases": [
+        "Myca: Fungal Membrane Explorations(1).png",
+        "R34 Additional membrane candidates summary.png"
+      ],
+      "classification": [
+        "experiment",
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "e2311590a403cacebb68d8e04b33d8aa7490497e5b9742736812e126c66f8449",
+      "size_bytes": 2880935,
+      "resource_path": "resources/e2311590a403cace/R33 Shelf-fungus membrane exploration.png",
+      "original_filename": "R33 Shelf-fungus membrane exploration.png",
+      "stored_filename": "R33 Shelf-fungus membrane exploration.png",
+      "filename_aliases": [
+        "Myca: Fungal Being Concept Sheet.png",
+        "R33 Shelf-fungus membrane exploration.png"
+      ],
+      "classification": [
+        "experiment",
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "ff3e9f68753d440ede3d4cc7cb6e14985f5f673a11350bf611b9919bac1e663e",
+      "size_bytes": 2845935,
+      "resource_path": "resources/ff3e9f68753d440e/R32 Gill-frill veil-streamer spore-lace explorations.png",
+      "original_filename": "R32 Gill-frill veil-streamer spore-lace explorations.png",
+      "stored_filename": "R32 Gill-frill veil-streamer spore-lace explorations.png",
+      "filename_aliases": [
+        "Myca: Fungal Membrane Explorations.png",
+        "R32 Gill-frill veil-streamer spore-lace explorations.png"
+      ],
+      "classification": [
+        "experiment",
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "815007274eac21a2fea4ffeb8a3e6145c844c116e62fb6091b26346b0dcbd725",
+      "size_bytes": 2461172,
+      "resource_path": "resources/815007274eac21a2/Myca: Fungal Forest Spirit Character Sheet.png",
+      "original_filename": "Myca: Fungal Forest Spirit Character Sheet.png",
+      "stored_filename": "Myca: Fungal Forest Spirit Character Sheet.png",
+      "filename_aliases": [
+        "Myca: Fungal Forest Spirit Character Sheet.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "52a668e12d611097ff8550a55f3fe76d9eb4b34715bec18f9a04eb1488f3c22f",
+      "size_bytes": 1352688,
+      "resource_path": "resources/52a668e12d611097/Definitive Canon Shortlist.html",
+      "original_filename": "Definitive Canon Shortlist.html",
+      "stored_filename": "Definitive Canon Shortlist.html",
+      "filename_aliases": [
+        "Definitive Canon Shortlist.html",
+        "Myca Canon Shortlist.html",
+        "Myca_Definitive_Canon_Shortlist.html"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "de93c93f243efb16562a48d82c20de41242766e88c63fd2430dac7d42d55a534",
+      "size_bytes": 50286,
+      "resource_path": "resources/de93c93f243efb16/C15 Internal hand filaments without caption.png",
+      "original_filename": "C15 Internal hand filaments without caption.png",
+      "stored_filename": "C15 Internal hand filaments without caption.png",
+      "filename_aliases": [
+        "C15 Internal hand filaments without caption.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "96744ac2ce794c39f10df838556effe8928998778f56cebada5243785642cb43",
+      "size_bytes": 15495,
+      "resource_path": "resources/96744ac2ce794c39/Definitive Canon Shortlist.md",
+      "original_filename": "Definitive Canon Shortlist.md",
+      "stored_filename": "Definitive Canon Shortlist.md",
+      "filename_aliases": [
+        "Definitive Canon Shortlist.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "55cdccd66e4db34be9b7ac8311348588a413092074d8219f705a0a90a9357adf",
+      "size_bytes": 5985,
+      "resource_path": "resources/55cdccd66e4db34b/Canon Candidate Review.json",
+      "original_filename": "Canon Candidate Review.json",
+      "stored_filename": "Canon Candidate Review.json",
+      "filename_aliases": [
+        "Candidate Review.json",
+        "Canon Candidate Review.json"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "ce0e9e41cc91346402bc541d0e0a7f4ea4f5054d9f24deaed6c4d282a14d7a89",
+      "size_bytes": 33832,
+      "resource_path": "resources/ce0e9e41cc913464/C14 Tissue depth comparison.png",
+      "original_filename": "C14 Tissue depth comparison.png",
+      "stored_filename": "C14 Tissue depth comparison.png",
+      "filename_aliases": [
+        "C14 Tissue depth comparison.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "fe50ccee3da88492dd45a6da686ff7c1dbe2afb50a28a783b3093037f272b159",
+      "size_bytes": 14601,
+      "resource_path": "resources/fe50ccee3da88492/C13 Glassy white eye detail.png",
+      "original_filename": "C13 Glassy white eye detail.png",
+      "stored_filename": "C13 Glassy white eye detail.png",
+      "filename_aliases": [
+        "09_Pearlescent_eye_reference.png",
+        "C13 Glassy white eye detail.png"
+      ],
+      "classification": [
+        "pet-production",
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "caa8f09d7060597343125e9607786315afd3892e68e66326e50467b38dfb78c3",
+      "size_bytes": 47705,
+      "resource_path": "resources/caa8f09d70605973/C12 Selected lichen macro.png",
+      "original_filename": "C12 Selected lichen macro.png",
+      "stored_filename": "C12 Selected lichen macro.png",
+      "filename_aliases": [
+        "C12 Selected lichen macro.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "62df659f4186102ba10b48706d0e6762da63b08a404d24208f7e885f62d50690",
+      "size_bytes": 43957,
+      "resource_path": "resources/62df659f4186102b/C11 Selected paired leg tapers.png",
+      "original_filename": "C11 Selected paired leg tapers.png",
+      "stored_filename": "C11 Selected paired leg tapers.png",
+      "filename_aliases": [
+        "C11 Selected paired leg tapers.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "cb0c613059de719b6180e0505590ee3fd73df6e71e32c8b0d48fcf440bb093a0",
+      "size_bytes": 165284,
+      "resource_path": "resources/cb0c613059de719b/C10 Cap overhang and compact bob.png",
+      "original_filename": "C10 Cap overhang and compact bob.png",
+      "stored_filename": "C10 Cap overhang and compact bob.png",
+      "filename_aliases": [
+        "C10 Cap overhang and compact bob.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "a3f1c35cffea52ebd75003d66775965c4b12d3413ede2d767615aac2a65c845a",
+      "size_bytes": 241089,
+      "resource_path": "resources/a3f1c35cffea52eb/C09 Standing body and leg mass.png",
+      "original_filename": "C09 Standing body and leg mass.png",
+      "stored_filename": "C09 Standing body and leg mass.png",
+      "filename_aliases": [
+        "C09 Standing body and leg mass.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "37d2819b08432f251895545feecea505d6d7bd1e95c60ee6a48316e2e03392a0",
+      "size_bytes": 2677197,
+      "resource_path": "resources/37d2819b08432f25/R27 Top Level Reference Sheet.png",
+      "original_filename": "R27 Top Level Reference Sheet.png",
+      "stored_filename": "R27 Top Level Reference Sheet.png",
+      "filename_aliases": [
+        "Myca: Fantasy Mushroom Character Reference Sheet.png",
+        "R27 Top Level Reference Sheet.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "48c1a8cf4d3601ae2cd6aeb4ba0059c778bf0061489ed65927ada0373638f035",
+      "size_bytes": 2553929,
+      "resource_path": "resources/48c1a8cf4d3601ae/R28 Deep-Hyphae Reference Sheet.png",
+      "original_filename": "R28 Deep-Hyphae Reference Sheet.png",
+      "stored_filename": "R28 Deep-Hyphae Reference Sheet.png",
+      "filename_aliases": [
+        "Myca: Fungal Character Reference Sheet.png",
+        "R28 Deep-Hyphae Reference Sheet.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "83e6e65c43c2a9863bf4768ea98876de29144a9e684653a5a8d41731336355f7",
+      "size_bytes": 1898635,
+      "resource_path": "resources/83e6e65c43c2a986/Translucent Myca Mushroom Spirit Character Sheet.png",
+      "original_filename": "Translucent Myca Mushroom Spirit Character Sheet.png",
+      "stored_filename": "Translucent Myca Mushroom Spirit Character Sheet.png",
+      "filename_aliases": [
+        "Translucent Myca Mushroom Spirit Character Sheet.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "22a0e80e7a5e3c36dcb0a6a8bd64a8f520a7a28cb1eb2f4a5d59fc38934d4582",
+      "size_bytes": 2640761,
+      "resource_path": "resources/22a0e80e7a5e3c36/Mushroom Maiden Forest Character Sheet.png",
+      "original_filename": "Mushroom Maiden Forest Character Sheet.png",
+      "stored_filename": "Mushroom Maiden Forest Character Sheet.png",
+      "filename_aliases": [
+        "Mushroom Maiden Forest Character Sheet.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "25843cceaa4606e13c73a96ac105209fcc6a03afac8b38d645966985250dba8b",
+      "size_bytes": 2667584,
+      "resource_path": "resources/25843cceaa4606e1/Myca: A Gentle Fungal Being.png",
+      "original_filename": "Myca: A Gentle Fungal Being.png",
+      "stored_filename": "Myca: A Gentle Fungal Being.png",
+      "filename_aliases": [
+        "Myca: A Gentle Fungal Being.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "8e1aa0b802c67d8e2a3b8a2b4f739e8a0e75a6e18baddb09a70f968867555581",
+      "size_bytes": 344205,
+      "resource_path": "resources/8e1aa0b802c67d8e/R29 Rendered three-pose sheet.png",
+      "original_filename": "R29 Rendered three-pose sheet.png",
+      "stored_filename": "R29 Rendered three-pose sheet.png",
+      "filename_aliases": [
+        "95625.png",
+        "R29 Rendered three-pose sheet.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied",
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "e870bdc66294accf6987a686607a74acbcffd601514176f1785951f56bdd7c72",
+      "size_bytes": 190580,
+      "resource_path": "resources/e870bdc66294accf/R31 Flat-colour three-pose sheet.png",
+      "original_filename": "R31 Flat-colour three-pose sheet.png",
+      "stored_filename": "R31 Flat-colour three-pose sheet.png",
+      "filename_aliases": [
+        "95623.png",
+        "R31 Flat-colour three-pose sheet.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied",
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "5817677dd27adfcaa164217188516d54da128d1b8ddc42b3e1e764199e752bfd",
+      "size_bytes": 252218,
+      "resource_path": "resources/5817677dd27adfca/R30 Soft-shaded three-pose sheet.png",
+      "original_filename": "R30 Soft-shaded three-pose sheet.png",
+      "stored_filename": "R30 Soft-shaded three-pose sheet.png",
+      "filename_aliases": [
+        "95624.png",
+        "R30 Soft-shaded three-pose sheet.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied",
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "f70acc4be17f2d50277c15e2a88670723a094b977756b6798f7bfb52fb7c45d0",
+      "size_bytes": 2497336,
+      "resource_path": "resources/f70acc4be17f2d50/image-gen-4(4).png",
+      "original_filename": "image-gen-4(4).png",
+      "stored_filename": "image-gen-4(4).png",
+      "filename_aliases": [
+        "image-gen-4(4).png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "d3fe2b62a6745b5bf12f0a5b47d27b8a3fcdb7b3ddf9376b1cd15073f703e384",
+      "size_bytes": 3334049,
+      "resource_path": "resources/d3fe2b62a6745b5b/image-gen-3(5).png",
+      "original_filename": "image-gen-3(5).png",
+      "stored_filename": "image-gen-3(5).png",
+      "filename_aliases": [
+        "image-gen-3(5).png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "b596f6a5e8f3d4c3be06d169760b162f2246d3bcc075eedcba2110fdae7068b4",
+      "size_bytes": 2671388,
+      "resource_path": "resources/b596f6a5e8f3d4c3/image-gen-2(5).png",
+      "original_filename": "image-gen-2(5).png",
+      "stored_filename": "image-gen-2(5).png",
+      "filename_aliases": [
+        "image-gen-2(5).png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "a405bc7dd54186930f942a4485c3bbbe6c0eae2bffb79f762fd177eda6073f07",
+      "size_bytes": 2792986,
+      "resource_path": "resources/a405bc7dd5418693/image-gen-1(5).png",
+      "original_filename": "image-gen-1(5).png",
+      "stored_filename": "image-gen-1(5).png",
+      "filename_aliases": [
+        "image-gen-1(5).png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "a7b3cc6b40a33b67138d13b4bf48cd9e1aa1ce8fd23a2f1e7011a7e07751c199",
+      "size_bytes": 3437578,
+      "resource_path": "resources/a7b3cc6b40a33b67/image-gen-5.png",
+      "original_filename": "image-gen-5.png",
+      "stored_filename": "image-gen-5.png",
+      "filename_aliases": [
+        "image-gen-5.png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "cc0ed722529d50ea1b5694e8c891c1e6abe71996b49376490a4a860a11baffee",
+      "size_bytes": 3054562,
+      "resource_path": "resources/cc0ed722529d50ea/image-gen-4(3).png",
+      "original_filename": "image-gen-4(3).png",
+      "stored_filename": "image-gen-4(3).png",
+      "filename_aliases": [
+        "image-gen-4(3).png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "5b87afb26d93a3d5844724fdb85a82ccb53736bc2e8915d93a2b3ee5272df506",
+      "size_bytes": 3137193,
+      "resource_path": "resources/5b87afb26d93a3d5/image-gen-3(4).png",
+      "original_filename": "image-gen-3(4).png",
+      "stored_filename": "image-gen-3(4).png",
+      "filename_aliases": [
+        "image-gen-3(4).png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "f69c5f77e28da06ded351db425a30a9209fd00f61905fa15558a6aa9a1eb78aa",
+      "size_bytes": 2949060,
+      "resource_path": "resources/f69c5f77e28da06d/image-gen-2(4).png",
+      "original_filename": "image-gen-2(4).png",
+      "stored_filename": "image-gen-2(4).png",
+      "filename_aliases": [
+        "image-gen-2(4).png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "666ec61b56478718638db8c4020adcc76951e952fe7629c7c5ca53e309c441fa",
+      "size_bytes": 2999613,
+      "resource_path": "resources/666ec61b56478718/image-gen-1(4).png",
+      "original_filename": "image-gen-1(4).png",
+      "stored_filename": "image-gen-1(4).png",
+      "filename_aliases": [
+        "image-gen-1(4).png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "4210e0ca83872aed424bf7b38a9d0e1615192201e116dbd3b39bbdabff503770",
+      "size_bytes": 3321145,
+      "resource_path": "resources/4210e0ca83872aed/image-gen-3(3).png",
+      "original_filename": "image-gen-3(3).png",
+      "stored_filename": "image-gen-3(3).png",
+      "filename_aliases": [
+        "image-gen-3(3).png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "e0106c4a268d6a4b8d295da7d2c9aa29b8a6613403b9a0a84e1e7f425da34323",
+      "size_bytes": 2635581,
+      "resource_path": "resources/e0106c4a268d6a4b/image-gen-2(3).png",
+      "original_filename": "image-gen-2(3).png",
+      "stored_filename": "image-gen-2(3).png",
+      "filename_aliases": [
+        "image-gen-2(3).png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "ce758eede435eeec39ce1a8b709019a48e78fb643afe66147d38c35ee18cc679",
+      "size_bytes": 3462556,
+      "resource_path": "resources/ce758eede435eeec/image-gen-1(3).png",
+      "original_filename": "image-gen-1(3).png",
+      "stored_filename": "image-gen-1(3).png",
+      "filename_aliases": [
+        "image-gen-1(3).png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "96f663ef7f9419818910e86af65f7216f4bae05e19ea0e9f4408b859c9061140",
+      "size_bytes": 2793653,
+      "resource_path": "resources/96f663ef7f941981/image-gen-4(2).png",
+      "original_filename": "image-gen-4(2).png",
+      "stored_filename": "image-gen-4(2).png",
+      "filename_aliases": [
+        "image-gen-4(2).png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "4684c9d0f0ebee9fb8c04a835e5b60eca893842d76f60b174189d9e99fe7f279",
+      "size_bytes": 2398203,
+      "resource_path": "resources/4684c9d0f0ebee9f/image-gen-3(2).png",
+      "original_filename": "image-gen-3(2).png",
+      "stored_filename": "image-gen-3(2).png",
+      "filename_aliases": [
+        "image-gen-3(2).png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "77b88b4ba38b84540b3abad8c82ddcf709d2ce1fc3527efaf1d6af7dbf80bb2a",
+      "size_bytes": 2202043,
+      "resource_path": "resources/77b88b4ba38b8454/image-gen-2(2).png",
+      "original_filename": "image-gen-2(2).png",
+      "stored_filename": "image-gen-2(2).png",
+      "filename_aliases": [
+        "image-gen-2(2).png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "41e517f4ce5530b8c2cdddd0d08ca2a4b562e18451d9f822b95637b8607b967c",
+      "size_bytes": 2731601,
+      "resource_path": "resources/41e517f4ce5530b8/image-gen-1(2).png",
+      "original_filename": "image-gen-1(2).png",
+      "stored_filename": "image-gen-1(2).png",
+      "filename_aliases": [
+        "image-gen-1(2).png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "533275e9fc2788cbf9b2984fcb33da2cee75aa9165542e2e4330a8d283fbe856",
+      "size_bytes": 1760731,
+      "resource_path": "resources/533275e9fc2788cb/Mushroom Girl Character Turnaround.png",
+      "original_filename": "Mushroom Girl Character Turnaround.png",
+      "stored_filename": "Mushroom Girl Character Turnaround.png",
+      "filename_aliases": [
+        "Mushroom Girl Character Turnaround.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "7ec7be1293fc9a949ba36a76acf35fd25eb3ebc5f4a886e83b9aa8247c4b2f1b",
+      "size_bytes": 1676989,
+      "resource_path": "resources/7ec7be1293fc9a94/Mushroom Girl Character Study(1).png",
+      "original_filename": "Mushroom Girl Character Study(1).png",
+      "stored_filename": "Mushroom Girl Character Study(1).png",
+      "filename_aliases": [
+        "Mushroom Girl Character Study(1).png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "037055d6bab0f9fae445c12706890d632dd5138355af837bd89967db46dd8c2b",
+      "size_bytes": 1493346,
+      "resource_path": "resources/037055d6bab0f9fa/Myca Mushroom Character Sheet.png",
+      "original_filename": "Myca Mushroom Character Sheet.png",
+      "stored_filename": "Myca Mushroom Character Sheet.png",
+      "filename_aliases": [
+        "Myca Mushroom Character Sheet.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "4b2013145d9b54f3f9f2e63a4d420bca26aff3377bb1330578983fb273e50f07",
+      "size_bytes": 1873747,
+      "resource_path": "resources/4b2013145d9b54f3/Myca: Gentle Mushroom Character Studies.png",
+      "original_filename": "Myca: Gentle Mushroom Character Studies.png",
+      "stored_filename": "Myca: Gentle Mushroom Character Studies.png",
+      "filename_aliases": [
+        "Myca: Gentle Mushroom Character Studies.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "ceb22d0f94d5c50337efd1d40015cb72559a633ea4fb7b79bd7fe973b0f5df34",
+      "size_bytes": 2068701,
+      "resource_path": "resources/ceb22d0f94d5c503/Myca, the Gentle Mushroom Keeper.png",
+      "original_filename": "Myca, the Gentle Mushroom Keeper.png",
+      "stored_filename": "Myca, the Gentle Mushroom Keeper.png",
+      "filename_aliases": [
+        "Myca, the Gentle Mushroom Keeper.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "ac9378786fbdb72278cc2aa837fb057122011a133f64f141bd27ce2ec44bd150",
+      "size_bytes": 246067,
+      "resource_path": "resources/ac9378786fbdb722/C08 Terrain-following contact.png",
+      "original_filename": "C08 Terrain-following contact.png",
+      "stored_filename": "C08 Terrain-following contact.png",
+      "filename_aliases": [
+        "C08 Terrain-following contact.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "046ecc1e42e1d763efe9fda850cc018ae666ef256b3a9e2cd4d48d2d91f28634",
+      "size_bytes": 122224,
+      "resource_path": "resources/046ecc1e42e1d763/C06 Clean airborne release.png",
+      "original_filename": "C06 Clean airborne release.png",
+      "stored_filename": "C06 Clean airborne release.png",
+      "filename_aliases": [
+        "C06 Clean airborne release.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "73c4335d5701d26c8a2832b2d425f9135933e469a50d9e4d7ce4da7fc4dd478a",
+      "size_bytes": 73381,
+      "resource_path": "resources/73c4335d5701d26c/C07 Organic hand filaments.png",
+      "original_filename": "C07 Organic hand filaments.png",
+      "stored_filename": "C07 Organic hand filaments.png",
+      "filename_aliases": [
+        "C07 Organic hand filaments.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "77a379b72ca02a08cf367ec00fb2247db4bf26a3880d7aa6a8cbae3c98790545",
+      "size_bytes": 133445,
+      "resource_path": "resources/77a379b72ca02a08/C05 Lateral hyphal emergence.png",
+      "original_filename": "C05 Lateral hyphal emergence.png",
+      "stored_filename": "C05 Lateral hyphal emergence.png",
+      "filename_aliases": [
+        "C05 Lateral hyphal emergence.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "d3ab088f8803d12b5379cc19c62f9efc8951606642c083025774de18dc1aeefe",
+      "size_bytes": 117664,
+      "resource_path": "resources/d3ab088f8803d12b/C04 Initial contact.png",
+      "original_filename": "C04 Initial contact.png",
+      "stored_filename": "C04 Initial contact.png",
+      "filename_aliases": [
+        "C04 Initial contact.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "3fb62513c3e964eac25ed7aa5092e2abf462d44d952b194853831c13b02a13ae",
+      "size_bytes": 470148,
+      "resource_path": "resources/3fb62513c3e964ea/R23 Supplied alternate design sheet.png",
+      "original_filename": "R23 Supplied alternate design sheet.png",
+      "stored_filename": "R23 Supplied alternate design sheet.png",
+      "filename_aliases": [
+        "95516(1).png",
+        "R23 Supplied alternate design sheet.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied",
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "4d2634bc28800e0f2e54fb810f84b3f3eed8eeafa59bc8a32a1961d9a98550c5",
+      "size_bytes": 212936,
+      "resource_path": "resources/4d2634bc28800e0f/C02 Selected lichen texture.png",
+      "original_filename": "C02 Selected lichen texture.png",
+      "stored_filename": "C02 Selected lichen texture.png",
+      "filename_aliases": [
+        "C02 Selected lichen texture.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "bcc991610b33830ec41a6a6c9f52402240d9481bebab44116fd75ae7cea41b5b",
+      "size_bytes": 381075,
+      "resource_path": "resources/bcc991610b33830e/C01 Selected leg proportions.png",
+      "original_filename": "C01 Selected leg proportions.png",
+      "stored_filename": "C01 Selected leg proportions.png",
+      "filename_aliases": [
+        "C01 Selected leg proportions.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "5db3d65068a5f26f4b6825a37a0010b76d3228f4540100bc8a36714894bbf029",
+      "size_bytes": 33448,
+      "resource_path": "resources/5db3d65068a5f26f/C03 Uninterrupted terminal geometry.png",
+      "original_filename": "C03 Uninterrupted terminal geometry.png",
+      "stored_filename": "C03 Uninterrupted terminal geometry.png",
+      "filename_aliases": [
+        "C03 Uninterrupted terminal geometry.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "39f8ae8b43bec9b62927192a7143e50fa321cba036c4325d380b0fce286082e6",
+      "size_bytes": 504250,
+      "resource_path": "resources/39f8ae8b43bec9b6/R20 Supplied material and pose interpretation.png",
+      "original_filename": "R20 Supplied material and pose interpretation.png",
+      "stored_filename": "R20 Supplied material and pose interpretation.png",
+      "filename_aliases": [
+        "95513(1).png",
+        "95513(2).png",
+        "95513(3).png",
+        "95513(4).png",
+        "R20 Supplied material and pose interpretation.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied",
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "a79fb81ba6e2e8e6824103cbd05c408e3f389de31c5bb7ab976e89004a6ae5f6",
+      "size_bytes": 509787,
+      "resource_path": "resources/a79fb81ba6e2e8e6/R21 Supplied thin-calf sheet variant.png",
+      "original_filename": "R21 Supplied thin-calf sheet variant.png",
+      "stored_filename": "R21 Supplied thin-calf sheet variant.png",
+      "filename_aliases": [
+        "95514(1).png",
+        "95514(2).png",
+        "R21 Supplied thin-calf sheet variant.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied",
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "7679ef51377f15aea5aad63cca5f6ed22b5969c7461aaaedf543a7c08911f673",
+      "size_bytes": 477645,
+      "resource_path": "resources/7679ef51377f15ae/R22 Supplied point-geometry sheet variant.png",
+      "original_filename": "R22 Supplied point-geometry sheet variant.png",
+      "stored_filename": "R22 Supplied point-geometry sheet variant.png",
+      "filename_aliases": [
+        "95515(1).png",
+        "R22 Supplied point-geometry sheet variant.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied",
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "955b79c25e720e15e62b7565dad3fac9e51c33f1082262aee98e4f6d122bc16f",
+      "size_bytes": 2340872,
+      "resource_path": "resources/955b79c25e720e15/R19 Rejected-cap turnaround.png",
+      "original_filename": "R19 Rejected-cap turnaround.png",
+      "stored_filename": "R19 Rejected-cap turnaround.png",
+      "filename_aliases": [
+        "Myca Mushroom-Girl Character Reference Sheet.png",
+        "R19 Rejected-cap turnaround.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "ecb22672eae659f50159388fdd76df60e17df427070ea768bce20430f94593bd",
+      "size_bytes": 2712987,
+      "resource_path": "resources/ecb22672eae659f5/R16 Expression-only study.png",
+      "original_filename": "R16 Expression-only study.png",
+      "stored_filename": "R16 Expression-only study.png",
+      "filename_aliases": [
+        "Myca: Fungal Expression Sheet.png",
+        "R16 Expression-only study.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "1513f32987d1ca0da312443f416e5602fe5510d2dc8b50f6ef5262688f36cc25",
+      "size_bytes": 2550105,
+      "resource_path": "resources/1513f32987d1ca0d/R14 Initial animation sheet.png",
+      "original_filename": "R14 Initial animation sheet.png",
+      "stored_filename": "R14 Initial animation sheet.png",
+      "filename_aliases": [
+        "Myca: A Living Connection.png",
+        "R14 Initial animation sheet.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "8bcbd0a7e818f7bb6f090ab00c60e299ba52ae0916271bf82d9c23241ec79c71",
+      "size_bytes": 2865834,
+      "resource_path": "resources/8bcbd0a7e818f7bb/R13 Reduced-constellation revision.png",
+      "original_filename": "R13 Reduced-constellation revision.png",
+      "stored_filename": "R13 Reduced-constellation revision.png",
+      "filename_aliases": [
+        "Myca: Rooted Curiosity Character Sheet.png",
+        "R13 Reduced-constellation revision.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "fd32f07783a8aaae8bb31d45e21362552a9800506661c1a496d9ec7bd773b145",
+      "size_bytes": 2690011,
+      "resource_path": "resources/fd32f07783a8aaae/R15 Restrained-acting revision.png",
+      "original_filename": "R15 Restrained-acting revision.png",
+      "stored_filename": "R15 Restrained-acting revision.png",
+      "filename_aliases": [
+        "Myca: A Living Connection(1).png",
+        "R15 Restrained-acting revision.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "7cfe7a174d10eac684cd69d714b25f059258563ef99787ee8deaadd6193186b8",
+      "size_bytes": 2511865,
+      "resource_path": "resources/7cfe7a174d10eac6/R11 Continuous-point geometry study.png",
+      "original_filename": "R11 Continuous-point geometry study.png",
+      "stored_filename": "R11 Continuous-point geometry study.png",
+      "filename_aliases": [
+        "Myca: Fungal Locomotion Study.png",
+        "R11 Continuous-point geometry study.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "b1f2362fef097715e9116c91feaa624764fd95efb45c4c94946ce52a93e72ea1",
+      "size_bytes": 2916188,
+      "resource_path": "resources/b1f2362fef097715/R12 Thin-calf combination.png",
+      "original_filename": "R12 Thin-calf combination.png",
+      "stored_filename": "R12 Thin-calf combination.png",
+      "filename_aliases": [
+        "Myca: Rooted in a Wider World.png",
+        "R12 Thin-calf combination.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "29d686e0f758df86e6ca807fdd85d9f0dd3e11f491d58bfb7bf3999946d72506",
+      "size_bytes": 2581416,
+      "resource_path": "resources/29d686e0f758df86/R10 Initial isolated locomotion study.png",
+      "original_filename": "R10 Initial isolated locomotion study.png",
+      "stored_filename": "R10 Initial isolated locomotion study.png",
+      "filename_aliases": [
+        "Myca: Mycelial Locomotion Study.png",
+        "R10 Initial isolated locomotion study.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "6ee5cb563106f8c4986d0a9a3e481657a01042261e11fbf24bfa189240061fb8",
+      "size_bytes": 441177,
+      "resource_path": "resources/6ee5cb563106f8c4/R09 Root-like contact failure.png",
+      "original_filename": "R09 Root-like contact failure.png",
+      "stored_filename": "R09 Root-like contact failure.png",
+      "filename_aliases": [
+        "95511.png",
+        "R09 Root-like contact failure.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied",
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "8d53572b8ea858bd4e0564b0a49d4c2c69766571e57e08568dc678b65221938f",
+      "size_bytes": 2912950,
+      "resource_path": "resources/8d53572b8ea858bd/R06 Long-lichen exploration.png",
+      "original_filename": "R06 Long-lichen exploration.png",
+      "stored_filename": "R06 Long-lichen exploration.png",
+      "filename_aliases": [
+        "Lichen Forest Spirit Character Study.png",
+        "R06 Long-lichen exploration.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "11c3a50db6c85e83fef9603f44b2bde32de8ac794c94af31b260c2559d21abc6",
+      "size_bytes": 2706861,
+      "resource_path": "resources/11c3a50db6c85e83/R07 Compact-lichen revision.png",
+      "original_filename": "R07 Compact-lichen revision.png",
+      "stored_filename": "R07 Compact-lichen revision.png",
+      "filename_aliases": [
+        "Lichen-Haired Mushroom Girl Character Sheet.png",
+        "R07 Compact-lichen revision.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "e0611779d6c176a6d7c246b375da3bd89811c0c098c4a065de580ce76fadfa17",
+      "size_bytes": 2820351,
+      "resource_path": "resources/e0611779d6c176a6/R05 First branching-contact exploration.png",
+      "original_filename": "R05 First branching-contact exploration.png",
+      "stored_filename": "R05 First branching-contact exploration.png",
+      "filename_aliases": [
+        "R05 First branching-contact exploration.png",
+        "Rooted Mycelium Field Study.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "949308b49d083e6bf4a2da406d06b479f414ebaa886f56511e55e170d00170c0",
+      "size_bytes": 493623,
+      "resource_path": "resources/949308b49d083e6b/R08 Selected proportions and lichen.png",
+      "original_filename": "R08 Selected proportions and lichen.png",
+      "stored_filename": "R08 Selected proportions and lichen.png",
+      "filename_aliases": [
+        "95509(1).png",
+        "95509(3).png",
+        "95509.png",
+        "R08 Selected proportions and lichen.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied",
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "95ddf50620951cc9b2fe09448825bed48e467e6c6d6dbcdd8d04b021469c88d5",
+      "size_bytes": 572881,
+      "resource_path": "resources/95ddf50620951cc9/R04 Early pointed-leg variant.png",
+      "original_filename": "R04 Early pointed-leg variant.png",
+      "stored_filename": "R04 Early pointed-leg variant.png",
+      "filename_aliases": [
+        "95503.png",
+        "R04 Early pointed-leg variant.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied",
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "6eccee3d8f4c9395fbbc691cf47e7db9522d9471b823864ff95a2acc6b405965",
+      "size_bytes": 541917,
+      "resource_path": "resources/6eccee3d8f4c9395/R03 Early sheet with conventional feet.png",
+      "original_filename": "R03 Early sheet with conventional feet.png",
+      "stored_filename": "R03 Early sheet with conventional feet.png",
+      "filename_aliases": [
+        "95502.png",
+        "R03 Early sheet with conventional feet.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied",
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "425254846b9934ac111c6ad9d5eb6b3dee6156b4e6803984bd95f6bfb4d41f70",
+      "size_bytes": 374769,
+      "resource_path": "resources/425254846b9934ac/R02 First detailed interpretation.png",
+      "original_filename": "R02 First detailed interpretation.png",
+      "stored_filename": "R02 First detailed interpretation.png",
+      "filename_aliases": [
+        "95497.png",
+        "R02 First detailed interpretation.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied",
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "32fb49d30f6f75c46930046c34c05116f4101982777dea84edbd667aa097813c",
+      "size_bytes": 9000894,
+      "resource_path": "resources/32fb49d30f6f75c4/Myca Resource Guide.html",
+      "original_filename": "Myca Resource Guide.html",
+      "stored_filename": "Myca Resource Guide.html",
+      "filename_aliases": [
+        "Myca Resource Guide.html"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "f93f3f3129f7fd41fc61438a44aadcfa5c8336839f6fbb5bececd3ed5905a386",
+      "size_bytes": 16230,
+      "resource_path": "resources/f93f3f3129f7fd41/Decision Log and Open Questions.md",
+      "original_filename": "Decision Log and Open Questions.md",
+      "stored_filename": "Decision Log and Open Questions.md",
+      "filename_aliases": [
+        "Decision Log and Open Questions.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "92bd93631c986dde30c0070ce94d287d3729301d050c0e3a7c07d9a56bc22d86",
+      "size_bytes": 6888,
+      "resource_path": "resources/92bd93631c986dde/Model Sheets and Review Checklist.md",
+      "original_filename": "Model Sheets and Review Checklist.md",
+      "stored_filename": "Model Sheets and Review Checklist.md",
+      "filename_aliases": [
+        "Model Sheets and Review Checklist.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "fe965696cbaf9beafbd083a9427daddc3f86728b5c24f1cc864739dda8401d53",
+      "size_bytes": 35579,
+      "resource_path": "resources/fe965696cbaf9bea/Reference Index.md",
+      "original_filename": "Reference Index.md",
+      "stored_filename": "Reference Index.md",
+      "filename_aliases": [
+        "Reference Index.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "6e2b0a9707aedcaf8514fb6b599347f8fea912a7604a424530a409d72eae7f8e",
+      "size_bytes": 8608,
+      "resource_path": "resources/6e2b0a9707aedcaf/Prompt Modules and Style Translation.md",
+      "original_filename": "Prompt Modules and Style Translation.md",
+      "stored_filename": "Prompt Modules and Style Translation.md",
+      "filename_aliases": [
+        "Prompt Modules and Style Translation.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "4f21733ba6300ee8823a4a7fcd83b132b0fe00124a1ceb3b4d8cf99bc2bd0227",
+      "size_bytes": 5742,
+      "resource_path": "resources/4f21733ba6300ee8/Myca Expression and Acting Guide.md",
+      "original_filename": "Myca Expression and Acting Guide.md",
+      "stored_filename": "Myca Expression and Acting Guide.md",
+      "filename_aliases": [
+        "Myca Expression and Acting Guide.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "0a514889229f8aa6c18467df3122f1e4db96c5677ed7d99559e2b4dd04440cd0",
+      "size_bytes": 7385,
+      "resource_path": "resources/0a514889229f8aa6/README.md",
+      "original_filename": "README.md",
+      "stored_filename": "README.md",
+      "filename_aliases": [
+        "README.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "b65136f0f84e16ccd646873d55a81c6b09b081cd80bf19531333a7b91fe889c5",
+      "size_bytes": 3785,
+      "resource_path": "resources/b65136f0f84e16cc/S03 Previous Locomotion Reference.md",
+      "original_filename": "S03 Previous Locomotion Reference.md",
+      "stored_filename": "S03 Previous Locomotion Reference.md",
+      "filename_aliases": [
+        "Myca_Locomotion_Reference.md",
+        "S03 Previous Locomotion Reference.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "7edb5fa95600699c47ce3500546a6b5c51983a4940fbf264ad0d819ff980fd7f",
+      "size_bytes": 8292,
+      "resource_path": "resources/7edb5fa95600699c/S02 Previous Master Character Prompt.md",
+      "original_filename": "S02 Previous Master Character Prompt.md",
+      "stored_filename": "S02 Previous Master Character Prompt.md",
+      "filename_aliases": [
+        "Myca_Master_Character_Prompt.md",
+        "S02 Previous Master Character Prompt.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "907495fc50fd1b41e080e876e420999d361cd4d0858e90c8ae0b28572f435d7c",
+      "size_bytes": 5548,
+      "resource_path": "resources/907495fc50fd1b41/S01 Previous Character Design Brief.md",
+      "original_filename": "S01 Previous Character Design Brief.md",
+      "stored_filename": "S01 Previous Character Design Brief.md",
+      "filename_aliases": [
+        "Myca_Character_Design_Brief.md",
+        "S01 Previous Character Design Brief.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "11ddc221549079e4232cd94acdff9340400ff825776ee0f99abfda5b10feb9cc",
+      "size_bytes": 1953427,
+      "resource_path": "resources/11ddc221549079e4/Myca: Enchanted Forest Pose Study.png",
+      "original_filename": "Myca: Enchanted Forest Pose Study.png",
+      "stored_filename": "Myca: Enchanted Forest Pose Study.png",
+      "filename_aliases": [
+        "Myca: Enchanted Forest Pose Study.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "cfd0a666963f6da9de51785dad093a0ab40094d75029036b126cea6132e8ff4d",
+      "size_bytes": 19118,
+      "resource_path": "resources/cfd0a666963f6da9/Myca Character Design Brief.md",
+      "original_filename": "Myca Character Design Brief.md",
+      "stored_filename": "Myca Character Design Brief.md",
+      "filename_aliases": [
+        "Myca Character Design Brief.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "a7e3269dfab5b917679a7699a279f32326bdbf358e56b1b1d35948cce5b498dd",
+      "size_bytes": 2638397,
+      "resource_path": "resources/a7e3269dfab5b917/exec-0107ce90-7dcb-4b61-b5e0-53f0df150418.png",
+      "original_filename": "exec-0107ce90-7dcb-4b61-b5e0-53f0df150418.png",
+      "stored_filename": "exec-0107ce90-7dcb-4b61-b5e0-53f0df150418.png",
+      "filename_aliases": [
+        "exec-0107ce90-7dcb-4b61-b5e0-53f0df150418.png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "669aac8698cb30f51de4e9be10bc7e5c33a687046827feed291d23de16880d19",
+      "size_bytes": 2889384,
+      "resource_path": "resources/669aac8698cb30f5/Myca’s Fungal Locomotion Field Guide.png",
+      "original_filename": "Myca’s Fungal Locomotion Field Guide.png",
+      "stored_filename": "Myca’s Fungal Locomotion Field Guide.png",
+      "filename_aliases": [
+        "Locomotion Reference - Movement and Surfaces.png",
+        "Myca’s Fungal Locomotion Field Guide.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "0f487c7d03d6ff58f5600dd244a4741e0ceda413232d3f3b2c32b2a0e74a5b7c",
+      "size_bytes": 2606599,
+      "resource_path": "resources/0f487c7d03d6ff58/Myca: A Living Step Cycle.png",
+      "original_filename": "Myca: A Living Step Cycle.png",
+      "stored_filename": "Myca: A Living Step Cycle.png",
+      "filename_aliases": [
+        "Locomotion Reference - Step Cycle.png",
+        "Myca: A Living Step Cycle.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "32773880452c03495d12339e60e8ee821e18f96fbeb26d7421718048ec750659",
+      "size_bytes": 7874,
+      "resource_path": "resources/32773880452c0349/Myca Locomotion Reference.md",
+      "original_filename": "Myca Locomotion Reference.md",
+      "stored_filename": "Myca Locomotion Reference.md",
+      "filename_aliases": [
+        "Myca Locomotion Reference.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "1e2df58064e40072c5e3ba17482c35de2c8ac3603219d0127f405a0a5413b57d",
+      "size_bytes": 5543,
+      "resource_path": "resources/1e2df58064e40072/Myca Master Character Prompt.md",
+      "original_filename": "Myca Master Character Prompt.md",
+      "stored_filename": "Myca Master Character Prompt.md",
+      "filename_aliases": [
+        "Myca Master Character Prompt.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "b45c7817b065744a13cd6d3c1abdaeb758dfe69dbaded0b6c80aab172cbf4430",
+      "size_bytes": 2710530,
+      "resource_path": "resources/b45c7817b065744a/Myca: Fungal Forest Character Sheet.png",
+      "original_filename": "Myca: Fungal Forest Character Sheet.png",
+      "stored_filename": "Myca: Fungal Forest Character Sheet.png",
+      "filename_aliases": [
+        "Myca: Fungal Forest Character Sheet.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "ead35bdf139497bbefd37fcee7fa5715501f516e3a1ed02afc349e4848b9e9a9",
+      "size_bytes": 2857328,
+      "resource_path": "resources/ead35bdf139497bb/exec-ba697da0-cd13-44e5-ad38-4c79c3067eef.png",
+      "original_filename": "exec-ba697da0-cd13-44e5-ad38-4c79c3067eef.png",
+      "stored_filename": "exec-ba697da0-cd13-44e5-ad38-4c79c3067eef.png",
+      "filename_aliases": [
+        "exec-ba697da0-cd13-44e5-ad38-4c79c3067eef.png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "e1f343957060d24d736b914be9cfec51bce13e42957529bbc1bf38e7f1fdb686",
+      "size_bytes": 2692256,
+      "resource_path": "resources/e1f343957060d24d/exec-d9a0917c-31b4-44c6-a35e-24125d3edf89.png",
+      "original_filename": "exec-d9a0917c-31b4-44c6-a35e-24125d3edf89.png",
+      "stored_filename": "exec-d9a0917c-31b4-44c6-a35e-24125d3edf89.png",
+      "filename_aliases": [
+        "exec-d9a0917c-31b4-44c6-a35e-24125d3edf89.png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "05b86bfeea81687fcf0b4ae0efafd91583d7885616cc2a2e3c76500716f308bc",
+      "size_bytes": 2610831,
+      "resource_path": "resources/05b86bfeea81687f/Myca: A Forest Mycelium Character Sheet.png",
+      "original_filename": "Myca: A Forest Mycelium Character Sheet.png",
+      "stored_filename": "Myca: A Forest Mycelium Character Sheet.png",
+      "filename_aliases": [
+        "Myca: A Forest Mycelium Character Sheet.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "8e247174ffa6e6d31c3313903fcb6ea649e2a90a267c34c54d46df4c5c7eb6f5",
+      "size_bytes": 2885687,
+      "resource_path": "resources/8e247174ffa6e6d3/Myca: Fungal Guardian of the Forest.png",
+      "original_filename": "Myca: Fungal Guardian of the Forest.png",
+      "stored_filename": "Myca: Fungal Guardian of the Forest.png",
+      "filename_aliases": [
+        "Myca: Fungal Guardian of the Forest.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "aba25fa75e52bff7e18b2ab9a882961ef66bbee0c596a61c5386462e6009b314",
+      "size_bytes": 2898253,
+      "resource_path": "resources/aba25fa75e52bff7/Myca: Guardian of the Forest.png",
+      "original_filename": "Myca: Guardian of the Forest.png",
+      "stored_filename": "Myca: Guardian of the Forest.png",
+      "filename_aliases": [
+        "Myca: Guardian of the Forest.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "95e584ed8dbc2037df7b4c952c2100b5d91d3a5b46bacd4e4f84120da7aa8ee8",
+      "size_bytes": 2939013,
+      "resource_path": "resources/95e584ed8dbc2037/Myca: Fungal Forest Character Reference Sheet.png",
+      "original_filename": "Myca: Fungal Forest Character Reference Sheet.png",
+      "stored_filename": "Myca: Fungal Forest Character Reference Sheet.png",
+      "filename_aliases": [
+        "Myca: Fungal Forest Character Reference Sheet.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "4a1f85243263a5ce649698f0d46e90ac14f271c1d0fafe60c5c34cc3675ef0fd",
+      "size_bytes": 2669797,
+      "resource_path": "resources/4a1f85243263a5ce/Myca: A Mycelial Forest Character Sheet.png",
+      "original_filename": "Myca: A Mycelial Forest Character Sheet.png",
+      "stored_filename": "Myca: A Mycelial Forest Character Sheet.png",
+      "filename_aliases": [
+        "Myca: A Mycelial Forest Character Sheet.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "41ae9595f7d9ad033b82bc770868a06d81ca4205214223a13e176cc863f8587e",
+      "size_bytes": 2876543,
+      "resource_path": "resources/41ae9595f7d9ad03/Rooted Curiosity Character Folio.png",
+      "original_filename": "Rooted Curiosity Character Folio.png",
+      "stored_filename": "Rooted Curiosity Character Folio.png",
+      "filename_aliases": [
+        "Rooted Curiosity Character Folio.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "b0c889ad5ffbf613331417f08b484a5335008e58c206d66522a9e92143b3e974",
+      "size_bytes": 2914660,
+      "resource_path": "resources/b0c889ad5ffbf613/Rooted Mushroom Girl Character Sheet.png",
+      "original_filename": "Rooted Mushroom Girl Character Sheet.png",
+      "stored_filename": "Rooted Mushroom Girl Character Sheet.png",
+      "filename_aliases": [
+        "Rooted Mushroom Girl Character Sheet.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "af48b63536cd5815c2173a266600316699bb2b093054f21abd680b53023a166c",
+      "size_bytes": 2827429,
+      "resource_path": "resources/af48b63536cd5815/Rooted Mushroom Wanderer Concept Sheet.png",
+      "original_filename": "Rooted Mushroom Wanderer Concept Sheet.png",
+      "stored_filename": "Rooted Mushroom Wanderer Concept Sheet.png",
+      "filename_aliases": [
+        "Rooted Mushroom Wanderer Concept Sheet.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "dd3fd12f4cda67aaab369ac345946763c9e0f88241c888acbe41158a08bc39b9",
+      "size_bytes": 2737746,
+      "resource_path": "resources/dd3fd12f4cda67aa/Mushroom Guardian Concept Sheet.png",
+      "original_filename": "Mushroom Guardian Concept Sheet.png",
+      "stored_filename": "Mushroom Guardian Concept Sheet.png",
+      "filename_aliases": [
+        "Mushroom Guardian Concept Sheet.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "c392bc46184b7c5c502c55f0aa61a0c749d0e960adb7e89b8611da147e55ee4e",
+      "size_bytes": 2452178,
+      "resource_path": "resources/c392bc46184b7c5c/Mushroom Girl in a Sunlit Forest.png",
+      "original_filename": "Mushroom Girl in a Sunlit Forest.png",
+      "stored_filename": "Mushroom Girl in a Sunlit Forest.png",
+      "filename_aliases": [
+        "Mushroom Girl in a Sunlit Forest.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "3e5b68a132d7135cf750234746a40e2918c4354100ec0aaa088002f40d7c6b4f",
+      "size_bytes": 2527820,
+      "resource_path": "resources/3e5b68a132d7135c/Mushroom Girl: A Quieter Magic.png",
+      "original_filename": "Mushroom Girl: A Quieter Magic.png",
+      "stored_filename": "Mushroom Girl: A Quieter Magic.png",
+      "filename_aliases": [
+        "Mushroom Girl: A Quieter Magic.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "02e41046b32e58274f0c3829f2cdfe0536df80d6dde10cc8c3a536c7ebdeaa7b",
+      "size_bytes": 2306021,
+      "resource_path": "resources/02e41046b32e5827/Woodland Mushroom Companion Character Sheet.png",
+      "original_filename": "Woodland Mushroom Companion Character Sheet.png",
+      "stored_filename": "Woodland Mushroom Companion Character Sheet.png",
+      "filename_aliases": [
+        "Woodland Mushroom Companion Character Sheet.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "e1db55da23ac03e3d31a5eff2c4fd2967014d8b70ab2742000d4d251c7a88d65",
+      "size_bytes": 1825707,
+      "resource_path": "resources/e1db55da23ac03e3/Mushroom Girl Pose Study.png",
+      "original_filename": "Mushroom Girl Pose Study.png",
+      "stored_filename": "Mushroom Girl Pose Study.png",
+      "filename_aliases": [
+        "Mushroom Girl Pose Study.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "8c10ddc15f4fec9cb7d2b579e7a3d96aff9959013bf851b5dae80a3a08ef2cd9",
+      "size_bytes": 2957047,
+      "resource_path": "resources/8c10ddc15f4fec9c/image-gen-3(3).png",
+      "original_filename": "image-gen-3(3).png",
+      "stored_filename": "image-gen-3(3).png",
+      "filename_aliases": [
+        "image-gen-3(3).png"
+      ],
+      "classification": [
+        "cosplay inspiration"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "3e1cce6b47e8229d6411599db7a6b7e25b76691d667d03f3a020f2b20d26acab",
+      "size_bytes": 3174321,
+      "resource_path": "resources/3e1cce6b47e8229d/image-gen-2(3).png",
+      "original_filename": "image-gen-2(3).png",
+      "stored_filename": "image-gen-2(3).png",
+      "filename_aliases": [
+        "image-gen-2(3).png"
+      ],
+      "classification": [
+        "cosplay inspiration"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "a130fa94140abe0973fd638367df70ba71f0acd499294735b49e279cffb20a8a",
+      "size_bytes": 3006368,
+      "resource_path": "resources/a130fa94140abe09/image-gen-1(3).png",
+      "original_filename": "image-gen-1(3).png",
+      "stored_filename": "image-gen-1(3).png",
+      "filename_aliases": [
+        "image-gen-1(3).png"
+      ],
+      "classification": [
+        "cosplay inspiration"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "0a7cf317c70e84e294980f1f3c099c350ea280d5c62e5ca9b8a2f673fff33646",
+      "size_bytes": 2993749,
+      "resource_path": "resources/0a7cf317c70e84e2/Enchanted Mushroom Girl Cosplay Moodboard.png",
+      "original_filename": "Enchanted Mushroom Girl Cosplay Moodboard.png",
+      "stored_filename": "Enchanted Mushroom Girl Cosplay Moodboard.png",
+      "filename_aliases": [
+        "Enchanted Mushroom Girl Cosplay Moodboard.png"
+      ],
+      "classification": [
+        "cosplay inspiration"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "15201a72311395ee4840c2411235a7e7188bd5c5cbfe80c2a50ba5bcaa228e00",
+      "size_bytes": 2770178,
+      "resource_path": "resources/15201a72311395ee/Enchanted Mushroom Cottagecore Portraits.png",
+      "original_filename": "Enchanted Mushroom Cottagecore Portraits.png",
+      "stored_filename": "Enchanted Mushroom Cottagecore Portraits.png",
+      "filename_aliases": [
+        "Enchanted Mushroom Cottagecore Portraits.png"
+      ],
+      "classification": [
+        "cosplay inspiration"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "081ac55f1149a2242e9605bcd0ad2e4859f14ff9a9532f75bd5b7fd5de9aaff2",
+      "size_bytes": 2461847,
+      "resource_path": "resources/081ac55f1149a224/Cozy Mushroom Fairy Creative Den.png",
+      "original_filename": "Cozy Mushroom Fairy Creative Den.png",
+      "stored_filename": "Cozy Mushroom Fairy Creative Den.png",
+      "filename_aliases": [
+        "Cozy Mushroom Fairy Creative Den.png"
+      ],
+      "classification": [
+        "cosplay inspiration"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "8b0e5557879c60d419c3afb5caea9213fe4782a5228472247dea87fb917ccae9",
+      "size_bytes": 2325361,
+      "resource_path": "resources/8b0e5557879c60d4/Myca: Lily-Closure Membrane Concept Sheet.png",
+      "original_filename": "Myca: Lily-Closure Membrane Concept Sheet.png",
+      "stored_filename": "Myca: Lily-Closure Membrane Concept Sheet.png",
+      "filename_aliases": [
+        "Myca: Lily-Closure Membrane Concept Sheet.png"
+      ],
+      "classification": [
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "062ee50cb5ab9079af0b0071f64a5f72e5bd7a6b396b84845c6b44315dfa5f52",
+      "size_bytes": 2401272,
+      "resource_path": "resources/062ee50cb5ab9079/Myca: Living Membrane Study.png",
+      "original_filename": "Myca: Living Membrane Study.png",
+      "stored_filename": "Myca: Living Membrane Study.png",
+      "filename_aliases": [
+        "Myca: Living Membrane Study.png"
+      ],
+      "classification": [
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "c1ed1d4e36bc7fbf5897f3a578913ecc66c12ca34aaa8f1a3084db50b1a45650",
+      "size_bytes": 2514881,
+      "resource_path": "resources/c1ed1d4e36bc7fbf/Myca: Living Fungal Membrane Study.png",
+      "original_filename": "Myca: Living Fungal Membrane Study.png",
+      "stored_filename": "Myca: Living Fungal Membrane Study.png",
+      "filename_aliases": [
+        "Myca: Living Fungal Membrane Study.png"
+      ],
+      "classification": [
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "a723b59f9f52f70a737741134d0bfd0e343cf5408c7048d1afc1ee2d28746ecd",
+      "size_bytes": 2659831,
+      "resource_path": "resources/a723b59f9f52f70a/Myca: Lily-Curtain Fungal Concept Sheet.png",
+      "original_filename": "Myca: Lily-Curtain Fungal Concept Sheet.png",
+      "stored_filename": "Myca: Lily-Curtain Fungal Concept Sheet.png",
+      "filename_aliases": [
+        "Myca: Lily-Curtain Fungal Concept Sheet.png"
+      ],
+      "classification": [
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "c9dd65a8c7d9320f13d60e168ddb77348ef20c7a0c6bea72e024587fd6c22a82",
+      "size_bytes": 2652920,
+      "resource_path": "resources/c9dd65a8c7d9320f/Myca: A Rooted Mushroom Fairy Reference Sheet.png",
+      "original_filename": "Myca: A Rooted Mushroom Fairy Reference Sheet.png",
+      "stored_filename": "Myca: A Rooted Mushroom Fairy Reference Sheet.png",
+      "filename_aliases": [
+        "Myca: A Rooted Mushroom Fairy Reference Sheet.png"
+      ],
+      "classification": [
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "8490fb154ecb6629ec1b4fd62776a741e1bb92c69b2747b576639c5523a15892",
+      "size_bytes": 2791396,
+      "resource_path": "resources/8490fb154ecb6629/Myca’s Lily-Bud Fungal Field Guide.png",
+      "original_filename": "Myca’s Lily-Bud Fungal Field Guide.png",
+      "stored_filename": "Myca’s Lily-Bud Fungal Field Guide.png",
+      "filename_aliases": [
+        "Myca’s Lily-Bud Fungal Field Guide.png"
+      ],
+      "classification": [
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "f2ec21d7d0e9b035cfa2e7caedc0ff91c51e56eeb3cb8dc1e17a5ff45ebc9c02",
+      "size_bytes": 7975,
+      "resource_path": "resources/f2ec21d7d0e9b035/Myca_Project_Instructions_8000chars.md",
+      "original_filename": "Myca_Project_Instructions_8000chars.md",
+      "stored_filename": "Myca_Project_Instructions_8000chars.md",
+      "filename_aliases": [
+        "Myca_Project_Instructions_8000chars.md",
+        "PROJECT_INSTRUCTIONS.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "ad4a86a07e774de07229c20522e530e6455e732d1303cc6836d2837a9fb5507b",
+      "size_bytes": 12172,
+      "resource_path": "resources/ad4a86a07e774de0/Myca_Project_Instructions.md",
+      "original_filename": "Myca_Project_Instructions.md",
+      "stored_filename": "Myca_Project_Instructions.md",
+      "filename_aliases": [
+        "Myca_Project_Instructions.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "5a1ecdea3fb3a35fe06614c967ded1ad4eab325246b7ecb9fa83bbb78dd5aa95",
+      "size_bytes": 2713728,
+      "resource_path": "resources/5a1ecdea3fb3a35f/Myca: Fungal Being Character Guide.png",
+      "original_filename": "Myca: Fungal Being Character Guide.png",
+      "stored_filename": "Myca: Fungal Being Character Guide.png",
+      "filename_aliases": [
+        "Myca: Fungal Being Character Guide.png"
+      ],
+      "classification": [
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "d4ec5a90e2a3151cce3feb69b340a2894ba5f2421fb37cdd8e7a45876d9813b1",
+      "size_bytes": 3425992,
+      "resource_path": "resources/d4ec5a90e2a3151c/image-gen-3(2).png",
+      "original_filename": "image-gen-3(2).png",
+      "stored_filename": "image-gen-3(2).png",
+      "filename_aliases": [
+        "image-gen-3(2).png"
+      ],
+      "classification": [
+        "experimental visual study"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "b4e074ae07c6d38b1162162daf929688caeac8e443dd5d68fc006bcb9908a00d",
+      "size_bytes": 3399844,
+      "resource_path": "resources/b4e074ae07c6d38b/image-gen-2(2).png",
+      "original_filename": "image-gen-2(2).png",
+      "stored_filename": "image-gen-2(2).png",
+      "filename_aliases": [
+        "image-gen-2(2).png"
+      ],
+      "classification": [
+        "experimental visual study"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "c782a4715bd100a7a825a0e5cfac647bbdc35ff7a1546bd59c5d4545317c5216",
+      "size_bytes": 3347304,
+      "resource_path": "resources/c782a4715bd100a7/image-gen-1(2).png",
+      "original_filename": "image-gen-1(2).png",
+      "stored_filename": "image-gen-1(2).png",
+      "filename_aliases": [
+        "image-gen-1(2).png"
+      ],
+      "classification": [
+        "experimental visual study"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "e6c55780b8a8536c7c353a862fd9d50ab5d1442d65b57931665450a36dcfbba7",
+      "size_bytes": 3493984,
+      "resource_path": "resources/e6c55780b8a8536c/Myca: A Gentle Forest Presence.png",
+      "original_filename": "Myca: A Gentle Forest Presence.png",
+      "stored_filename": "Myca: A Gentle Forest Presence.png",
+      "filename_aliases": [
+        "Myca: A Gentle Forest Presence.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "332698ac54be8ed7ce3d7f6e33dc614d6fee0e0046b50c5a850df614f7e45178",
+      "size_bytes": 3518563,
+      "resource_path": "resources/332698ac54be8ed7/Myca: A Gentle Fungal Presence.png",
+      "original_filename": "Myca: A Gentle Fungal Presence.png",
+      "stored_filename": "Myca: A Gentle Fungal Presence.png",
+      "filename_aliases": [
+        "Myca: A Gentle Fungal Presence.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "a41e174eef4cc08ff540bc3cc8e5bd81658ea879e7c4e28722385fb5ffa7ae79",
+      "size_bytes": 3033534,
+      "resource_path": "resources/a41e174eef4cc08f/Myca: Fungal Forest Character Sheets.png",
+      "original_filename": "Myca: Fungal Forest Character Sheets.png",
+      "stored_filename": "Myca: Fungal Forest Character Sheets.png",
+      "filename_aliases": [
+        "Myca: Fungal Forest Character Sheets.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "052c6d5b05128f316b3610c41c25d29e2a850c70640aaa170b38d35f6b651eb2",
+      "size_bytes": 3349500,
+      "resource_path": "resources/052c6d5b05128f31/image-gen-6.png",
+      "original_filename": "image-gen-6.png",
+      "stored_filename": "image-gen-6.png",
+      "filename_aliases": [
+        "image-gen-6.png"
+      ],
+      "classification": [
+        "experimental visual study"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "3aff2bb04f192246a7e051d78fd4a2b35bbca283a56ae07f4436d782d06dc37f",
+      "size_bytes": 3354855,
+      "resource_path": "resources/3aff2bb04f192246/image-gen-5(1).png",
+      "original_filename": "image-gen-5(1).png",
+      "stored_filename": "image-gen-5(1).png",
+      "filename_aliases": [
+        "image-gen-5(1).png"
+      ],
+      "classification": [
+        "experimental visual study"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "88b10fa9085deb029d1111f49cbd8412f463294259c672565e94a454c9aa9ee6",
+      "size_bytes": 3270310,
+      "resource_path": "resources/88b10fa9085deb02/image-gen-4(1).png",
+      "original_filename": "image-gen-4(1).png",
+      "stored_filename": "image-gen-4(1).png",
+      "filename_aliases": [
+        "image-gen-4(1).png"
+      ],
+      "classification": [
+        "experimental visual study"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "37653f2e5167c395db591ebb5a4967e0c06667adb1911d8e97fe0e70e8081734",
+      "size_bytes": 2732971,
+      "resource_path": "resources/37653f2e5167c395/image-gen-3(1).png",
+      "original_filename": "image-gen-3(1).png",
+      "stored_filename": "image-gen-3(1).png",
+      "filename_aliases": [
+        "image-gen-3(1).png"
+      ],
+      "classification": [
+        "experimental visual study"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "0977aa95e81d0c92f64b532d5ef449684499d15dae8f2371724764bcdc46682d",
+      "size_bytes": 2755521,
+      "resource_path": "resources/0977aa95e81d0c92/image-gen-2(1).png",
+      "original_filename": "image-gen-2(1).png",
+      "stored_filename": "image-gen-2(1).png",
+      "filename_aliases": [
+        "image-gen-2(1).png"
+      ],
+      "classification": [
+        "experimental visual study"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "c9b5924cd506dcb6b72a0fc37677c0469e388f1c07e2c19b75c467666642290e",
+      "size_bytes": 2774921,
+      "resource_path": "resources/c9b5924cd506dcb6/image-gen-1(1).png",
+      "original_filename": "image-gen-1(1).png",
+      "stored_filename": "image-gen-1(1).png",
+      "filename_aliases": [
+        "image-gen-1(1).png"
+      ],
+      "classification": [
+        "experimental visual study"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "9f58b5d3b5986269a4e1cede9269d5484d2f9bf0baf20bf42252324408c31973",
+      "size_bytes": 2747702,
+      "resource_path": "resources/9f58b5d3b5986269/image-gen-5.png",
+      "original_filename": "image-gen-5.png",
+      "stored_filename": "image-gen-5.png",
+      "filename_aliases": [
+        "image-gen-5.png"
+      ],
+      "classification": [
+        "experimental visual study"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "9049f21f9fc7b67ec15ad4dbb01eee4245bc497f384dd28a7058fff9fe9a8a4b",
+      "size_bytes": 1908687,
+      "resource_path": "resources/9049f21f9fc7b67e/image-gen-4.png",
+      "original_filename": "image-gen-4.png",
+      "stored_filename": "image-gen-4.png",
+      "filename_aliases": [
+        "image-gen-4.png"
+      ],
+      "classification": [
+        "experimental visual study"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "3817dd36fe1f34fa0d920ee2b1445d77459542f9ddb04c083de4e5fe5c6e639b",
+      "size_bytes": 2304716,
+      "resource_path": "resources/3817dd36fe1f34fa/image-gen-3.png",
+      "original_filename": "image-gen-3.png",
+      "stored_filename": "image-gen-3.png",
+      "filename_aliases": [
+        "image-gen-3.png"
+      ],
+      "classification": [
+        "experimental visual study"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "060d43c4ce1d07e6c33c8185ffec617a973a8fa6a7c95a89a33a5c086b5c1400",
+      "size_bytes": 2639574,
+      "resource_path": "resources/060d43c4ce1d07e6/image-gen-2.png",
+      "original_filename": "image-gen-2.png",
+      "stored_filename": "image-gen-2.png",
+      "filename_aliases": [
+        "image-gen-2.png"
+      ],
+      "classification": [
+        "experimental visual study"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "1ae9d7f5c90eecb154cf6e07f4b44a72b054a25df73da94fe0792c13533ef83b",
+      "size_bytes": 2606037,
+      "resource_path": "resources/1ae9d7f5c90eecb1/image-gen-1.png",
+      "original_filename": "image-gen-1.png",
+      "stored_filename": "image-gen-1.png",
+      "filename_aliases": [
+        "image-gen-1.png"
+      ],
+      "classification": [
+        "experimental visual study"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "96c3c1b5884eda09887899cc6ad53ebceb2179858faf2dd420929bb61af902d3",
+      "size_bytes": 2745379,
+      "resource_path": "resources/96c3c1b5884eda09/Myca: Fungal Fairy Character Reference Sheet.png",
+      "original_filename": "Myca: Fungal Fairy Character Reference Sheet.png",
+      "stored_filename": "Myca: Fungal Fairy Character Reference Sheet.png",
+      "filename_aliases": [
+        "Myca: Fungal Fairy Character Reference Sheet.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "66c0d625056b5ee3f1d1b9c0a58a6b04bb979ef60ec4841812880e2ec1930a4c",
+      "size_bytes": 2658672,
+      "resource_path": "resources/66c0d625056b5ee3/Myca: Living Fungal Character Sheet.png",
+      "original_filename": "Myca: Living Fungal Character Sheet.png",
+      "stored_filename": "Myca: Living Fungal Character Sheet.png",
+      "filename_aliases": [
+        "Myca: Living Fungal Character Sheet.png"
+      ],
+      "classification": [
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "f90bc311f188708456e9d0045349643b9bb7622e2458a4b6ebe1622739c6ddce",
+      "size_bytes": 398253,
+      "resource_path": "resources/f90bc311f1887084/95718(1).png",
+      "original_filename": "95718(1).png",
+      "stored_filename": "95718(1).png",
+      "filename_aliases": [
+        "95718(1).png",
+        "95718.png"
+      ],
+      "classification": [
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "a47cd91c500e1daf87275a83ab4da5eeb630eb8847710e1da3955beb57d5ec74",
+      "size_bytes": 503614,
+      "resource_path": "resources/a47cd91c500e1daf/95762(1).jpg",
+      "original_filename": "95762(1).jpg",
+      "stored_filename": "95762(1).jpg",
+      "filename_aliases": [
+        "95762(1).jpg",
+        "95762.jpg"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "eb477abb869b3729b48fde51563237a15057c4e472f215a423c32e7fa8091c23",
+      "size_bytes": 509138,
+      "resource_path": "resources/eb477abb869b3729/95763.jpg",
+      "original_filename": "95763.jpg",
+      "stored_filename": "95763.jpg",
+      "filename_aliases": [
+        "95763.jpg"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "2808510b4118e3244f1de8d6642c629469f2574b5c9b60e23ccc360ec933a47b",
+      "size_bytes": 457748,
+      "resource_path": "resources/2808510b4118e324/95715(4).png",
+      "original_filename": "95715(4).png",
+      "stored_filename": "95715(4).png",
+      "filename_aliases": [
+        "95715(1).png",
+        "95715(2).png",
+        "95715(3).png",
+        "95715(4).png",
+        "95715.png"
+      ],
+      "classification": [
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "2ac960b4220540d9ec9c2dce1e9d08660f40cd1a2638fd27d7dc9be1eac99c7b",
+      "size_bytes": 597033,
+      "resource_path": "resources/2ac960b4220540d9/95764.jpg",
+      "original_filename": "95764.jpg",
+      "stored_filename": "95764.jpg",
+      "filename_aliases": [
+        "95764.jpg"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "6ba195977993f0db3cc44cf45ea851deb81331b0c4bd9f54caea5d5495905baf",
+      "size_bytes": 597497,
+      "resource_path": "resources/6ba195977993f0db/95607.png",
+      "original_filename": "95607.png",
+      "stored_filename": "95607.png",
+      "filename_aliases": [
+        "95607.png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "d4880e7db998b20db6dc1c6a1e2f7a624bbd4ab7340afc3edfdbe76257e678bf",
+      "size_bytes": 16303464,
+      "resource_path": "resources/d4880e7db998b20d/Myca_Character_Sheet_Animated.gif",
+      "original_filename": "Myca_Character_Sheet_Animated.gif",
+      "stored_filename": "Myca_Character_Sheet_Animated.gif",
+      "filename_aliases": [
+        "Myca_Character_Sheet_Animated.gif"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "2ade066f9dc7a0a1ae1689548ed305a1142aaf4822f581b1cefcaebf3d0e0910",
+      "size_bytes": 2611060,
+      "resource_path": "resources/2ade066f9dc7a0a1/Myca: Rooted in Wonder(6).png",
+      "original_filename": "Myca: Rooted in Wonder(6).png",
+      "stored_filename": "Myca: Rooted in Wonder(6).png",
+      "filename_aliases": [
+        "Myca: Rooted in Wonder(6).png"
+      ],
+      "classification": [
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "3b68a8c003a6e52643efa835b14f3ddb24f43cf0db200646dacd6ef9c40b88d9",
+      "size_bytes": 2595077,
+      "resource_path": "resources/3b68a8c003a6e526/Myca: Rooted in Wonder(5).png",
+      "original_filename": "Myca: Rooted in Wonder(5).png",
+      "stored_filename": "Myca: Rooted in Wonder(5).png",
+      "filename_aliases": [
+        "Myca: Rooted in Wonder(5).png"
+      ],
+      "classification": [
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "fd923abec6869d4b8551f6a8008d6b706d4ecca622aa047d8e76b571daa5c8c1",
+      "size_bytes": 2571928,
+      "resource_path": "resources/fd923abec6869d4b/Myca: Rooted in Wonder(4).png",
+      "original_filename": "Myca: Rooted in Wonder(4).png",
+      "stored_filename": "Myca: Rooted in Wonder(4).png",
+      "filename_aliases": [
+        "Myca: Rooted in Wonder(4).png"
+      ],
+      "classification": [
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "293a8bd2d3a2947fc1c244c36af041cac22cb635bf80d19f0910d3963bf60d28",
+      "size_bytes": 2716664,
+      "resource_path": "resources/293a8bd2d3a2947f/Myca: Rooted in Wonder(3).png",
+      "original_filename": "Myca: Rooted in Wonder(3).png",
+      "stored_filename": "Myca: Rooted in Wonder(3).png",
+      "filename_aliases": [
+        "Myca: Rooted in Wonder(3).png"
+      ],
+      "classification": [
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "cf0cbbc31777001ba48d44113850632eecad68ffafdfc68c82679034ca1b8b6f",
+      "size_bytes": 2515970,
+      "resource_path": "resources/cf0cbbc31777001b/Myca: Rooted in Wonder(2).png",
+      "original_filename": "Myca: Rooted in Wonder(2).png",
+      "stored_filename": "Myca: Rooted in Wonder(2).png",
+      "filename_aliases": [
+        "Myca: Rooted in Wonder(2).png"
+      ],
+      "classification": [
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "0c6650975934700dda7af9b97655c2a7ec120e2ddc45bf427bc9d4a3fe329fad",
+      "size_bytes": 2780033,
+      "resource_path": "resources/0c6650975934700d/Myca: Rooted in Wonder(1).png",
+      "original_filename": "Myca: Rooted in Wonder(1).png",
+      "stored_filename": "Myca: Rooted in Wonder(1).png",
+      "filename_aliases": [
+        "Myca: Rooted in Wonder(1).png"
+      ],
+      "classification": [
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "d441e1d59ad54a4da8819cc84b4503e83d8932b76ad724b8a0c41f403aa22909",
+      "size_bytes": 412280,
+      "resource_path": "resources/d441e1d59ad54a4d/95717.png",
+      "original_filename": "95717.png",
+      "stored_filename": "95717.png",
+      "filename_aliases": [
+        "95717.png"
+      ],
+      "classification": [
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "f765840f520e4b6145acfa92de87f7ef3133b10bd521fca4ef687cfac3da876a",
+      "size_bytes": 412681,
+      "resource_path": "resources/f765840f520e4b61/95716.png",
+      "original_filename": "95716.png",
+      "stored_filename": "95716.png",
+      "filename_aliases": [
+        "95716.png"
+      ],
+      "classification": [
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "12905a408b38fc7824bdbc2741947815783b410d6d9e87b814cfb153b4dd71bf",
+      "size_bytes": 2490337,
+      "resource_path": "resources/12905a408b38fc78/Myca: Rooted in Wonder.png",
+      "original_filename": "Myca: Rooted in Wonder.png",
+      "stored_filename": "Myca: Rooted in Wonder.png",
+      "filename_aliases": [
+        "Myca: Rooted in Wonder.png"
+      ],
+      "classification": [
+        "experimental membrane design"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "17817c4b21f4523c4125f2e5da062e30a81e8c3518bfe65d51b07821172c9093",
+      "size_bytes": 7645039,
+      "resource_path": "resources/17817c4b21f4523c/Myca%20Resource%20Guide.html",
+      "original_filename": "Myca%20Resource%20Guide.html",
+      "stored_filename": "Myca%20Resource%20Guide.html",
+      "filename_aliases": [
+        "Myca%20Resource%20Guide.html"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "69575c9d5e87d0915e831779b0f2cf8df112a6673aaf5fcbf3e083eda04f2317",
+      "size_bytes": 2489972,
+      "resource_path": "resources/69575c9d5e87d091/95515.png",
+      "original_filename": "95515.png",
+      "stored_filename": "95515.png",
+      "filename_aliases": [
+        "95515.png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "8230f1c15a6ea4c63d076b1d18a7cc0ad3899172f4f9cb933e41116d8f6597fa",
+      "size_bytes": 2894295,
+      "resource_path": "resources/8230f1c15a6ea4c6/95514.png",
+      "original_filename": "95514.png",
+      "stored_filename": "95514.png",
+      "filename_aliases": [
+        "95514.png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "2610445bb47f1d59cbbf54f856349640e0fc90479ce4b6f1f1ef6c7e1cb1c939",
+      "size_bytes": 2688637,
+      "resource_path": "resources/2610445bb47f1d59/95516.png",
+      "original_filename": "95516.png",
+      "stored_filename": "95516.png",
+      "filename_aliases": [
+        "95516.png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "90752e89c821a97b880a8514bbaf6c70365284c53b190cf78d3fb14415110960",
+      "size_bytes": 2852877,
+      "resource_path": "resources/90752e89c821a97b/95509(2).png",
+      "original_filename": "95509(2).png",
+      "stored_filename": "95509(2).png",
+      "filename_aliases": [
+        "95509(2).png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "acb5b268b6b2c3ea871a2b1a15539b2d675e7137901da4e2e1b8942d145ad067",
+      "size_bytes": 2874587,
+      "resource_path": "resources/acb5b268b6b2c3ea/95513.png",
+      "original_filename": "95513.png",
+      "stored_filename": "95513.png",
+      "filename_aliases": [
+        "95513.png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "937b83ced6a6b9aabb7f7ce0c4404a8f20df1827a258dc881cc52ddc512f1d01",
+      "size_bytes": 2284128,
+      "resource_path": "resources/937b83ced6a6b9aa/95497(1).png",
+      "original_filename": "95497(1).png",
+      "stored_filename": "95497(1).png",
+      "filename_aliases": [
+        "95497(1).png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "4229b348defc3d16b98b37693dedf8574497f11f494cf5093e6ff4d145f3ccc3",
+      "size_bytes": 2358354,
+      "resource_path": "resources/4229b348defc3d16/Enchanted Mushroom Spirit Character Sheet(1).png",
+      "original_filename": "Enchanted Mushroom Spirit Character Sheet(1).png",
+      "stored_filename": "Enchanted Mushroom Spirit Character Sheet(1).png",
+      "filename_aliases": [
+        "Enchanted Mushroom Spirit Character Sheet(1).png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "f08673b4d52c4f044c5bd647bcce9ccb89ac34206cd30b89677c02908949aebb",
+      "size_bytes": 2298270,
+      "resource_path": "resources/f08673b4d52c4f04/Enchanted Mushroom Spirit Character Sheet.png",
+      "original_filename": "Enchanted Mushroom Spirit Character Sheet.png",
+      "stored_filename": "Enchanted Mushroom Spirit Character Sheet.png",
+      "filename_aliases": [
+        "Enchanted Mushroom Spirit Character Sheet.png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "ce71eb9ce6168f7819cc6353e9367084bdb9cea6ae9c05acb8abad732dadfef3",
+      "size_bytes": 2083105,
+      "resource_path": "resources/ce71eb9ce6168f78/Mushroom Girl Character Study.png",
+      "original_filename": "Mushroom Girl Character Study.png",
+      "stored_filename": "Mushroom Girl Character Study.png",
+      "filename_aliases": [
+        "Mushroom Girl Character Study.png"
+      ],
+      "classification": [
+        "supporting historical reference; no whole-sheet canon approval"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "f0545a32b4c254230200d0fc8b03013ecae10487902bcbfd74bd0e90365bc04c",
+      "size_bytes": 301689,
+      "resource_path": "resources/f0545a32b4c25423/01_Myca_Master_Turnaround.png",
+      "original_filename": "01_Myca_Master_Turnaround.png",
+      "stored_filename": "01_Myca_Master_Turnaround.png",
+      "filename_aliases": [
+        "01_Myca_Master_Turnaround.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "c10ff04b32b1524d3a45b73b688bf9c6b677429de887cba9edd645bc095bc08a",
+      "size_bytes": 380792,
+      "resource_path": "resources/c10ff04b32b1524d/02_Myca_Head_and_Cap_Turnaround.png",
+      "original_filename": "02_Myca_Head_and_Cap_Turnaround.png",
+      "stored_filename": "02_Myca_Head_and_Cap_Turnaround.png",
+      "filename_aliases": [
+        "02_Myca_Head_and_Cap_Turnaround.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "b52916b61415d3db5b96d2f1aec47b0d4aef0d5b67454d4593079fb1088b871d",
+      "size_bytes": 365712,
+      "resource_path": "resources/b52916b61415d3db/03_Myca_Material_and_Detail_Construction.png",
+      "original_filename": "03_Myca_Material_and_Detail_Construction.png",
+      "stored_filename": "03_Myca_Material_and_Detail_Construction.png",
+      "filename_aliases": [
+        "03_Myca_Material_and_Detail_Construction.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "fb2e0daa4be7eb532837d001ead0201eb267c21972d2916ec09c1c85a6f8c3b0",
+      "size_bytes": 212463,
+      "resource_path": "resources/fb2e0daa4be7eb53/04_Myca_Leg_Geometry_and_Locomotion.png",
+      "original_filename": "04_Myca_Leg_Geometry_and_Locomotion.png",
+      "stored_filename": "04_Myca_Leg_Geometry_and_Locomotion.png",
+      "filename_aliases": [
+        "04_Myca_Leg_Geometry_and_Locomotion.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "a4987da2b35add5b115f14112a9e94e841d8ec52e9f89a3b4bc94f7f5b6c1670",
+      "size_bytes": 458805,
+      "resource_path": "resources/a4987da2b35add5b/05_Myca_Expression_and_Acting_Guide.png",
+      "original_filename": "05_Myca_Expression_and_Acting_Guide.png",
+      "stored_filename": "05_Myca_Expression_and_Acting_Guide.png",
+      "filename_aliases": [
+        "05_Myca_Expression_and_Acting_Guide.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "11889365f72da02b2023509858b04f7b092fcb59171d12e688ed0178e616c299",
+      "size_bytes": 355132,
+      "resource_path": "resources/11889365f72da02b/06_Myca_Poses_and_Gesture_Language.png",
+      "original_filename": "06_Myca_Poses_and_Gesture_Language.png",
+      "stored_filename": "06_Myca_Poses_and_Gesture_Language.png",
+      "filename_aliases": [
+        "06_Myca_Poses_and_Gesture_Language.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "1a470ab7b2cae278a4035ab03e62c8f774cf26b3e5fe791f2c18549d46a0d284",
+      "size_bytes": 432079,
+      "resource_path": "resources/1a470ab7b2cae278/07_Myca_Colour_Landmarks_and_Production_Lock.png",
+      "original_filename": "07_Myca_Colour_Landmarks_and_Production_Lock.png",
+      "stored_filename": "07_Myca_Colour_Landmarks_and_Production_Lock.png",
+      "filename_aliases": [
+        "07_Myca_Colour_Landmarks_and_Production_Lock.png"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "5199e47af1087cbd4f1fda83bc1aedc1655cc179ac798b9056aeded529acfc05",
+      "size_bytes": 570,
+      "resource_path": "resources/5199e47af1087cbd/README.txt",
+      "original_filename": "README.txt",
+      "stored_filename": "README.txt",
+      "filename_aliases": [
+        "README.txt"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "ec1dfb4f6165799f388661f8befd47ffba9ec1f6af03caf4c383f69f8c3bf412",
+      "size_bytes": 31531,
+      "resource_path": "resources/ec1dfb4f6165799f/Asset Manifest.json",
+      "original_filename": "Asset Manifest.json",
+      "stored_filename": "Asset Manifest.json",
+      "filename_aliases": [
+        "Asset Manifest.json"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "d7591891acf7941e6ae37d9b9ff0309756f32c5e7154220fc59fff75c5184554",
+      "size_bytes": 11480,
+      "resource_path": "resources/d7591891acf7941e/Decision Log and Open Questions.md",
+      "original_filename": "Decision Log and Open Questions.md",
+      "stored_filename": "Decision Log and Open Questions.md",
+      "filename_aliases": [
+        "Decision Log and Open Questions.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "90f363c313a5c632fb867ea3484ff5e38b9fe13d76828ce7c512c0aa4c0940c6",
+      "size_bytes": 16592,
+      "resource_path": "resources/90f363c313a5c632/Myca Character Design Brief.md",
+      "original_filename": "Myca Character Design Brief.md",
+      "stored_filename": "Myca Character Design Brief.md",
+      "filename_aliases": [
+        "Myca Character Design Brief.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "1cddbad76e4fa5fac8e4748b6e96f7613a7bd074fd79893bdce85611f3da3339",
+      "size_bytes": 4715,
+      "resource_path": "resources/1cddbad76e4fa5fa/Myca Master Character Prompt.md",
+      "original_filename": "Myca Master Character Prompt.md",
+      "stored_filename": "Myca Master Character Prompt.md",
+      "filename_aliases": [
+        "Myca Master Character Prompt.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "b42d3cd0d8709e45a3324810ba691c339be5718aa0485631745d4b50b0473a8e",
+      "size_bytes": 6588624,
+      "resource_path": "resources/b42d3cd0d8709e45/Myca Resource Guide.html",
+      "original_filename": "Myca Resource Guide.html",
+      "stored_filename": "Myca Resource Guide.html",
+      "filename_aliases": [
+        "Myca Resource Guide.html"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "41672499b33d9735a90b97559b61fde1f1b0aa953a2a6d370ed221c4cd8dd353",
+      "size_bytes": 5756,
+      "resource_path": "resources/41672499b33d9735/Model Sheets and Review Checklist.md",
+      "original_filename": "Model Sheets and Review Checklist.md",
+      "stored_filename": "Model Sheets and Review Checklist.md",
+      "filename_aliases": [
+        "Model Sheets and Review Checklist.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "a6bb15850fb6e5e580877e5cabfcc988dc7f686a269ab93ff30f7f4e03bfb5ab",
+      "size_bytes": 6730,
+      "resource_path": "resources/a6bb15850fb6e5e5/Prompt Modules and Style Translation.md",
+      "original_filename": "Prompt Modules and Style Translation.md",
+      "stored_filename": "Prompt Modules and Style Translation.md",
+      "filename_aliases": [
+        "Prompt Modules and Style Translation.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "3a450af7a0c5f0d4dd62db3ba8ea9371ded632d571c48cd955cef8ffcb4d5741",
+      "size_bytes": 5060,
+      "resource_path": "resources/3a450af7a0c5f0d4/README.md",
+      "original_filename": "README.md",
+      "stored_filename": "README.md",
+      "filename_aliases": [
+        "README.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "7282934a7647a59f1daf23e51842425540b719b76ca82bf001f623943fe336d6",
+      "size_bytes": 22598,
+      "resource_path": "resources/7282934a7647a59f/Reference Index.md",
+      "original_filename": "Reference Index.md",
+      "stored_filename": "Reference Index.md",
+      "filename_aliases": [
+        "Reference Index.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "cb80a1b9ce6e823742ea1a4039fdea9b3c7ec0ee3a2a408c782aece45e513856",
+      "size_bytes": 114504,
+      "resource_path": "resources/cb80a1b9ce6e8237/R01 Original creator drawing.png",
+      "original_filename": "R01 Original creator drawing.png",
+      "stored_filename": "R01 Original creator drawing.png",
+      "filename_aliases": [
+        "18616.png",
+        "R01 Original creator drawing.png"
+      ],
+      "classification": [
+        "creator original; partially superseded",
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "3d2934e40a49c52d50c5e6157bee0a3f6e6df5f8ed0dffd121465d92798a999f",
+      "size_bytes": 2891,
+      "resource_path": "resources/3d2934e40a49c52d/canon-register.json",
+      "original_filename": "canon-register.json",
+      "stored_filename": "canon-register.json",
+      "filename_aliases": [
+        "canon-register.json"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "cace8b2b68a9a59a4ff0a484bbafe7417586341206408a2c74f70ccef4e7c8fc",
+      "size_bytes": 497,
+      "resource_path": "resources/cace8b2b68a9a59a/resource-status.json",
+      "original_filename": "resource-status.json",
+      "stored_filename": "resource-status.json",
+      "filename_aliases": [
+        "resource-status.json"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "277e129e98259f80c46d48a1e4ade37b2cb079c3c933ce2c82522199cee0e3f9",
+      "size_bytes": 775,
+      "resource_path": "resources/277e129e98259f80/pages.yml",
+      "original_filename": "pages.yml",
+      "stored_filename": "pages.yml",
+      "filename_aliases": [
+        "pages.yml"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "b8c35df31e607202a7bf10cd342b27d1e5358a1f5fb0bcfadfd7f5a267e4a647",
+      "size_bytes": 278,
+      "resource_path": "resources/b8c35df31e607202/validate.yml",
+      "original_filename": "validate.yml",
+      "stored_filename": "validate.yml",
+      "filename_aliases": [
+        "validate.yml"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "21a793dc726308a49d1b76268d7b89c409275ab492318025de53a9ff268fa325",
+      "size_bytes": 36,
+      "resource_path": "resources/21a793dc726308a4/.gitignore",
+      "original_filename": ".gitignore",
+      "stored_filename": ".gitignore",
+      "filename_aliases": [
+        ".gitignore"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "5cfcf7eb9d3f5d7f8e492046812d52b8257641a3d29fb05772f7b74860212a1d",
+      "size_bytes": 2450,
+      "resource_path": "resources/5cfcf7eb9d3f5d7f/README.md",
+      "original_filename": "README.md",
+      "stored_filename": "README.md",
+      "filename_aliases": [
+        "README.md"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "202524a251cca68a09655da23501341f589df3e977dd5fa58442279915ba563d",
+      "size_bytes": 1502,
+      "resource_path": "resources/202524a251cca68a/validate.py",
+      "original_filename": "validate.py",
+      "stored_filename": "validate.py",
+      "filename_aliases": [
+        "validate.py"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "5b545c6bb02d241d08c9aac1bcaa997074d693b711bb60506a2076885394b1b0",
+      "size_bytes": 4521,
+      "resource_path": "resources/5b545c6bb02d241d/build_site.py",
+      "original_filename": "build_site.py",
+      "stored_filename": "build_site.py",
+      "filename_aliases": [
+        "build_site.py"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "1ee70ada9348c8a8700aaa1b8bf325d58266c9212f9acad78c9d3c2b79476234",
+      "size_bytes": 8998673,
+      "resource_path": "resources/1ee70ada9348c8a8/Myca Resource Guide.html",
+      "original_filename": "Myca Resource Guide.html",
+      "stored_filename": "Myca Resource Guide.html",
+      "filename_aliases": [
+        "Myca Resource Guide.html"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "6944a83ffc92225de7f2cca9c29263b462a0500295e8d23a41616700c0995c6e",
+      "size_bytes": 320,
+      "resource_path": "resources/6944a83ffc92225d/README.txt",
+      "original_filename": "README.txt",
+      "stored_filename": "README.txt",
+      "filename_aliases": [
+        "README.txt"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "ebe9f62b3debb6b97c394161d93c7ecdf6c4bf152d3cf573403f1ee9faeadba8",
+      "size_bytes": 6377,
+      "resource_path": "resources/ebe9f62b3debb6b9/Crop Provenance.json",
+      "original_filename": "Crop Provenance.json",
+      "stored_filename": "Crop Provenance.json",
+      "filename_aliases": [
+        "Crop Provenance.json"
+      ],
+      "classification": [
+        "reference-or-production; approval not implied"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "df14a3afc45c1ea17c246fe39f50e0aaebcb5384198e62215018a7cf42b43af2",
+      "size_bytes": 2848475,
+      "resource_path": "resources/df14a3afc45c1ea1/image-gen-3(2).png",
+      "original_filename": "image-gen-3(2).png",
+      "stored_filename": "image-gen-3(2).png",
+      "filename_aliases": [
+        "image-gen-3(2).png"
+      ],
+      "classification": [
+        "experimental design comparison"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "bc9c974716eaa62ee249903e39659c1c90425a2aebaa7443884bcfcdd9d5e83d",
+      "size_bytes": 2605591,
+      "resource_path": "resources/bc9c974716eaa62e/image-gen-2(2).png",
+      "original_filename": "image-gen-2(2).png",
+      "stored_filename": "image-gen-2(2).png",
+      "filename_aliases": [
+        "image-gen-2(2).png"
+      ],
+      "classification": [
+        "experimental design comparison"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "3d599c4530e9296738d371c7d065b034743b89ff40f7dc1dd026f49d4a7c9749",
+      "size_bytes": 2768665,
+      "resource_path": "resources/3d599c4530e92967/image-gen-1(2).png",
+      "original_filename": "image-gen-1(2).png",
+      "stored_filename": "image-gen-1(2).png",
+      "filename_aliases": [
+        "image-gen-1(2).png"
+      ],
+      "classification": [
+        "experimental design comparison"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "f6de8a772da53d672b5b92122ba43fce3eb869ad98dcd5488a39edc69feca54b",
+      "size_bytes": 2661903,
+      "resource_path": "resources/f6de8a772da53d67/image-gen-3(1).png",
+      "original_filename": "image-gen-3(1).png",
+      "stored_filename": "image-gen-3(1).png",
+      "filename_aliases": [
+        "image-gen-3(1).png"
+      ],
+      "classification": [
+        "experimental design comparison"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "3b2b02bfce6e30783e49c310acb465b8021f0d77d54d7413fe7be3859eb2164b",
+      "size_bytes": 2786858,
+      "resource_path": "resources/3b2b02bfce6e3078/image-gen-2(1).png",
+      "original_filename": "image-gen-2(1).png",
+      "stored_filename": "image-gen-2(1).png",
+      "filename_aliases": [
+        "image-gen-2(1).png"
+      ],
+      "classification": [
+        "experimental design comparison"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "bf6164e1d8a84e1c0cc9a13ad4e51919f47a1b627b0ed348bd7bf67d9a1493c2",
+      "size_bytes": 2616440,
+      "resource_path": "resources/bf6164e1d8a84e1c/image-gen-1(1).png",
+      "original_filename": "image-gen-1(1).png",
+      "stored_filename": "image-gen-1(1).png",
+      "filename_aliases": [
+        "image-gen-1(1).png"
+      ],
+      "classification": [
+        "experimental design comparison"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "1a009c5b8b1b5211e94a3138f3365ca8482ef4184892d51b8c4e12b23f182e5c",
+      "size_bytes": 2558411,
+      "resource_path": "resources/1a009c5b8b1b5211/image-gen-3.png",
+      "original_filename": "image-gen-3.png",
+      "stored_filename": "image-gen-3.png",
+      "filename_aliases": [
+        "image-gen-3.png"
+      ],
+      "classification": [
+        "experimental design comparison"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "d60424897d47f9b08142cfde56ef5cb953a23aabcd5c785e5a1222ad78aaf831",
+      "size_bytes": 2520915,
+      "resource_path": "resources/d60424897d47f9b0/image-gen-2.png",
+      "original_filename": "image-gen-2.png",
+      "stored_filename": "image-gen-2.png",
+      "filename_aliases": [
+        "image-gen-2.png"
+      ],
+      "classification": [
+        "experimental design comparison"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "50980d61d317297ccfc54a3f9dee3679df7cad2b04b1ffaccfbe687a18d81cb6",
+      "size_bytes": 2542905,
+      "resource_path": "resources/50980d61d317297c/image-gen-1.png",
+      "original_filename": "image-gen-1.png",
+      "stored_filename": "image-gen-1.png",
+      "filename_aliases": [
+        "image-gen-1.png"
+      ],
+      "classification": [
+        "experimental design comparison"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "3922032091eaaff0debae5e1cd56eef26f942ae0212bbc0a8f6e89f63d3bbbaf",
+      "size_bytes": 1512530,
+      "resource_path": "resources/3922032091eaaff0/canonical_portrait.png",
+      "original_filename": null,
+      "stored_filename": "canonical_portrait.png",
+      "filename_aliases": [
+        "canonical_portrait.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "1f22d01cec1ea369b35c1807369bfcd64980a1b3da1c0c46339da1b8e587d0cc",
+      "size_bytes": 5850527,
+      "resource_path": "resources/1f22d01cec1ea369/00_All_animations_GIF.gif",
+      "original_filename": null,
+      "stored_filename": "00_All_animations_GIF.gif",
+      "filename_aliases": [
+        "00_All_animations_GIF.gif"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "e57e07d7c9c633f5eb340f02e98c179f4d12fc24e14dd4977e6a6647b9e0c27d",
+      "size_bytes": 258262,
+      "resource_path": "resources/e57e07d7c9c633f5/01_Native_gaze_loop.gif",
+      "original_filename": null,
+      "stored_filename": "01_Native_gaze_loop.gif",
+      "filename_aliases": [
+        "01_Native_gaze_loop.gif"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "da9064b92c73ecab3b9b598ff853d161fe6f9687fddaf69cfa093a49fb203cd7",
+      "size_bytes": 304954,
+      "resource_path": "resources/da9064b92c73ecab/02_Motion_proof_stills.png",
+      "original_filename": null,
+      "stored_filename": "02_Motion_proof_stills.png",
+      "filename_aliases": [
+        "02_Motion_proof_stills.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "6e793dd4425d68090dafc08d22693cbb0766fc40a432fa09d174d04755ee3f8a",
+      "size_bytes": 3440292,
+      "resource_path": "resources/6e793dd4425d6809/03_Final_Myca_V2_sprite_sheet.png",
+      "original_filename": null,
+      "stored_filename": "03_Final_Myca_V2_sprite_sheet.png",
+      "filename_aliases": [
+        "03_Final_Myca_V2_sprite_sheet.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "8d7e89ec4634652f5139129cccaf12996dddae59f866dfa56f8504fd145a05fe",
+      "size_bytes": 288462,
+      "resource_path": "resources/8d7e89ec4634652f/05_Native_jump_transition.gif",
+      "original_filename": null,
+      "stored_filename": "05_Native_jump_transition.gif",
+      "filename_aliases": [
+        "05_Native_jump_transition.gif"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "c3e26b00f91fc546f54c8ecfa183f0f59f94b21e13b8080b79169c7d746f3e2b",
+      "size_bytes": 2187426,
+      "resource_path": "resources/c3e26b00f91fc546/07_Rendered_anime_master.png",
+      "original_filename": null,
+      "stored_filename": "07_Rendered_anime_master.png",
+      "filename_aliases": [
+        "07_Rendered_anime_master.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "3d7fcec3afa6cfa30cce5dcaa7447f5f10b07d2bcf277da5b525797435b080b5",
+      "size_bytes": 1996658,
+      "resource_path": "resources/3d7fcec3afa6cfa3/08_Natural_lighting_reference.png",
+      "original_filename": null,
+      "stored_filename": "08_Natural_lighting_reference.png",
+      "filename_aliases": [
+        "08_Natural_lighting_reference.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "b1352878c26274be645719aa6b39aab96b78cb94db6a25cbff9900d1dfbfa721",
+      "size_bytes": 10562,
+      "resource_path": "resources/b1352878c26274be/10_Production_brief.json",
+      "original_filename": null,
+      "stored_filename": "10_Production_brief.json",
+      "filename_aliases": [
+        "10_Production_brief.json"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "b976ef251f21925b7c9a1bffa65e278605fcabf25e1bf497088bdd4056641d81",
+      "size_bytes": 1493158,
+      "resource_path": "resources/b976ef251f21925b/11_Idle_animation_source.png",
+      "original_filename": null,
+      "stored_filename": "11_Idle_animation_source.png",
+      "filename_aliases": [
+        "11_Idle_animation_source.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "6ae01e3024b059e4b80b8d6205fa74810401afdecd16d0be0ef53262e346303a",
+      "size_bytes": 1396874,
+      "resource_path": "resources/6ae01e3024b059e4/12_Rightward_animation_source.png",
+      "original_filename": null,
+      "stored_filename": "12_Rightward_animation_source.png",
+      "filename_aliases": [
+        "12_Rightward_animation_source.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "0e8c2b8d206c26018b3a6ed8acce985dac7a30f4f5d5ad7243961c6e64cb4f31",
+      "size_bytes": 1681583,
+      "resource_path": "resources/0e8c2b8d206c2601/13_Wave_animation_source.png",
+      "original_filename": null,
+      "stored_filename": "13_Wave_animation_source.png",
+      "filename_aliases": [
+        "13_Wave_animation_source.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "b524a2bafd4d1ceb5ce18d591f56e960a8cd6d3580cb66d9cec8c4d2555abaca",
+      "size_bytes": 1598339,
+      "resource_path": "resources/b524a2bafd4d1ceb/14_Jump_animation_source.png",
+      "original_filename": null,
+      "stored_filename": "14_Jump_animation_source.png",
+      "filename_aliases": [
+        "14_Jump_animation_source.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "9e2c429e01e45b75be37350f68bd83cd723f1120af8745e7abb16ef4fb34dd18",
+      "size_bytes": 727,
+      "resource_path": "resources/9e2c429e01e45b75/15_Confirmed_production_choices.md",
+      "original_filename": null,
+      "stored_filename": "15_Confirmed_production_choices.md",
+      "filename_aliases": [
+        "15_Confirmed_production_choices.md"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "5a3baaa39c8ee0cadf0c7444a893b73d180842322fba99c93dca24c058b89eaf",
+      "size_bytes": 1392001,
+      "resource_path": "resources/5a3baaa39c8ee0ca/16_Leftward_animation_source.png",
+      "original_filename": null,
+      "stored_filename": "16_Leftward_animation_source.png",
+      "filename_aliases": [
+        "16_Leftward_animation_source.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "643bca9e02e8423fab2889c2caf7875d59145dd56d286056de44ecad28955203",
+      "size_bytes": 1494724,
+      "resource_path": "resources/643bca9e02e8423f/17_Failure_animation_source.png",
+      "original_filename": null,
+      "stored_filename": "17_Failure_animation_source.png",
+      "filename_aliases": [
+        "17_Failure_animation_source.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "e0d9dc8aefaf2bbe15e697cc2e9f74101cdfc9612c2e2150f002d5938730002c",
+      "size_bytes": 1601875,
+      "resource_path": "resources/e0d9dc8aefaf2bbe/18_Waiting_animation_source.png",
+      "original_filename": null,
+      "stored_filename": "18_Waiting_animation_source.png",
+      "filename_aliases": [
+        "18_Waiting_animation_source.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "919dad5a5888d38c1b204527d63174ce5ad699d69ac20c9343508fbe592ad778",
+      "size_bytes": 1620062,
+      "resource_path": "resources/919dad5a5888d38c/19_Working_animation_source.png",
+      "original_filename": null,
+      "stored_filename": "19_Working_animation_source.png",
+      "filename_aliases": [
+        "19_Working_animation_source.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "919d8a5b3ab822f88419340505cb5e032597d72b699fbdd868160f73145d0ba7",
+      "size_bytes": 1512928,
+      "resource_path": "resources/919d8a5b3ab822f8/20_Review_animation_source.png",
+      "original_filename": null,
+      "stored_filename": "20_Review_animation_source.png",
+      "filename_aliases": [
+        "20_Review_animation_source.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "b79495e7d2be0afdd12110b32844338551787b413a6bccf412e65860b5598e5d",
+      "size_bytes": 2645123,
+      "resource_path": "resources/b79495e7d2be0afd/21_Standard_animation_atlas.png",
+      "original_filename": null,
+      "stored_filename": "21_Standard_animation_atlas.png",
+      "filename_aliases": [
+        "21_Standard_animation_atlas.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "0147df94797b8b4eedfd8e27a717be8a9b6473446fd50b63b441b1c4170262a9",
+      "size_bytes": 717904,
+      "resource_path": "resources/0147df94797b8b4e/22_Standard_animation_contact_sheet.png",
+      "original_filename": null,
+      "stored_filename": "22_Standard_animation_contact_sheet.png",
+      "filename_aliases": [
+        "22_Standard_animation_contact_sheet.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "2ecc1bbace8b111b8dc731acda8ee6e9d8868003b7ab918f3fb3a7686d000f9c",
+      "size_bytes": 1563951,
+      "resource_path": "resources/2ecc1bbace8b111b/23_Cardinal_gaze_source.png",
+      "original_filename": null,
+      "stored_filename": "23_Cardinal_gaze_source.png",
+      "filename_aliases": [
+        "23_Cardinal_gaze_source.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "6cadd7a1c3df8df2c0994135d99c8e8fa5852ae1b6ee6caf41d4b0c77232e41b",
+      "size_bytes": 198916,
+      "resource_path": "resources/6cadd7a1c3df8df2/24_Approved_cardinal_reference.png",
+      "original_filename": null,
+      "stored_filename": "24_Approved_cardinal_reference.png",
+      "filename_aliases": [
+        "24_Approved_cardinal_reference.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "023abc916e1a904b8350d99ce29fbde229621b378364dff1133967b38e9f593c",
+      "size_bytes": 1387211,
+      "resource_path": "resources/023abc916e1a904b/25_Clockwise_gaze_source___first_half.png",
+      "original_filename": null,
+      "stored_filename": "25_Clockwise_gaze_source___first_half.png",
+      "filename_aliases": [
+        "25_Clockwise_gaze_source___first_half.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "e0aed05df5300aae6127c33192e53acd9a400c762a9df5023650650e566e0cd3",
+      "size_bytes": 1383524,
+      "resource_path": "resources/e0aed05df5300aae/26_Clockwise_gaze_source___second_half.png",
+      "original_filename": null,
+      "stored_filename": "26_Clockwise_gaze_source___second_half.png",
+      "filename_aliases": [
+        "26_Clockwise_gaze_source___second_half.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "d4ef2e380fe680824f8c39c82bef72f593eefc739ae21b0bf45021398ac0098f",
+      "size_bytes": 890849,
+      "resource_path": "resources/d4ef2e380fe68082/27_Final_animation_contact_sheet.png",
+      "original_filename": null,
+      "stored_filename": "27_Final_animation_contact_sheet.png",
+      "filename_aliases": [
+        "27_Final_animation_contact_sheet.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "66eecaf5715746e9946ab207e61b8fc38a1eb58c722b0fbb1e582d11e4057695",
+      "size_bytes": 1051239,
+      "resource_path": "resources/66eecaf5715746e9/28_Sixteen_gaze_directions.png",
+      "original_filename": null,
+      "stored_filename": "28_Sixteen_gaze_directions.png",
+      "filename_aliases": [
+        "28_Sixteen_gaze_directions.png"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "b1ca64ac36943bf11f44ac994890f6260feb0502f6b1ffb74c103193d6b54f05",
+      "size_bytes": 19168,
+      "resource_path": "resources/b1ca64ac36943bf1/29_Atlas_validation.json",
+      "original_filename": null,
+      "stored_filename": "29_Atlas_validation.json",
+      "filename_aliases": [
+        "29_Atlas_validation.json"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "25e7b526c32bf798240cbe1915273e2e29d1125648a295b2da2114ff0c87055b",
+      "size_bytes": 1438,
+      "resource_path": "resources/25e7b526c32bf798/30_Pet_quality_check.json",
+      "original_filename": null,
+      "stored_filename": "30_Pet_quality_check.json",
+      "filename_aliases": [
+        "30_Pet_quality_check.json"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "dfcf631535130501031c44219c21ee10d85e4078e5d28f4d3f9d5e792b16b0b6",
+      "size_bytes": 297,
+      "resource_path": "resources/dfcf631535130501/31_Pet_service_preflight.json",
+      "original_filename": null,
+      "stored_filename": "31_Pet_service_preflight.json",
+      "filename_aliases": [
+        "31_Pet_service_preflight.json"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "96e6d6577ca129ab975f5df6681ef56b28c317777b09b051f75b6424672b41ca",
+      "size_bytes": 5584,
+      "resource_path": "resources/96e6d6577ca129ab/32_Native_direction_review.json",
+      "original_filename": null,
+      "stored_filename": "32_Native_direction_review.json",
+      "filename_aliases": [
+        "32_Native_direction_review.json"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "a44a37c8a8b87b58731d1164e82e223843270f38835453a19957e2cffaf87c6c",
+      "size_bytes": 5613,
+      "resource_path": "resources/a44a37c8a8b87b58/33_Blind_direction_result.json",
+      "original_filename": null,
+      "stored_filename": "33_Blind_direction_result.json",
+      "filename_aliases": [
+        "33_Blind_direction_result.json"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "9564208e8eff91ab6f0d1ab2c46e96c58044fc4fa0895589eb37b8e3883c2a76",
+      "size_bytes": 4344,
+      "resource_path": "resources/9564208e8eff91ab/34_Independent_final_visual_review.json",
+      "original_filename": null,
+      "stored_filename": "34_Independent_final_visual_review.json",
+      "filename_aliases": [
+        "34_Independent_final_visual_review.json"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "4db594788f8ec07b8b96a8ed241bf2bac041284e1f324539d49b7fdcfcee0e1f",
+      "size_bytes": 3849,
+      "resource_path": "resources/4db594788f8ec07b/35_Gaze_continuity.json",
+      "original_filename": null,
+      "stored_filename": "35_Gaze_continuity.json",
+      "filename_aliases": [
+        "35_Gaze_continuity.json"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "41a3188355b44411d1b97dbd937d98f55db8ef87185d4ec5b6173b8a619ac6e8",
+      "size_bytes": 2109,
+      "resource_path": "resources/41a3188355b44411/36_Transparency_edge_cleanup.json",
+      "original_filename": null,
+      "stored_filename": "36_Transparency_edge_cleanup.json",
+      "filename_aliases": [
+        "36_Transparency_edge_cleanup.json"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "3670501e0c6415c3a286d6b96dca4a99e0fa7250daf75a9f7257fd2d67cdc360",
+      "size_bytes": 29751,
+      "resource_path": "resources/3670501e0c6415c3/37_Standard_frame_review.json",
+      "original_filename": null,
+      "stored_filename": "37_Standard_frame_review.json",
+      "filename_aliases": [
+        "37_Standard_frame_review.json"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    },
+    {
+      "sha256": "940af9d0141022ac5e7aa1ad5e6e5bcd10323c98e9066cf27fe128fa69993450",
+      "size_bytes": 925,
+      "resource_path": "resources/940af9d0141022ac/45_Creation_and_selection_verification.json",
+      "original_filename": null,
+      "stored_filename": "45_Creation_and_selection_verification.json",
+      "filename_aliases": [
+        "45_Creation_and_selection_verification.json"
+      ],
+      "classification": [
+        "pet-production"
+      ],
+      "original_bytes": true
+    }
+  ],
+  "references": [
+    {
+      "reference_id": "R01",
+      "status": "recovered",
+      "asset_sha256": [
+        "cb80a1b9ce6e823742ea1a4039fdea9b3c7ec0ee3a2a408c782aece45e513856"
+      ],
+      "design_registry": {
+        "reference_id": "R01",
+        "title": "R01 Original creator drawing",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Creator original; partially superseded.\n\n**Use for:** Original cap-and-bob relationship, pale-green body, pink skirt, dark waistband, lantern and three characteristic poses.\n\n**Do not inherit:** Original feet and lower-leg bands predate the explicitly selected pointed-leg revision. Do not reinstate them. The later written cap rule supersedes its higher crown.\n\n**Evidence / context:** Latest supplied original drawing; creator provided the starting design.\n\n**Original:** `18616.png` · 665 × 665 pixels.\n\n![R01 source preview](Sheets/R01%20Original%20creator%20drawing.png)\n\n[Open preserved source](Sheets/R01%20Original%20creator%20drawing.png)",
+        "status": "Creator original; partially superseded.",
+        "approved_scope": "Original cap-and-bob relationship, pale-green body, pink skirt, dark waistband, lantern and three characteristic poses.",
+        "known_defects": "Original feet and lower-leg bands predate the explicitly selected pointed-leg revision. Do not reinstate them. The later written cap rule supersedes its higher crown.",
+        "original": "`18616.png` · 665 × 665 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R02",
+      "status": "recovered",
+      "asset_sha256": [
+        "425254846b9934ac111c6ad9d5eb6b3dee6156b4e6803984bd95f6bfb4d41f70"
+      ],
+      "design_registry": {
+        "reference_id": "R02",
+        "title": "R02 First detailed interpretation",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Early interpretation.\n\n**Use for:** Early glassy-white eyes, cap gills and translucent fungal-material exploration.\n\n**Do not inherit:** Conventional feet, humanized face and visible surface anatomy are not a final specification.\n\n**Evidence / context:** Shown after the first successful detailed rendering; followed by the mouth-seam refinement.\n\n**Original:** `95497.png` · 1280 × 1536 pixels.\n\n![R02 source preview](../Archive/Visual%20Development/R02%20First%20detailed%20interpretation.png)\n\n[Open preserved source](../Archive/Visual%20Development/R02%20First%20detailed%20interpretation.png)",
+        "status": "Early interpretation.",
+        "approved_scope": "Early glassy-white eyes, cap gills and translucent fungal-material exploration.",
+        "known_defects": "Conventional feet, humanized face and visible surface anatomy are not a final specification.",
+        "original": "`95497.png` · 1280 × 1536 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R03",
+      "status": "recovered",
+      "asset_sha256": [
+        "6eccee3d8f4c9395fbbc691cf47e7db9522d9471b823864ff95a2acc6b405965"
+      ],
+      "design_registry": {
+        "reference_id": "R03",
+        "title": "R03 Early sheet with conventional feet",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Superseded variant.\n\n**Use for:** Early mouth/eye and cap-material studies.\n\n**Do not inherit:** Feet and lower-leg bands are superseded; some internal branching is strongly geometric.\n\n**Evidence / context:** Earlier supplied comparison image.\n\n**Original:** `95502.png` · 1536 × 1536 pixels.\n\n![R03 source preview](../Archive/Visual%20Development/R03%20Early%20sheet%20with%20conventional%20feet.png)\n\n[Open preserved source](../Archive/Visual%20Development/R03%20Early%20sheet%20with%20conventional%20feet.png)",
+        "status": "Superseded variant.",
+        "approved_scope": "Early mouth/eye and cap-material studies.",
+        "known_defects": "Feet and lower-leg bands are superseded; some internal branching is strongly geometric.",
+        "original": "`95502.png` · 1536 × 1536 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R04",
+      "status": "recovered",
+      "asset_sha256": [
+        "95ddf50620951cc9b2fe09448825bed48e467e6c6d6dbcdd8d04b021469c88d5"
+      ],
+      "design_registry": {
+        "reference_id": "R04",
+        "title": "R04 Early pointed-leg variant",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Development variant.\n\n**Use for:** Move from feet toward pointed lower limbs.\n\n**Do not inherit:** Contact growth is not resolved and the internal network is too node-like for the later direction.\n\n**Evidence / context:** Earlier supplied pointed-leg comparison.\n\n**Original:** `95503.png` · 1536 × 1536 pixels.\n\n![R04 source preview](../Archive/Visual%20Development/R04%20Early%20pointed-leg%20variant.png)\n\n[Open preserved source](../Archive/Visual%20Development/R04%20Early%20pointed-leg%20variant.png)",
+        "status": "Development variant.",
+        "approved_scope": "Move from feet toward pointed lower limbs.",
+        "known_defects": "Contact growth is not resolved and the internal network is too node-like for the later direction.",
+        "original": "`95503.png` · 1536 × 1536 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R05",
+      "status": "recovered",
+      "asset_sha256": [
+        "e0611779d6c176a6d7c246b375da3bd89811c0c098c4a065de580ce76fadfa17"
+      ],
+      "design_registry": {
+        "reference_id": "R05",
+        "title": "R05 First branching-contact exploration",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Mechanism exploration.\n\n**Use for:** Visible branching at ground contact rather than merely touching the ground.\n\n**Do not inherit:** Do not copy thicker radial strands, permanent root-like silhouettes or body proportions wholesale.\n\n**Evidence / context:** Generated after the request for mycelium spreading from each step.\n\n**Original:** `a_detailed_fantasy_concept_art_illustration_and_in.png` · 1145 × 1374 pixels.\n\n![R05 source preview](../Archive/Visual%20Development/R05%20First%20branching-contact%20exploration.png)\n\n[Open preserved source](../Archive/Visual%20Development/R05%20First%20branching-contact%20exploration.png)",
+        "status": "Mechanism exploration.",
+        "approved_scope": "Visible branching at ground contact rather than merely touching the ground.",
+        "known_defects": "Do not copy thicker radial strands, permanent root-like silhouettes or body proportions wholesale.",
+        "original": "`a_detailed_fantasy_concept_art_illustration_and_in.png` · 1145 × 1374 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R06",
+      "status": "recovered",
+      "asset_sha256": [
+        "8d53572b8ea858bd4e0564b0a49d4c2c69766571e57e08568dc678b65221938f"
+      ],
+      "design_registry": {
+        "reference_id": "R06",
+        "title": "R06 Long-lichen exploration",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Rejected hair direction.\n\n**Use for:** Development history of lichen as the hair material.\n\n**Do not inherit:** Long hanging growth and enlarged fronds were explicitly corrected. This is not a hair-length reference.\n\n**Evidence / context:** Followed by: keep the same hair shape, make the lichen smaller with darker accents.\n\n**Original:** `a_detailed_fantasy_concept_art_collage_character_s.png` · 1024 × 1536 pixels.\n\n![R06 source preview](../Archive/Visual%20Development/R06%20Long-lichen%20exploration.png)\n\n[Open preserved source](../Archive/Visual%20Development/R06%20Long-lichen%20exploration.png)",
+        "status": "Rejected hair direction.",
+        "approved_scope": "Development history of lichen as the hair material.",
+        "known_defects": "Long hanging growth and enlarged fronds were explicitly corrected. This is not a hair-length reference.",
+        "original": "`a_detailed_fantasy_concept_art_collage_character_s.png` · 1024 × 1536 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R07",
+      "status": "recovered",
+      "asset_sha256": [
+        "11c3a50db6c85e83fef9603f44b2bde32de8ac794c94af31b260c2559d21abc6"
+      ],
+      "design_registry": {
+        "reference_id": "R07",
+        "title": "R07 Compact-lichen revision",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Intermediate hair revision.\n\n**Use for:** Return to a compact dark bob with finer lichen detail.\n\n**Do not inherit:** Some areas still read as ordinary hair decorated with lichen; later texture and colour instructions are more specific.\n\n**Evidence / context:** Generated in response to the short-hair correction.\n\n**Original:** `a_vertical_cinematic_character_concept_illustrati.png` · 1024 × 1536 pixels.\n\n![R07 source preview](../Archive/Visual%20Development/R07%20Compact-lichen%20revision.png)\n\n[Open preserved source](../Archive/Visual%20Development/R07%20Compact-lichen%20revision.png)",
+        "status": "Intermediate hair revision.",
+        "approved_scope": "Return to a compact dark bob with finer lichen detail.",
+        "known_defects": "Some areas still read as ordinary hair decorated with lichen; later texture and colour instructions are more specific.",
+        "original": "`a_vertical_cinematic_character_concept_illustrati.png` · 1024 × 1536 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R08",
+      "status": "recovered",
+      "asset_sha256": [
+        "949308b49d083e6bf4a2da406d06b479f414ebaa886f56511e55e170d00170c0"
+      ],
+      "design_registry": {
+        "reference_id": "R08",
+        "title": "R08 Selected proportions and lichen",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Creator-selected features.\n\n**Use for:** Primary proportional reference for long narrow legs and the selected texture/feel of the compact lichen bob.\n\n**Do not inherit:** Do not copy absent contact growth, bright geometric hyphae, cap crown height or mislabeled detail panels. This approval was feature-specific.\n\n**Evidence / context:** Creator explicitly selected the leg proportions and hair texture, while preferring the earlier branching-contact behaviour.\n\n**Original:** `95509.png` · 1024 × 1536 pixels.\n\n![R08 source preview](Sheets/R08%20Selected%20proportions%20and%20lichen.png)\n\n[Open preserved source](Sheets/R08%20Selected%20proportions%20and%20lichen.png)",
+        "status": "Creator-selected features.",
+        "approved_scope": "Primary proportional reference for long narrow legs and the selected texture/feel of the compact lichen bob.",
+        "known_defects": "Do not copy absent contact growth, bright geometric hyphae, cap crown height or mislabeled detail panels. This approval was feature-specific.",
+        "original": "`95509.png` · 1024 × 1536 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R09",
+      "status": "recovered",
+      "asset_sha256": [
+        "6ee5cb563106f8c4986d0a9a3e481657a01042261e11fbf24bfa189240061fb8"
+      ],
+      "design_registry": {
+        "reference_id": "R09",
+        "title": "R09 Root-like contact failure",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Explicitly challenged result.\n\n**Use for:** Failure reference: the point and gripping network merge visually.\n\n**Do not inherit:** Do not adopt its root-like terminations or treat the captioned step sequence as proof the mechanism is correct.\n\n**Evidence / context:** Creator said the legs and hyphae sprouting by contact points were still incorrect.\n\n**Original:** `95511.png` · 1024 × 1536 pixels.\n\n![R09 source preview](../Archive/Visual%20Development/R09%20Root-like%20contact%20failure.png)\n\n[Open preserved source](../Archive/Visual%20Development/R09%20Root-like%20contact%20failure.png)",
+        "status": "Explicitly challenged result.",
+        "approved_scope": "Failure reference: the point and gripping network merge visually.",
+        "known_defects": "Do not adopt its root-like terminations or treat the captioned step sequence as proof the mechanism is correct.",
+        "original": "`95511.png` · 1024 × 1536 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R10",
+      "status": "recovered",
+      "asset_sha256": [
+        "29d686e0f758df86e6ca807fdd85d9f0dd3e11f491d58bfb7bf3999946d72506"
+      ],
+      "design_registry": {
+        "reference_id": "R10",
+        "title": "R10 Initial isolated locomotion study",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Partial mechanism success.\n\n**Use for:** Approach/touch panels begin separating the clean point from external hyphae.\n\n**Do not inherit:** Hero legs still suggest feet/heels; other panels have high-origin strands. Later geometry takes priority.\n\n**Evidence / context:** Creator: some top examples still looked like feet, but this was closer.\n\n**Original:** `a_detailed_fantasy_infographic_illustration_poster.png` · 1312 × 1199 pixels.\n\n![R10 source preview](../Archive/Visual%20Development/R10%20Initial%20isolated%20locomotion%20study.png)\n\n[Open preserved source](../Archive/Visual%20Development/R10%20Initial%20isolated%20locomotion%20study.png)",
+        "status": "Partial mechanism success.",
+        "approved_scope": "Approach/touch panels begin separating the clean point from external hyphae.",
+        "known_defects": "Hero legs still suggest feet/heels; other panels have high-origin strands. Later geometry takes priority.",
+        "original": "`a_detailed_fantasy_infographic_illustration_poster.png` · 1312 × 1199 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R11",
+      "status": "recovered",
+      "asset_sha256": [
+        "7cfe7a174d10eac684cd69d714b25f059258563ef99787ee8deaadd6193186b8"
+      ],
+      "design_registry": {
+        "reference_id": "R11",
+        "title": "R11 Continuous-point geometry study",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Creator-selected mechanism; proportion caveat.\n\n**Use for:** Continuous terminal taper and the separation between the intact point and lateral contact growth.\n\n**Do not inherit:** Creator requested thinner calves and the proportions of R08. Sprouting height and filament thickness must still be checked against the written rule.\n\n**Evidence / context:** Creator called the result nearly perfect, then requested thinner calves and the earlier proportions.\n\n**Original:** `a_detailed_atmospheric_infographic_style_illustr.png` · 1145 × 1374 pixels.\n\n![R11 source preview](Sheets/R11%20Continuous-point%20geometry%20study.png)\n\n[Open preserved source](Sheets/R11%20Continuous-point%20geometry%20study.png)",
+        "status": "Creator-selected mechanism; proportion caveat.",
+        "approved_scope": "Continuous terminal taper and the separation between the intact point and lateral contact growth.",
+        "known_defects": "Creator requested thinner calves and the proportions of R08. Sprouting height and filament thickness must still be checked against the written rule.",
+        "original": "`a_detailed_atmospheric_infographic_style_illustr.png` · 1145 × 1374 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R12",
+      "status": "recovered",
+      "asset_sha256": [
+        "b1f2362fef097715e9116c91feaa624764fd95efb45c4c94946ce52a93e72ea1"
+      ],
+      "design_registry": {
+        "reference_id": "R12",
+        "title": "R12 Thin-calf combination",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Requested combination attempt.\n\n**Use for:** Combines a long slim taper with contact studies and the established bob.\n\n**Do not inherit:** Bright nodes and angular internal branches were subsequently challenged. Cap shape is subject to the later written revision.\n\n**Evidence / context:** Generated after the request to thin the calves and combine proportions.\n\n**Original:** `a_detailed_cinematic_concept_art_character_sheet.png` · 1024 × 1536 pixels.\n\n![R12 source preview](Sheets/R12%20Thin-calf%20combination.png)\n\n[Open preserved source](Sheets/R12%20Thin-calf%20combination.png)",
+        "status": "Requested combination attempt.",
+        "approved_scope": "Combines a long slim taper with contact studies and the established bob.",
+        "known_defects": "Bright nodes and angular internal branches were subsequently challenged. Cap shape is subject to the later written revision.",
+        "original": "`a_detailed_cinematic_concept_art_character_sheet.png` · 1024 × 1536 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R13",
+      "status": "recovered",
+      "asset_sha256": [
+        "8bcbd0a7e818f7bb6f090ab00c60e299ba52ae0916271bf82d9c23241ec79c71"
+      ],
+      "design_registry": {
+        "reference_id": "R13",
+        "title": "R13 Reduced-constellation revision",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Revision attempt; not fully approved.\n\n**Use for:** Attempt to reduce decorative glowing-node treatment after the explicit hyphae correction.\n\n**Do not inherit:** Residual straight segments and bright junctions remain. Its captions are not evidence that all corrections succeeded.\n\n**Evidence / context:** Generated after: make the hyphae look less like constellations.\n\n**Original:** `a_detailed_character_design_art_sheet_illustration.png` · 1024 × 1536 pixels.\n\n![R13 source preview](Sheets/R13%20Reduced-constellation%20revision.png)\n\n[Open preserved source](Sheets/R13%20Reduced-constellation%20revision.png)",
+        "status": "Revision attempt; not fully approved.",
+        "approved_scope": "Attempt to reduce decorative glowing-node treatment after the explicit hyphae correction.",
+        "known_defects": "Residual straight segments and bright junctions remain. Its captions are not evidence that all corrections succeeded.",
+        "original": "`a_detailed_character_design_art_sheet_illustration.png` · 1024 × 1536 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R14",
+      "status": "recovered",
+      "asset_sha256": [
+        "1513f32987d1ca0da312443f416e5602fe5510d2dc8b50f6ef5262688f36cc25"
+      ],
+      "design_registry": {
+        "reference_id": "R14",
+        "title": "R14 Initial animation sheet",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Expression drift identified.\n\n**Use for:** Development layouts, pose range and first animation-sheet organisation.\n\n**Do not inherit:** Some expressions were rejected as off-model. A capless head study does not establish a detachable cap.\n\n**Evidence / context:** Creator said some expressions felt off.\n\n**Original:** `wide_clean_character_design_animation_sheet_illus.png` · 1536 × 1024 pixels.\n\n![R14 source preview](../Archive/Visual%20Development/R14%20Initial%20animation%20sheet.png)\n\n[Open preserved source](../Archive/Visual%20Development/R14%20Initial%20animation%20sheet.png)",
+        "status": "Expression drift identified.",
+        "approved_scope": "Development layouts, pose range and first animation-sheet organisation.",
+        "known_defects": "Some expressions were rejected as off-model. A capless head study does not establish a detachable cap.",
+        "original": "`wide_clean_character_design_animation_sheet_illus.png` · 1536 × 1024 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R15",
+      "status": "recovered",
+      "asset_sha256": [
+        "fd32f07783a8aaae8bb31d45e21362552a9800506661c1a496d9ec7bd773b145"
+      ],
+      "design_registry": {
+        "reference_id": "R15",
+        "title": "R15 Restrained-acting revision",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Acting revision attempt.\n\n**Use for:** Head angle and hand gestures used to support expression.\n\n**Do not inherit:** Still includes conspicuous nodes and some humanized mouth details. Not a blanket-approved acting or anatomy sheet.\n\n**Evidence / context:** Generated after the restrained-expression rules were proposed.\n\n**Original:** `a_detailed_clean_studio_style_character_sheet_il.png` · 1536 × 1024 pixels.\n\n![R15 source preview](../Archive/Visual%20Development/R15%20Restrained-acting%20revision.png)\n\n[Open preserved source](../Archive/Visual%20Development/R15%20Restrained-acting%20revision.png)",
+        "status": "Acting revision attempt.",
+        "approved_scope": "Head angle and hand gestures used to support expression.",
+        "known_defects": "Still includes conspicuous nodes and some humanized mouth details. Not a blanket-approved acting or anatomy sheet.",
+        "original": "`a_detailed_clean_studio_style_character_sheet_il.png` · 1536 × 1024 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R16",
+      "status": "recovered",
+      "asset_sha256": [
+        "ecb22672eae659f50159388fdd76df60e17df427070ea768bce20430f94593bd"
+      ],
+      "design_registry": {
+        "reference_id": "R16",
+        "title": "R16 Expression-only study",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Working acting reference.\n\n**Use for:** Head orientation, hand placement, quiet attention and restrained expression as a direction.\n\n**Do not inherit:** Some smiles and the speaking-mouth inset exceed the tiny seam. Approve individual poses, not the whole sheet.\n\n**Evidence / context:** Generated for the request for an expression-only sheet; no explicit whole-sheet approval followed.\n\n**Original:** `wide_ornate_character_expression_sheet_concept.png` · 1536 × 1024 pixels.\n\n![R16 source preview](Sheets/R16%20Expression-only%20study.png)\n\n[Open preserved source](Sheets/R16%20Expression-only%20study.png)",
+        "status": "Working acting reference.",
+        "approved_scope": "Head orientation, hand placement, quiet attention and restrained expression as a direction.",
+        "known_defects": "Some smiles and the speaking-mouth inset exceed the tiny seam. Approve individual poses, not the whole sheet.",
+        "original": "`wide_ornate_character_expression_sheet_concept.png` · 1536 × 1024 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R17",
+      "status": "recovered",
+      "asset_sha256": [
+        "0f487c7d03d6ff58f5600dd244a4741e0ceda413232d3f3b2c32b2a0e74a5b7c"
+      ],
+      "design_registry": {
+        "reference_id": "R17",
+        "title": "Locomotion Reference - Step Cycle",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Working sequence reference.\n\n**Use for:** Six-stage organisation, isolated lower-leg studies and substrate examples.\n\n**Do not inherit:** The release image retains hanging filaments; the final airborne state must instead be clean. Some webs are too thick or radial. Crops do not fix these defects.\n\n**Evidence / context:** Existing Myca Library asset and latest supplied image; visually identical to the earlier generated guide file.\n\n**Original:** `Locomotion Reference - Step Cycle.png` · 1224 × 1285 pixels.\n\n![R17 source preview](Sheets/Locomotion%20Reference%20-%20Step%20Cycle.png)\n\n[Open preserved source](Sheets/Locomotion%20Reference%20-%20Step%20Cycle.png)",
+        "status": "Working sequence reference.",
+        "approved_scope": "Six-stage organisation, isolated lower-leg studies and substrate examples.",
+        "known_defects": "The release image retains hanging filaments; the final airborne state must instead be clean. Some webs are too thick or radial. Crops do not fix these defects.",
+        "original": "`Locomotion Reference - Step Cycle.png` · 1224 × 1285 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R18",
+      "status": "recovered",
+      "asset_sha256": [
+        "669aac8698cb30f51de4e9be10bc7e5c33a687046827feed291d23de16880d19"
+      ],
+      "design_registry": {
+        "reference_id": "R18",
+        "title": "Locomotion Reference - Movement and Surfaces",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Working environment reference.\n\n**Use for:** Terrain-following branches and examples of locomotion used in poses.\n\n**Do not inherit:** Do not copy bulkier legs, root-like contact fans, persistent release strands or a changed cap shape.\n\n**Evidence / context:** Existing Myca Library asset and latest supplied image; visually identical to the earlier generated environment guide.\n\n**Original:** `Locomotion Reference - Movement and Surfaces.png` · 1223 × 1286 pixels.\n\n![R18 source preview](Sheets/Locomotion%20Reference%20-%20Movement%20and%20Surfaces.png)\n\n[Open preserved source](Sheets/Locomotion%20Reference%20-%20Movement%20and%20Surfaces.png)",
+        "status": "Working environment reference.",
+        "approved_scope": "Terrain-following branches and examples of locomotion used in poses.",
+        "known_defects": "Do not copy bulkier legs, root-like contact fans, persistent release strands or a changed cap shape.",
+        "original": "`Locomotion Reference - Movement and Surfaces.png` · 1223 × 1286 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R19",
+      "status": "recovered",
+      "asset_sha256": [
+        "955b79c25e720e15e62b7565dad3fac9e51c33f1082262aee98e4f6d122bc16f"
+      ],
+      "design_registry": {
+        "reference_id": "R19",
+        "title": "R19 Rejected-cap turnaround",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Cap drift explicitly identified.\n\n**Use for:** Failure reference for inconsistent head/body rotations and cap geometry.\n\n**Do not inherit:** The taller conical cap and changed patch density were challenged. Do not promote this sheet as a canonical turnaround.\n\n**Evidence / context:** Creator warned the mushroom design was getting off track, then requested a standalone fly-agaric description.\n\n**Original:** `a_clean_detailed_character_design_sheet_illustrat.png` · 1536 × 1024 pixels.\n\n![R19 source preview](../Archive/Visual%20Development/R19%20Rejected-cap%20turnaround.png)\n\n[Open preserved source](../Archive/Visual%20Development/R19%20Rejected-cap%20turnaround.png)",
+        "status": "Cap drift explicitly identified.",
+        "approved_scope": "Failure reference for inconsistent head/body rotations and cap geometry.",
+        "known_defects": "The taller conical cap and changed patch density were challenged. Do not promote this sheet as a canonical turnaround.",
+        "original": "`a_clean_detailed_character_design_sheet_illustrat.png` · 1536 × 1024 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R20",
+      "status": "recovered",
+      "asset_sha256": [
+        "39f8ae8b43bec9b62927192a7143e50fa321cba036c4325d380b0fce286082e6"
+      ],
+      "design_registry": {
+        "reference_id": "R20",
+        "title": "R20 Supplied material and pose interpretation",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Supporting image; no blanket approval.\n\n**Use for:** Further surface-filament, hand, material and pose examples supplied for consolidation.\n\n**Do not inherit:** Ordinary hair-like locks, humanized face/surface anatomy and calf volume vary from the settled rules.\n\n**Evidence / context:** Newly supplied with the request to consolidate the full resource.\n\n**Original:** `95513.png` · 1024 × 1536 pixels.\n\n![R20 source preview](Sheets/R20%20Supplied%20material%20and%20pose%20interpretation.png)\n\n[Open preserved source](Sheets/R20%20Supplied%20material%20and%20pose%20interpretation.png)",
+        "status": "Supporting image; no blanket approval.",
+        "approved_scope": "Further surface-filament, hand, material and pose examples supplied for consolidation.",
+        "known_defects": "Ordinary hair-like locks, humanized face/surface anatomy and calf volume vary from the settled rules.",
+        "original": "`95513.png` · 1024 × 1536 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R21",
+      "status": "recovered",
+      "asset_sha256": [
+        "a79fb81ba6e2e8e6824103cbd05c408e3f389de31c5bb7ab976e89004a6ae5f6"
+      ],
+      "design_registry": {
+        "reference_id": "R21",
+        "title": "R21 Supplied thin-calf sheet variant",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Supplied variant of R12 composition.\n\n**Use for:** Another available copy of the thin-calf combination and the long taper.\n\n**Do not inherit:** Retains constellation-like junctions and earlier cap shape. Separate supplied file, not a separate approval.\n\n**Evidence / context:** Latest supplied image; visually corresponds to the R12 composition but has different bytes.\n\n**Original:** `95514.png` · 1024 × 1536 pixels.\n\n![R21 source preview](Sheets/R21%20Supplied%20thin-calf%20sheet%20variant.png)\n\n[Open preserved source](Sheets/R21%20Supplied%20thin-calf%20sheet%20variant.png)",
+        "status": "Supplied variant of R12 composition.",
+        "approved_scope": "Another available copy of the thin-calf combination and the long taper.",
+        "known_defects": "Retains constellation-like junctions and earlier cap shape. Separate supplied file, not a separate approval.",
+        "original": "`95514.png` · 1024 × 1536 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R22",
+      "status": "recovered",
+      "asset_sha256": [
+        "7679ef51377f15aea5aad63cca5f6ed22b5969c7461aaaedf543a7c08911f673"
+      ],
+      "design_registry": {
+        "reference_id": "R22",
+        "title": "R22 Supplied point-geometry sheet variant",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Supplied variant of R11 composition.\n\n**Use for:** Continuous-point anatomy and contact sequence in the supplied copy.\n\n**Do not inherit:** Calf thinning and lower contact-zone refinements still apply. Separate supplied file, not a separate approval.\n\n**Evidence / context:** Latest supplied image; visually corresponds to R11 but has different bytes and dimensions.\n\n**Original:** `95515.png` · 1280 × 1536 pixels.\n\n![R22 source preview](Sheets/R22%20Supplied%20point-geometry%20sheet%20variant.png)\n\n[Open preserved source](Sheets/R22%20Supplied%20point-geometry%20sheet%20variant.png)",
+        "status": "Supplied variant of R11 composition.",
+        "approved_scope": "Continuous-point anatomy and contact sequence in the supplied copy.",
+        "known_defects": "Calf thinning and lower contact-zone refinements still apply. Separate supplied file, not a separate approval.",
+        "original": "`95515.png` · 1280 × 1536 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R23",
+      "status": "recovered",
+      "asset_sha256": [
+        "3fb62513c3e964eac25ed7aa5092e2abf462d44d952b194853831c13b02a13ae"
+      ],
+      "design_registry": {
+        "reference_id": "R23",
+        "title": "R23 Supplied alternate design sheet",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Supporting image; unresolved drift.\n\n**Use for:** Additional gill, hand, surface and turnaround layout examples.\n\n**Do not inherit:** The joyful expression opens into a conventional smile; some leg and cap shapes differ. Do not inherit these as changes to canon.\n\n**Evidence / context:** Newly supplied with the request to consolidate the full resource.\n\n**Original:** `95516.png` · 1536 × 1024 pixels.\n\n![R23 source preview](Sheets/R23%20Supplied%20alternate%20design%20sheet.png)\n\n[Open preserved source](Sheets/R23%20Supplied%20alternate%20design%20sheet.png)",
+        "status": "Supporting image; unresolved drift.",
+        "approved_scope": "Additional gill, hand, surface and turnaround layout examples.",
+        "known_defects": "The joyful expression opens into a conventional smile; some leg and cap shapes differ. Do not inherit these as changes to canon.",
+        "original": "`95516.png` · 1536 × 1024 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R24",
+      "status": "missing_or_unmapped",
+      "asset_sha256": [],
+      "design_registry": {
+        "reference_id": "R24",
+        "title": "Gentle Presence",
+        "status": "Reserved in earlier downloadable update; no exact original bytes mapped by this read",
+        "approved_scope": "Style/pose exploration only",
+        "source_message": "[private source retained in owner archive]"
+      }
+    },
+    {
+      "reference_id": "R25",
+      "status": "missing_or_unmapped",
+      "asset_sha256": [],
+      "design_registry": {
+        "reference_id": "R25",
+        "title": "Gentle Forest Presence",
+        "status": "Reserved in earlier downloadable update; no exact original bytes mapped by this read",
+        "approved_scope": "Style/pose exploration only",
+        "source_message": "[private source retained in owner archive]"
+      }
+    },
+    {
+      "reference_id": "R26",
+      "status": "missing_or_unmapped",
+      "asset_sha256": [],
+      "design_registry": {
+        "reference_id": "R26",
+        "title": "Woodland Mushroom Character Sheet",
+        "status": "Reserved in earlier downloadable update; no exact original bytes mapped by this read",
+        "approved_scope": "Style/pose exploration only",
+        "source_message": "[private source retained in owner archive]"
+      }
+    },
+    {
+      "reference_id": "R27",
+      "status": "recovered",
+      "asset_sha256": [
+        "37d2819b08432f251895545feecea505d6d7bd1e95c60ee6a48316e2e03392a0"
+      ],
+      "design_registry": {
+        "reference_id": "R27",
+        "title": "Top Level Reference Sheet",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Creator-praised overview; subsequent tissue-depth correction applies.\n\n**Use for:** Overview organisation, feature coverage and the visual direction the creator praised. Retain only individually suitable details.\n\n**Do not inherit:** The subsequent request specifically challenges the painted-on internal network. Do not inherit calf bulk, a high cap crown, additional human-specific surface detail, lip volume or persistent release strands. General praise is not a geometry/material approval of every panel.\n\n**Evidence / context:** Generated as the top-level resource image. The creator praised the result, then requested more depth beneath the tissue. Reserved ID retained from the earlier downloadable resource update.\n\n**Original:** `myca_fantasy_mushroom_character_reference_sheet.png` · 1122 × 1402 pixels.\n\n[Open preserved source for audit](../References/Sheets/R27%20Top%20Level%20Reference%20Sheet.png)",
+        "status": "Creator-praised overview; subsequent tissue-depth correction applies.",
+        "approved_scope": "Overview organisation, feature coverage and the visual direction the creator praised. Retain only individually suitable details.",
+        "known_defects": "The subsequent request specifically challenges the painted-on internal network. Do not inherit calf bulk, a high cap crown, additional human-specific surface detail, lip volume or persistent release strands. General praise is not a geometry/material approval of every panel.",
+        "original": "`myca_fantasy_mushroom_character_reference_sheet.png` · 1122 × 1402 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R28",
+      "status": "recovered",
+      "asset_sha256": [
+        "48c1a8cf4d3601ae2cd6aeb4ba0059c778bf0061489ed65927ada0373638f035"
+      ],
+      "design_registry": {
+        "reference_id": "R28",
+        "title": "Deep-Hyphae Reference Sheet",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Subsurface-depth revision attempt; ranked overview candidate, not approved final anatomy.\n\n**Use for:** Consolidated overview coverage, glassy eye detail, gill structure, and comparison of the tissue-depth attempt against the written brief.\n\n**Do not inherit:** The title does not establish successful subsurface depth. The network remains too uniformly legible in several areas; calf volume, cap/patch continuity, lip-like seam edges, human-specific surface details and attached release strands require correction.\n\n**Evidence / context:** Generated after the creator asked for hyphae to look underneath layers rather than painted on. No explicit feature-by-feature approval of that correction followed. Reserved ID retained from the earlier downloadable update.\n\n**Original:** `myca_fungal_character_reference_sheet.png` · 1165 × 1350 pixels.\n\n[Open preserved source for audit](../References/Sheets/R28%20Deep-Hyphae%20Reference%20Sheet.png)",
+        "status": "Subsurface-depth revision attempt; ranked overview candidate, not approved final anatomy.",
+        "approved_scope": "Consolidated overview coverage, glassy eye detail, gill structure, and comparison of the tissue-depth attempt against the written brief.",
+        "known_defects": "The title does not establish successful subsurface depth. The network remains too uniformly legible in several areas; calf volume, cap/patch continuity, lip-like seam edges, human-specific surface details and attached release strands require correction.",
+        "original": "`myca_fungal_character_reference_sheet.png` · 1165 × 1350 pixels.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R29",
+      "status": "recovered",
+      "asset_sha256": [
+        "8e1aa0b802c67d8e2a3b8a2b4f739e8a0e75a6e18baddb09a70f968867555581"
+      ],
+      "design_registry": {
+        "reference_id": "R29",
+        "title": "Rendered three-pose sheet",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Creator-supplied supporting style/pose reference; no blanket design approval.\n\n**Use for:** A rendered treatment of the lantern-and-raised-knee pose, standing pointing pose and seated backward glance. Use for composition, gestures and an optional luminous/wet material presentation.\n\n**Do not inherit:** The visible lower-leg bands, prominent pointed ears, longer hanging hair details, bright angular/node-like hyphae and water droplets are not newly approved design features. This image does not establish subsurface filament depth, a final cap profile or default translucency for the skirt.\n\n**Evidence / context:** Supplied together in the conversation with the request: \"Can u add these to the folders as well\". Stored unchanged; no new image generation or retouching.\n\n**Original:** `95625.png` · 1536 × 1536 pixels. **Added:** 9 October 2026.\n\n![R29 source preview](Sheets/R29%20Rendered%20three-pose%20sheet.png)\n\n[Open preserved source](Sheets/R29%20Rendered%20three-pose%20sheet.png)",
+        "status": "Creator-supplied supporting style/pose reference; no blanket design approval.",
+        "approved_scope": "A rendered treatment of the lantern-and-raised-knee pose, standing pointing pose and seated backward glance. Use for composition, gestures and an optional luminous/wet material presentation.",
+        "known_defects": "The visible lower-leg bands, prominent pointed ears, longer hanging hair details, bright angular/node-like hyphae and water droplets are not newly approved design features. This image does not establish subsurface filament depth, a final cap profile or default translucency for the skirt.",
+        "original": "`95625.png` · 1536 × 1536 pixels. **Added:** 9 October 2026.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R30",
+      "status": "recovered",
+      "asset_sha256": [
+        "5817677dd27adfcaa164217188516d54da128d1b8ddc42b3e1e764199e752bfd"
+      ],
+      "design_registry": {
+        "reference_id": "R30",
+        "title": "Soft-shaded three-pose sheet",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Creator-supplied supporting style/pose reference; no blanket design approval.\n\n**Use for:** A softer shaded interpretation of the same three poses, with quieter surface detail and a compact bob. Useful for comparing pose readability and broad colour masses without a detailed forest background.\n\n**Do not inherit:** Simplified lichen, faint internal structure and absent contact-growth detail are presentation choices, not removals from Myca's design. Use the written cap, calf and clean-point rules rather than treating this page as a measured model or completed locomotion study.\n\n**Evidence / context:** Supplied together in the conversation with the request: \"Can u add these to the folders as well\". Stored unchanged; no new image generation or retouching.\n\n**Original:** `95624.png` · 1536 × 1536 pixels. **Added:** 9 October 2026.\n\n![R30 source preview](Sheets/R30%20Soft-shaded%20three-pose%20sheet.png)\n\n[Open preserved source](Sheets/R30%20Soft-shaded%20three-pose%20sheet.png)",
+        "status": "Creator-supplied supporting style/pose reference; no blanket design approval.",
+        "approved_scope": "A softer shaded interpretation of the same three poses, with quieter surface detail and a compact bob. Useful for comparing pose readability and broad colour masses without a detailed forest background.",
+        "known_defects": "Simplified lichen, faint internal structure and absent contact-growth detail are presentation choices, not removals from Myca's design. Use the written cap, calf and clean-point rules rather than treating this page as a measured model or completed locomotion study.",
+        "original": "`95624.png` · 1536 × 1536 pixels. **Added:** 9 October 2026.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R31",
+      "status": "recovered",
+      "asset_sha256": [
+        "e870bdc66294accf6987a686607a74acbcffd601514176f1785951f56bdd7c72"
+      ],
+      "design_registry": {
+        "reference_id": "R31",
+        "title": "Flat-colour three-pose sheet",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Creator-supplied supporting style/pose reference; no blanket design approval.\n\n**Use for:** A clean line-and-flat-colour interpretation of the lantern, pointing and seated poses. Useful for silhouette, gesture, large colour areas and comparison with the original three-pose composition.\n\n**Do not inherit:** The omission of visible internal hyphae, detailed lichen, glassy material response and contact filaments is a simplification, not a canon change. Do not substitute its proportions, cap crown or pointed-leg geometry for the established feature-specific references.\n\n**Evidence / context:** Supplied together in the conversation with the request: \"Can u add these to the folders as well\". Stored unchanged; no new image generation or retouching.\n\n**Original:** `95623.png` · 1536 × 1536 pixels. **Added:** 9 October 2026.\n\n![R31 source preview](Sheets/R31%20Flat-colour%20three-pose%20sheet.png)\n\n[Open preserved source](Sheets/R31%20Flat-colour%20three-pose%20sheet.png)",
+        "status": "Creator-supplied supporting style/pose reference; no blanket design approval.",
+        "approved_scope": "A clean line-and-flat-colour interpretation of the lantern, pointing and seated poses. Useful for silhouette, gesture, large colour areas and comparison with the original three-pose composition.",
+        "known_defects": "The omission of visible internal hyphae, detailed lichen, glassy material response and contact filaments is a simplification, not a canon change. Do not substitute its proportions, cap crown or pointed-leg geometry for the established feature-specific references.",
+        "original": "`95623.png` · 1536 × 1536 pixels. **Added:** 9 October 2026.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R32",
+      "status": "recovered",
+      "asset_sha256": [
+        "ff3e9f68753d440ede3d4cc7cb6e14985f5f673a11350bf611b9919bac1e663e"
+      ],
+      "design_registry": {
+        "reference_id": "R32",
+        "title": "Gill-frill, veil-streamer and spore-lace explorations",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Experimental candidate sheet.\n\n**Use for:** The distinct structural ideas of (1) radially pleated gill-frill membrane, (2) long open veil-streamer ribbons, and (3) fenestrated spore-lace membrane.\n\n**Do not inherit:** Generated captions, exact pore placement, decorative spore glow, cap/face drift, or any accidental textile-like fastening. The three concepts remain separate candidates; do not average them together.\n\n**Evidence / context:** Generated after the creator asked for three additional membrane styles that did not resemble the already explored petal, single-sheet or vascular variants.\n\n**Original:** `myca_fungal_membrane_explorations.png` · 1122 × 1402 pixels. Added as preserved experimental reference on 10 October 2026.\n\n![R32 source preview](Sheets/R32%20Gill-frill%20veil-streamer%20spore-lace%20explorations.png)\n\n[Open preserved source](Sheets/R32%20Gill-frill%20veil-streamer%20spore-lace%20explorations.png)",
+        "status": "Experimental candidate sheet.",
+        "approved_scope": "The distinct structural ideas of (1) radially pleated gill-frill membrane, (2) long open veil-streamer ribbons, and (3) fenestrated spore-lace membrane.",
+        "known_defects": "Generated captions, exact pore placement, decorative spore glow, cap/face drift, or any accidental textile-like fastening. The three concepts remain separate candidates; do not average them together.",
+        "original": "`myca_fungal_membrane_explorations.png` · 1122 × 1402 pixels. Added as preserved experimental reference on 10 October 2026.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R33",
+      "status": "recovered",
+      "asset_sha256": [
+        "e2311590a403cacebb68d8e04b33d8aa7490497e5b9742736812e126c66f8449"
+      ],
+      "design_registry": {
+        "reference_id": "R33",
+        "title": "Shelf-fungus membrane exploration",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Experimental candidate sheet.\n\n**Use for:** Layered bracket/shelf architecture, scalloped tier edges and a more substantial semi-rigid fungal skirt replacement.\n\n**Do not inherit:** Exact number of shelves, generated pores/gills, incidental contact web, cap/face/body drift or any human-specific anatomy. Shelf-fungus layering is the tested feature.\n\n**Evidence / context:** Generated after the creator explicitly asked to explore a design resembling shelf fungus.\n\n**Original:** `myca_fungal_being_concept_sheet.png` · 1122 × 1402 pixels. Added as preserved experimental reference on 10 October 2026.\n\n![R33 source preview](Sheets/R33%20Shelf-fungus%20membrane%20exploration.png)\n\n[Open preserved source](Sheets/R33%20Shelf-fungus%20membrane%20exploration.png)",
+        "status": "Experimental candidate sheet.",
+        "approved_scope": "Layered bracket/shelf architecture, scalloped tier edges and a more substantial semi-rigid fungal skirt replacement.",
+        "known_defects": "Exact number of shelves, generated pores/gills, incidental contact web, cap/face/body drift or any human-specific anatomy. Shelf-fungus layering is the tested feature.",
+        "original": "`myca_fungal_being_concept_sheet.png` · 1122 × 1402 pixels. Added as preserved experimental reference on 10 October 2026.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "R34",
+      "status": "recovered",
+      "asset_sha256": [
+        "ad0f58813af6342c16d3ab5e9e0b74476f2f827514d601cbef8d328ff06c61b5"
+      ],
+      "design_registry": {
+        "reference_id": "R34",
+        "title": "Four additional membrane candidates summary",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Status:** Experimental comparison sheet.\n\n**Use for:** Side-by-side visual distinction between gill-frill, veil-streamer, spore-lace and shelf-fungus membrane candidates.\n\n**Do not inherit:** Generated explanatory text as authority, exact decorative details, garment-like seams, cap/body drift or any feature outside the four membrane architectures. Use R32/R33 plus the written module when precise construction matters.\n\n**Evidence / context:** Generated after the creator asked to add all four as additional skirt-replacement candidates.\n\n**Original:** `myca_fungal_membrane_explorations.png` · 1122 × 1402 pixels. Added as preserved experimental comparison on 10 October 2026.\n\n![R34 source preview](Sheets/R34%20Additional%20membrane%20candidates%20summary.png)\n\n[Open preserved source](Sheets/R34%20Additional%20membrane%20candidates%20summary.png)",
+        "status": "Experimental comparison sheet.",
+        "approved_scope": "Side-by-side visual distinction between gill-frill, veil-streamer, spore-lace and shelf-fungus membrane candidates.",
+        "known_defects": "Generated explanatory text as authority, exact decorative details, garment-like seams, cap/body drift or any feature outside the four membrane architectures. Use R32/R33 plus the written module when precise construction matters.",
+        "original": "`myca_fungal_membrane_explorations.png` · 1122 × 1402 pixels. Added as preserved experimental comparison on 10 October 2026.",
+        "crop_parent": null,
+        "crop_scope": null
+      }
+    },
+    {
+      "reference_id": "C01",
+      "status": "recovered",
+      "asset_sha256": [
+        "bcc991610b33830ec41a6a6c9f52402240d9481bebab44116fd75ae7cea41b5b"
+      ],
+      "design_registry": {
+        "reference_id": "C01",
+        "title": "Selected leg proportions",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Parent:** R08. **Crop:** `(370, 75, 655, 929)`. **Size:** 285 × 854 pixels.\n\n**Scope and caveat:** Leg length, reduced lower-leg width and continuous pointed silhouette only. The earlier cap and filament treatment are not approved by this crop.\n\n![C01 Selected leg proportions](Details/C01%20Selected%20leg%20proportions.png)\n\n[Open exact crop](Details/C01%20Selected%20leg%20proportions.png)",
+        "status": null,
+        "approved_scope": null,
+        "known_defects": null,
+        "original": null,
+        "crop_parent": "R08. **Crop:** `(370, 75, 655, 929)`. **Size:** 285 × 854 pixels.",
+        "crop_scope": "Leg length, reduced lower-leg width and continuous pointed silhouette only. The earlier cap and filament treatment are not approved by this crop."
+      }
+    },
+    {
+      "reference_id": "C02",
+      "status": "recovered",
+      "asset_sha256": [
+        "4d2634bc28800e0f2e54fb810f84b3f3eed8eeafa59bc8a32a1961d9a98550c5"
+      ],
+      "design_registry": {
+        "reference_id": "C02",
+        "title": "Selected lichen texture",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Parent:** R08. **Crop:** `(651, 8, 1017, 340)`. **Size:** 366 × 332 pixels.\n\n**Scope and caveat:** Compact bob and small lichen structure. Ignore bright facial nodes and do not infer new facial anatomy.\n\n![C02 Selected lichen texture](Details/C02%20Selected%20lichen%20texture.png)\n\n[Open exact crop](Details/C02%20Selected%20lichen%20texture.png)",
+        "status": null,
+        "approved_scope": null,
+        "known_defects": null,
+        "original": null,
+        "crop_parent": "R08. **Crop:** `(651, 8, 1017, 340)`. **Size:** 366 × 332 pixels.",
+        "crop_scope": "Compact bob and small lichen structure. Ignore bright facial nodes and do not infer new facial anatomy."
+      }
+    },
+    {
+      "reference_id": "C03",
+      "status": "recovered",
+      "asset_sha256": [
+        "5db3d65068a5f26f4b6825a37a0010b76d3228f4540100bc8a36714894bbf029"
+      ],
+      "design_registry": {
+        "reference_id": "C03",
+        "title": "Uninterrupted terminal geometry",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Parent:** R11. **Crop:** `(575, 270, 663, 683)`. **Size:** 88 × 413 pixels.\n\n**Scope and caveat:** One clean lower-leg taper. This is a geometry detail, not a full-body proportion guide.\n\n![C03 Uninterrupted terminal geometry](Details/C03%20Uninterrupted%20terminal%20geometry.png)\n\n[Open exact crop](Details/C03%20Uninterrupted%20terminal%20geometry.png)",
+        "status": null,
+        "approved_scope": null,
+        "known_defects": null,
+        "original": null,
+        "crop_parent": "R11. **Crop:** `(575, 270, 663, 683)`. **Size:** 88 × 413 pixels.",
+        "crop_scope": "One clean lower-leg taper. This is a geometry detail, not a full-body proportion guide."
+      }
+    },
+    {
+      "reference_id": "C04",
+      "status": "recovered",
+      "asset_sha256": [
+        "d3ab088f8803d12b5379cc19c62f9efc8951606642c083025774de18dc1aeefe"
+      ],
+      "design_registry": {
+        "reference_id": "C04",
+        "title": "Initial contact",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Parent:** R11. **Crop:** `(242, 754, 449, 1082)`. **Size:** 207 × 328 pixels.\n\n**Scope and caveat:** Intact point at first contact. Use written low-origin rule for subsequent emergence.\n\n![C04 Initial contact](Details/C04%20Initial%20contact.png)\n\n[Open exact crop](Details/C04%20Initial%20contact.png)",
+        "status": null,
+        "approved_scope": null,
+        "known_defects": null,
+        "original": null,
+        "crop_parent": "R11. **Crop:** `(242, 754, 449, 1082)`. **Size:** 207 × 328 pixels.",
+        "crop_scope": "Intact point at first contact. Use written low-origin rule for subsequent emergence."
+      }
+    },
+    {
+      "reference_id": "C05",
+      "status": "recovered",
+      "asset_sha256": [
+        "77a379b72ca02a08cf367ec00fb2247db4bf26a3880d7aa6a8cbae3c98790545"
+      ],
+      "design_registry": {
+        "reference_id": "C05",
+        "title": "Lateral hyphal emergence",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Parent:** R11. **Crop:** `(459, 754, 678, 1082)`. **Size:** 219 × 328 pixels.\n\n**Scope and caveat:** Distinction between point and lateral filaments. The visible emergence zone should be tightened to immediately above the substrate.\n\n![C05 Lateral hyphal emergence](Details/C05%20Lateral%20hyphal%20emergence.png)\n\n[Open exact crop](Details/C05%20Lateral%20hyphal%20emergence.png)",
+        "status": null,
+        "approved_scope": null,
+        "known_defects": null,
+        "original": null,
+        "crop_parent": "R11. **Crop:** `(459, 754, 678, 1082)`. **Size:** 219 × 328 pixels.",
+        "crop_scope": "Distinction between point and lateral filaments. The visible emergence zone should be tightened to immediately above the substrate."
+      }
+    },
+    {
+      "reference_id": "C06",
+      "status": "recovered",
+      "asset_sha256": [
+        "046ecc1e42e1d763efe9fda850cc018ae666ef256b3a9e2cd4d48d2d91f28634"
+      ],
+      "design_registry": {
+        "reference_id": "C06",
+        "title": "Clean airborne release",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Parent:** R11. **Crop:** `(916, 754, 1134, 1082)`. **Size:** 218 × 328 pixels.\n\n**Scope and caveat:** Clean point after release. Any residual substrate filaments are separate from the lifted leg.\n\n![C06 Clean airborne release](Details/C06%20Clean%20airborne%20release.png)\n\n[Open exact crop](Details/C06%20Clean%20airborne%20release.png)",
+        "status": null,
+        "approved_scope": null,
+        "known_defects": null,
+        "original": null,
+        "crop_parent": "R11. **Crop:** `(916, 754, 1134, 1082)`. **Size:** 218 × 328 pixels.",
+        "crop_scope": "Clean point after release. Any residual substrate filaments are separate from the lifted leg."
+      }
+    },
+    {
+      "reference_id": "C07",
+      "status": "recovered",
+      "asset_sha256": [
+        "73c4335d5701d26c8a2832b2d425f9135933e469a50d9e4d7ce4da7fc4dd478a"
+      ],
+      "design_registry": {
+        "reference_id": "C07",
+        "title": "Organic hand filaments",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Parent:** R20. **Crop:** `(532, 696, 740, 945)`. **Size:** 208 × 249 pixels.\n\n**Scope and caveat:** Supporting internal-material study. Not approval of hand topology or every visible branch shape.\n\n![C07 Organic hand filaments](Details/C07%20Organic%20hand%20filaments.png)\n\n[Open exact crop](Details/C07%20Organic%20hand%20filaments.png)",
+        "status": null,
+        "approved_scope": null,
+        "known_defects": null,
+        "original": null,
+        "crop_parent": "R20. **Crop:** `(532, 696, 740, 945)`. **Size:** 208 × 249 pixels.",
+        "crop_scope": "Supporting internal-material study. Not approval of hand topology or every visible branch shape."
+      }
+    },
+    {
+      "reference_id": "C08",
+      "status": "recovered",
+      "asset_sha256": [
+        "ac9378786fbdb72278cc2aa837fb057122011a133f64f141bd27ce2ec44bd150"
+      ],
+      "design_registry": {
+        "reference_id": "C08",
+        "title": "Terrain-following contact",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Parent:** R18. **Crop:** `(793, 417, 1201, 693)`. **Size:** 408 × 276 pixels.\n\n**Scope and caveat:** Branches following leaves, moss, wood and stones. Reduce thickness and regularity where required by the locomotion specification.\n\n![C08 Terrain-following contact](Details/C08%20Terrain-following%20contact.png)\n\n[Open exact crop](Details/C08%20Terrain-following%20contact.png)",
+        "status": null,
+        "approved_scope": null,
+        "known_defects": null,
+        "original": null,
+        "crop_parent": "R18. **Crop:** `(793, 417, 1201, 693)`. **Size:** 408 × 276 pixels.",
+        "crop_scope": "Branches following leaves, moss, wood and stones. Reduce thickness and regularity where required by the locomotion specification."
+      }
+    },
+    {
+      "reference_id": "C09",
+      "status": "recovered",
+      "asset_sha256": [
+        "a3f1c35cffea52ebd75003d66775965c4b12d3413ede2d767615aac2a65c845a"
+      ],
+      "design_registry": {
+        "reference_id": "C09",
+        "title": "Standing body and leg mass",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Parent:** R30. **Crop:** `(889, 282, 1256, 1311)`. **Size:** 367 × 1029 pixels.\n\n**Scope and caveat:** Body mass and existing clean pointed endings only. Cap and part of the gesture are deliberately outside the crop. Slim the calves to the selected proportional target; this is not a measured or complete turnaround.\n\n[Open exact crop](../References/Details/C09%20Standing%20body%20and%20leg%20mass.png)",
+        "status": null,
+        "approved_scope": null,
+        "known_defects": null,
+        "original": null,
+        "crop_parent": "R30. **Crop:** `(889, 282, 1256, 1311)`. **Size:** 367 × 1029 pixels.",
+        "crop_scope": "Body mass and existing clean pointed endings only. Cap and part of the gesture are deliberately outside the crop. Slim the calves to the selected proportional target; this is not a measured or complete turnaround."
+      }
+    },
+    {
+      "reference_id": "C10",
+      "status": "recovered",
+      "asset_sha256": [
+        "cb0c613059de719b6180e0505590ee3fd73df6e71e32c8b0d48fcf440bb093a0"
+      ],
+      "design_registry": {
+        "reference_id": "C10",
+        "title": "Cap overhang and compact bob",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Parent:** R30. **Crop:** `(824, 8, 1407, 286)`. **Size:** 583 × 278 pixels.\n\n**Scope and caveat:** Broad head-to-cap relationship and compact bob mass. The crown, patch map, exact face and lichen construction remain subject to the written brief; this crop is not all-angle cap approval.\n\n[Open exact crop](../References/Details/C10%20Cap%20overhang%20and%20compact%20bob.png)",
+        "status": null,
+        "approved_scope": null,
+        "known_defects": null,
+        "original": null,
+        "crop_parent": "R30. **Crop:** `(824, 8, 1407, 286)`. **Size:** 583 × 278 pixels.",
+        "crop_scope": "Broad head-to-cap relationship and compact bob mass. The crown, patch map, exact face and lichen construction remain subject to the written brief; this crop is not all-angle cap approval."
+      }
+    },
+    {
+      "reference_id": "C11",
+      "status": "recovered",
+      "asset_sha256": [
+        "62df659f4186102ba10b48706d0e6762da63b08a404d24208f7e885f62d50690"
+      ],
+      "design_registry": {
+        "reference_id": "C11",
+        "title": "Selected paired leg tapers",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Parent:** R08. **Crop:** `(464, 568, 544, 942)`. **Size:** 80 × 374 pixels.\n\n**Scope and caveat:** Selected leg-length and taper relationship. This narrow crop excludes the earlier cap and printed annotations. Visible angular internal lines are not approved; upper-leg volume hidden by the skirt is not inferred.\n\n[Open exact crop](../References/Details/C11%20Selected%20paired%20leg%20tapers.png)",
+        "status": null,
+        "approved_scope": null,
+        "known_defects": null,
+        "original": null,
+        "crop_parent": "R08. **Crop:** `(464, 568, 544, 942)`. **Size:** 80 × 374 pixels.",
+        "crop_scope": "Selected leg-length and taper relationship. This narrow crop excludes the earlier cap and printed annotations. Visible angular internal lines are not approved; upper-leg volume hidden by the skirt is not inferred."
+      }
+    },
+    {
+      "reference_id": "C12",
+      "status": "recovered",
+      "asset_sha256": [
+        "caa8f09d7060597343125e9607786315afd3892e68e66326e50467b38dfb78c3"
+      ],
+      "design_registry": {
+        "reference_id": "C12",
+        "title": "Selected lichen macro",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Parent:** R08. **Crop:** `(865, 430, 1007, 597)`. **Size:** 142 × 167 pixels.\n\n**Scope and caveat:** Selected lichen texture and small overlapping growth. The dark-edge / pale-interior relationship is still controlled by the written brief. A macro alone does not establish hair length.\n\n[Open exact crop](../References/Details/C12%20Selected%20lichen%20macro.png)",
+        "status": null,
+        "approved_scope": null,
+        "known_defects": null,
+        "original": null,
+        "crop_parent": "R08. **Crop:** `(865, 430, 1007, 597)`. **Size:** 142 × 167 pixels.",
+        "crop_scope": "Selected lichen texture and small overlapping growth. The dark-edge / pale-interior relationship is still controlled by the written brief. A macro alone does not establish hair length."
+      }
+    },
+    {
+      "reference_id": "C13",
+      "status": "recovered",
+      "asset_sha256": [
+        "fe50ccee3da88492dd45a6da686ff7c1dbe2afb50a28a783b3093037f272b159"
+      ],
+      "design_registry": {
+        "reference_id": "C13",
+        "title": "Glassy white eye detail",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Parent:** R28. **Crop:** `(1036, 87, 1143, 180)`. **Size:** 107 × 93 pixels.\n\n**Scope and caveat:** Pearlescent unmarked eye volume only. Do not copy precise eyelash, eye-rim or surrounding facial topology as newly approved anatomy.\n\n[Open exact crop](../References/Details/C13%20Glassy%20white%20eye%20detail.png)",
+        "status": null,
+        "approved_scope": null,
+        "known_defects": null,
+        "original": null,
+        "crop_parent": "R28. **Crop:** `(1036, 87, 1143, 180)`. **Size:** 107 × 93 pixels.",
+        "crop_scope": "Pearlescent unmarked eye volume only. Do not copy precise eyelash, eye-rim or surrounding facial topology as newly approved anatomy."
+      }
+    },
+    {
+      "reference_id": "C14",
+      "status": "recovered",
+      "asset_sha256": [
+        "ce0e9e41cc91346402bc541d0e0a7f4ea4f5054d9f24deaed6c4d282a14d7a89"
+      ],
+      "design_registry": {
+        "reference_id": "C14",
+        "title": "Tissue depth comparison",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Parent:** R28. **Crop:** `(979, 444, 1140, 597)`. **Size:** 161 × 153 pixels.\n\n**Scope and caveat:** Comparison-only material attempt. It does not yet settle convincing layered depth and must not be used as a finished texture target.\n\n[Open exact crop](../References/Details/C14%20Tissue%20depth%20comparison.png)",
+        "status": null,
+        "approved_scope": null,
+        "known_defects": null,
+        "original": null,
+        "crop_parent": "R28. **Crop:** `(979, 444, 1140, 597)`. **Size:** 161 × 153 pixels.",
+        "crop_scope": "Comparison-only material attempt. It does not yet settle convincing layered depth and must not be used as a finished texture target."
+      }
+    },
+    {
+      "reference_id": "C15",
+      "status": "recovered",
+      "asset_sha256": [
+        "de93c93f243efb16562a48d82c20de41242766e88c63fd2430dac7d42d55a534"
+      ],
+      "design_registry": {
+        "reference_id": "C15",
+        "title": "Internal hand filaments without caption",
+        "source_document": "Myca/References/Reference Index.md",
+        "full_entry": "**Parent:** R20. **Crop:** `(532, 695, 741, 874)`. **Size:** 209 × 179 pixels.\n\n**Scope and caveat:** Fine irregular hand/wrist filaments as an organic-material donor. Fingertips and the old caption are excluded; this does not approve hand topology or prove final subsurface depth.\n\n[Open exact crop](../References/Details/C15%20Internal%20hand%20filaments%20without%20caption.png)",
+        "status": null,
+        "approved_scope": null,
+        "known_defects": null,
+        "original": null,
+        "crop_parent": "R20. **Crop:** `(532, 695, 741, 874)`. **Size:** 209 × 179 pixels.",
+        "crop_scope": "Fine irregular hand/wrist filaments as an organic-material donor. Fingertips and the old caption are excluded; this does not approve hand topology or prove final subsurface depth."
+      }
+    }
+  ],
+  "public_subset_exclusions": [
+    {
+      "filename": "Asset Manifest.json",
+      "sha256": "91878a99317958a41cb19cbf9d8449b9c6a52ee4c2fc2885be313e836bd30e1b",
+      "reason": "Original document contains owner-specific references/paths; unchanged original retained in owner archive."
+    },
+    {
+      "filename": "myca-cellium-starter.zip",
+      "sha256": "d2ac4eb2fd7f5ec8e3d5ae89b1a2fd64076612559cb9f5a7615504afe9f2e3c2",
+      "reason": "Original nested archive omitted from Git; extracted eligible members retained."
+    },
+    {
+      "filename": "manifest.json",
+      "sha256": "99cce4b3568d3d15f334d30492e730aff1cd7be9292a4e1f685296fc4450d93c",
+      "reason": "Original document contains owner-specific references/paths; unchanged original retained in owner archive."
+    },
+    {
+      "filename": "manifest.csv",
+      "sha256": "1f47bc5da0db094fe6a2d934608859a8438c5b817014936fc32d933ff6bf9b6c",
+      "reason": "Original document contains owner-specific references/paths; unchanged original retained in owner archive."
+    },
+    {
+      "filename": "Myca_Canon_Shortlist_Pack.zip",
+      "sha256": "c5adfc1c8d19f671671759c21a6c750918bcebf03d82add74bce2c90547ce2ef",
+      "reason": "Original nested archive omitted from Git; extracted eligible members retained."
+    },
+    {
+      "filename": "Myca_Definitive_Character_Sheets_Revision_1.zip",
+      "sha256": "ffa1aa23a93a347ca2af38bf3f5ffdc9d950aa53a713bc79e0f08ef82df2571f",
+      "reason": "Original nested archive omitted from Git; extracted eligible members retained."
+    },
+    {
+      "filename": "Myca_Creation_and_Maintenance_Resource_v1.zip",
+      "sha256": "d69ef9f08ff633089a9f8b937f9fc41544b287f95fd374d88fefa40fdbc0f4c5",
+      "reason": "Original nested archive omitted from Git; extracted eligible members retained."
+    }
+  ],
+  "scope": "Public repository resource subset. Full private provenance and unchanged excluded metadata documents retained in owner recovery ZIP. No image regeneration; no inferred canon approval."
+}
