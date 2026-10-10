@@ -6,6 +6,8 @@ A version-controlled, **feature-scoped** character reference with a read-only Gi
 
 The existing source Markdown documents and the legacy embedded-preview HTML are preserved in `docs/` without rewriting their content. Some resource files and original reference image binaries were not present in the available attachment set; see `data/resource-status.json`. Missing files are **not** represented as imported.
 
+The preserved documents describe a fuller resource bundle. This import lacks the original images and crops, acting guide, review checklist, decision log, and archived S01–S03 source documents. Their links remain incomplete; the visual guide's 49 embedded previews are available.
+
 ## How to use
 
 - `docs/Myca Character Design Brief.md`: primary appearance and membrane candidates.
