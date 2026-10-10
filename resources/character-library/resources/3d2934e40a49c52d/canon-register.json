@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "baseline": "1.0",
+  "records": [
+    {
+      "id": "identity.fungal-colony",
+      "status": "canon",
+      "authority": "docs/Myca Character Design Brief.md",
+      "section": "1. Identity and construction"
+    },
+    {
+      "id": "body.continuous-point-legs",
+      "status": "canon",
+      "authority": "docs/Myca Character Design Brief.md",
+      "section": "9. Legs and terminal points",
+      "references": [
+        "R08",
+        "R11",
+        "C03"
+      ]
+    },
+    {
+      "id": "body.subsurface-hyphae",
+      "status": "canon",
+      "authority": "docs/Myca Character Design Brief.md",
+      "section": "3. Fungal surface and internal mycelium"
+    },
+    {
+      "id": "cap.broad-shallow",
+      "status": "canon",
+      "authority": "docs/Myca Character Design Brief.md",
+      "section": "7. Mushroom cap"
+    },
+    {
+      "id": "outfit.baseline-skirt",
+      "status": "canon",
+      "authority": "docs/Myca Character Design Brief.md",
+      "section": "10. Clothing and optional props"
+    },
+    {
+      "id": "outfit.membrane.layered-petal",
+      "status": "experimental",
+      "authority": "docs/Myca Character Design Brief.md",
+      "section": "Experimental living-membrane skirt replacements"
+    },
+    {
+      "id": "outfit.membrane.single-sheet",
+      "status": "experimental",
+      "authority": "docs/Myca Character Design Brief.md",
+      "section": "Experimental living-membrane skirt replacements"
+    },
+    {
+      "id": "outfit.membrane.vascular-reinforced",
+      "status": "experimental",
+      "authority": "docs/Myca Character Design Brief.md",
+      "section": "Experimental living-membrane skirt replacements"
+    },
+    {
+      "id": "outfit.membrane.gill-frill",
+      "status": "experimental",
+      "authority": "docs/Myca Character Design Brief.md",
+      "section": "Experimental living-membrane skirt replacements"
+    },
+    {
+      "id": "outfit.membrane.veil-streamer",
+      "status": "experimental",
+      "authority": "docs/Myca Character Design Brief.md",
+      "section": "Experimental living-membrane skirt replacements"
+    },
+    {
+      "id": "outfit.membrane.spore-lace",
+      "status": "experimental",
+      "authority": "docs/Myca Character Design Brief.md",
+      "section": "Experimental living-membrane skirt replacements"
+    },
+    {
+      "id": "outfit.membrane.shelf-fungus",
+      "status": "experimental",
+      "authority": "docs/Myca Character Design Brief.md",
+      "section": "Experimental living-membrane skirt replacements"
+    },
+    {
+      "id": "cap.patch-map",
+      "status": "unresolved",
+      "authority": "docs/Myca Character Design Brief.md",
+      "section": "7. Mushroom cap"
+    },
+    {
+      "id": "locomotion.contact-cycle",
+      "status": "canon",
+      "authority": "docs/Myca Locomotion Reference.md",
+      "section": "Six-stage step cycle"
+    }
+  ]
+}
