@@ -1,0 +1,973 @@
+{
+  "ok": true,
+  "frames_root": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames",
+  "states": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review"
+  ],
+  "errors": [],
+  "warnings": [],
+  "rows": [
+    {
+      "state": "idle",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\idle\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 17902,
+          "bbox": [
+            5,
+            21,
+            187,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 205
+        },
+        {
+          "index": 1,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\idle\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18298,
+          "bbox": [
+            5,
+            21,
+            187,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 204
+        },
+        {
+          "index": 2,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\idle\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 17873,
+          "bbox": [
+            5,
+            21,
+            187,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 207
+        },
+        {
+          "index": 3,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\idle\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 17818,
+          "bbox": [
+            5,
+            21,
+            187,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 201
+        },
+        {
+          "index": 4,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\idle\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 17834,
+          "bbox": [
+            5,
+            21,
+            187,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 208
+        },
+        {
+          "index": 5,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\idle\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 17843,
+          "bbox": [
+            5,
+            21,
+            187,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 204
+        }
+      ]
+    },
+    {
+      "state": "running-right",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running-right\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 15902,
+          "bbox": [
+            6,
+            28,
+            185,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 273
+        },
+        {
+          "index": 1,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running-right\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 14310,
+          "bbox": [
+            7,
+            45,
+            185,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 270
+        },
+        {
+          "index": 2,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running-right\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 15560,
+          "bbox": [
+            6,
+            32,
+            186,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 239
+        },
+        {
+          "index": 3,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running-right\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 16439,
+          "bbox": [
+            6,
+            21,
+            185,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 294
+        },
+        {
+          "index": 4,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running-right\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 15580,
+          "bbox": [
+            5,
+            32,
+            187,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 270
+        },
+        {
+          "index": 5,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running-right\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 14335,
+          "bbox": [
+            7,
+            45,
+            185,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 267
+        },
+        {
+          "index": 6,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running-right\\06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 15582,
+          "bbox": [
+            5,
+            32,
+            186,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 258
+        },
+        {
+          "index": 7,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running-right\\07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 15893,
+          "bbox": [
+            7,
+            25,
+            185,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 287
+        }
+      ]
+    },
+    {
+      "state": "running-left",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running-left\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 15663,
+          "bbox": [
+            8,
+            31,
+            183,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 237
+        },
+        {
+          "index": 1,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running-left\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 14325,
+          "bbox": [
+            6,
+            51,
+            185,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 241
+        },
+        {
+          "index": 2,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running-left\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 15555,
+          "bbox": [
+            6,
+            34,
+            185,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 253
+        },
+        {
+          "index": 3,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running-left\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 16704,
+          "bbox": [
+            6,
+            21,
+            185,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 255
+        },
+        {
+          "index": 4,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running-left\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 16008,
+          "bbox": [
+            5,
+            31,
+            187,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 246
+        },
+        {
+          "index": 5,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running-left\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 14406,
+          "bbox": [
+            6,
+            51,
+            185,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 234
+        },
+        {
+          "index": 6,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running-left\\06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 15708,
+          "bbox": [
+            6,
+            34,
+            186,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 232
+        },
+        {
+          "index": 7,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running-left\\07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 16560,
+          "bbox": [
+            5,
+            23,
+            186,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 275
+        }
+      ]
+    },
+    {
+      "state": "waving",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\waving\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19111,
+          "bbox": [
+            5,
+            23,
+            187,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 78
+        },
+        {
+          "index": 1,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\waving\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 17997,
+          "bbox": [
+            5,
+            23,
+            187,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 52
+        },
+        {
+          "index": 2,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\waving\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18972,
+          "bbox": [
+            5,
+            23,
+            187,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 101
+        },
+        {
+          "index": 3,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\waving\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18979,
+          "bbox": [
+            5,
+            23,
+            187,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 88
+        }
+      ]
+    },
+    {
+      "state": "jumping",
+      "expected_frames": 5,
+      "actual_frames": 5,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\jumping\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18024,
+          "bbox": [
+            5,
+            23,
+            187,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 134
+        },
+        {
+          "index": 1,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\jumping\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18253,
+          "bbox": [
+            5,
+            15,
+            187,
+            179
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 138
+        },
+        {
+          "index": 2,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\jumping\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18384,
+          "bbox": [
+            6,
+            4,
+            186,
+            167
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 138
+        },
+        {
+          "index": 3,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\jumping\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18104,
+          "bbox": [
+            5,
+            17,
+            187,
+            180
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 120
+        },
+        {
+          "index": 4,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\jumping\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18018,
+          "bbox": [
+            5,
+            23,
+            187,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 129
+        }
+      ]
+    },
+    {
+      "state": "failed",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\failed\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19701,
+          "bbox": [
+            5,
+            8,
+            187,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 297
+        },
+        {
+          "index": 1,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\failed\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20974,
+          "bbox": [
+            6,
+            8,
+            186,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 409
+        },
+        {
+          "index": 2,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\failed\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21046,
+          "bbox": [
+            6,
+            9,
+            186,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 301
+        },
+        {
+          "index": 3,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\failed\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20169,
+          "bbox": [
+            5,
+            8,
+            187,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 305
+        },
+        {
+          "index": 4,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\failed\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20111,
+          "bbox": [
+            5,
+            8,
+            186,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 342
+        },
+        {
+          "index": 5,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\failed\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21197,
+          "bbox": [
+            6,
+            8,
+            186,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 338
+        },
+        {
+          "index": 6,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\failed\\06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20922,
+          "bbox": [
+            6,
+            8,
+            185,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 393
+        },
+        {
+          "index": 7,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\failed\\07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19674,
+          "bbox": [
+            5,
+            8,
+            186,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 287
+        }
+      ]
+    },
+    {
+      "state": "waiting",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\waiting\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19664,
+          "bbox": [
+            5,
+            13,
+            187,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 212
+        },
+        {
+          "index": 1,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\waiting\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19730,
+          "bbox": [
+            6,
+            12,
+            186,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 214
+        },
+        {
+          "index": 2,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\waiting\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19505,
+          "bbox": [
+            6,
+            13,
+            186,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 221
+        },
+        {
+          "index": 3,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\waiting\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19139,
+          "bbox": [
+            9,
+            13,
+            183,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 225
+        },
+        {
+          "index": 4,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\waiting\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19332,
+          "bbox": [
+            6,
+            13,
+            186,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 209
+        },
+        {
+          "index": 5,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\waiting\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19597,
+          "bbox": [
+            5,
+            13,
+            187,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 228
+        }
+      ]
+    },
+    {
+      "state": "running",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19275,
+          "bbox": [
+            5,
+            11,
+            187,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 164
+        },
+        {
+          "index": 1,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19534,
+          "bbox": [
+            6,
+            11,
+            186,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 174
+        },
+        {
+          "index": 2,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19121,
+          "bbox": [
+            5,
+            16,
+            186,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 156
+        },
+        {
+          "index": 3,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19453,
+          "bbox": [
+            6,
+            12,
+            186,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 179
+        },
+        {
+          "index": 4,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19034,
+          "bbox": [
+            6,
+            14,
+            186,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 162
+        },
+        {
+          "index": 5,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\running\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19104,
+          "bbox": [
+            5,
+            11,
+            186,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 173
+        }
+      ]
+    },
+    {
+      "state": "review",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\review\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18180,
+          "bbox": [
+            5,
+            11,
+            187,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 208
+        },
+        {
+          "index": 1,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\review\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 17765,
+          "bbox": [
+            6,
+            11,
+            185,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 192
+        },
+        {
+          "index": 2,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\review\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 17717,
+          "bbox": [
+            7,
+            11,
+            185,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 190
+        },
+        {
+          "index": 3,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\review\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 17692,
+          "bbox": [
+            7,
+            11,
+            185,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 209
+        },
+        {
+          "index": 4,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\review\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 17902,
+          "bbox": [
+            6,
+            11,
+            186,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 204
+        },
+        {
+          "index": 5,
+          "file": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\qa\\frames\\review\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 17928,
+          "bbox": [
+            6,
+            11,
+            186,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 192
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "ok": true,
+  "atlas": "C:\\Users\\Tristan van Wyk\\.codex\\.chatgpt-projects\\g-p-6ac8951beab48191be169eeacf305360\\outputs\\myca-pet-v2\\final\\spritesheet-extended.png",
+  "encoded_bytes": 3440292,
+  "sha256": "6e793dd4425d68090dafc08d22693cbb0766fc40a432fa09d174d04755ee3f8a",
+  "jump": {
+    "idle_baseline": 184,
+    "jump_baselines": [
+      185,
+      177,
+      164,
+      178,
+      185
+    ],
+    "airborne_lift_pixels": 21,
+    "landing_delta_pixels": 1
+  },
+  "look_registration": {
+    "neutral_center_x": 96.0,
+    "look_centers_x": [
+      96.5,
+      99.0,
+      100.5,
+      102.0,
+      100.5,
+      101.5,
+      102.5,
+      101.5,
+      95.0,
+      90.0,
+      86.5,
+      88.5,
+      94.0,
+      97.0,
+      98.0,
+      100.0
+    ],
+    "look_widths": [
+      173,
+      160,
+      159,
+      160,
+      165,
+      167,
+      167,
+      165,
+      160,
+      160,
+      159,
+      161,
+      164,
+      162,
+      162,
+      160
+    ],
+    "maximum_center_drift_pixels": 9.5,
+    "maximum_width_ratio": 1.0880503144654088
+  },
+  "errors": [],
+  "warnings": [
+    "look direction 315 accepted with a reviewed warning",
+    "look direction 337.5 accepted with a reviewed warning",
+    "090->112.5 diff is a local outlier (2685 pixels vs neighbor average 1734)",
+    "337.5->000 diff is a local outlier (4249 pixels vs neighbor average 2439)"
+  ]
+}
