@@ -9,5 +9,32 @@
     "Archive/Previous Documents/S02 Previous Master Character Prompt.md",
     "Archive/Previous Documents/S03 Previous Locomotion Reference.md",
     "Original reference image files and crops"
-  ]
+  ],
+  "verified_recovery": {
+    "snapshot": "2026-10-10",
+    "catalog": "resources/character-library/Index.md",
+    "manifest": "resources/character-library/manifest.json",
+    "checksums": "resources/character-library/SHA256SUMS",
+    "original_asset_count": 239,
+    "asset_bytes": 421078476,
+    "filename_alias_count": 290,
+    "reference_record_count": 49,
+    "recovered_reference_count": 46,
+    "missing_or_unmapped_reference_ids": [
+      "R24",
+      "R25",
+      "R26"
+    ],
+    "unavailable_page_binary_record_count": 8,
+    "recovered_document_snapshot_names": [
+      "Myca Expression and Acting Guide.md",
+      "Model Sheets and Review Checklist.md",
+      "Decision Log and Open Questions.md",
+      "S01 Previous Character Design Brief.md",
+      "S02 Previous Master Character Prompt.md",
+      "S03 Previous Locomotion Reference.md"
+    ],
+    "scope": "Additive original resources and historical snapshots. Existing docs, canon baseline, approval ledgers, and experimental statuses are unchanged. The original import gap list above is retained as history.",
+    "unavailable_page_binary_records": "resources/character-library/Missing-Resources.json"
+  }
 }
