@@ -1,0 +1,10 @@
+{
+  "source_snapshot": "2026-10-10",
+  "note": "Only documents available in this conversation are included. No original reference image directory or unpublished maintenance/acting pages was available for import. The legacy HTML includes embedded previews.",
+  "missing_from_source_bundle": [
+    "Myca Expression and Acting Guide.md",
+    "Maintenance/Decision Log and Open Questions.md",
+    "Production/Model Sheets and Review Checklist.md",
+    "Original reference image files and crops"
+  ]
+}
