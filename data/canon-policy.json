@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "automation_version": "0.2",
+  "creator": {"login": "Tristand1506", "id": 56117578},
+  "protected_paths": ["docs/**", "PROJECT_INSTRUCTIONS.md"],
+  "governance_paths": [
+    "data/canon-policy.json",
+    "scripts/canon_guard.py",
+    "scripts/validate.py",
+    ".github/workflows/**",
+    ".github/CODEOWNERS"
+  ]
+}

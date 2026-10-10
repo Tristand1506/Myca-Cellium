@@ -2,6 +2,8 @@ name: Validate Myca canon metadata
 on:
   push:
   pull_request:
+permissions:
+  contents: read
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -11,3 +13,5 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/validate.py
+      - run: python scripts/canon_guard.py validate
+      - run: python -m unittest discover -s tests -v
