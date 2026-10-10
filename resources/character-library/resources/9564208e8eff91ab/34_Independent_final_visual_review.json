@@ -1,0 +1,42 @@
+{
+  "reviewer": "independent-final-visual-review-1",
+  "final_sheet": "final/spritesheet-extended.png",
+  "accept": true,
+  "blockers": [],
+  "warnings": [
+    {
+      "area": "look animation spacing",
+      "observation": "The 22.5/45-degree up-right poses and the final 315/337.5-degree up-left poses are very similar. These adjacent samples read as brief holds, so the angular pace is not perfectly uniform.",
+      "severity": "polish",
+      "effect": "No visible direction reversal or broken loop."
+    },
+    {
+      "area": "idle/jump action boundary",
+      "observation": "The bent hands appear on entry to the jump row and disappear on return to idle. The torso pose changes discretely at those action boundaries.",
+      "severity": "polish",
+      "effect": "The vertical rise, peak, descent, and resting baseline remain coherent; there is no large scale or position snap."
+    }
+  ],
+  "observations": {
+    "identity": "Across the exact final atlas, the same green botanical bust, short leafy hair, red mushroom cap with pale patches, and softly shaded face remain recognizable. The shoulder and chest proportions remain consistent enough for a single character.",
+    "eyes": "The open eyes are pale pearlescent shapes without visible dark pupils or iris centers. Half and closed blinks remain consistent with that eye design.",
+    "cap_attachment": "The cap sits against the hair/head in every occupied cell inspected. In the look rows, the cap pitch and head orientation turn together; no detached or independently sliding cap is visible.",
+    "hands": "The wave, jump fists, forehead gesture, waiting palm, joined fingers, and thinking pose remain attached to their forearms. At native size, no clearly extra hand, disconnected finger cluster, or severe hand cutout was apparent. Small stylized finger contours are present.",
+    "scale_and_baseline": "The resting bust footprint remains comparable across action rows. Look-row shoulders stay approximately centered and anchored while the head/cap rotate. The jump intentionally lifts the whole bust, then returns to its resting height.",
+    "clipping_and_holes": "No clearly truncated cap tip, lost facial region, unintended interior transparency hole, or missing occupied cell was visible. Some caps approach the cell edges closely, but their visible silhouettes remain intact. Unused trailing atlas cells are blank as shown in the contact sheet.",
+    "direction_order": "The native final look rows and all 16 decoded look-loop frames proceed clockwise: up, up-right, right, down-right, down, down-left, left, up-left. Nose direction, chin pitch, exposed cap underside, and visible cap top support the sequence independently of pupil direction.",
+    "final_up_left_and_loop_closure": "The final two up-left poses are similar, with the nose/chin still toward screen-left and upward and the cap underside exposed. Their small difference does not produce a visible reversal. The last pose returns to the centered upward pose as the loop wraps, preserving the clockwise sweep.",
+    "jump_transition": "All 17 ordered decoded idle-jump-idle frames were examined. Idle blinks, then the jump progresses from low fists through a higher pose to a clear airborne peak, descends, settles, and returns to the idle bust. The cap remains attached and the character scale stays stable through the lift."
+  },
+  "evidence": [
+    {"file":"qa/contact-sheet-extended.png","method":"view_image original"},
+    {"file":"qa/look-directions.png","method":"view_image original"},
+    {"file":"qa/final-look-row-9-native.png","method":"view_image original"},
+    {"file":"qa/final-look-row-10-native.png","method":"view_image original"},
+    {"file":"qa/final-previews/motion-proof-stills.png","method":"view_image original"},
+    {"file":"final/spritesheet-extended.png","method":"view_image original; exact final atlas"},
+    {"file":"qa/final-previews/idle-jump-idle-native.gif","method":"all 17 decoded frames inspected in order at native size","frame_size":[192,208],"duration_ms_each":180},
+    {"file":"qa/final-previews/look-loop-native.gif","method":"all 16 decoded frames inspected in order at native size","frame_size":[192,208],"duration_ms_each":220}
+  ],
+  "review_scope": "Independent visual review of the supplied final atlas and preview evidence. No artwork was modified."
+}

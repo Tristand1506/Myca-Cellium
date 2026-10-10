@@ -1,0 +1,32 @@
+{
+  "pet": {
+    "id": "pet_6ac91d06810c8191863c8bc1270b4d2c",
+    "name": "Myca",
+    "description": "A gentle fungal companion in a rendered anime portrait, with a crimson canopy, lichen bob and pearlescent white eyes.",
+    "is_custom": true,
+    "is_active": false
+  },
+  "sprite_version": 2,
+  "final_sprite_sheet": "spritesheet-extended.png",
+  "sha256": "6e793dd4425d68090dafc08d22693cbb0766fc40a432fa09d174d04755ee3f8a",
+  "dimensions": [
+    1536,
+    2288
+  ],
+  "animation_states": 9,
+  "gaze_directions": 16,
+  "creation_verified_by": "pets_list_pets",
+  "active_pet": {
+    "id": "pet_6ac3938b6a488191862f614308b78fce",
+    "name": "Nixie",
+    "unchanged": true
+  },
+  "library": {
+    "page_id": "page_65f280ed32808191afa0e61b17f73b5c",
+    "title": "Myca Bust V2 Pet",
+    "confirmedFiles": 45,
+    "missingReferences": []
+  },
+  "mandatory_checks_passed": true,
+  "independent_visual_review_accepted": true
+}
