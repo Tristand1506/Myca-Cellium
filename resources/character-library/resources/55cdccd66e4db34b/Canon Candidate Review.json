@@ -1,0 +1,94 @@
+{
+  "review_id": "REVIEW-001",
+  "date": "2026-10-09",
+  "status": "recommended; creator selection pending",
+  "baseline_changed": false,
+  "ranking": [
+    {
+      "rank": 1,
+      "id": "R30",
+      "name": "Soft-shaded three-pose sheet",
+      "role": "Lead whole-character base candidate",
+      "evidence": "Creator-supplied supporting reference. This lead ranking is an editorial recommendation, not recorded creator approval.",
+      "strength": "The three poses keep the main colour masses, compact bob, restrained face, skirt/waistband relationship and clean pointed endings easy to inspect. Compared with R29, fewer competing effects and no lower-leg bands make it a cleaner starting point.",
+      "retain": "The readable overall character, compact head/hair mass, quiet face, and the lantern / pointing / seated gesture family.",
+      "repair": "Reduce calf fullness and restore the long narrow taper using R08 plus R11. Resolve the broad shallow cap as one object, restore small lichen construction and demonstrate internal tissue depth at detail scale. Do not infer fixed measurements from the poses.",
+      "scope": "Use as the base candidate to refine, not as authority over R08's selected proportions or R11's point geometry.",
+      "crops": [
+        "C09",
+        "C10"
+      ]
+    },
+    {
+      "rank": 2,
+      "id": "R08",
+      "name": "Selected proportions and lichen",
+      "role": "Strongest established proportion-and-hair authority",
+      "evidence": "The creator explicitly selected this sheet's leg proportions and hair texture/feel while preferring another contact network.",
+      "strength": "It has the clearest feature-specific endorsement and preserves the unusually long, narrow paired tapers and recognisable bob texture. It must constrain a new base drawing even though it ranks second as a complete-page candidate.",
+      "retain": "Long-leg proportional relationship and the chosen lichen texture. Pair with the later calf-thinning instruction and the compact-bob rule.",
+      "repair": "Exclude the high crown, bright angular/node-like internal network, weak contact demonstration and mislabeled insets. The apparent fine facial anatomy is not separately approved.",
+      "scope": "Use only for the selected proportions and lichen. Do not feed its entire obsolete information sheet back as current canon.",
+      "crops": [
+        "C11",
+        "C12"
+      ]
+    },
+    {
+      "rank": 3,
+      "id": "R11",
+      "name": "Continuous-point geometry study",
+      "role": "Essential point-geometry and contact-state specialist",
+      "evidence": "The creator described the result as nearly perfect, then requested thinner calves and the proportions of the earlier selected sheet.",
+      "strength": "The single terminal point is distinct from the temporary surrounding web, and the final airborne panel is clean. This is more useful for the core mechanical rule than the later release panels that still carry strands.",
+      "retain": "Uninterrupted terminal geometry; point at first touch; distinction between point and lateral emergence; a clean final release state.",
+      "repair": "Do not copy the calf bulk. Keep emergence immediately above the substrate, reduce the high-origin / thick radial strands, and let the separate locomotion specification govern the sequence.",
+      "scope": "C03 supports static character anatomy. C04-C06 belong to the separate locomotion module, not the condensed master prompt.",
+      "crops": [
+        "C03",
+        "C04",
+        "C05",
+        "C06"
+      ]
+    },
+    {
+      "rank": 4,
+      "id": "R28",
+      "name": "Deep-Hyphae Reference Sheet",
+      "role": "Conditional consolidated-overview candidate",
+      "evidence": "A revision produced in response to the explicit tissue-depth request; the previous overview R27 was praised. Neither event approves every detail on this sheet.",
+      "strength": "It covers the figure, eyes, gills, hair, tissue, limbs and contact process in one place. The eye detail is a useful volume reference, and the tissue tile is useful for comparing what the depth correction attempted.",
+      "retain": "Feature coverage and selected glassy-eye / gill detail. Use the tissue inset as a review comparison, not a finished shader or texture specification.",
+      "repair": "Several networks still read as uniformly visible lines plus glow. Lower-leg bulk, cap/patch consistency, lip-like seam edges, human-specific surface artefacts and attached release strands remain issues.",
+      "scope": "A presentation candidate after corrections, not an all-feature authority. The name \"Deep-Hyphae\" is an asset label, not a passing review result.",
+      "crops": [
+        "C13",
+        "C14"
+      ]
+    },
+    {
+      "rank": 5,
+      "id": "R20",
+      "name": "Supplied material and pose interpretation",
+      "role": "Organic-filament and material-detail donor",
+      "evidence": "Creator-supplied supporting image; not a blanket design approval.",
+      "strength": "The hand/wrist detail offers fine, irregularly branching filaments with less of the overt star-node pattern in some earlier sheets. It adds a material reference that the cleaner base sheets cannot show at their scale.",
+      "retain": "Selected hand/wrist filament texture and gentle observational gesture ideas, keeping the underlying body rules unchanged.",
+      "repair": "Do not inherit ordinary hair with attached foliage, humanised face/body details, fuller calves or the older cap crown. This image also does not fully settle the depth of every internal strand.",
+      "scope": "Use a caption-free material crop only. It is not the base body, head model or full locomotion reference.",
+      "crops": [
+        "C15"
+      ]
+    }
+  ],
+  "crop_ids": [
+    "C09",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14",
+    "C15"
+  ],
+  "source_scope": "Live Myca registry plus inspected later overview/model candidates and the visible development discussion."
+}
