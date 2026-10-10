@@ -1,35 +1,181 @@
 #!/usr/bin/env python3
-"""Static GitHub Pages renderer. Reads docs without modifying source."""
+"""Build Pages from written authority and the verified public library."""
+import html
 from pathlib import Path
-import html, re, shutil
-import mistune
-ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'_site'; DOCS=ROOT/'docs'
-if OUT.exists():shutil.rmtree(OUT)
-OUT.mkdir()
-css='*{box-sizing:border-box}body{margin:0;background:#f6f5ef;color:#27372e;font:16px/1.7 system-ui,sans-serif}header{background:#263f33;color:#f7f8ed;padding:1.3rem max(5vw,1rem)}header a{color:#e2ebda}main{max-width:1150px;margin:2rem auto;padding:0 1.4rem}h1,h2,h3{line-height:1.25}h1{font:2.4rem Georgia,serif}a{color:#466747}nav{display:flex;gap:1rem;flex-wrap:wrap}section,.page{background:white;padding:1.5rem 2rem;margin:1rem 0;border:1px solid #e1e5dc;border-radius:.8rem}table{border-collapse:collapse;display:block;overflow-x:auto}th,td{border:1px solid #dce2d7;padding:.45rem .7rem;text-align:left}th{background:#eef2e8}pre{overflow:auto;padding:1rem;background:#edf1eb}code{overflow-wrap:anywhere}img{max-width:100%;height:auto}.notice{border-left:4px solid #9f7948;padding:1rem;background:#fbf3e1}li{margin:.2rem 0}footer{padding:2rem;color:#6a716b}'
-(OUT/'style.css').write_text(css)
-markdown=mistune.create_markdown(plugins=['table','strikethrough'])
-entries=[('Character Design Brief','Myca Character Design Brief.md'),('Master Character Prompt','Myca Master Character Prompt.md'),('Locomotion Reference','Myca Locomotion Reference.md'),('Prompt Modules','Production/Prompt Modules and Style Translation.md'),('Reference Index','References/Reference Index.md'),('Canon Shortlist','References/Definitive Canon Shortlist.md'),('Resource README','README.md')]
-def wrap(title,body,root_relative=''):
-  # links in source markdown point to original relative folder; preserve through mirrored output paths
-  nav='<nav><a href="'+root_relative+'index.html">Overview</a><a href="'+root_relative+'Myca Resource Guide.html">Original visual guide</a><a href="'+root_relative+'docs/Myca Character Design Brief.html">Character design</a><a href="'+root_relative+'docs/References/Reference Index.html">References</a></nav>'
-  return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+html.escape(title)+' · Myca Cellium</title><link rel="stylesheet" href="'+root_relative+'style.css"></head><body><header><strong>MYCA CELLIUM · CANON REFERENCE</strong>'+nav+'</header><main><article class="page">'+body+'</article></main><footer>Character continuity first · Source details remain feature-scoped</footer></body></html>'
-for md in DOCS.rglob('*.md'):
-  relative=md.relative_to(DOCS)
-  dest=OUT/'docs'/relative.with_suffix('.html')
-  dest.parent.mkdir(parents=True,exist_ok=True)
-  # Keep original .md hyperlinks working by shipping the source docs and avoid broken links to non-imported images.
-  content=md.read_text(encoding='utf-8')
-  rendered=markdown(content)
-  rendered=re.sub(r'href="([^"]+)\.md(#[^"]*)?"', lambda m:'href="'+m.group(1)+'.html'+(m.group(2) or '')+'"',rendered)
-  depth=len(dest.relative_to(OUT).parts)-1
-  dest.write_text(wrap(md.stem,rendered,'../'*depth),encoding='utf-8')
-shutil.copytree(DOCS,OUT/'source',dirs_exist_ok=True)
-# Also copy original files into mirrored docs/ paths, so direct links to original sources work where present.
-shutil.copytree(DOCS,OUT/'docs',dirs_exist_ok=True)
-shutil.copy2(DOCS/'Myca Resource Guide.html',OUT/'Myca Resource Guide.html')
-links=''.join('<li><a href="docs/'+path[:-3]+'.html">'+html.escape(name)+'</a></li>' for name,path in entries)
-body='<h1>Myca · Character Design Library</h1><p>A browsable source-of-truth for an evolving fungal character. Canon changes require explicit creator approval; reference art controls only documented features.</p><p class="notice"><strong>Partial source import:</strong> The original images and crops, acting guide, review checklist, decision log and archived S01–S03 source documents were not in this attachment set. The preserved visual guide contains 49 embedded previews; links to missing original files remain incomplete.</p><h2>Documentation</h2><ul>'+links+'</ul><h2>Visual overview</h2><p><a href="Myca Resource Guide.html">Open preserved, illustrated browser edition</a> (large embedded-preview HTML).</p><h2>Design statuses</h2><p>Current baseline is 1.0. Seven living-membrane variants remain experiments, not replacements for the documented pink skirt and dark waistband.</p>'
-(OUT/'index.html').write_text(wrap('Library',body),encoding='utf-8')
-print('Built',OUT)
+import posixpath
+import re
+import shutil
+from urllib.parse import quote, unquote, urlsplit
+
+import resource_library
+from site_gallery import gallery_pages, overview, wrap
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / '_site'
+PUBLIC_PAGES = ('Index.md', 'Asset-Catalog.md', 'Experiments.md', 'README.md',
+                'Design-History.md', 'Recovery-Notes.md', 'Sanitation-Report.md')
+PUBLIC_METADATA = ('manifest.json', 'SHA256SUMS', 'Missing-Resources.json')
+RECOVERED_DOCS = {
+    'Myca Expression and Acting Guide.md': 'Myca Expression and Acting Guide.md',
+    'Production/Model Sheets and Review Checklist.md': 'Model Sheets and Review Checklist.md',
+    'Maintenance/Decision Log and Open Questions.md': 'Decision Log and Open Questions.md',
+    **{f'Archive/Previous Documents/S0{i} Previous {name}.md':
+       f'S0{i} Previous {name}.md' for i, name in enumerate(
+           ('Character Design Brief', 'Master Character Prompt', 'Locomotion Reference'), 1)},
+}
+
+
+def public_files(manifest):
+    """An explicit allowlist; never recursively copy a recovery directory."""
+    return set(PUBLIC_PAGES + PUBLIC_METADATA) | {a['resource_path'] for a in manifest['assets']}
+
+
+def publish_library(library, out, manifest):
+    for relative in sorted(public_files(manifest)):
+        source = library / relative
+        if source.is_symlink() or not source.is_file() or not source.resolve().is_relative_to(library.resolve()):
+            raise ValueError(f'Unsafe public library file: {relative}')
+        target = out / 'resources/character-library' / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source, target)  # Preserve bytes, including historical CRLF.
+
+
+def asset_aliases(manifest):
+    aliases = {}
+    for asset in manifest['assets']:
+        for name in asset['filename_aliases']:
+            aliases.setdefault(name, []).append(asset)
+    return aliases
+
+
+def recovered_documents(manifest):
+    aliases = asset_aliases(manifest)
+    # Different historical versions are not silently selected as current authority.
+    return {path: aliases[label][0] if len(aliases[label]) == 1 else None
+            for path, label in RECOVERED_DOCS.items() if label in aliases}
+
+
+def guide_aliases(guide, manifest):
+    """Verified compatibility paths keep the untouched illustrated guide usable."""
+    aliases = asset_aliases(manifest)
+    result = {}
+    for target in re.findall(r'href="([^"]+)"', guide):
+        parsed = urlsplit(html.unescape(target))
+        if parsed.scheme or parsed.netloc or not parsed.path:
+            continue
+        path = unquote(parsed.path)
+        if path.startswith('/') or '..' in Path(path).parts:
+            raise ValueError('Unsafe guide compatibility path')
+        candidates = aliases.get(Path(path).name, [])
+        if len(candidates) != 1:
+            raise ValueError(f'Guide link lacks a unique verified original: {path}')
+        result[path] = candidates[0]
+    return result
+
+
+def rewrite_links(rendered, logical_path, output_path, out, manifest, documents):
+    """Resolve verified originals; ambiguous/missing labels link to the catalog."""
+    aliases = asset_aliases(manifest)
+    refs = {r['reference_id']: r for r in manifest['references']}
+    assets = {a['sha256']: a for a in manifest['assets']}
+    prefix = '../' * (len(Path(output_path).parts) - 1)
+
+    def replacement(match):
+        attr, target = match.groups()
+        url = urlsplit(html.unescape(target))
+        if url.scheme or url.netloc or not url.path:
+            return match.group(0)
+        decoded = unquote(url.path)
+        logical = posixpath.normpath(posixpath.join(posixpath.dirname(logical_path), decoded))
+        actual = 'docs/' + logical
+        name = posixpath.basename(decoded)
+        resolved = None
+        if name == 'Myca Resource Guide.html':
+            resolved = 'Myca Resource Guide.html'
+        elif actual.endswith('.md') and (out / actual).is_file():
+            resolved = actual[:-3] + '.html'
+        elif (out / actual).is_file():
+            resolved = actual
+        elif logical in documents:
+            resolved = ('docs/' + logical[:-3] + '.html') if documents[logical] else 'resources/character-library/Asset-Catalog.html'
+        else:
+            rid = re.match(r'([RC]\d{2})\b', name)
+            if rid and rid[1] in refs and refs[rid[1]]['asset_sha256']:
+                asset = assets[refs[rid[1]]['asset_sha256'][0]]
+                if name in asset['filename_aliases']:
+                    resolved = 'resources/character-library/' + asset['resource_path']
+            if resolved is None and len(aliases.get(name, [])) == 1:
+                resolved = 'resources/character-library/' + aliases[name][0]['resource_path']
+            if resolved is None:
+                resolved = 'resources/character-library/Asset-Catalog.html'
+        suffix = ('#' + url.fragment) if url.fragment and resolved != 'resources/character-library/Asset-Catalog.html' else ''
+        return f'{attr}="{quote(prefix + resolved + suffix, safe="/#")}"'
+
+    return re.sub(r'(href|src)="([^"]+)"', replacement, rendered)
+
+
+def build(root=ROOT, out=OUT, markdown=None):
+    library = root / 'resources/character-library'
+    # Runs inside the existing manually dispatched Pages workflow, before output.
+    manifest = resource_library.load_manifest()
+    resource_library.validate(manifest)
+    if markdown is None:
+        import mistune
+        markdown = mistune.create_markdown(plugins=['table', 'strikethrough'])
+    if out.exists():
+        shutil.rmtree(out)
+    out.mkdir(parents=True)
+    (out / '.nojekyll').write_text('', encoding='utf-8')
+    for name in ('style.css', 'gallery.js'):
+        shutil.copyfile(root / 'web' / name, out / name)
+    publish_library(library, out, manifest)
+    docs = root / 'docs'
+    shutil.copytree(docs, out / 'docs', dirs_exist_ok=True)
+    shutil.copytree(docs, out / 'source', dirs_exist_ok=True)
+    # Never render, minify or rewrite the existing illustrated browser guide.
+    shutil.copyfile(docs / 'Myca Resource Guide.html', out / 'Myca Resource Guide.html')
+    for alias, asset in guide_aliases((docs / 'Myca Resource Guide.html').read_text(encoding='utf-8'), manifest).items():
+        for prefix in ('', 'docs/'):
+            dest = out / (prefix + alias)
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(library / asset['resource_path'], dest)
+    documents = recovered_documents(manifest)
+    for logical, asset in documents.items():
+        if asset:
+            dest = out / 'docs' / logical
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(library / asset['resource_path'], dest)
+    for md in (out / 'docs').rglob('*.md'):
+        logical = md.relative_to(out / 'docs').as_posix()
+        relative = 'docs/' + logical[:-3] + '.html'
+        rendered = rewrite_links(markdown(md.read_text(encoding='utf-8')), logical, relative, out, manifest, documents)
+        notice = '<p class="notice">Recovered historical document. Current written rules and feature-specific reference scopes remain authoritative.</p>' if logical in documents else ''
+        (out / relative).write_text(wrap(md.stem, notice + rendered, '../' * (len(Path(relative).parts) - 1)), encoding='utf-8')
+    (out / 'automation').mkdir()
+    shutil.copyfile(root / 'automation/README.md', out / 'automation/README.md')
+    (out / 'automation/README.html').write_text(wrap('Canon approval protocol', markdown((root / 'automation/README.md').read_text(encoding='utf-8')), '../'), encoding='utf-8')
+    for name in PUBLIC_PAGES:
+        relative = 'resources/character-library/' + name[:-3] + '.html'
+        body = markdown((library / name).read_text(encoding='utf-8'))
+        # Asset snapshots stay direct original downloads. Only navigation and
+        # rendered authority pages get their .html suffix.
+        def public_link(match):
+            path, fragment = match.groups()
+            if path.startswith('resources/'):
+                return match.group(0)
+            return 'href="' + path + '.html' + (fragment or '') + '"'
+        body = re.sub(r'href="([^"]+)\.md(#[^"]*)?"', public_link, body)
+        (out / relative).write_text(wrap(name[:-3], body, '../../'), encoding='utf-8')
+    for relative, body in gallery_pages(manifest).items():
+        dest = out / relative
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_text(wrap('Recovered gallery', body, '../', gallery=True), encoding='utf-8')
+    (out / 'index.html').write_text(wrap('Character library', overview(manifest)), encoding='utf-8')
+    return manifest
+
+
+if __name__ == '__main__':
+    build()
+    from validate_site import validate
+    validate()
+    print('Built', OUT)
