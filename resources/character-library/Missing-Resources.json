@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "source_scope": "Recovery gaps; source labels and MIME/size metadata only. No private file references or guessed original names.",
+  "missing_or_unmapped_reference_ids": [
+    "R24",
+    "R25",
+    "R26"
+  ],
+  "unavailable_page_binary_records": [
+    {
+      "source_title": "Myca Bust V2 Pet",
+      "label": "All animations MP4",
+      "mime_type": "video/mp4",
+      "reported_size_bytes": 584673,
+      "original_filename": null,
+      "status": "unavailable",
+      "notes": "Source metadata is readable; original binary bytes were not recovered in the reviewed public subset. Private reference IDs are retained only in the owner recovery evidence."
+    },
+    {
+      "source_title": "Myca Bust V2 Pet",
+      "label": "Production files 1 of 7",
+      "mime_type": "application/zip",
+      "reported_size_bytes": 6583643,
+      "original_filename": null,
+      "status": "unavailable",
+      "notes": "Source metadata is readable; original binary bytes were not recovered in the reviewed public subset. Private reference IDs are retained only in the owner recovery evidence."
+    },
+    {
+      "source_title": "Myca Bust V2 Pet",
+      "label": "Production files 2 of 7",
+      "mime_type": "application/zip",
+      "reported_size_bytes": 5094207,
+      "original_filename": null,
+      "status": "unavailable",
+      "notes": "Source metadata is readable; original binary bytes were not recovered in the reviewed public subset. Private reference IDs are retained only in the owner recovery evidence."
+    },
+    {
+      "source_title": "Myca Bust V2 Pet",
+      "label": "Production files 3 of 7",
+      "mime_type": "application/zip",
+      "reported_size_bytes": 8208222,
+      "original_filename": null,
+      "status": "unavailable",
+      "notes": "Source metadata is readable; original binary bytes were not recovered in the reviewed public subset. Private reference IDs are retained only in the owner recovery evidence."
+    },
+    {
+      "source_title": "Myca Bust V2 Pet",
+      "label": "Production files 4 of 7",
+      "mime_type": "application/zip",
+      "reported_size_bytes": 8316897,
+      "original_filename": null,
+      "status": "unavailable",
+      "notes": "Source metadata is readable; original binary bytes were not recovered in the reviewed public subset. Private reference IDs are retained only in the owner recovery evidence."
+    },
+    {
+      "source_title": "Myca Bust V2 Pet",
+      "label": "Production files 5 of 7",
+      "mime_type": "application/zip",
+      "reported_size_bytes": 7129306,
+      "original_filename": null,
+      "status": "unavailable",
+      "notes": "Source metadata is readable; original binary bytes were not recovered in the reviewed public subset. Private reference IDs are retained only in the owner recovery evidence."
+    },
+    {
+      "source_title": "Myca Bust V2 Pet",
+      "label": "Production files 6 of 7",
+      "mime_type": "application/zip",
+      "reported_size_bytes": 6691265,
+      "original_filename": null,
+      "status": "unavailable",
+      "notes": "Source metadata is readable; original binary bytes were not recovered in the reviewed public subset. Private reference IDs are retained only in the owner recovery evidence."
+    },
+    {
+      "source_title": "Myca Bust V2 Pet",
+      "label": "Production files 7 of 7",
+      "mime_type": "application/zip",
+      "reported_size_bytes": 7564793,
+      "original_filename": null,
+      "status": "unavailable",
+      "notes": "Source metadata is readable; original binary bytes were not recovered in the reviewed public subset. Private reference IDs are retained only in the owner recovery evidence."
+    }
+  ]
+}

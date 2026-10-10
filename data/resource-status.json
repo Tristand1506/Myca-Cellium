@@ -9,5 +9,37 @@
     "Archive/Previous Documents/S02 Previous Master Character Prompt.md",
     "Archive/Previous Documents/S03 Previous Locomotion Reference.md",
     "Original reference image files and crops"
-  ]
+  ],
+  "verified_recovery": {
+    "snapshot": "2026-10-10",
+    "catalog": "resources/character-library/Index.md",
+    "manifest": "resources/character-library/manifest.json",
+    "checksums": "resources/character-library/SHA256SUMS",
+    "original_asset_count": 232,
+    "asset_bytes": 421015862,
+    "filename_alias_count": 285,
+    "reference_record_count": 49,
+    "recovered_reference_count": 46,
+    "missing_or_unmapped_reference_ids": [
+      "R24",
+      "R25",
+      "R26"
+    ],
+    "unavailable_page_binary_record_count": 8,
+    "recovered_document_snapshot_names": [
+      "Myca Expression and Acting Guide.md",
+      "Model Sheets and Review Checklist.md",
+      "Decision Log and Open Questions.md",
+      "S01 Previous Character Design Brief.md",
+      "S02 Previous Master Character Prompt.md",
+      "S03 Previous Locomotion Reference.md"
+    ],
+    "scope": "Clean import of verified public artwork and documentation, plus two pared-down metadata summaries. Five private production reports are omitted in full and retained privately. Artwork bytes, reference IDs, caveats, canon, approvals and experimental classifications are unchanged.",
+    "unavailable_page_binary_records": "resources/character-library/Missing-Resources.json",
+    "public_asset_count": 234,
+    "sanitized_metadata_derivative_count": 2,
+    "original_asset_bytes": 421013796,
+    "original_filename_alias_count": 283,
+    "publication_revision": 3
+  }
 }

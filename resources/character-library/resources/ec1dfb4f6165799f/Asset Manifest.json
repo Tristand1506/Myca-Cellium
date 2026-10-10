@@ -1,0 +1,744 @@
+{
+  "resource": "Myca Creation and Maintenance Resource",
+  "baseline_version": "1.0",
+  "consolidated_on": "2026-10-08",
+  "scope": "Visible conversation, available original image files, supplied Markdown documents and inspected Myca Library folder. No external research or new artwork.",
+  "approval_note": "Documentation consolidation is not blanket approval of any generated image. See each reference scope and the decision log.",
+  "source_documents": [
+    {
+      "id": "S01",
+      "original_filename": "Myca Character Design Brief.md",
+      "path": "Archive/Previous Documents/S01 Previous Character Design Brief.md",
+      "sha256": "907495fc50fd1b41e080e876e420999d361cd4d0858e90c8ae0b28572f435d7c"
+    },
+    {
+      "id": "S02",
+      "original_filename": "Myca Master Character Prompt.md",
+      "path": "Archive/Previous Documents/S02 Previous Master Character Prompt.md",
+      "sha256": "7edb5fa95600699c47ce3500546a6b5c51983a4940fbf264ad0d819ff980fd7f"
+    },
+    {
+      "id": "S03",
+      "original_filename": "Myca Locomotion Reference.md",
+      "path": "Archive/Previous Documents/S03 Previous Locomotion Reference.md",
+      "sha256": "b65136f0f84e16ccd646873d55a81c6b09b081cd80bf19531333a7b91fe889c5"
+    }
+  ],
+  "references": [
+    {
+      "id": "R01",
+      "source_filename": "18616.png",
+      "path": "References/Sheets/R01 Original creator drawing.png",
+      "status": "Creator original; partially superseded",
+      "use_for": "Original cap-and-bob relationship, pale-green body, pink skirt, dark waistband, lantern and three characteristic poses.",
+      "do_not_inherit": "Original feet and lower-leg bands predate the explicitly selected pointed-leg revision. Do not reinstate them. The later written cap rule supersedes its higher crown.",
+      "provenance": "Latest supplied original drawing; creator provided the starting design.",
+      "width": 665,
+      "height": 665,
+      "sha256": "cb80a1b9ce6e823742ea1a4039fdea9b3c7ec0ee3a2a408c782aece45e513856",
+      "bytes": 114504
+    },
+    {
+      "id": "R02",
+      "source_filename": "95497.png",
+      "path": "Archive/Visual Development/R02 First detailed interpretation.png",
+      "status": "Early interpretation",
+      "use_for": "Early glassy-white eyes, cap gills and translucent fungal-material exploration.",
+      "do_not_inherit": "Conventional feet, humanized face and visible surface anatomy are not a final specification.",
+      "provenance": "Shown after the first successful detailed rendering; followed by the mouth-seam refinement.",
+      "width": 1280,
+      "height": 1536,
+      "sha256": "425254846b9934ac111c6ad9d5eb6b3dee6156b4e6803984bd95f6bfb4d41f70",
+      "bytes": 374769
+    },
+    {
+      "id": "R03",
+      "source_filename": "95502.png",
+      "path": "Archive/Visual Development/R03 Early sheet with conventional feet.png",
+      "status": "Superseded variant",
+      "use_for": "Early mouth/eye and cap-material studies.",
+      "do_not_inherit": "Feet and lower-leg bands are superseded; some internal branching is strongly geometric.",
+      "provenance": "Earlier supplied comparison image.",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "6eccee3d8f4c9395fbbc691cf47e7db9522d9471b823864ff95a2acc6b405965",
+      "bytes": 541917
+    },
+    {
+      "id": "R04",
+      "source_filename": "95503.png",
+      "path": "Archive/Visual Development/R04 Early pointed-leg variant.png",
+      "status": "Development variant",
+      "use_for": "Move from feet toward pointed lower limbs.",
+      "do_not_inherit": "Contact growth is not resolved and the internal network is too node-like for the later direction.",
+      "provenance": "Earlier supplied pointed-leg comparison.",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "95ddf50620951cc9b2fe09448825bed48e467e6c6d6dbcdd8d04b021469c88d5",
+      "bytes": 572881
+    },
+    {
+      "id": "R05",
+      "source_filename": "a_detailed_fantasy_concept_art_illustration_and_in.png",
+      "path": "Archive/Visual Development/R05 First branching-contact exploration.png",
+      "status": "Mechanism exploration",
+      "use_for": "Visible branching at ground contact rather than merely touching the ground.",
+      "do_not_inherit": "Do not copy thicker radial strands, permanent root-like silhouettes or body proportions wholesale.",
+      "provenance": "Generated after the request for mycelium spreading from each step.",
+      "width": 1145,
+      "height": 1374,
+      "sha256": "e0611779d6c176a6d7c246b375da3bd89811c0c098c4a065de580ce76fadfa17",
+      "bytes": 2820351
+    },
+    {
+      "id": "R06",
+      "source_filename": "a_detailed_fantasy_concept_art_collage_character_s.png",
+      "path": "Archive/Visual Development/R06 Long-lichen exploration.png",
+      "status": "Rejected hair direction",
+      "use_for": "Development history of lichen as the hair material.",
+      "do_not_inherit": "Long hanging growth and enlarged fronds were explicitly corrected. This is not a hair-length reference.",
+      "provenance": "Followed by: keep the same hair shape, make the lichen smaller with darker accents.",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "8d53572b8ea858bd4e0564b0a49d4c2c69766571e57e08568dc678b65221938f",
+      "bytes": 2912950
+    },
+    {
+      "id": "R07",
+      "source_filename": "a_vertical_cinematic_character_concept_illustrati.png",
+      "path": "Archive/Visual Development/R07 Compact-lichen revision.png",
+      "status": "Intermediate hair revision",
+      "use_for": "Return to a compact dark bob with finer lichen detail.",
+      "do_not_inherit": "Some areas still read as ordinary hair decorated with lichen; later texture and colour instructions are more specific.",
+      "provenance": "Generated in response to the short-hair correction.",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "11c3a50db6c85e83fef9603f44b2bde32de8ac794c94af31b260c2559d21abc6",
+      "bytes": 2706861
+    },
+    {
+      "id": "R08",
+      "source_filename": "95509.png",
+      "path": "References/Sheets/R08 Selected proportions and lichen.png",
+      "status": "Creator-selected features",
+      "use_for": "Primary proportional reference for long narrow legs and the selected texture/feel of the compact lichen bob.",
+      "do_not_inherit": "Do not copy absent contact growth, bright geometric hyphae, cap crown height or mislabeled detail panels. This approval was feature-specific.",
+      "provenance": "Creator explicitly selected the leg proportions and hair texture, while preferring the earlier branching-contact behaviour.",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "949308b49d083e6bf4a2da406d06b479f414ebaa886f56511e55e170d00170c0",
+      "bytes": 493623
+    },
+    {
+      "id": "R09",
+      "source_filename": "95511.png",
+      "path": "Archive/Visual Development/R09 Root-like contact failure.png",
+      "status": "Explicitly challenged result",
+      "use_for": "Failure reference: the point and gripping network merge visually.",
+      "do_not_inherit": "Do not adopt its root-like terminations or treat the captioned step sequence as proof the mechanism is correct.",
+      "provenance": "Creator said the legs and hyphae sprouting by contact points were still incorrect.",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6ee5cb563106f8c4986d0a9a3e481657a01042261e11fbf24bfa189240061fb8",
+      "bytes": 441177
+    },
+    {
+      "id": "R10",
+      "source_filename": "a_detailed_fantasy_infographic_illustration_poster.png",
+      "path": "Archive/Visual Development/R10 Initial isolated locomotion study.png",
+      "status": "Partial mechanism success",
+      "use_for": "Approach/touch panels begin separating the clean point from external hyphae.",
+      "do_not_inherit": "Hero legs still suggest feet/heels; other panels have high-origin strands. Later geometry takes priority.",
+      "provenance": "Creator: some top examples still looked like feet, but this was closer.",
+      "width": 1312,
+      "height": 1199,
+      "sha256": "29d686e0f758df86e6ca807fdd85d9f0dd3e11f491d58bfb7bf3999946d72506",
+      "bytes": 2581416
+    },
+    {
+      "id": "R11",
+      "source_filename": "a_detailed_atmospheric_infographic_style_illustr.png",
+      "path": "References/Sheets/R11 Continuous-point geometry study.png",
+      "status": "Creator-selected mechanism; proportion caveat",
+      "use_for": "Continuous terminal taper and the separation between the intact point and lateral contact growth.",
+      "do_not_inherit": "Creator requested thinner calves and the proportions of R08. Sprouting height and filament thickness must still be checked against the written rule.",
+      "provenance": "Creator called the result nearly perfect, then requested thinner calves and the earlier proportions.",
+      "width": 1145,
+      "height": 1374,
+      "sha256": "7cfe7a174d10eac684cd69d714b25f059258563ef99787ee8deaadd6193186b8",
+      "bytes": 2511865
+    },
+    {
+      "id": "R12",
+      "source_filename": "a_detailed_cinematic_concept_art_character_sheet.png",
+      "path": "References/Sheets/R12 Thin-calf combination.png",
+      "status": "Requested combination attempt",
+      "use_for": "Combines a long slim taper with contact studies and the established bob.",
+      "do_not_inherit": "Bright nodes and angular internal branches were subsequently challenged. Cap shape is subject to the later written revision.",
+      "provenance": "Generated after the request to thin the calves and combine proportions.",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "b1f2362fef097715e9116c91feaa624764fd95efb45c4c94946ce52a93e72ea1",
+      "bytes": 2916188
+    },
+    {
+      "id": "R13",
+      "source_filename": "a_detailed_character_design_art_sheet_illustration.png",
+      "path": "References/Sheets/R13 Reduced-constellation revision.png",
+      "status": "Revision attempt; not fully approved",
+      "use_for": "Attempt to reduce decorative glowing-node treatment after the explicit hyphae correction.",
+      "do_not_inherit": "Residual straight segments and bright junctions remain. Its captions are not evidence that all corrections succeeded.",
+      "provenance": "Generated after: make the hyphae look less like constellations.",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "8bcbd0a7e818f7bb6f090ab00c60e299ba52ae0916271bf82d9c23241ec79c71",
+      "bytes": 2865834
+    },
+    {
+      "id": "R14",
+      "source_filename": "wide_clean_character_design_animation_sheet_illus.png",
+      "path": "Archive/Visual Development/R14 Initial animation sheet.png",
+      "status": "Expression drift identified",
+      "use_for": "Development layouts, pose range and first animation-sheet organisation.",
+      "do_not_inherit": "Some expressions were rejected as off-model. A capless head study does not establish a detachable cap.",
+      "provenance": "Creator said some expressions felt off.",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "1513f32987d1ca0da312443f416e5602fe5510d2dc8b50f6ef5262688f36cc25",
+      "bytes": 2550105
+    },
+    {
+      "id": "R15",
+      "source_filename": "a_detailed_clean_studio_style_character_sheet_il.png",
+      "path": "Archive/Visual Development/R15 Restrained-acting revision.png",
+      "status": "Acting revision attempt",
+      "use_for": "Head angle and hand gestures used to support expression.",
+      "do_not_inherit": "Still includes conspicuous nodes and some humanized mouth details. Not a blanket-approved acting or anatomy sheet.",
+      "provenance": "Generated after the restrained-expression rules were proposed.",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "fd32f07783a8aaae8bb31d45e21362552a9800506661c1a496d9ec7bd773b145",
+      "bytes": 2690011
+    },
+    {
+      "id": "R16",
+      "source_filename": "wide_ornate_character_expression_sheet_concept.png",
+      "path": "References/Sheets/R16 Expression-only study.png",
+      "status": "Working acting reference",
+      "use_for": "Head orientation, hand placement, quiet attention and restrained expression as a direction.",
+      "do_not_inherit": "Some smiles and the speaking-mouth inset exceed the tiny seam. Approve individual poses, not the whole sheet.",
+      "provenance": "Generated for the request for an expression-only sheet; no explicit whole-sheet approval followed.",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "ecb22672eae659f50159388fdd76df60e17df427070ea768bce20430f94593bd",
+      "bytes": 2712987
+    },
+    {
+      "id": "R17",
+      "source_filename": "Locomotion Reference - Step Cycle.png",
+      "path": "References/Sheets/Locomotion Reference - Step Cycle.png",
+      "status": "Working sequence reference",
+      "use_for": "Six-stage organisation, isolated lower-leg studies and substrate examples.",
+      "do_not_inherit": "The release image retains hanging filaments; the final airborne state must instead be clean. Some webs are too thick or radial. Crops do not fix these defects.",
+      "provenance": "Existing Myca Library asset and latest supplied image; visually identical to the earlier generated guide file.",
+      "width": 1224,
+      "height": 1285,
+      "sha256": "0f487c7d03d6ff58f5600dd244a4741e0ceda413232d3f3b2c32b2a0e74a5b7c",
+      "bytes": 2606599
+    },
+    {
+      "id": "R18",
+      "source_filename": "Locomotion Reference - Movement and Surfaces.png",
+      "path": "References/Sheets/Locomotion Reference - Movement and Surfaces.png",
+      "status": "Working environment reference",
+      "use_for": "Terrain-following branches and examples of locomotion used in poses.",
+      "do_not_inherit": "Do not copy bulkier legs, root-like contact fans, persistent release strands or a changed cap shape.",
+      "provenance": "Existing Myca Library asset and latest supplied image; visually identical to the earlier generated environment guide.",
+      "width": 1223,
+      "height": 1286,
+      "sha256": "669aac8698cb30f51de4e9be10bc7e5c33a687046827feed291d23de16880d19",
+      "bytes": 2889384
+    },
+    {
+      "id": "R19",
+      "source_filename": "a_clean_detailed_character_design_sheet_illustrat.png",
+      "path": "Archive/Visual Development/R19 Rejected-cap turnaround.png",
+      "status": "Cap drift explicitly identified",
+      "use_for": "Failure reference for inconsistent head/body rotations and cap geometry.",
+      "do_not_inherit": "The taller conical cap and changed patch density were challenged. Do not promote this sheet as a canonical turnaround.",
+      "provenance": "Creator warned the mushroom design was getting off track, then requested a standalone fly-agaric description.",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "955b79c25e720e15e62b7565dad3fac9e51c33f1082262aee98e4f6d122bc16f",
+      "bytes": 2340872
+    },
+    {
+      "id": "R20",
+      "source_filename": "95513.png",
+      "path": "References/Sheets/R20 Supplied material and pose interpretation.png",
+      "status": "Supporting image; no blanket approval",
+      "use_for": "Further surface-filament, hand, material and pose examples supplied for consolidation.",
+      "do_not_inherit": "Ordinary hair-like locks, humanized face/surface anatomy and calf volume vary from the settled rules.",
+      "provenance": "Newly supplied with the request to consolidate the full resource.",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "39f8ae8b43bec9b62927192a7143e50fa321cba036c4325d380b0fce286082e6",
+      "bytes": 504250
+    },
+    {
+      "id": "R21",
+      "source_filename": "95514.png",
+      "path": "References/Sheets/R21 Supplied thin-calf sheet variant.png",
+      "status": "Supplied variant of R12 composition",
+      "use_for": "Another available copy of the thin-calf combination and the long taper.",
+      "do_not_inherit": "Retains constellation-like junctions and earlier cap shape. Separate supplied file, not a separate approval.",
+      "provenance": "Latest supplied image; visually corresponds to the R12 composition but has different bytes.",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "a79fb81ba6e2e8e6824103cbd05c408e3f389de31c5bb7ab976e89004a6ae5f6",
+      "bytes": 509787
+    },
+    {
+      "id": "R22",
+      "source_filename": "95515.png",
+      "path": "References/Sheets/R22 Supplied point-geometry sheet variant.png",
+      "status": "Supplied variant of R11 composition",
+      "use_for": "Continuous-point anatomy and contact sequence in the supplied copy.",
+      "do_not_inherit": "Calf thinning and lower contact-zone refinements still apply. Separate supplied file, not a separate approval.",
+      "provenance": "Latest supplied image; visually corresponds to R11 but has different bytes and dimensions.",
+      "width": 1280,
+      "height": 1536,
+      "sha256": "7679ef51377f15aea5aad63cca5f6ed22b5969c7461aaaedf543a7c08911f673",
+      "bytes": 477645
+    },
+    {
+      "id": "R23",
+      "source_filename": "95516.png",
+      "path": "References/Sheets/R23 Supplied alternate design sheet.png",
+      "status": "Supporting image; unresolved drift",
+      "use_for": "Additional gill, hand, surface and turnaround layout examples.",
+      "do_not_inherit": "The joyful expression opens into a conventional smile; some leg and cap shapes differ. Do not inherit these as changes to canon.",
+      "provenance": "Newly supplied with the request to consolidate the full resource.",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "3fb62513c3e964eac25ed7aa5092e2abf462d44d952b194853831c13b02a13ae",
+      "bytes": 470148
+    }
+  ],
+  "detail_crops": [
+    {
+      "id": "C01",
+      "parent": "R08",
+      "title": "Selected leg proportions",
+      "path": "References/Details/C01 Selected leg proportions.png",
+      "crop_box": [
+        370,
+        75,
+        655,
+        929
+      ],
+      "caveat": "Leg length, reduced lower-leg width and continuous pointed silhouette only. The earlier cap and filament treatment are not approved by this crop.",
+      "sha256": "bcc991610b33830ec41a6a6c9f52402240d9481bebab44116fd75ae7cea41b5b",
+      "width": 285,
+      "height": 854
+    },
+    {
+      "id": "C02",
+      "parent": "R08",
+      "title": "Selected lichen texture",
+      "path": "References/Details/C02 Selected lichen texture.png",
+      "crop_box": [
+        651,
+        8,
+        1017,
+        340
+      ],
+      "caveat": "Compact bob and small lichen structure. Ignore bright facial nodes and do not infer new facial anatomy.",
+      "sha256": "4d2634bc28800e0f2e54fb810f84b3f3eed8eeafa59bc8a32a1961d9a98550c5",
+      "width": 366,
+      "height": 332
+    },
+    {
+      "id": "C03",
+      "parent": "R11",
+      "title": "Uninterrupted terminal geometry",
+      "path": "References/Details/C03 Uninterrupted terminal geometry.png",
+      "crop_box": [
+        575,
+        270,
+        663,
+        683
+      ],
+      "caveat": "One clean lower-leg taper. This is a geometry detail, not a full-body proportion guide.",
+      "sha256": "5db3d65068a5f26f4b6825a37a0010b76d3228f4540100bc8a36714894bbf029",
+      "width": 88,
+      "height": 413
+    },
+    {
+      "id": "C04",
+      "parent": "R11",
+      "title": "Initial contact",
+      "path": "References/Details/C04 Initial contact.png",
+      "crop_box": [
+        242,
+        754,
+        449,
+        1082
+      ],
+      "caveat": "Intact point at first contact. Use written low-origin rule for subsequent emergence.",
+      "sha256": "d3ab088f8803d12b5379cc19c62f9efc8951606642c083025774de18dc1aeefe",
+      "width": 207,
+      "height": 328
+    },
+    {
+      "id": "C05",
+      "parent": "R11",
+      "title": "Lateral hyphal emergence",
+      "path": "References/Details/C05 Lateral hyphal emergence.png",
+      "crop_box": [
+        459,
+        754,
+        678,
+        1082
+      ],
+      "caveat": "Distinction between point and lateral filaments. The visible emergence zone should be tightened to immediately above the substrate.",
+      "sha256": "77a379b72ca02a08cf367ec00fb2247db4bf26a3880d7aa6a8cbae3c98790545",
+      "width": 219,
+      "height": 328
+    },
+    {
+      "id": "C06",
+      "parent": "R11",
+      "title": "Clean airborne release",
+      "path": "References/Details/C06 Clean airborne release.png",
+      "crop_box": [
+        916,
+        754,
+        1134,
+        1082
+      ],
+      "caveat": "Clean point after release. Any residual substrate filaments are separate from the lifted leg.",
+      "sha256": "046ecc1e42e1d763efe9fda850cc018ae666ef256b3a9e2cd4d48d2d91f28634",
+      "width": 218,
+      "height": 328
+    },
+    {
+      "id": "C07",
+      "parent": "R20",
+      "title": "Organic hand filaments",
+      "path": "References/Details/C07 Organic hand filaments.png",
+      "crop_box": [
+        532,
+        696,
+        740,
+        945
+      ],
+      "caveat": "Supporting internal-material study. Not approval of hand topology or every visible branch shape.",
+      "sha256": "73c4335d5701d26c8a2832b2d425f9135933e469a50d9e4d7ce4da7fc4dd478a",
+      "width": 208,
+      "height": 249
+    },
+    {
+      "id": "C08",
+      "parent": "R18",
+      "title": "Terrain-following contact",
+      "path": "References/Details/C08 Terrain-following contact.png",
+      "crop_box": [
+        793,
+        417,
+        1201,
+        693
+      ],
+      "caveat": "Branches following leaves, moss, wood and stones. Reduce thickness and regularity where required by the locomotion specification.",
+      "sha256": "ac9378786fbdb72278cc2aa837fb057122011a133f64f141bd27ce2ec44bd150",
+      "width": 408,
+      "height": 276
+    }
+  ],
+  "byte_identical_aliases": [
+    {
+      "alias": "a_detailed_infographic_style_concept_art_guide_sh.png",
+      "same_as": "R17"
+    },
+    {
+      "alias": "a_detailed_informational_concept_art_guide_sheet.png",
+      "same_as": "R18"
+    }
+  ],
+  "active_pages": [
+    {
+      "id": "start",
+      "title": "Start here",
+      "path": "README.md"
+    },
+    {
+      "id": "design",
+      "title": "Visual design",
+      "path": "Myca Character Design Brief.md"
+    },
+    {
+      "id": "prompt",
+      "title": "Master prompt",
+      "path": "Myca Master Character Prompt.md"
+    },
+    {
+      "id": "movement",
+      "title": "Locomotion",
+      "path": "Myca Locomotion Reference.md"
+    },
+    {
+      "id": "acting",
+      "title": "Expressions and acting",
+      "path": "Myca Expression and Acting Guide.md"
+    },
+    {
+      "id": "production",
+      "title": "Prompt modules",
+      "path": "Production/Prompt Modules and Style Translation.md"
+    },
+    {
+      "id": "review",
+      "title": "Review checklist",
+      "path": "Production/Model Sheets and Review Checklist.md"
+    },
+    {
+      "id": "references",
+      "title": "Reference index",
+      "path": "References/Reference Index.md"
+    },
+    {
+      "id": "maintenance",
+      "title": "Decisions and maintenance",
+      "path": "Maintenance/Decision Log and Open Questions.md"
+    }
+  ],
+  "counts": {
+    "active_markdown_pages": 9,
+    "source_documents_archived": 3,
+    "distinct_source_images": 23,
+    "detail_crops": 8
+  },
+  "file_inventory": [
+    {
+      "path": "Archive/Previous Documents/S01 Previous Character Design Brief.md",
+      "bytes": 5548,
+      "sha256": "907495fc50fd1b41e080e876e420999d361cd4d0858e90c8ae0b28572f435d7c"
+    },
+    {
+      "path": "Archive/Previous Documents/S02 Previous Master Character Prompt.md",
+      "bytes": 8292,
+      "sha256": "7edb5fa95600699c47ce3500546a6b5c51983a4940fbf264ad0d819ff980fd7f"
+    },
+    {
+      "path": "Archive/Previous Documents/S03 Previous Locomotion Reference.md",
+      "bytes": 3785,
+      "sha256": "b65136f0f84e16ccd646873d55a81c6b09b081cd80bf19531333a7b91fe889c5"
+    },
+    {
+      "path": "Archive/Visual Development/R02 First detailed interpretation.png",
+      "bytes": 374769,
+      "sha256": "425254846b9934ac111c6ad9d5eb6b3dee6156b4e6803984bd95f6bfb4d41f70"
+    },
+    {
+      "path": "Archive/Visual Development/R03 Early sheet with conventional feet.png",
+      "bytes": 541917,
+      "sha256": "6eccee3d8f4c9395fbbc691cf47e7db9522d9471b823864ff95a2acc6b405965"
+    },
+    {
+      "path": "Archive/Visual Development/R04 Early pointed-leg variant.png",
+      "bytes": 572881,
+      "sha256": "95ddf50620951cc9b2fe09448825bed48e467e6c6d6dbcdd8d04b021469c88d5"
+    },
+    {
+      "path": "Archive/Visual Development/R05 First branching-contact exploration.png",
+      "bytes": 2820351,
+      "sha256": "e0611779d6c176a6d7c246b375da3bd89811c0c098c4a065de580ce76fadfa17"
+    },
+    {
+      "path": "Archive/Visual Development/R06 Long-lichen exploration.png",
+      "bytes": 2912950,
+      "sha256": "8d53572b8ea858bd4e0564b0a49d4c2c69766571e57e08568dc678b65221938f"
+    },
+    {
+      "path": "Archive/Visual Development/R07 Compact-lichen revision.png",
+      "bytes": 2706861,
+      "sha256": "11c3a50db6c85e83fef9603f44b2bde32de8ac794c94af31b260c2559d21abc6"
+    },
+    {
+      "path": "Archive/Visual Development/R09 Root-like contact failure.png",
+      "bytes": 441177,
+      "sha256": "6ee5cb563106f8c4986d0a9a3e481657a01042261e11fbf24bfa189240061fb8"
+    },
+    {
+      "path": "Archive/Visual Development/R10 Initial isolated locomotion study.png",
+      "bytes": 2581416,
+      "sha256": "29d686e0f758df86e6ca807fdd85d9f0dd3e11f491d58bfb7bf3999946d72506"
+    },
+    {
+      "path": "Archive/Visual Development/R14 Initial animation sheet.png",
+      "bytes": 2550105,
+      "sha256": "1513f32987d1ca0da312443f416e5602fe5510d2dc8b50f6ef5262688f36cc25"
+    },
+    {
+      "path": "Archive/Visual Development/R15 Restrained-acting revision.png",
+      "bytes": 2690011,
+      "sha256": "fd32f07783a8aaae8bb31d45e21362552a9800506661c1a496d9ec7bd773b145"
+    },
+    {
+      "path": "Archive/Visual Development/R19 Rejected-cap turnaround.png",
+      "bytes": 2340872,
+      "sha256": "955b79c25e720e15e62b7565dad3fac9e51c33f1082262aee98e4f6d122bc16f"
+    },
+    {
+      "path": "Maintenance/Decision Log and Open Questions.md",
+      "bytes": 11480,
+      "sha256": "d7591891acf7941e6ae37d9b9ff0309756f32c5e7154220fc59fff75c5184554"
+    },
+    {
+      "path": "Myca Character Design Brief.md",
+      "bytes": 16592,
+      "sha256": "90f363c313a5c632fb867ea3484ff5e38b9fe13d76828ce7c512c0aa4c0940c6"
+    },
+    {
+      "path": "Myca Expression and Acting Guide.md",
+      "bytes": 5742,
+      "sha256": "4f21733ba6300ee8823a4a7fcd83b132b0fe00124a1ceb3b4d8cf99bc2bd0227"
+    },
+    {
+      "path": "Myca Locomotion Reference.md",
+      "bytes": 7874,
+      "sha256": "32773880452c03495d12339e60e8ee821e18f96fbeb26d7421718048ec750659"
+    },
+    {
+      "path": "Myca Master Character Prompt.md",
+      "bytes": 4715,
+      "sha256": "1cddbad76e4fa5fac8e4748b6e96f7613a7bd074fd79893bdce85611f3da3339"
+    },
+    {
+      "path": "Myca Resource Guide.html",
+      "bytes": 6588624,
+      "sha256": "b42d3cd0d8709e45a3324810ba691c339be5718aa0485631745d4b50b0473a8e"
+    },
+    {
+      "path": "Production/Model Sheets and Review Checklist.md",
+      "bytes": 5756,
+      "sha256": "41672499b33d9735a90b97559b61fde1f1b0aa953a2a6d370ed221c4cd8dd353"
+    },
+    {
+      "path": "Production/Prompt Modules and Style Translation.md",
+      "bytes": 6730,
+      "sha256": "a6bb15850fb6e5e580877e5cabfcc988dc7f686a269ab93ff30f7f4e03bfb5ab"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5060,
+      "sha256": "3a450af7a0c5f0d4dd62db3ba8ea9371ded632d571c48cd955cef8ffcb4d5741"
+    },
+    {
+      "path": "References/Details/C01 Selected leg proportions.png",
+      "bytes": 381075,
+      "sha256": "bcc991610b33830ec41a6a6c9f52402240d9481bebab44116fd75ae7cea41b5b"
+    },
+    {
+      "path": "References/Details/C02 Selected lichen texture.png",
+      "bytes": 212936,
+      "sha256": "4d2634bc28800e0f2e54fb810f84b3f3eed8eeafa59bc8a32a1961d9a98550c5"
+    },
+    {
+      "path": "References/Details/C03 Uninterrupted terminal geometry.png",
+      "bytes": 33448,
+      "sha256": "5db3d65068a5f26f4b6825a37a0010b76d3228f4540100bc8a36714894bbf029"
+    },
+    {
+      "path": "References/Details/C04 Initial contact.png",
+      "bytes": 117664,
+      "sha256": "d3ab088f8803d12b5379cc19c62f9efc8951606642c083025774de18dc1aeefe"
+    },
+    {
+      "path": "References/Details/C05 Lateral hyphal emergence.png",
+      "bytes": 133445,
+      "sha256": "77a379b72ca02a08cf367ec00fb2247db4bf26a3880d7aa6a8cbae3c98790545"
+    },
+    {
+      "path": "References/Details/C06 Clean airborne release.png",
+      "bytes": 122224,
+      "sha256": "046ecc1e42e1d763efe9fda850cc018ae666ef256b3a9e2cd4d48d2d91f28634"
+    },
+    {
+      "path": "References/Details/C07 Organic hand filaments.png",
+      "bytes": 73381,
+      "sha256": "73c4335d5701d26c8a2832b2d425f9135933e469a50d9e4d7ce4da7fc4dd478a"
+    },
+    {
+      "path": "References/Details/C08 Terrain-following contact.png",
+      "bytes": 246067,
+      "sha256": "ac9378786fbdb72278cc2aa837fb057122011a133f64f141bd27ce2ec44bd150"
+    },
+    {
+      "path": "References/Reference Index.md",
+      "bytes": 22598,
+      "sha256": "7282934a7647a59f1daf23e51842425540b719b76ca82bf001f623943fe336d6"
+    },
+    {
+      "path": "References/Sheets/Locomotion Reference - Movement and Surfaces.png",
+      "bytes": 2889384,
+      "sha256": "669aac8698cb30f51de4e9be10bc7e5c33a687046827feed291d23de16880d19"
+    },
+    {
+      "path": "References/Sheets/Locomotion Reference - Step Cycle.png",
+      "bytes": 2606599,
+      "sha256": "0f487c7d03d6ff58f5600dd244a4741e0ceda413232d3f3b2c32b2a0e74a5b7c"
+    },
+    {
+      "path": "References/Sheets/R01 Original creator drawing.png",
+      "bytes": 114504,
+      "sha256": "cb80a1b9ce6e823742ea1a4039fdea9b3c7ec0ee3a2a408c782aece45e513856"
+    },
+    {
+      "path": "References/Sheets/R08 Selected proportions and lichen.png",
+      "bytes": 493623,
+      "sha256": "949308b49d083e6bf4a2da406d06b479f414ebaa886f56511e55e170d00170c0"
+    },
+    {
+      "path": "References/Sheets/R11 Continuous-point geometry study.png",
+      "bytes": 2511865,
+      "sha256": "7cfe7a174d10eac684cd69d714b25f059258563ef99787ee8deaadd6193186b8"
+    },
+    {
+      "path": "References/Sheets/R12 Thin-calf combination.png",
+      "bytes": 2916188,
+      "sha256": "b1f2362fef097715e9116c91feaa624764fd95efb45c4c94946ce52a93e72ea1"
+    },
+    {
+      "path": "References/Sheets/R13 Reduced-constellation revision.png",
+      "bytes": 2865834,
+      "sha256": "8bcbd0a7e818f7bb6f090ab00c60e299ba52ae0916271bf82d9c23241ec79c71"
+    },
+    {
+      "path": "References/Sheets/R16 Expression-only study.png",
+      "bytes": 2712987,
+      "sha256": "ecb22672eae659f50159388fdd76df60e17df427070ea768bce20430f94593bd"
+    },
+    {
+      "path": "References/Sheets/R20 Supplied material and pose interpretation.png",
+      "bytes": 504250,
+      "sha256": "39f8ae8b43bec9b62927192a7143e50fa321cba036c4325d380b0fce286082e6"
+    },
+    {
+      "path": "References/Sheets/R21 Supplied thin-calf sheet variant.png",
+      "bytes": 509787,
+      "sha256": "a79fb81ba6e2e8e6824103cbd05c408e3f389de31c5bb7ab976e89004a6ae5f6"
+    },
+    {
+      "path": "References/Sheets/R22 Supplied point-geometry sheet variant.png",
+      "bytes": 477645,
+      "sha256": "7679ef51377f15aea5aad63cca5f6ed22b5969c7461aaaedf543a7c08911f673"
+    },
+    {
+      "path": "References/Sheets/R23 Supplied alternate design sheet.png",
+      "bytes": 470148,
+      "sha256": "3fb62513c3e964eac25ed7aa5092e2abf462d44d952b194853831c13b02a13ae"
+    }
+  ],
+  "manifest_checksum_note": "The manifest does not include its own hash. All other packaged files are listed."
+}

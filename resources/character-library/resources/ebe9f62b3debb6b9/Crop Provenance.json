@@ -1,0 +1,192 @@
+[
+  {
+    "id": "C03",
+    "parent": "R11",
+    "title": "Uninterrupted terminal geometry",
+    "path": "References/Details/C03 Uninterrupted terminal geometry.png",
+    "crop_box": [
+      575,
+      270,
+      663,
+      683
+    ],
+    "caveat": "One clean lower-leg taper. This is a geometry detail, not a full-body proportion guide.",
+    "sha256": "5db3d65068a5f26f4b6825a37a0010b76d3228f4540100bc8a36714894bbf029",
+    "width": 88,
+    "height": 413
+  },
+  {
+    "id": "C04",
+    "parent": "R11",
+    "title": "Initial contact",
+    "path": "References/Details/C04 Initial contact.png",
+    "crop_box": [
+      242,
+      754,
+      449,
+      1082
+    ],
+    "caveat": "Intact point at first contact. Use written low-origin rule for subsequent emergence.",
+    "sha256": "d3ab088f8803d12b5379cc19c62f9efc8951606642c083025774de18dc1aeefe",
+    "width": 207,
+    "height": 328
+  },
+  {
+    "id": "C05",
+    "parent": "R11",
+    "title": "Lateral hyphal emergence",
+    "path": "References/Details/C05 Lateral hyphal emergence.png",
+    "crop_box": [
+      459,
+      754,
+      678,
+      1082
+    ],
+    "caveat": "Distinction between point and lateral filaments. The visible emergence zone should be tightened to immediately above the substrate.",
+    "sha256": "77a379b72ca02a08cf367ec00fb2247db4bf26a3880d7aa6a8cbae3c98790545",
+    "width": 219,
+    "height": 328
+  },
+  {
+    "id": "C06",
+    "parent": "R11",
+    "title": "Clean airborne release",
+    "path": "References/Details/C06 Clean airborne release.png",
+    "crop_box": [
+      916,
+      754,
+      1134,
+      1082
+    ],
+    "caveat": "Clean point after release. Any residual substrate filaments are separate from the lifted leg.",
+    "sha256": "046ecc1e42e1d763efe9fda850cc018ae666ef256b3a9e2cd4d48d2d91f28634",
+    "width": 218,
+    "height": 328
+  },
+  {
+    "id": "C09",
+    "parent": "R30",
+    "title": "Standing body and leg mass",
+    "path": "References/Details/C09 Standing body and leg mass.png",
+    "crop_box": [
+      889,
+      282,
+      1256,
+      1311
+    ],
+    "caveat": "Body mass and existing clean pointed endings only. Cap and part of the gesture are deliberately outside the crop. Slim the calves to the selected proportional target; this is not a measured or complete turnaround.",
+    "sha256": "a3f1c35cffea52ebd75003d66775965c4b12d3413ede2d767615aac2a65c845a",
+    "width": 367,
+    "height": 1029,
+    "created_on": "2026-10-09",
+    "operation": "Lossless rectangular crop; no retouching or enlargement"
+  },
+  {
+    "id": "C10",
+    "parent": "R30",
+    "title": "Cap overhang and compact bob",
+    "path": "References/Details/C10 Cap overhang and compact bob.png",
+    "crop_box": [
+      824,
+      8,
+      1407,
+      286
+    ],
+    "caveat": "Broad head-to-cap relationship and compact bob mass. The crown, patch map, exact face and lichen construction remain subject to the written brief; this crop is not all-angle cap approval.",
+    "sha256": "cb0c613059de719b6180e0505590ee3fd73df6e71e32c8b0d48fcf440bb093a0",
+    "width": 583,
+    "height": 278,
+    "created_on": "2026-10-09",
+    "operation": "Lossless rectangular crop; no retouching or enlargement"
+  },
+  {
+    "id": "C11",
+    "parent": "R08",
+    "title": "Selected paired leg tapers",
+    "path": "References/Details/C11 Selected paired leg tapers.png",
+    "crop_box": [
+      464,
+      568,
+      544,
+      942
+    ],
+    "caveat": "Selected leg-length and taper relationship. This narrow crop excludes the earlier cap and printed annotations. Visible angular internal lines are not approved; upper-leg volume hidden by the skirt is not inferred.",
+    "sha256": "62df659f4186102ba10b48706d0e6762da63b08a404d24208f7e885f62d50690",
+    "width": 80,
+    "height": 374,
+    "created_on": "2026-10-09",
+    "operation": "Lossless rectangular crop; no retouching or enlargement"
+  },
+  {
+    "id": "C12",
+    "parent": "R08",
+    "title": "Selected lichen macro",
+    "path": "References/Details/C12 Selected lichen macro.png",
+    "crop_box": [
+      865,
+      430,
+      1007,
+      597
+    ],
+    "caveat": "Selected lichen texture and small overlapping growth. The dark-edge / pale-interior relationship is still controlled by the written brief. A macro alone does not establish hair length.",
+    "sha256": "caa8f09d7060597343125e9607786315afd3892e68e66326e50467b38dfb78c3",
+    "width": 142,
+    "height": 167,
+    "created_on": "2026-10-09",
+    "operation": "Lossless rectangular crop; no retouching or enlargement"
+  },
+  {
+    "id": "C13",
+    "parent": "R28",
+    "title": "Glassy white eye detail",
+    "path": "References/Details/C13 Glassy white eye detail.png",
+    "crop_box": [
+      1036,
+      87,
+      1143,
+      180
+    ],
+    "caveat": "Pearlescent unmarked eye volume only. Do not copy precise eyelash, eye-rim or surrounding facial topology as newly approved anatomy.",
+    "sha256": "fe50ccee3da88492dd45a6da686ff7c1dbe2afb50a28a783b3093037f272b159",
+    "width": 107,
+    "height": 93,
+    "created_on": "2026-10-09",
+    "operation": "Lossless rectangular crop; no retouching or enlargement"
+  },
+  {
+    "id": "C14",
+    "parent": "R28",
+    "title": "Tissue depth comparison",
+    "path": "References/Details/C14 Tissue depth comparison.png",
+    "crop_box": [
+      979,
+      444,
+      1140,
+      597
+    ],
+    "caveat": "Comparison-only material attempt. It does not yet settle convincing layered depth and must not be used as a finished texture target.",
+    "sha256": "ce0e9e41cc91346402bc541d0e0a7f4ea4f5054d9f24deaed6c4d282a14d7a89",
+    "width": 161,
+    "height": 153,
+    "created_on": "2026-10-09",
+    "operation": "Lossless rectangular crop; no retouching or enlargement"
+  },
+  {
+    "id": "C15",
+    "parent": "R20",
+    "title": "Internal hand filaments without caption",
+    "path": "References/Details/C15 Internal hand filaments without caption.png",
+    "crop_box": [
+      532,
+      695,
+      741,
+      874
+    ],
+    "caveat": "Fine irregular hand/wrist filaments as an organic-material donor. Fingertips and the old caption are excluded; this does not approve hand topology or prove final subsurface depth.",
+    "sha256": "de93c93f243efb16562a48d82c20de41242766e88c63fd2430dac7d42d55a534",
+    "width": 209,
+    "height": 179,
+    "created_on": "2026-10-09",
+    "operation": "Lossless rectangular crop; no retouching or enlargement"
+  }
+]
