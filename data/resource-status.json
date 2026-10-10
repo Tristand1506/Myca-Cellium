@@ -1,15 +1,6 @@
 {
   "source_snapshot": "2026-10-10",
-  "note": "Only documents available in this conversation are included. No original reference image directory or unpublished maintenance/acting pages was available for import. The legacy HTML includes embedded previews.",
-  "missing_from_source_bundle": [
-    "Myca Expression and Acting Guide.md",
-    "Maintenance/Decision Log and Open Questions.md",
-    "Production/Model Sheets and Review Checklist.md",
-    "Archive/Previous Documents/S01 Previous Character Design Brief.md",
-    "Archive/Previous Documents/S02 Previous Master Character Prompt.md",
-    "Archive/Previous Documents/S03 Previous Locomotion Reference.md",
-    "Original reference image files and crops"
-  ],
+  "note": "Current public coverage is recorded in verified_recovery. The original attachment import lacked the files listed in original_import_gaps; recovered snapshots and artwork are now available. Historical documents do not create new canon approvals.",
   "verified_recovery": {
     "snapshot": "2026-10-10",
     "catalog": "resources/character-library/Index.md",
@@ -41,5 +32,20 @@
     "original_asset_bytes": 421013796,
     "original_filename_alias_count": 283,
     "publication_revision": 3
-  }
+  },
+  "original_import_gaps": [
+    "Myca Expression and Acting Guide.md",
+    "Maintenance/Decision Log and Open Questions.md",
+    "Production/Model Sheets and Review Checklist.md",
+    "Archive/Previous Documents/S01 Previous Character Design Brief.md",
+    "Archive/Previous Documents/S02 Previous Master Character Prompt.md",
+    "Archive/Previous Documents/S03 Previous Locomotion Reference.md",
+    "Original reference image files and crops"
+  ],
+  "current_missing_or_unmapped_reference_ids": [
+    "R24",
+    "R25",
+    "R26"
+  ],
+  "current_unavailable_binary_record_count": 8
 }

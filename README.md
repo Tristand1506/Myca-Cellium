@@ -12,9 +12,9 @@ Run `python scripts/resource_library.py validate` to check the complete recovery
 
 ## Original document import
 
-The existing source Markdown documents and the legacy embedded-preview HTML are preserved in `docs/` without rewriting their content. Some resource files and original reference image binaries were not present in the available attachment set; see `data/resource-status.json`. Missing files are **not** represented as imported.
+The existing source Markdown documents and the legacy embedded-preview HTML are preserved in `docs/` without rewriting their content. The initial attachment gaps are historical; the recovered artwork and document snapshots are now available. Current gaps are R24–R26 and eight unavailable binaries; see `data/resource-status.json`. Missing files are **not** represented as imported.
 
-The preserved documents describe a fuller resource bundle. The original import lacked the original images and crops, acting guide, review checklist, decision log, and archived S01–S03 source documents. Those recovered files now have links in the resource index above. Prior-layout links inside the preserved documents remain incomplete; their source bytes and the visual guide's 49 embedded previews are unchanged.
+The preserved documents describe a fuller resource bundle. The original import lacked the original images and crops, acting guide, review checklist, decision log, and archived S01–S03 source documents. Those recovered files now have links in the resource index above. Prior-layout links in downloadable historical snapshots remain unchanged. The rendered website resolves verified references; ambiguous historical document versions link to the catalog. The illustrated guide and its 49 embedded previews retain their exact source bytes, with verified compatibility paths for its original-file links.
 
 ## How to use
 
@@ -24,7 +24,7 @@ The preserved documents describe a fuller resource bundle. The original import l
 - `data/canon-register.json`: structured index pointing to written authority, **not** a replacement for it.
 - `PROJECT_INSTRUCTIONS.md`: condensed project guidance under 8,000 characters.
 - `python scripts/validate.py`: deterministic integrity checks.
-- `python scripts/build_site.py`: build a static searchable documentation overview in `_site/`.
+- `python scripts/build_site.py`: build the static reference gallery, separate experiments, documentation and verified public assets in `_site/`.
 
 ## Canon change protocol
 
@@ -41,3 +41,16 @@ The `.github/workflows/pages.yml` workflow builds and deploys the site only when
 ## Important
 
 `docs/Myca Resource Guide.html` is the preserved browser edition with embedded previews and is large (~8.6 MB). The generated documentation site links to it. Use the recovered resource index for original image files; its hash-based paths preserve distinct variants and filename collisions. Recovery still has the explicit gaps listed above.
+
+## Website validation
+
+The Pages builder validates the sanitised manifest and checksum pins before writing output. It copies only the 234 listed assets and named public metadata/navigation files; private archives and unlisted recovery files are excluded. The reference gallery shows exact registry scopes and caveats. Membrane experiments and other experimental studies are on a separate page; archive inclusion does not grant canon approval. Originals are lazy-loaded and remain byte-identical.
+
+```sh
+python scripts/resource_library.py validate --images
+python scripts/build_site.py
+python scripts/validate_site.py
+python -m unittest discover -s tests -v
+```
+
+The existing Pages workflow remains manual. Review and merge the website PR, then run **Publish Myca library** from `main` to deploy. This change does not automatically merge or deploy.
