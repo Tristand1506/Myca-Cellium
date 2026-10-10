@@ -1,6 +1,6 @@
 # Living-membrane experiments
 
-[Reference library](Index.md) · [All original assets](Asset-Catalog.md) · [Design history](Design-History.md)
+[Reference library](Index.md) · [All public assets](Asset-Catalog.md) · [Design history](Design-History.md)
 
 The dusty-pink flared skirt and dark-brown waistband remain the baseline. These membrane images are experiments, including the later unindexed lily/pencil-skirt exploration. They do not create R35 or a canon replacement. Follow the current written membrane rules for a membrane task, with no belt, waistband, fastening, or ordinary fabric attachment seam.
 

@@ -4,7 +4,7 @@ A version-controlled, **feature-scoped** character reference with a read-only Gi
 
 ## Recovered character library
 
-The [recovered resource index](resources/character-library/Index.md) opens the original character images, reference sheets, detail crops, animation studies, and design-document snapshots. It contains 239 distinct original assets with 290 filename aliases; 46 of the 49 R01–R34 and C01–C15 identifiers are recovered. R24–R26 remain missing or unmapped, and eight Page-linked binaries remain unavailable.
+The [recovered resource index](resources/character-library/Index.md) opens the original character images, reference sheets, detail crops, animation studies, and design-document snapshots. It contains 239 public assets: 237 unchanged originals and two clearly labeled sanitized metadata derivatives, with 290 current filename aliases. The unchanged source documents for those derivatives remain in the owner archive. Of the 49 R01–R34 and C01–C15 identifiers, 46 are recovered; R24–R26 remain missing or unmapped, and eight Page-linked binaries remain unavailable.
 
 [Browse all assets and aliases](resources/character-library/Asset-Catalog.md), [review the separate membrane experiments](resources/character-library/Experiments.md), or read the [recovery notes](resources/character-library/Recovery-Notes.md). SHA-256 fingerprints preserve byte identity. Supporting documents remain historical snapshots; the existing canon documents and feature-specific approvals remain authoritative.
 

@@ -1,0 +1,42 @@
+{
+  "document_kind": "sanitized_public_derivative",
+  "sanitization": {
+    "kind": "sanitized_public_metadata_derivative",
+    "source_sha256": "940af9d0141022ac5e7aa1ad5e6e5bcd10323c98e9066cf27fe128fa69993450",
+    "source_stored_filename": "45_Creation_and_selection_verification.json",
+    "source_original_filename": null,
+    "source_filename_aliases": [
+      "45_Creation_and_selection_verification.json"
+    ],
+    "original_retention": "Unchanged original is retained in the owner recovery archive.",
+    "history_note": "Earlier public commits retain the original. No Git history was rewritten.",
+    "removed_fields": [
+      "pet.id",
+      "active_pet",
+      "library.page_id"
+    ]
+  },
+  "pet": {
+    "name": "Myca",
+    "description": "A gentle fungal companion in a rendered anime portrait, with a crimson canopy, lichen bob and pearlescent white eyes.",
+    "is_custom": true,
+    "is_active": false
+  },
+  "sprite_version": 2,
+  "final_sprite_sheet": "spritesheet-extended.png",
+  "sha256": "6e793dd4425d68090dafc08d22693cbb0766fc40a432fa09d174d04755ee3f8a",
+  "dimensions": [
+    1536,
+    2288
+  ],
+  "animation_states": 9,
+  "gaze_directions": 16,
+  "creation_verified_by": "pets_list_pets",
+  "library": {
+    "title": "Myca Bust V2 Pet",
+    "confirmedFiles": 45,
+    "missingReferences": []
+  },
+  "mandatory_checks_passed": true,
+  "independent_visual_review_accepted": true
+}

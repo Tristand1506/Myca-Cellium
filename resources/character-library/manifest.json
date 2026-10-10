@@ -3080,18 +3080,33 @@
       "original_bytes": true
     },
     {
-      "sha256": "9e2c429e01e45b75be37350f68bd83cd723f1120af8745e7abb16ef4fb34dd18",
-      "size_bytes": 727,
-      "resource_path": "resources/9e2c429e01e45b75/15_Confirmed_production_choices.md",
+      "sha256": "2752e84c085244226fc293d3eacdecb004589ff9db5b469bf3b79442d2fac4a2",
+      "size_bytes": 1174,
+      "resource_path": "resources/2752e84c08524422/15_Myca_Production_Choices_SANITIZED.md",
       "original_filename": null,
-      "stored_filename": "15_Confirmed_production_choices.md",
+      "stored_filename": "15_Myca_Production_Choices_SANITIZED.md",
       "filename_aliases": [
-        "15_Confirmed_production_choices.md"
+        "15_Myca_Production_Choices_SANITIZED.md"
       ],
       "classification": [
-        "pet-production"
+        "pet-production",
+        "sanitized metadata derivative"
       ],
-      "original_bytes": true
+      "original_bytes": false,
+      "derivation": {
+        "kind": "sanitized_public_metadata_derivative",
+        "source_sha256": "9e2c429e01e45b75be37350f68bd83cd723f1120af8745e7abb16ef4fb34dd18",
+        "source_stored_filename": "15_Confirmed_production_choices.md",
+        "source_original_filename": null,
+        "source_filename_aliases": [
+          "15_Confirmed_production_choices.md"
+        ],
+        "original_retention": "Unchanged original is retained in the owner recovery archive.",
+        "history_note": "Earlier public commits retain the original. No Git history was rewritten.",
+        "removed_information": [
+          "Unrelated active-pet name and selection context in the Creation paragraph."
+        ]
+      }
     },
     {
       "sha256": "5a3baaa39c8ee0cadf0c7444a893b73d180842322fba99c93dca24c058b89eaf",
@@ -3402,18 +3417,35 @@
       "original_bytes": true
     },
     {
-      "sha256": "940af9d0141022ac5e7aa1ad5e6e5bcd10323c98e9066cf27fe128fa69993450",
-      "size_bytes": 925,
-      "resource_path": "resources/940af9d0141022ac/45_Creation_and_selection_verification.json",
+      "sha256": "6e44988801c4c0859e7daddb33005a1c708cd39e1bf7a76fa60a2a5a5b01599a",
+      "size_bytes": 1405,
+      "resource_path": "resources/6e44988801c4c085/45_Myca_Production_Verification_SANITIZED.json",
       "original_filename": null,
-      "stored_filename": "45_Creation_and_selection_verification.json",
+      "stored_filename": "45_Myca_Production_Verification_SANITIZED.json",
       "filename_aliases": [
-        "45_Creation_and_selection_verification.json"
+        "45_Myca_Production_Verification_SANITIZED.json"
       ],
       "classification": [
-        "pet-production"
+        "pet-production",
+        "sanitized metadata derivative"
       ],
-      "original_bytes": true
+      "original_bytes": false,
+      "derivation": {
+        "kind": "sanitized_public_metadata_derivative",
+        "source_sha256": "940af9d0141022ac5e7aa1ad5e6e5bcd10323c98e9066cf27fe128fa69993450",
+        "source_stored_filename": "45_Creation_and_selection_verification.json",
+        "source_original_filename": null,
+        "source_filename_aliases": [
+          "45_Creation_and_selection_verification.json"
+        ],
+        "original_retention": "Unchanged original is retained in the owner recovery archive.",
+        "history_note": "Earlier public commits retain the original. No Git history was rewritten.",
+        "removed_fields": [
+          "pet.id",
+          "active_pet",
+          "library.page_id"
+        ]
+      }
     }
   ],
   "references": [
@@ -4363,7 +4395,60 @@
       "filename": "Myca_Creation_and_Maintenance_Resource_v1.zip",
       "sha256": "d69ef9f08ff633089a9f8b937f9fc41544b287f95fd374d88fefa40fdbc0f4c5",
       "reason": "Original nested archive omitted from Git; extracted eligible members retained."
+    },
+    {
+      "filename": "45_Creation_and_selection_verification.json",
+      "sha256": "940af9d0141022ac5e7aa1ad5e6e5bcd10323c98e9066cf27fe128fa69993450",
+      "size_bytes": 925,
+      "reason": "Original includes owner-specific or unrelated pet metadata. Unchanged original retained in owner archive; current public version is a clearly labeled sanitized derivative.",
+      "replacement_sha256": "6e44988801c4c0859e7daddb33005a1c708cd39e1bf7a76fa60a2a5a5b01599a",
+      "replacement_resource_path": "resources/6e44988801c4c085/45_Myca_Production_Verification_SANITIZED.json",
+      "history_note": "Original bytes remain in earlier public Git commits. History was not rewritten."
+    },
+    {
+      "filename": "15_Confirmed_production_choices.md",
+      "sha256": "9e2c429e01e45b75be37350f68bd83cd723f1120af8745e7abb16ef4fb34dd18",
+      "size_bytes": 727,
+      "reason": "Original includes owner-specific or unrelated pet metadata. Unchanged original retained in owner archive; current public version is a clearly labeled sanitized derivative.",
+      "replacement_sha256": "2752e84c085244226fc293d3eacdecb004589ff9db5b469bf3b79442d2fac4a2",
+      "replacement_resource_path": "resources/2752e84c08524422/15_Myca_Production_Choices_SANITIZED.md",
+      "history_note": "Original bytes remain in earlier public Git commits. History was not rewritten."
     }
   ],
-  "scope": "Public repository resource subset. Full private provenance and unchanged excluded metadata documents retained in owner recovery ZIP. No image regeneration; no inferred canon approval."
+  "scope": "Public repository resource subset containing unchanged original assets and explicitly labeled sanitized metadata derivatives. Full private provenance and unchanged excluded documents remain in the owner recovery ZIP. No image regeneration; no inferred canon approval.",
+  "publication_revision": {
+    "revision": 2,
+    "based_on_public_commit": "9cc9c1dfb91948b5e969d31c6c94527098ed4060",
+    "previous_manifest_sha256": "7bf7ed6b905f941bcee1eda3ae92de3807385a3e0f2089757735ad422a5930f7",
+    "previous_checksum_file_sha256": "67eed825666f40b31062c14e6c3e2f3233a26f6f84e901a61a1b817139c9c1e1",
+    "reason": "Remove owner-specific service IDs and unrelated pet metadata from the current public tree. Originals remain in the owner archive and earlier public Git history.",
+    "image_bytes_changed": false,
+    "canon_changed": false,
+    "replacements": [
+      {
+        "source_sha256": "940af9d0141022ac5e7aa1ad5e6e5bcd10323c98e9066cf27fe128fa69993450",
+        "source_stored_filename": "45_Creation_and_selection_verification.json",
+        "source_size_bytes": 925,
+        "replacement_sha256": "6e44988801c4c0859e7daddb33005a1c708cd39e1bf7a76fa60a2a5a5b01599a",
+        "replacement_resource_path": "resources/6e44988801c4c085/45_Myca_Production_Verification_SANITIZED.json",
+        "replacement_size_bytes": 1405,
+        "removed": [
+          "pet.id",
+          "active_pet",
+          "library.page_id"
+        ]
+      },
+      {
+        "source_sha256": "9e2c429e01e45b75be37350f68bd83cd723f1120af8745e7abb16ef4fb34dd18",
+        "source_stored_filename": "15_Confirmed_production_choices.md",
+        "source_size_bytes": 727,
+        "replacement_sha256": "2752e84c085244226fc293d3eacdecb004589ff9db5b469bf3b79442d2fac4a2",
+        "replacement_resource_path": "resources/2752e84c08524422/15_Myca_Production_Choices_SANITIZED.md",
+        "replacement_size_bytes": 1174,
+        "removed": [
+          "Unrelated active-pet name and selection context in the Creation paragraph."
+        ]
+      }
+    ]
+  }
 }

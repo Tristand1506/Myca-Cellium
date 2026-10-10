@@ -15,8 +15,8 @@
     "catalog": "resources/character-library/Index.md",
     "manifest": "resources/character-library/manifest.json",
     "checksums": "resources/character-library/SHA256SUMS",
-    "original_asset_count": 239,
-    "asset_bytes": 421078476,
+    "original_asset_count": 237,
+    "asset_bytes": 421079403,
     "filename_alias_count": 290,
     "reference_record_count": 49,
     "recovered_reference_count": 46,
@@ -34,7 +34,12 @@
       "S02 Previous Master Character Prompt.md",
       "S03 Previous Locomotion Reference.md"
     ],
-    "scope": "Additive original resources and historical snapshots. Existing docs, canon baseline, approval ledgers, and experimental statuses are unchanged. The original import gap list above is retained as history.",
-    "unavailable_page_binary_records": "resources/character-library/Missing-Resources.json"
+    "scope": "Additive original resources and historical snapshots, plus two explicitly labeled sanitized metadata derivatives. Unchanged derivative sources remain in the owner archive. Image bytes, existing docs, canon baseline, approval ledgers, and experimental statuses are unchanged; the original import gap list remains as history.",
+    "unavailable_page_binary_records": "resources/character-library/Missing-Resources.json",
+    "public_asset_count": 239,
+    "sanitized_metadata_derivative_count": 2,
+    "original_asset_bytes": 421076824,
+    "original_filename_alias_count": 288,
+    "publication_revision": 2
   }
 }

@@ -1,10 +1,10 @@
 # Recovered Myca character library
 
-239 original assets, deduplicated by SHA-256, with 290 filename aliases. 46 of 49 reference IDs are recovered; R24–R26 remain missing or unmapped. The 15 detail crops match their recorded parent pixels. Inclusion is not whole-image approval.
+239 public assets: 237 unchanged originals and 2 clearly labeled sanitized metadata derivatives, with 290 current filename aliases. 46 of 49 reference IDs are recovered; R24–R26 remain missing or unmapped. The 15 detail crops match their recorded parent pixels. Inclusion is not whole-image approval.
 
-[All assets and filename aliases](Asset-Catalog.md) · [Separate membrane experiments](Experiments.md) · [Design history](Design-History.md) · [Coverage and validation](Recovery-Notes.md) · [Missing-resource records](Missing-Resources.json) · [Original recovery manifest](manifest.json)
+[All assets and filename aliases](Asset-Catalog.md) · [Separate membrane experiments](Experiments.md) · [Design history](Design-History.md) · [Coverage and validation](Recovery-Notes.md) · [Missing-resource records](Missing-Resources.json) · [Public recovery manifest](manifest.json)
 
-The [current character brief](../../docs/Myca%20Character%20Design%20Brief.md), [locomotion rules](../../docs/Myca%20Locomotion%20Reference.md), [reference index](../../docs/References/Reference%20Index.md), and [approval protocol](../../automation/README.md) remain authoritative. Recovered documents are unchanged historical snapshots. The manifest field `approved_scope` reproduces the registry's **Use for** guidance; it does not authenticate a new approval.
+The [current character brief](../../docs/Myca%20Character%20Design%20Brief.md), [locomotion rules](../../docs/Myca%20Locomotion%20Reference.md), [reference index](../../docs/References/Reference%20Index.md), and [approval protocol](../../automation/README.md) remain authoritative. Historical documents retain their original bytes except for the two explicitly labeled sanitized metadata derivatives; their unchanged sources remain in the owner archive. The manifest field `approved_scope` reproduces the registry's **Use for** guidance; it does not authenticate a new approval.
 
 ## Source references and history
 
