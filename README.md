@@ -2,11 +2,19 @@
 
 A version-controlled, **feature-scoped** character reference with a read-only GitHub Pages publication workflow. Written approved design rules are authoritative; generated images are not blanket canon.
 
-## Current import
+## Recovered character library
+
+The [recovered resource index](resources/character-library/Index.md) opens the original character images, reference sheets, detail crops, animation studies, and design-document snapshots. It contains 234 public assets: 232 unchanged originals and two clearly labeled sanitized metadata derivatives, with 285 current filename aliases. The unchanged source documents for those derivatives remain in the owner archive. Of the 49 R01–R34 and C01–C15 identifiers, 46 are recovered; R24–R26 remain missing or unmapped, and eight Page-linked binaries remain unavailable.
+
+[Browse all assets and aliases](resources/character-library/Asset-Catalog.md), [review the separate membrane experiments](resources/character-library/Experiments.md), or read the [sanitation report](resources/character-library/Sanitation-Report.md). SHA-256 fingerprints preserve byte identity. Supporting documents remain historical snapshots; the existing canon documents and feature-specific approvals remain authoritative.
+
+Run `python scripts/resource_library.py validate` to check the complete recovery snapshot and navigation. Add `--images` when Pillow is available to decode all images and verify the 15 crop-to-parent pixel comparisons.
+
+## Original document import
 
 The existing source Markdown documents and the legacy embedded-preview HTML are preserved in `docs/` without rewriting their content. Some resource files and original reference image binaries were not present in the available attachment set; see `data/resource-status.json`. Missing files are **not** represented as imported.
 
-The preserved documents describe a fuller resource bundle. This import lacks the original images and crops, acting guide, review checklist, decision log, and archived S01–S03 source documents. Their links remain incomplete; the visual guide's 49 embedded previews are available.
+The preserved documents describe a fuller resource bundle. The original import lacked the original images and crops, acting guide, review checklist, decision log, and archived S01–S03 source documents. Those recovered files now have links in the resource index above. Prior-layout links inside the preserved documents remain incomplete; their source bytes and the visual guide's 49 embedded previews are unchanged.
 
 ## How to use
 
@@ -32,4 +40,4 @@ The `.github/workflows/pages.yml` workflow builds and deploys the site only when
 
 ## Important
 
-`docs/Myca Resource Guide.html` is the preserved browser edition with embedded previews and is large (~8.6 MB). The generated index links to it. Individual links to missing original image files may not work until the full original resource directory is imported. This is not a completed visual-asset migration.
+`docs/Myca Resource Guide.html` is the preserved browser edition with embedded previews and is large (~8.6 MB). The generated documentation site links to it. Use the recovered resource index for original image files; its hash-based paths preserve distinct variants and filename collisions. Recovery still has the explicit gaps listed above.
