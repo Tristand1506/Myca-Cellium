@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "revision": 0,
+  "collections": [
+    {"id": "cap", "name": "Cap", "assets": [], "details": []},
+    {"id": "lichen", "name": "Lichen", "assets": [], "details": []},
+    {"id": "face-eyes", "name": "Face and eyes", "assets": [], "details": []},
+    {"id": "tissue", "name": "Tissue and hyphae", "assets": [], "details": []},
+    {"id": "legs", "name": "Legs and contact", "assets": [], "details": []},
+    {"id": "membranes", "name": "Membrane experiments", "assets": [], "details": []}
+  ],
+  "details": [],
+  "archived": []
+}

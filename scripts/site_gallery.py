@@ -26,6 +26,7 @@ def image_url(asset, prefix="../"):
 
 def wrap(title, body, prefix="", gallery=False):
     nav = (("Overview", "index.html"), ("Reference gallery", "gallery/index.html"),
+           ("Collections", "gallery/collections.html"), ("Archive", "gallery/archive.html"),
            ("Experiments", "gallery/experiments.html"), ("All artwork", "gallery/artwork.html"),
            ("Illustrated guide", "Myca Resource Guide.html"),
            ("Written design", "docs/Myca Character Design Brief.html"))
@@ -102,8 +103,9 @@ def controls(options, count):
             '<p id="gallery-empty" hidden>No matching artwork. Try another word or reset the filters.</p>')
 
 
-def gallery_pages(manifest):
+def gallery_pages(manifest, metadata=None):
     assets = {a["sha256"]: a for a in manifest["assets"]}
+    archived = set((metadata or {}).get("archived", []))
     registered = {sha for ref in manifest["references"] for sha in ref["asset_sha256"]}
     references, experimental_refs = [], []
     for ref in manifest["references"]:
@@ -111,8 +113,11 @@ def gallery_pages(manifest):
             references.append(missing_card(ref))
         else:
             asset = assets[ref["asset_sha256"][0]]
+            if asset["sha256"] in archived:
+                continue
             (experimental_refs if is_experiment(asset) else references).append(card(asset, ref))
-    other = sorted((a for a in assets.values() if is_image(a) and a["sha256"] not in registered), key=lambda a: a["stored_filename"].casefold())
+    other = sorted((a for a in assets.values() if is_image(a) and a["sha256"] not in registered
+                    and a["sha256"] not in archived), key=lambda a: a["stored_filename"].casefold())
     membrane = [card(a) for a in other if "experimental membrane design" in a["classification"]]
     experiments = [card(a) for a in other if is_experiment(a) and "experimental membrane design" not in a["classification"]]
     supporting = [card(a) for a in other if not is_experiment(a)]

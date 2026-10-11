@@ -8,6 +8,8 @@ import shutil
 from urllib.parse import quote, unquote, urlsplit
 
 import resource_library
+import review_metadata
+from review_public import organization_pages
 from site_gallery import gallery_pages, overview, wrap
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -25,14 +27,18 @@ RECOVERED_DOCS = {
 }
 
 
-def public_files(manifest):
+def public_files(manifest, metadata=None):
     """An explicit allowlist; never recursively copy a recovery directory."""
-    return set(PUBLIC_PAGES + PUBLIC_METADATA) | {a['resource_path'] for a in manifest['assets']}
+    files = set(PUBLIC_PAGES + PUBLIC_METADATA) | {a['resource_path'] for a in manifest['assets']}
+    if metadata:
+        files |= {review_metadata.asset_relative(a, metadata) for a in manifest['assets']}
+    return files
 
 
-def publish_library(library, out, manifest):
-    for relative in sorted(public_files(manifest)):
-        source = library / relative
+def publish_library(library, out, manifest, metadata=None):
+    metadata = metadata or review_metadata.default_metadata()
+    for relative in sorted(public_files(manifest, metadata)):
+        source = review_metadata.locate(library, relative, manifest, metadata)
         if source.is_symlink() or not source.is_file() or not source.resolve().is_relative_to(library.resolve()):
             raise ValueError(f'Unsafe public library file: {relative}')
         target = out / 'resources/character-library' / relative
@@ -119,6 +125,7 @@ def build(root=ROOT, out=OUT, markdown=None):
     # Runs inside the existing manually dispatched Pages workflow, before output.
     manifest = resource_library.load_manifest()
     resource_library.validate(manifest)
+    metadata = review_metadata.load_metadata(root, manifest)
     if markdown is None:
         import mistune
         markdown = mistune.create_markdown(plugins=['table', 'strikethrough'])
@@ -128,7 +135,7 @@ def build(root=ROOT, out=OUT, markdown=None):
     (out / '.nojekyll').write_text('', encoding='utf-8')
     for name in ('style.css', 'gallery.js'):
         shutil.copyfile(root / 'web' / name, out / name)
-    publish_library(library, out, manifest)
+    publish_library(library, out, manifest, metadata)
     docs = root / 'docs'
     shutil.copytree(docs, out / 'docs', dirs_exist_ok=True)
     shutil.copytree(docs, out / 'source', dirs_exist_ok=True)
@@ -138,13 +145,13 @@ def build(root=ROOT, out=OUT, markdown=None):
         for prefix in ('', 'docs/'):
             dest = out / (prefix + alias)
             dest.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(library / asset['resource_path'], dest)
+            shutil.copyfile(review_metadata.locate(library, asset['resource_path'], manifest, metadata), dest)
     documents = recovered_documents(manifest)
     for logical, asset in documents.items():
         if asset:
             dest = out / 'docs' / logical
             dest.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(library / asset['resource_path'], dest)
+            shutil.copyfile(review_metadata.locate(library, asset['resource_path'], manifest, metadata), dest)
     for md in (out / 'docs').rglob('*.md'):
         logical = md.relative_to(out / 'docs').as_posix()
         relative = 'docs/' + logical[:-3] + '.html'
@@ -166,11 +173,15 @@ def build(root=ROOT, out=OUT, markdown=None):
             return 'href="' + path + '.html' + (fragment or '') + '"'
         body = re.sub(r'href="([^"]+)\.md(#[^"]*)?"', public_link, body)
         (out / relative).write_text(wrap(name[:-3], body, '../../'), encoding='utf-8')
-    for relative, body in gallery_pages(manifest).items():
+    for relative, body in {**gallery_pages(manifest, metadata), **organization_pages(manifest, metadata)}.items():
         dest = out / relative
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(wrap('Recovered gallery', body, '../', gallery=True), encoding='utf-8')
     (out / 'index.html').write_text(wrap('Character library', overview(manifest)), encoding='utf-8')
+    # Explicit public schema; do not copy any local notes, journals, or desk files.
+    import json
+    (out / 'review-collections.json').write_text(json.dumps(metadata, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    shutil.copyfile(root / 'web/detail-views.js', out / 'detail-views.js')
     return manifest
 
 

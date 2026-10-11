@@ -18,6 +18,11 @@ The preserved documents describe a fuller resource bundle. The original import l
 
 ## How to use
 
+For manual visual organization, see [Review Desk startup and workflow](REVIEW_DESK.md).
+Run `python scripts/review_desk.py` from your local checkout to create feature collections,
+save linked detail regions, compare image pairs, and archive/restore originals with Undo.
+Private notes stay Git-ignored; collections and regions can be published through the existing manual Pages workflow.
+
 - `docs/Myca Character Design Brief.md`: primary appearance and membrane candidates.
 - `docs/Myca Locomotion Reference.md`: movement and contact only.
 - `docs/References/Reference Index.md`: feature-scoped evidence and caveats.
