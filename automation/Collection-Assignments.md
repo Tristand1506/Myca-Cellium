@@ -61,3 +61,31 @@ unavailable. No replacement artwork or identifiers are invented.
 Original artwork, recovery manifest, checksums, current R/C IDs, written design
 documents, canonical scopes, statuses and approval ledgers remain unchanged.
 Pages publication remains manually dispatched; this change does not deploy.
+
+
+## Proposed membrane layout · follow-up on 12 October 2026
+
+The revision-21 snapshot above remains the inspected creator-saved state. This PR
+proposes revision 22 with nine additional working direction collections and seven
+linked comparison regions. All seven prior collections, their 70 memberships,
+and all 46 archive choices are unchanged. There are now 114 whole-image memberships
+and seven view memberships across 16 collections; the additional memberships
+reuse existing sources rather than duplicating files.
+
+Visual organization separates layered-petal (31 whole studies), single-sheet (two),
+shelf-fungus (one), lily/bud (six), and mixed sheets (four). R32's gill-frill,
+veil-streamer and spore-lace figures receive separate linked views. Petal,
+single-sheet, shelf-fungus and lily/bud also have linked representative views.
+Vascular reinforcement has no representative confidently assigned; one original
+remains Unsorted. The broad membrane collection retains all 45 original images.
+
+These are reversible working groups for comparison, not creator approval of
+classification, anatomy or a final membrane construction. Lily/bud grouping is
+organizational; it does not amend the written seven-candidate design list. Every
+view retains its parent's source identity and caveats, with no bitmap crop or R/C
+ID created.
+
+The connected editor was only read; these proposed additions are in the PR.
+Its inspected saved public state still reports revision 21. Pull the reviewed
+changes and restart the editor after integration before editing the new groups.
+Nothing is merged or published by this task.

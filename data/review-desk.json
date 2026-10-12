@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 21,
+  "revision": 22,
   "collections": [
     {
       "id": "cap",
@@ -120,9 +120,204 @@
         "3e5b68a132d7135cf750234746a40e2918c4354100ec0aaa088002f40d7c6b4f"
       ],
       "details": []
+    },
+    {
+      "id": "membrane-layered-petal",
+      "name": "Membrane · Layered petal",
+      "assets": [
+        "f90bc311f188708456e9d0045349643b9bb7622e2458a4b6ebe1622739c6ddce",
+        "d441e1d59ad54a4da8819cc84b4503e83d8932b76ad724b8a0c41f403aa22909",
+        "f765840f520e4b6145acfa92de87f7ef3133b10bd521fca4ef687cfac3da876a",
+        "50980d61d317297ccfc54a3f9dee3679df7cad2b04b1ffaccfbe687a18d81cb6",
+        "1ae9d7f5c90eecb154cf6e07f4b44a72b054a25df73da94fe0792c13533ef83b",
+        "bf6164e1d8a84e1c0cc9a13ad4e51919f47a1b627b0ed348bd7bf67d9a1493c2",
+        "3d599c4530e9296738d371c7d065b034743b89ff40f7dc1dd026f49d4a7c9749",
+        "c782a4715bd100a7a825a0e5cfac647bbdc35ff7a1546bd59c5d4545317c5216",
+        "060d43c4ce1d07e6c33c8185ffec617a973a8fa6a7c95a89a33a5c086b5c1400",
+        "d60424897d47f9b08142cfde56ef5cb953a23aabcd5c785e5a1222ad78aaf831",
+        "3b2b02bfce6e30783e49c310acb465b8021f0d77d54d7413fe7be3859eb2164b",
+        "b4e074ae07c6d38b1162162daf929688caeac8e443dd5d68fc006bcb9908a00d",
+        "3817dd36fe1f34fa0d920ee2b1445d77459542f9ddb04c083de4e5fe5c6e639b",
+        "1a009c5b8b1b5211e94a3138f3365ca8482ef4184892d51b8c4e12b23f182e5c",
+        "f6de8a772da53d672b5b92122ba43fce3eb869ad98dcd5488a39edc69feca54b",
+        "9049f21f9fc7b67ec15ad4dbb01eee4245bc497f384dd28a7058fff9fe9a8a4b",
+        "d4ec5a90e2a3151cce3feb69b340a2894ba5f2421fb37cdd8e7a45876d9813b1",
+        "88b10fa9085deb029d1111f49cbd8412f463294259c672565e94a454c9aa9ee6",
+        "052c6d5b05128f316b3610c41c25d29e2a850c70640aaa170b38d35f6b651eb2",
+        "3aff2bb04f192246a7e051d78fd4a2b35bbca283a56ae07f4436d782d06dc37f",
+        "9f58b5d3b5986269a4e1cede9269d5484d2f9bf0baf20bf42252324408c31973",
+        "332698ac54be8ed7ce3d7f6e33dc614d6fee0e0046b50c5a850df614f7e45178",
+        "96c3c1b5884eda09887899cc6ad53ebceb2179858faf2dd420929bb61af902d3",
+        "0c6650975934700dda7af9b97655c2a7ec120e2ddc45bf427bc9d4a3fe329fad",
+        "66c0d625056b5ee3f1d1b9c0a58a6b04bb979ef60ec4841812880e2ec1930a4c",
+        "cf0cbbc31777001ba48d44113850632eecad68ffafdfc68c82679034ca1b8b6f",
+        "293a8bd2d3a2947fc1c244c36af041cac22cb635bf80d19f0910d3963bf60d28",
+        "fd923abec6869d4b8551f6a8008d6b706d4ecca622aa047d8e76b571daa5c8c1",
+        "3b68a8c003a6e52643efa835b14f3ddb24f43cf0db200646dacd6ef9c40b88d9",
+        "2ade066f9dc7a0a1ae1689548ed305a1142aaf4822f581b1cefcaebf3d0e0910",
+        "e6c55780b8a8536c7c353a862fd9d50ab5d1442d65b57931665450a36dcfbba7"
+      ],
+      "details": [
+        "view-membrane-layered-petal"
+      ]
+    },
+    {
+      "id": "membrane-single-sheet",
+      "name": "Membrane · Single sheet",
+      "assets": [
+        "0977aa95e81d0c92f64b532d5ef449684499d15dae8f2371724764bcdc46682d",
+        "37653f2e5167c395db591ebb5a4967e0c06667adb1911d8e97fe0e70e8081734"
+      ],
+      "details": [
+        "view-membrane-single-sheet"
+      ]
+    },
+    {
+      "id": "membrane-vascular",
+      "name": "Membrane · Vascular reinforcement",
+      "assets": [],
+      "details": []
+    },
+    {
+      "id": "membrane-gill-frill",
+      "name": "Membrane · Gill frill",
+      "assets": [],
+      "details": [
+        "view-membrane-gill-frill"
+      ]
+    },
+    {
+      "id": "membrane-veil-streamer",
+      "name": "Membrane · Veil streamers",
+      "assets": [],
+      "details": [
+        "view-membrane-veil-streamer"
+      ]
+    },
+    {
+      "id": "membrane-spore-lace",
+      "name": "Membrane · Spore lace",
+      "assets": [],
+      "details": [
+        "view-membrane-spore-lace"
+      ]
+    },
+    {
+      "id": "membrane-shelf-fungus",
+      "name": "Membrane · Shelf fungus",
+      "assets": [
+        "e2311590a403cacebb68d8e04b33d8aa7490497e5b9742736812e126c66f8449"
+      ],
+      "details": [
+        "view-membrane-shelf-fungus"
+      ]
+    },
+    {
+      "id": "membrane-lily-bud",
+      "name": "Membrane · Lily / bud studies",
+      "assets": [
+        "c9dd65a8c7d9320f13d60e168ddb77348ef20c7a0c6bea72e024587fd6c22a82",
+        "8b0e5557879c60d419c3afb5caea9213fe4782a5228472247dea87fb917ccae9",
+        "a723b59f9f52f70a737741134d0bfd0e343cf5408c7048d1afc1ee2d28746ecd",
+        "062ee50cb5ab9079af0b0071f64a5f72e5bd7a6b396b84845c6b44315dfa5f52",
+        "c1ed1d4e36bc7fbf5897f3a578913ecc66c12ca34aaa8f1a3084db50b1a45650",
+        "8490fb154ecb6629ec1b4fd62776a741e1bb92c69b2747b576639c5523a15892"
+      ],
+      "details": [
+        "view-membrane-lily-bud"
+      ]
+    },
+    {
+      "id": "membrane-mixed",
+      "name": "Membrane · Mixed comparison sheets",
+      "assets": [
+        "ad0f58813af6342c16d3ab5e9e0b74476f2f827514d601cbef8d328ff06c61b5",
+        "ff3e9f68753d440ede3d4cc7cb6e14985f5f673a11350bf611b9919bac1e663e",
+        "5a1ecdea3fb3a35fe06614c967ded1ad4eab325246b7ecb9fa83bbb78dd5aa95",
+        "a41e174eef4cc08ff540bc3cc8e5bd81658ea879e7c4e28722385fb5ffa7ae79"
+      ],
+      "details": []
     }
   ],
-  "details": [],
+  "details": [
+    {
+      "id": "view-membrane-layered-petal",
+      "title": "Layered petal · working comparison region",
+      "asset_sha256": "3817dd36fe1f34fa0d920ee2b1445d77459542f9ddb04c083de4e5fe5c6e639b",
+      "rect": [
+        0.04,
+        0.07,
+        0.28,
+        0.57
+      ]
+    },
+    {
+      "id": "view-membrane-single-sheet",
+      "title": "Single sheet · working comparison region",
+      "asset_sha256": "0977aa95e81d0c92f64b532d5ef449684499d15dae8f2371724764bcdc46682d",
+      "rect": [
+        0.0,
+        0.0,
+        0.48,
+        0.67
+      ]
+    },
+    {
+      "id": "view-membrane-gill-frill",
+      "title": "Gill frill · working comparison region",
+      "asset_sha256": "ff3e9f68753d440ede3d4cc7cb6e14985f5f673a11350bf611b9919bac1e663e",
+      "rect": [
+        0.005,
+        0.14,
+        0.33,
+        0.6
+      ]
+    },
+    {
+      "id": "view-membrane-veil-streamer",
+      "title": "Veil streamers · working comparison region",
+      "asset_sha256": "ff3e9f68753d440ede3d4cc7cb6e14985f5f673a11350bf611b9919bac1e663e",
+      "rect": [
+        0.337,
+        0.14,
+        0.66,
+        0.6
+      ]
+    },
+    {
+      "id": "view-membrane-spore-lace",
+      "title": "Spore lace · working comparison region",
+      "asset_sha256": "ff3e9f68753d440ede3d4cc7cb6e14985f5f673a11350bf611b9919bac1e663e",
+      "rect": [
+        0.671,
+        0.14,
+        0.995,
+        0.6
+      ]
+    },
+    {
+      "id": "view-membrane-shelf-fungus",
+      "title": "Shelf fungus · working comparison region",
+      "asset_sha256": "e2311590a403cacebb68d8e04b33d8aa7490497e5b9742736812e126c66f8449",
+      "rect": [
+        0.008,
+        0.09,
+        0.311,
+        0.79
+      ]
+    },
+    {
+      "id": "view-membrane-lily-bud",
+      "title": "Lily / bud studies · working comparison region",
+      "asset_sha256": "8b0e5557879c60d419c3afb5caea9213fe4782a5228472247dea87fb917ccae9",
+      "rect": [
+        0.326,
+        0.008,
+        0.5,
+        0.366
+      ]
+    }
+  ],
   "archived": [
     "f0545a32b4c254230200d0fc8b03013ecae10487902bcbfd74bd0e90365bc04c",
     "c10ff04b32b1524d3a45b73b688bf9c6b677429de887cba9edd645bc095bc08a",

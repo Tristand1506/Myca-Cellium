@@ -49,6 +49,16 @@ collection browsing. Canon records and creator approval ledgers are unchanged.
 See the [collection inspection report](automation/Collection-Assignments.md) for
 the connected-session snapshot, observed scope mismatches and remaining data gaps.
 
+## Membrane comparison board
+
+**Compare membranes** separates working growth directions and supports two-to-four
+study comparisons, including linked panels from R32/R33. Existing collection
+memberships store the organization; `data/membrane-layout.json` controls headings.
+All original studies remain accessible, source proportions and reference caveats
+are preserved, and browser selections never alter saved data or approve a feature.
+See [the Review Desk workflow](REVIEW_DESK.md#separate-and-compare-membrane-directions)
+for changing groups and regions.
+
 ## Canon change protocol
 
 1. Create an `experiment/*` or `refinement/*` branch.

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "source_collection": "membranes",
+  "directions": [
+    {
+      "id": "layered-petal",
+      "collection_id": "membrane-layered-petal",
+      "title": "Layered petal",
+      "summary": "Overlapping soft petal-like sheets.",
+      "basis": "documented candidate"
+    },
+    {
+      "id": "single-sheet",
+      "collection_id": "membrane-single-sheet",
+      "title": "Single sheet",
+      "summary": "One continuous flared membrane.",
+      "basis": "documented candidate"
+    },
+    {
+      "id": "vascular",
+      "collection_id": "membrane-vascular",
+      "title": "Vascular reinforcement",
+      "summary": "Branching support tapering from the body transition toward the edge.",
+      "basis": "documented candidate"
+    },
+    {
+      "id": "gill-frill",
+      "collection_id": "membrane-gill-frill",
+      "title": "Gill frill",
+      "summary": "Radially pleated lamella-like folds.",
+      "basis": "documented candidate"
+    },
+    {
+      "id": "veil-streamer",
+      "collection_id": "membrane-veil-streamer",
+      "title": "Veil streamers",
+      "summary": "Open ribbons and narrow streamer-like panels.",
+      "basis": "documented candidate"
+    },
+    {
+      "id": "spore-lace",
+      "collection_id": "membrane-spore-lace",
+      "title": "Spore lace",
+      "summary": "Fenestrated tissue with thin bridges and natural openings.",
+      "basis": "documented candidate"
+    },
+    {
+      "id": "shelf-fungus",
+      "collection_id": "membrane-shelf-fungus",
+      "title": "Shelf fungus",
+      "summary": "Scalloped bracket-like tiers with a more substantial architecture.",
+      "basis": "documented candidate"
+    },
+    {
+      "id": "lily-bud",
+      "collection_id": "membrane-lily-bud",
+      "title": "Lily / bud studies",
+      "summary": "Closure, curtain and bud-shaped working experiments.",
+      "basis": "organizational experiment"
+    },
+    {
+      "id": "mixed",
+      "collection_id": "membrane-mixed",
+      "title": "Mixed comparison sheets",
+      "summary": "Whole sheets showing several directions together.",
+      "basis": "comparison sheets"
+    }
+  ]
+}

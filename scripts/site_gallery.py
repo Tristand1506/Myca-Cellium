@@ -28,7 +28,8 @@ def wrap(title, body, prefix="", gallery=False):
     nav = (("Overview", "index.html"), ("Reference gallery", "gallery/index.html"),
            ("Collections", "gallery/collections.html"), ("By feature", "gallery/features.html"),
            ("Archive", "gallery/archive.html"),
-           ("Experiments", "gallery/experiments.html"), ("All artwork", "gallery/artwork.html"),
+           ("Experiments", "gallery/experiments.html"), ("Compare membranes", "gallery/membranes.html"),
+           ("All artwork", "gallery/artwork.html"),
            ("Illustrated guide", "Myca Resource Guide.html"),
            ("Written design", "docs/Myca Character Design Brief.html"))
     links = "".join(f'<a href="{url(prefix + path)}">{label}</a>' for label, path in nav)
@@ -128,6 +129,7 @@ def gallery_pages(manifest, metadata=None):
     intro += tabs + controls([("source", "Source references"), ("crop", "Detail crops"), ("missing", "Missing IDs")], len(references))
     refs_body = intro + '<div class="gallery-grid">' + ''.join(references) + '</div>'
     ex_body = '<p class="kicker">Experimental archive</p><h1>Fungal membrane experiments</h1><p class="lede">Candidate designs, preserved for comparison.</p><p class="notice experiment-notice">The dusty-pink flared skirt and dark-brown waistband remain the baseline. Membrane candidates are experiments, not a selected canon replacement. During membrane tasks, follow the written rules: no belt, waistband, fastening or ordinary fabric attachment seam.</p>'
+    ex_body += '<p><a class="button" href="membranes.html">Separate directions and compare studies</a></p>'
     ex_body += tabs + controls([], len(experimental_refs) + len(membrane) + len(experiments))
     ex_body += '<section><h2>Registered membrane studies · R32–R34</h2><div class="gallery-grid">' + ''.join(experimental_refs) + '</div></section>'
     ex_body += '<section><h2>Other membrane candidates</h2><p>Unregistered studies do not create R35 or a new canon entry.</p><div class="gallery-grid">' + ''.join(membrane) + '</div></section>'

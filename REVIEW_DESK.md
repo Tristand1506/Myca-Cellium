@@ -82,6 +82,32 @@ Saving in the Review Desk writes `data/review-desk.json` locally. Commit and pus
 through a PR before building Pages from the remote branch. A generated feature index
 is derived output, not a second editable source of memberships.
 
+## Separate and compare membrane directions
+
+Open **Compare membranes** in the built site. Filter by growth architecture, select
+two to four whole studies or linked regions, then choose **Compare selected**.
+Selections survive direction changes. Equal-height frames preserve the source
+proportions; they do not normalize character scale, pose or lighting. On small
+screens, the comparison scrolls horizontally within its own frame.
+
+The working **Membrane · ...** collections separate petal, single-sheet, vascular,
+gill-frill, veil-streamer, spore-lace, shelf-fungus, lily/bud and mixed-sheet studies.
+The seven documented candidates remain experimental. Lily/bud is an organizational
+working direction, not a new canon candidate. Vascular currently has no clearly
+assigned representative; ambiguous studies stay Unsorted.
+
+Use the existing Review Desk collection actions to add or remove members, and draw
+or adjust linked regions without changing artwork. One source may belong to
+multiple directions. The original broad Membrane experiments collection and all
+other existing memberships are preserved. Region changes keep their existing view
+IDs; these presentation views receive no R/C IDs.
+
+`data/membrane-layout.json` maps stable collection IDs to direction headings.
+Adding another direction requires a matching collection and a layout entry.
+Public memberships and coordinates remain in `data/review-desk.json`.
+Browser comparison selections are temporary and do not write or publish anything.
+Commit saved organization through a PR; publication still uses the manual workflow.
+
 ## Prototype limits
 
 ### Windows line endings and checksum startup errors
