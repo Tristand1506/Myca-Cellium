@@ -153,7 +153,8 @@ class Desk:
 
     def mutate(self, payload):
         self.current()
-        meta.require(isinstance(payload, dict) and payload.get('version') == self.private['version'],
+        meta.require(isinstance(payload, dict) and type(payload.get('version')) is int
+                     and payload.get('version') == self.private['version'],
                      'Stale tab. Reload before making another change.')
         action = payload.get('action')
         public, private = copy.deepcopy(self.public), copy.deepcopy(self.private)

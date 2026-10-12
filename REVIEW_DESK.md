@@ -237,7 +237,7 @@ ignored private directory separately if its review history matters.
 
 ### v0.3 validation and limits
 
-The Python suite includes real Chrome/Edge browser interactions using only the
+The Python suite validates the full registered corpus against its pinned SHA-256\nmetadata and preserved R/C reservations. It also verifies every new private\nrecord type is excluded from publication. It includes real Chrome/Edge browser\ninteractions using only the
 standard library and the browser's local DevTools interface. No browser testing
 dependency, workflow rewrite or server framework is required. A headless runner
 does not replace an actual Windows/touch acceptance pass. Full-corpus publication

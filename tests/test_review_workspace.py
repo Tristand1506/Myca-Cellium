@@ -46,6 +46,11 @@ class WorkspaceTests(unittest.TestCase):
         self.change('annotation_delete', id=record['id']); self.change('undo')
         self.assertEqual(self.desk.state()['workspace']['annotations'][0], record)
 
+    def test_boolean_request_version_is_rejected(self):
+        self.change('annotation_save',record=self.annotation())
+        with self.assertRaisesRegex(ValueError,'Stale tab'):
+            self.desk.mutate({'version':True,'action':'annotation_save','record':self.annotation()})
+
     def test_bad_geometry_targets_enums_and_unknown_fields_are_atomic(self):
         invalid = [
             {'target':'R08'}, {'target':[]}, {'points':[[float('nan'),0],[1,1]]},
@@ -219,6 +224,31 @@ class WorkspaceTests(unittest.TestCase):
         self.change('undo')
         self.assertTrue(any(r['target']==region for r in self.desk.state()['workspace']['reviews']))
 
+    def test_all_private_workspace_records_remain_excluded_from_publication(self):
+        self.change('annotation_save',record=self.annotation())
+        self.change('comparison_save',record=self.comparison())
+        self.change('iteration_save',record=self.iteration())
+        self.change('review_save',record=self.review())
+        for name in build_site.PUBLIC_PAGES + build_site.PUBLIC_METADATA:
+            path=self.desk.library/name
+            if not path.exists():
+                path.write_text('Synthetic public envelope',encoding='utf-8')
+        output=self.root/'public-output'
+        build_site.publish_library(self.desk.library,output,self.manifest,self.desk.public)
+        self.assertFalse(any('.review-desk' in str(p) for p in output.rglob('*')))
+        for path in output.rglob('*'):
+            if path.is_file():
+                raw=path.read_bytes()
+                for sentinel in ('PRIVATE ANNOTATION','PRIVATE COMPARISON','PRIVATE PROMPT','PRIVATE NOMINATION'):
+                    self.assertNotIn(sentinel.encode(),raw)
+
+    def test_current_registered_artwork_bytes_identifiers_and_archives_are_intact(self):
+        from test_review_desk import resource_library
+        manifest=resource_library.load_manifest()
+        resource_library.validate(manifest)  # Read-only full-corpus SHA/navigation/privacy validation.
+        ids={r['reference_id'] for r in manifest['references']}
+        self.assertEqual(ids,{f'R{i:02d}' for i in range(1,35)}|{f'C{i:02d}' for i in range(1,16)})
+
 @unittest.skipUnless(browser_path(), 'Chrome or Edge required (MYCA_BROWSER can select it)')
 class WorkspaceBrowserTests(unittest.TestCase):
     def setUp(self):
@@ -291,7 +321,29 @@ class WorkspaceBrowserTests(unittest.TestCase):
         expected=browser.evaluate('compareSessions()[0]')
         browser.evaluate('compareDraft.transforms[0].zoom=1;openAdvancedCompare(compareSessions()[0])')
         self.assertEqual(browser.evaluate('compareDraft'),expected)
+
         browser.evaluate('document.getElementById("comparison").close()')
+        browser.evaluate(f'mutate("detail_save",{{title:"Browser linked region",asset_sha256:{json.dumps(self.sha)},rect:[.1,.2,.6,.7]}})')
+        browser.evaluate(f'mutate("detail_save",{{title:"Second region",asset_sha256:{json.dumps(self.second)},rect:[.2,.1,.8,.8]}})')
+        browser.evaluate('selection=new Set([state.assets[0].sha256,state.assets[1].sha256,...state.public.details.map(d=>d.id)]);openCompare()')
+        browser.wait('compareViews.length===4 && compareViews.every(p=>p.image.complete)')
+        self.assertEqual(browser.evaluate('compareViews.length'),4)
+        self.assertTrue(browser.evaluate('document.querySelector("#compare-mode option[value=overlay]").disabled'))
+        self.assertFalse(browser.evaluate('document.documentElement.scrollWidth > innerWidth'))
+        browser.evaluate('document.getElementById("comparison").close()')
+        browser.evaluate('openViewer(state.public.details[0].id)')
+        browser.wait('document.getElementById("image-stage").dataset.focused==="true"')
+        browser.evaluate('document.getElementById("mark-tool").value="pin";beginMark()')
+        browser.drag('#full-image',[.3,.3],[.3,.3])
+        browser.evaluate('document.getElementById("save-mark").click()')
+        browser.wait('marks().length===6 && !markDirty')
+        regionMark=browser.evaluate('marks().at(-1)')
+        self.assertAlmostEqual(regionMark['points'][0][0],.3,places=2)
+        self.assertAlmostEqual(regionMark['points'][0][1],.3,places=2)
+        browser.evaluate('focusDetail(true)')
+        self.assertEqual(browser.evaluate('marks().at(-1).points'),regionMark['points'])
+        browser.evaluate('closeViewer()')
+
 
 
         browser.evaluate(f'openHistory({json.dumps(self.sha)})')
@@ -331,7 +383,7 @@ class WorkspaceBrowserTests(unittest.TestCase):
         browser.call('Page.reload')
 
 
-        browser.wait('typeof state !== "undefined" && state?.workspace?.annotations.length===5')
+        browser.wait('typeof state !== "undefined" && state?.workspace?.annotations.length===6')
         self.assertEqual(self.desk.public_path.read_bytes(), self.public_bytes)
 
 
