@@ -10,6 +10,8 @@ from urllib.parse import unquote, urlsplit
 import build_site
 import resource_library
 import review_metadata
+import feature_references
+import membrane_gallery
 from review_public import organization_pages
 from site_gallery import gallery_pages, is_image
 
@@ -61,7 +63,8 @@ def local_links(path, out):
             errors.append(f'{path.relative_to(out)} -> {target}')
         # Source documents have historic heading anchors; generated navigation
         # and the preserved illustrated guide must have real fragment targets.
-        elif url.fragment and (not url.path or path.name == 'Myca Resource Guide.html'):
+        elif url.fragment and (not url.path or path.name == 'Myca Resource Guide.html'
+                               or resolved.parent == (out / 'gallery').resolve()):
             linked = Page(resolved.read_text(encoding='utf-8'))
             if unquote(url.fragment) not in linked.ids:
                 errors.append(f'{path.relative_to(out)} -> missing #{url.fragment}')
@@ -71,6 +74,7 @@ def local_links(path, out):
 def validate(root=build_site.ROOT, out=build_site.OUT):
     manifest = resource_library.load_manifest()
     metadata = review_metadata.load_metadata(root, manifest)
+    derived = feature_references.assignments(manifest, metadata, feature_references.load_features(root))
     library = root / 'resources/character-library'
     published = out / 'resources/character-library'
     expected = build_site.public_files(manifest, metadata)
@@ -87,13 +91,15 @@ def validate(root=build_site.ROOT, out=build_site.OUT):
         for prefix in ('', 'docs/'):
             check(digest(out / (prefix + alias)) == asset['sha256'], 'Guide compatibility asset changed')
     pages = [out / 'index.html', out / guide.name, out / 'automation/README.html']
-    gallery = {**gallery_pages(manifest, metadata), **organization_pages(manifest, metadata)}
+    gallery = {**gallery_pages(manifest, metadata), **organization_pages(manifest, metadata),
+               'gallery/features.html': feature_references.feature_page(manifest, derived),
+               'gallery/membranes.html': membrane_gallery.membrane_page(manifest, metadata, membrane_gallery.load_layout(root))}
     pages += [out / p for p in gallery]
     pages += [published / name for name in rendered]
     pages += [(out / 'docs' / md.relative_to(root / 'docs')).with_suffix('.html') for md in (root / 'docs').rglob('*.md')]
     pages += [out / 'docs' / (logical[:-3] + '.html') for logical, asset in build_site.recovered_documents(manifest).items() if asset]
     # Every other output file also has an explicit source or generated role.
-    allowed = {'index.html', 'style.css', 'gallery.js', 'detail-views.js', 'review-collections.json', '.nojekyll', guide.name,
+    allowed = {'index.html', 'style.css', 'gallery.js', 'detail-views.js', 'review-collections.json', 'feature-references.json', 'membrane-compare.js', '.nojekyll', guide.name,
                'automation/README.md', 'automation/README.html'}
     allowed |= {'resources/character-library/' + name for name in expected | rendered}
     allowed |= set(gallery)
@@ -125,6 +131,12 @@ def validate(root=build_site.ROOT, out=build_site.OUT):
     check(images == {a['resource_path'] for a in manifest['assets'] if is_image(a)}, 'Gallery does not cover all original images')
     check(json.loads((out / 'review-collections.json').read_text(encoding='utf-8')) == metadata,
           'Publication must include only validated public organization')
+    check(json.loads((out / 'feature-references.json').read_text(encoding='utf-8')) == derived,
+          'Feature assignments differ from collection membership or recorded reference limits')
+    check(feature_references.feature_page(manifest, derived) in (out / 'gallery/features.html').read_text(encoding='utf-8'),
+          'Feature page lost assignment scopes, statuses or parent caveats')
+    check(gallery['gallery/membranes.html'] in (out / 'gallery/membranes.html').read_text(encoding='utf-8'),
+          'Membrane comparison page lost direction assignments or reference caveats')
     refs = Page((out / 'gallery/index.html').read_text(encoding='utf-8'))
     check(not {'R32', 'R33', 'R34'} & set(refs.cards), 'Membrane experiments leaked into main reference gallery')
     css = (out / 'style.css').read_text()

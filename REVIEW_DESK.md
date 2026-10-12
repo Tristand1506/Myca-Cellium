@@ -61,6 +61,68 @@ Optional full-corpus regression (temporary copies require roughly 1 GB free; Pil
 MYCA_FULL_STORE_TEST=1 python -m unittest discover -s tests -p test_review_desk_integration.py -v
 ```
 
+## Feature-reference navigation
+
+The manual Pages build also generates **By feature** and `feature-references.json`.
+It uses the saved public sidecar, not private notes or Undo history. Explicit
+`data/collection-features.json` mappings associate stable collection IDs with review
+topics. New or unmapped collections stay organizational until a mapping is added;
+renaming does not infer a new topic, and deleting a collection creates no assignments.
+
+Every assigned item retains its recorded R/C identities, exact scope, status and
+classification. Registered crops also show their parent reference's limits; saved
+regions keep their original coordinates and receive no R/C ID. Archived memberships
+remain in the derived index and history view, with links to unchanged originals.
+
+**Selecting a reference for a topic does not approve that feature.** For example,
+placing a lichen-only crop into Face and eyes does not approve its facial anatomy.
+All existing written authority and specific creator approvals still control use.
+
+Saving in the Review Desk writes `data/review-desk.json` locally. Commit and push it
+through a PR before building Pages from the remote branch. A generated feature index
+is derived output, not a second editable source of memberships.
+
+## Separate and compare membrane directions
+
+Open **Compare membranes** in the built site. Filter by growth architecture, select
+two to four whole studies or linked regions, then choose **Compare selected**.
+Selections survive direction changes. Equal-height frames preserve the source
+proportions; they do not normalize character scale, pose or lighting. On small
+screens, the comparison scrolls horizontally within its own frame. Without
+JavaScript, linked-region cards show the full, undistorted original with the region
+coordinates below; whole-study cards and source limitations remain available.
+
+The working **Membrane · ...** collections separate petal, single-sheet, vascular,
+gill-frill, veil-streamer, spore-lace, shelf-fungus, lily/bud and mixed-sheet studies.
+The seven documented candidates remain experimental. Lily/bud is an organizational
+working direction, not a new canon candidate. Vascular currently has no clearly
+assigned representative; ambiguous studies stay Unsorted.
+
+Use the existing Review Desk collection actions to add or remove members, and draw
+additional linked regions without changing artwork. One source may belong to
+multiple directions. The original broad Membrane experiments collection and all
+other existing memberships are preserved. Existing R/C identifiers remain intact; these presentation regions use view IDs
+and receive no R/C identifiers.
+
+`data/membrane-layout.json` maps stable collection IDs to direction headings.
+Adding another direction requires a matching collection and a layout entry.
+Public memberships and coordinates remain in `data/review-desk.json`.
+Browser comparison selections are temporary and do not write or publish anything.
+Commit saved organization through a PR; publication still uses the manual workflow.
+
+### Browser regression check
+
+After building the site, use Playwright with Chromium installed to check all seven
+linked regions on desktop and mobile, with JavaScript enabled and disabled:
+
+```bash
+node tests/test_membrane_browser.js
+```
+
+The check uses the installed `playwright` module. `MYCA_PLAYWRIGHT_PATH` can point to
+an existing module installation instead. This browser check runs separately from
+the Python suite.
+
 ## Prototype limits
 
 ### Windows line endings and checksum startup errors

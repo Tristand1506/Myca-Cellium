@@ -31,6 +31,34 @@ Private notes stay Git-ignored; collections and regions can be published through
 - `python scripts/validate.py`: deterministic integrity checks.
 - `python scripts/build_site.py`: build the static reference gallery, separate experiments, documentation and verified public assets in `_site/`.
 
+## Collection-based reference assignments
+
+**Browse by feature** is generated from saved Review Desk memberships in
+`data/review-desk.json`. `data/collection-features.json` explicitly maps stable
+collection IDs to review topics. Renaming a collection preserves its topic;
+unmapped collections such as Legacy remain organizational. Names are never parsed
+as approvals or automatically mapped to features.
+
+The build emits `gallery/features.html` and `feature-references.json`, pairing each
+assigned asset or virtual region with **all existing R/C records**, exact scopes,
+statuses, classifications and crop-parent limitations. An assignment means
+"review this item for this topic", not permission to copy that feature. Unregistered
+art remains unregistered; archived memberships remain history, excluded from active
+collection browsing. Canon records and creator approval ledgers are unchanged.
+
+See the [collection inspection report](automation/Collection-Assignments.md) for
+the connected-session snapshot, observed scope mismatches and remaining data gaps.
+
+## Membrane comparison board
+
+**Compare membranes** separates working growth directions and supports two-to-four
+study comparisons, including linked panels from R32/R33. Existing collection
+memberships store the organization; `data/membrane-layout.json` controls headings.
+All original studies remain accessible, source proportions and reference caveats
+are preserved, and browser selections never alter saved data or approve a feature.
+See [the Review Desk workflow](REVIEW_DESK.md#separate-and-compare-membrane-directions)
+for changing groups and regions.
+
 ## Canon change protocol
 
 1. Create an `experiment/*` or `refinement/*` branch.

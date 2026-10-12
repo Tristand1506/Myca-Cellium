@@ -9,6 +9,8 @@ from urllib.parse import quote, unquote, urlsplit
 
 import resource_library
 import review_metadata
+import feature_references
+import membrane_gallery
 from review_public import organization_pages
 from site_gallery import gallery_pages, overview, wrap
 
@@ -126,6 +128,8 @@ def build(root=ROOT, out=OUT, markdown=None):
     manifest = resource_library.load_manifest()
     resource_library.validate(manifest)
     metadata = review_metadata.load_metadata(root, manifest)
+    derived = feature_references.assignments(manifest, metadata, feature_references.load_features(root))
+    membrane_layout = membrane_gallery.load_layout(root)
     if markdown is None:
         import mistune
         markdown = mistune.create_markdown(plugins=['table', 'strikethrough'])
@@ -173,15 +177,21 @@ def build(root=ROOT, out=OUT, markdown=None):
             return 'href="' + path + '.html' + (fragment or '') + '"'
         body = re.sub(r'href="([^"]+)\.md(#[^"]*)?"', public_link, body)
         (out / relative).write_text(wrap(name[:-3], body, '../../'), encoding='utf-8')
-    for relative, body in {**gallery_pages(manifest, metadata), **organization_pages(manifest, metadata)}.items():
+    pages = {**gallery_pages(manifest, metadata), **organization_pages(manifest, metadata),
+             'gallery/features.html': feature_references.feature_page(manifest, derived),
+             'gallery/membranes.html': membrane_gallery.membrane_page(manifest, metadata, membrane_layout)}
+    for relative, body in pages.items():
         dest = out / relative
         dest.parent.mkdir(parents=True, exist_ok=True)
-        dest.write_text(wrap('Recovered gallery', body, '../', gallery=True), encoding='utf-8')
+        title = 'Membrane directions' if relative == 'gallery/membranes.html' else 'Recovered gallery'
+        dest.write_text(wrap(title, body, '../', gallery=True), encoding='utf-8')
     (out / 'index.html').write_text(wrap('Character library', overview(manifest)), encoding='utf-8')
     # Explicit public schema; do not copy any local notes, journals, or desk files.
     import json
     (out / 'review-collections.json').write_text(json.dumps(metadata, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    (out / 'feature-references.json').write_text(json.dumps(derived, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     shutil.copyfile(root / 'web/detail-views.js', out / 'detail-views.js')
+    shutil.copyfile(root / 'web/membrane-compare.js', out / 'membrane-compare.js')
     return manifest
 
 

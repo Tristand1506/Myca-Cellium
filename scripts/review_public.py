@@ -25,6 +25,7 @@ def organization_pages(manifest, metadata):
     refs = {sha: ref for ref in manifest['references'] for sha in ref['asset_sha256']}
     details = {d['id']: d for d in metadata['details']}
     body = '<p class="kicker">Creator-curated organization</p><h1>Feature collections</h1><p class="notice">Grouping and saved regions do not grant canon approval. Experimental parents stay experimental. Private review notes are not published.</p>'
+    body += '<p><a href="features.html">Review feature assignments and recorded scopes</a></p>'
     if not metadata['collections']:
         body += '<p>No collections have been created yet.</p>'
     for collection in metadata['collections']:
@@ -40,6 +41,9 @@ def organization_pages(manifest, metadata):
         for detail in active_details:
             body += detail_card(detail, assets[detail['asset_sha256']], refs.get(detail['asset_sha256'])).replace(
                 f'id="{detail["id"]}"', f'id="{collection["id"]}-{detail["id"]}"', 1)
+        hidden = len(collection['assets']) + len(collection['details']) - len(active_assets) - len(active_details)
+        if hidden:
+            body += f'<p class="notice">{hidden} archived membership(s) retained. <a href="features.html#feature-{collection["id"]}">Review retained assignments</a>.</p>'
         if not active_assets and not active_details:
             body += '<p class="notice">No active items in this collection.</p>'
         body += '</div></section>'

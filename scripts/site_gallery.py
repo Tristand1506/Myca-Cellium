@@ -26,8 +26,10 @@ def image_url(asset, prefix="../"):
 
 def wrap(title, body, prefix="", gallery=False):
     nav = (("Overview", "index.html"), ("Reference gallery", "gallery/index.html"),
-           ("Collections", "gallery/collections.html"), ("Archive", "gallery/archive.html"),
-           ("Experiments", "gallery/experiments.html"), ("All artwork", "gallery/artwork.html"),
+           ("Collections", "gallery/collections.html"), ("By feature", "gallery/features.html"),
+           ("Archive", "gallery/archive.html"),
+           ("Experiments", "gallery/experiments.html"), ("Compare membranes", "gallery/membranes.html"),
+           ("All artwork", "gallery/artwork.html"),
            ("Illustrated guide", "Myca Resource Guide.html"),
            ("Written design", "docs/Myca Character Design Brief.html"))
     links = "".join(f'<a href="{url(prefix + path)}">{label}</a>' for label, path in nav)
@@ -127,6 +129,7 @@ def gallery_pages(manifest, metadata=None):
     intro += tabs + controls([("source", "Source references"), ("crop", "Detail crops"), ("missing", "Missing IDs")], len(references))
     refs_body = intro + '<div class="gallery-grid">' + ''.join(references) + '</div>'
     ex_body = '<p class="kicker">Experimental archive</p><h1>Fungal membrane experiments</h1><p class="lede">Candidate designs, preserved for comparison.</p><p class="notice experiment-notice">The dusty-pink flared skirt and dark-brown waistband remain the baseline. Membrane candidates are experiments, not a selected canon replacement. During membrane tasks, follow the written rules: no belt, waistband, fastening or ordinary fabric attachment seam.</p>'
+    ex_body += '<p><a class="button" href="membranes.html">Separate directions and compare studies</a></p>'
     ex_body += tabs + controls([], len(experimental_refs) + len(membrane) + len(experiments))
     ex_body += '<section><h2>Registered membrane studies · R32–R34</h2><div class="gallery-grid">' + ''.join(experimental_refs) + '</div></section>'
     ex_body += '<section><h2>Other membrane candidates</h2><p>Unregistered studies do not create R35 or a new canon entry.</p><div class="gallery-grid">' + ''.join(membrane) + '</div></section>'
@@ -141,7 +144,7 @@ def overview(manifest):
     assets = {a["sha256"]: a for a in manifest["assets"]}
     ref = next(r for r in manifest["references"] if r["reference_id"] == "R30")
     hero = assets[ref["asset_sha256"][0]]
-    body = '<section class="hero"><div><p class="kicker">A living fungal character · design baseline 1.0</p><h1>Myca’s reference library</h1><p class="lede">Explore the original artwork, precise feature references and evolving design studies.</p><p>Written design rules remain authoritative. Reference art supports only its documented features.</p><div class="actions"><a class="button" href="gallery/index.html">Browse references</a><a href="Myca%20Resource%20Guide.html">Open illustrated guide ↗</a></div></div>'
+    body = '<section class="hero"><div><p class="kicker">A living fungal character · design baseline 1.0</p><h1>Myca’s reference library</h1><p class="lede">Explore the original artwork, precise feature references and evolving design studies.</p><p>Written design rules remain authoritative. Reference art supports only its documented features.</p><div class="actions"><a class="button" href="gallery/features.html">Browse by feature</a><a href="gallery/index.html">All registered references</a><a href="Myca%20Resource%20Guide.html">Open illustrated guide ↗</a></div></div>'
     body += f'<figure><img src="{image_url(hero, "")}" alt="R30 soft-shaded three-pose supporting reference" decoding="async"><figcaption>R30 · supporting style and pose reference. No whole-sheet approval.</figcaption></figure></section>'
     body += '<section class="stats" aria-label="Recovered library coverage">' + ''.join(f'<div><strong>{number}</strong><span>{label}</span></div>' for number, label in [(187, "original image files"), (46, "recovered reference IDs"), (15, "pixel-exact detail crops"), (234, "public assets")]) + '</section>'
     body += '<section class="overview-grid"><article><p class="kicker">Use deliberately</p><h2>References with boundaries</h2><p>Read the intended feature scope beside each image, including corrections and defects that must not be inherited.</p><a href="gallery/index.html">Open scoped references →</a></article><article class="experiment-panel"><p class="kicker">Separate from canon</p><h2>Living-membrane candidates</h2><p>The pink skirt and dark waistband remain the baseline. Explore retained membrane studies as experimental alternatives.</p><a href="gallery/experiments.html">Review experiments →</a></article><article><p class="kicker">Development archive</p><h2>Animation and other artwork</h2><p>Original production frames, studies and inspiration, with recorded classifications and SHA-256 fingerprints.</p><a href="gallery/artwork.html">Browse supporting artwork →</a></article></section>'
