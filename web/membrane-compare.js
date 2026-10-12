@@ -15,6 +15,7 @@
     for (const frame of scope.querySelectorAll(".membrane-region")) {
       if (observed.has(frame)) continue;
       observed.add(frame);
+      frame.parentElement.hidden = false;
       const image = frame.querySelector("img");
       const fit = () => {
         const outer = frame.parentElement;

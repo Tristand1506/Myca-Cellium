@@ -84,8 +84,12 @@ def preview(asset, detail, title):
         return '<div class="membrane-preview">' + image + '></div>'
     l, t, r, b = detail['rect']
     style = f'width:{100/(r-l):.6f}%;height:{100/(b-t):.6f}%;left:{-100*l/(r-l):.6f}%;top:{-100*t/(b-t):.6f}%'
-    return (f'<div class="membrane-preview"><div class="membrane-region" data-region-width="{r-l}" data-region-height="{b-t}">'
-            + image + f' style="{style}"></div></div>')
+    # Region geometry needs the source image's intrinsic size. Until scripting
+    # can fit it, offer an undistorted whole-original preview instead.
+    return (f'<div class="membrane-preview" hidden><div class="membrane-region" data-region-width="{r-l}" data-region-height="{b-t}">'
+            + image + f' style="{style}"></div></div>'
+            + '<noscript><div class="membrane-preview">' + image + '></div>'
+            + '<p class="crop-meta">Full original shown. Enable JavaScript to view the linked region; its coordinates remain below.</p></noscript>')
 
 
 def comparison_card(item, asset, references, direction, parents=None):

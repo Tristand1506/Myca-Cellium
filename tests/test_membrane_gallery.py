@@ -73,6 +73,19 @@ class MembraneGalleryTests(unittest.TestCase):
         self.assertIn('No active studies assigned',page)
         self.assertIn('data-compare-select',page)
 
+    def test_region_preview_has_an_undistorted_no_script_original_fallback(self):
+        region=self.org['details'][0]
+        asset=self.manifest['assets'][1]
+        preview=membrane.preview(asset,region,region['title'])
+        enhanced,fallback=preview.split('<noscript>',1)
+        self.assertIn('class="membrane-preview" hidden',enhanced)
+        self.assertIn('class="membrane-region"',enhanced)
+        self.assertNotIn('membrane-region',fallback)
+        self.assertNotIn('style=',fallback)
+        self.assertIn('Full original shown.',fallback)
+        self.assertEqual(Page(enhanced).images[0]['src'],Page(fallback).images[0]['src'])
+        self.assertNotIn('<noscript>',membrane.preview(asset,None,region['title']))
+
     def test_titles_are_escaped_and_no_input_is_mutated(self):
         self.org['details'][0]['title']='<script>bad</script>'
         self.config['directions'][0]['title']='<strong>topic</strong>'

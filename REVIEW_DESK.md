@@ -88,7 +88,9 @@ Open **Compare membranes** in the built site. Filter by growth architecture, sel
 two to four whole studies or linked regions, then choose **Compare selected**.
 Selections survive direction changes. Equal-height frames preserve the source
 proportions; they do not normalize character scale, pose or lighting. On small
-screens, the comparison scrolls horizontally within its own frame.
+screens, the comparison scrolls horizontally within its own frame. Without
+JavaScript, linked-region cards show the full, undistorted original with the region
+coordinates below; whole-study cards and source limitations remain available.
 
 The working **Membrane · ...** collections separate petal, single-sheet, vascular,
 gill-frill, veil-streamer, spore-lace, shelf-fungus, lily/bud and mixed-sheet studies.
@@ -107,6 +109,19 @@ Adding another direction requires a matching collection and a layout entry.
 Public memberships and coordinates remain in `data/review-desk.json`.
 Browser comparison selections are temporary and do not write or publish anything.
 Commit saved organization through a PR; publication still uses the manual workflow.
+
+### Browser regression check
+
+After building the site, use Playwright with Chromium installed to check all seven
+linked regions on desktop and mobile, with JavaScript enabled and disabled:
+
+```bash
+node tests/test_membrane_browser.js
+```
+
+The check uses the installed `playwright` module. `MYCA_PLAYWRIGHT_PATH` can point to
+an existing module installation instead. This browser check runs separately from
+the Python suite.
 
 ## Prototype limits
 
