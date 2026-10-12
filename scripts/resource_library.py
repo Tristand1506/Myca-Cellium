@@ -7,12 +7,13 @@ from pathlib import Path
 import re
 import sys
 from urllib.parse import quote
+from windows_paths import path_errors, validate_repository
 
 ROOT = Path(__file__).resolve().parents[1]
 LIBRARY = ROOT / "resources/character-library"
 EXPECTED_HASHES = {
-    "SHA256SUMS": "d1ad6821758112f83c440f2e49fc108a8726a40562e4d1ae37099dfc50d031ae",
-    "manifest.json": "1ffc1194c4d229f84c2eeb5f40e7104632f6020a97df48b48463d6feb23afa46",
+    "SHA256SUMS": "2c3c48fbae29a08e343bb631568a06f9716673bd4aecf64bb54dc001e3e73fde",
+    "manifest.json": "fc5ff117f22bf5bd1ee6caaaaf06c79a6efdcb2c5ef82415496de0af1474ba20",
 }
 EXPECTED_IDS = {f"R{i:02}" for i in range(1, 35)} | {f"C{i:02}" for i in range(1, 16)}
 MISSING_IDS = {"R24", "R25", "R26"}
@@ -42,6 +43,7 @@ def local_path(relative):
     require(not relative.startswith(("/", "-")) and "\\" not in relative
             and all(part not in {"", ".", ".."} for part in relative.split("/")),
             f"Unsafe resource path: {relative}")
+    require(not path_errors([relative]), f"Windows-incompatible resource path: {relative}")
     path = LIBRARY / relative
     require(path.resolve().is_relative_to(LIBRARY.resolve()), f"Escaping path: {relative}")
     require(not path.is_symlink() and path.is_file(), f"Missing regular file: {relative}")
@@ -177,6 +179,7 @@ def rendered_indexes(manifest):
 
 
 def validate(manifest, images=False):
+    validate_repository(ROOT)
     checksums = {}
     for line in (LIBRARY / "SHA256SUMS").read_text(encoding="utf-8").splitlines():
         match = re.fullmatch(r"([0-9a-f]{64}) [ *](.+)", line)
