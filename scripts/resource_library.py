@@ -7,6 +7,7 @@ from pathlib import Path
 import re
 import sys
 from urllib.parse import quote
+import review_metadata
 from windows_paths import path_errors, validate_repository
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -44,7 +45,12 @@ def local_path(relative):
             and all(part not in {"", ".", ".."} for part in relative.split("/")),
             f"Unsafe resource path: {relative}")
     require(not path_errors([relative]), f"Windows-incompatible resource path: {relative}")
-    path = LIBRARY / relative
+    if relative.startswith("resources/"):
+        manifest = json.loads((LIBRARY / "manifest.json").read_text(encoding="utf-8"))
+        metadata = review_metadata.load_metadata(ROOT, manifest)
+        path = review_metadata.locate(LIBRARY, relative, manifest, metadata)
+    else:
+        path = review_metadata.safe_path(LIBRARY, relative)
     require(path.resolve().is_relative_to(LIBRARY.resolve()), f"Escaping path: {relative}")
     require(not path.is_symlink() and path.is_file(), f"Missing regular file: {relative}")
     return path
@@ -80,7 +86,9 @@ def group(asset):
 
 
 def rendered_indexes(manifest):
-    assets = {asset["sha256"]: asset for asset in manifest["assets"]}
+    metadata = review_metadata.load_metadata(ROOT, manifest)
+    assets = {asset["sha256"]: {**asset, "resource_path": review_metadata.asset_relative(asset, metadata)}
+              for asset in manifest["assets"]}
     refs = manifest["references"]
     originals = sum(asset["original_bytes"] is True for asset in assets.values())
     derivatives = len(assets) - originals
@@ -224,7 +232,7 @@ def validate(manifest, images=False):
                 and "_SANITIZED." in asset["stored_filename"]
                 and asset["derivation"]["kind"] == "sanitized_public_metadata_derivative",
                 "Metadata derivatives must be clearly labeled")
-        path = LIBRARY / asset["resource_path"]
+        path = local_path(asset["resource_path"])
         if path.suffix == ".json":
             report = json.loads(path.read_text(encoding="utf-8"))
             require(report["document_kind"] == "sanitized_public_derivative",
@@ -237,7 +245,7 @@ def validate(manifest, images=False):
             require("Sanitized derivative, not an unchanged original." in path.read_text(encoding="utf-8"),
                     "Text derivative lacks its public notice")
     for asset in assets.values():
-        path = LIBRARY / asset["resource_path"]
+        path = local_path(asset["resource_path"])
         if path.suffix.lower() in {".md", ".json", ".html", ".txt", ".py", ".yml"}:
             require(not OWNER_ID.search(path.read_text(encoding="utf-8-sig")),
                     f"Owner-specific service identifier in public resource: {path.name}")
@@ -249,8 +257,8 @@ def validate(manifest, images=False):
             content = re.sub(r"data:image/[^;]+;base64,[A-Za-z0-9+/=]+", "[embedded image]", content)
             require(not any(pattern.search(content) for pattern in (OWNER_ID, OWNER_PATH, PRIVATE_URL)),
                     f"Private identifier, owner path or private URL remains: {path.name}")
-    actual = {p.relative_to(LIBRARY).as_posix() for p in (LIBRARY / "resources").rglob("*") if p.is_file()}
-    require(actual == {a["resource_path"] for a in assets.values()}, "Unexpected or missing asset files")
+    metadata = review_metadata.load_metadata(ROOT, manifest)
+    review_metadata.validate_locations(LIBRARY, manifest, metadata)
     refs = {r["reference_id"]: r for r in manifest["references"]}
     require(len(refs) == len(manifest["references"]) and set(refs) == EXPECTED_IDS,
             "Reference IDs must retain R01–R34 and C01–C15 exactly once")
@@ -280,7 +288,9 @@ def validate(manifest, images=False):
             url = urlsplit(target)
             if url.scheme or not url.path:
                 continue
-            resolved = (LIBRARY / unquote(url.path)).resolve()
+            relative = unquote(url.path)
+            resolved = (local_path(relative) if relative.startswith("resources/")
+                        else LIBRARY / relative).resolve()
             require(resolved.is_relative_to(ROOT.resolve()) and resolved.is_file(),
                     f"Broken or escaping navigation link in {name}")
     missing = json.loads(local_path("Missing-Resources.json").read_text(encoding="utf-8"))
@@ -298,7 +308,7 @@ def validate(manifest, images=False):
     if images:
         from PIL import Image
         for asset in assets.values():
-            path = LIBRARY / asset["resource_path"]
+            path = local_path(asset["resource_path"])
             if path.suffix.lower() not in {".png", ".jpg", ".gif"}:
                 continue
             with Image.open(path) as image:
@@ -314,8 +324,8 @@ def validate(manifest, images=False):
             require(crop["edges"] == "exclusive right/bottom", f"Invalid crop convention: {rid}")
             parent = refs[crop["parent_reference_id"]]
             bounds = tuple(crop["bounds_px"])
-            with Image.open(LIBRARY / assets[parent["asset_sha256"][0]]["resource_path"]) as original, \
-                 Image.open(LIBRARY / assets[ref["asset_sha256"][0]]["resource_path"]) as detail:
+            with Image.open(local_path(assets[parent["asset_sha256"][0]]["resource_path"])) as original, \
+                 Image.open(local_path(assets[ref["asset_sha256"][0]]["resource_path"])) as detail:
                 require(0 <= bounds[0] < bounds[2] <= original.width
                         and 0 <= bounds[1] < bounds[3] <= original.height, f"Invalid crop bounds: {rid}")
                 require(detail.size == tuple(crop["size_px"]), f"Crop size differs: {rid}")

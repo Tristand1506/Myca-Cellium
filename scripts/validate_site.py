@@ -4,10 +4,13 @@ import hashlib
 from html.parser import HTMLParser
 from pathlib import Path
 import re
+import json
 from urllib.parse import unquote, urlsplit
 
 import build_site
 import resource_library
+import review_metadata
+from review_public import organization_pages
 from site_gallery import gallery_pages, is_image
 
 
@@ -67,14 +70,15 @@ def local_links(path, out):
 
 def validate(root=build_site.ROOT, out=build_site.OUT):
     manifest = resource_library.load_manifest()
+    metadata = review_metadata.load_metadata(root, manifest)
     library = root / 'resources/character-library'
     published = out / 'resources/character-library'
-    expected = build_site.public_files(manifest)
+    expected = build_site.public_files(manifest, metadata)
     actual = {p.relative_to(published).as_posix() for p in published.rglob('*') if p.is_file()}
     rendered = {name[:-3] + '.html' for name in build_site.PUBLIC_PAGES}
     check(actual == expected | rendered, 'Publication differs from reviewed library allowlist')
     for name in expected:
-        check(digest(library / name) == digest(published / name), f'Published bytes differ: {name}')
+        check(digest(review_metadata.locate(library, name, manifest, metadata)) == digest(published / name), f'Published bytes differ: {name}')
     for asset in manifest['assets']:
         check(digest(published / asset['resource_path']) == asset['sha256'], 'Published asset checksum changed')
     guide = root / 'docs/Myca Resource Guide.html'
@@ -83,15 +87,16 @@ def validate(root=build_site.ROOT, out=build_site.OUT):
         for prefix in ('', 'docs/'):
             check(digest(out / (prefix + alias)) == asset['sha256'], 'Guide compatibility asset changed')
     pages = [out / 'index.html', out / guide.name, out / 'automation/README.html']
-    pages += [out / p for p in gallery_pages(manifest)]
+    gallery = {**gallery_pages(manifest, metadata), **organization_pages(manifest, metadata)}
+    pages += [out / p for p in gallery]
     pages += [published / name for name in rendered]
     pages += [(out / 'docs' / md.relative_to(root / 'docs')).with_suffix('.html') for md in (root / 'docs').rglob('*.md')]
     pages += [out / 'docs' / (logical[:-3] + '.html') for logical, asset in build_site.recovered_documents(manifest).items() if asset]
     # Every other output file also has an explicit source or generated role.
-    allowed = {'index.html', 'style.css', 'gallery.js', '.nojekyll', guide.name,
+    allowed = {'index.html', 'style.css', 'gallery.js', 'detail-views.js', 'review-collections.json', '.nojekyll', guide.name,
                'automation/README.md', 'automation/README.html'}
     allowed |= {'resources/character-library/' + name for name in expected | rendered}
-    allowed |= set(gallery_pages(manifest))
+    allowed |= set(gallery)
     for source in (root / 'docs').rglob('*'):
         if source.is_file():
             name = source.relative_to(root / 'docs').as_posix()
@@ -108,7 +113,7 @@ def validate(root=build_site.ROOT, out=build_site.OUT):
     errors = [error for path in pages for error in local_links(path, out)]
     check(not errors, 'Broken public navigation:\n' + '\n'.join(errors))
     images, references = set(), set()
-    for name in gallery_pages(manifest):
+    for name in gallery:
         page = Page((out / name).read_text(encoding='utf-8'))
         check(page.viewport, 'Missing responsive viewport')
         check(len(page.ids) == len(set(page.ids)), 'Duplicate gallery element IDs')
@@ -118,6 +123,8 @@ def validate(root=build_site.ROOT, out=build_site.OUT):
             images.add(unquote(urlsplit(image['src']).path).removeprefix('../resources/character-library/'))
     check(references == resource_library.EXPECTED_IDS, 'Gallery lost reserved reference IDs')
     check(images == {a['resource_path'] for a in manifest['assets'] if is_image(a)}, 'Gallery does not cover all original images')
+    check(json.loads((out / 'review-collections.json').read_text(encoding='utf-8')) == metadata,
+          'Publication must include only validated public organization')
     refs = Page((out / 'gallery/index.html').read_text(encoding='utf-8'))
     check(not {'R32', 'R33', 'R34'} & set(refs.cards), 'Membrane experiments leaked into main reference gallery')
     css = (out / 'style.css').read_text()

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Myca · Review Desk</title>
+  <link rel="stylesheet" href="/desk.css">
+  <script src="/desk.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#workspace">Skip to workspace</a>
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">✳</span><div>MYCA CELLIUM<small>REFERENCE WORKSPACE</small></div></div>
+    <div class="sidebar-label">LIBRARY</div>
+    <nav id="library-nav" aria-label="Library views"></nav>
+    <div class="sidebar-label collections-label">COLLECTIONS <button id="new-collection" class="icon" aria-label="Create collection">+</button></div>
+    <nav id="collections" aria-label="Feature collections"></nav>
+    <div class="sidebar-bottom"><span class="local-dot"></span> Local checkout<br><small>Collections are public-ready.<br>Review notes never leave this desk.</small></div>
+  </aside>
+  <main id="workspace">
+    <header class="desk-header"><div><p class="eyebrow">A LITTLE ORDER IN THE UNDERGROWTH</p><h1>Review Desk</h1><p id="library-summary" class="muted">Loading preserved artwork…</p></div><button id="undo" disabled>Undo <span id="undo-count"></span></button></header>
+    <div class="notice"><span aria-hidden="true">◇</span><p>Organize references, not canon. Feature-specific scopes and caveats travel with every image and detail view.</p></div>
+    <section class="toolbar" aria-label="Browse controls">
+      <label class="search">Search references<input id="search" type="search" placeholder="Search R08, lichen, filename, scope…" autocomplete="off"></label>
+      <label>Show<select id="kind"><option value="all">All images &amp; views</option><option value="references">Mapped references</option><option value="crops">Existing crops</option><option value="details">Saved detail views</option><option value="unmapped">Unmapped images</option><option value="experiments">Experimental studies</option></select></label>
+      <label>Sort<select id="sort"><option value="name">Name</option><option value="reference">Reference ID</option><option value="size">File size</option></select></label>
+    </section>
+    <div class="section-heading"><div><h2 id="view-title">All active images</h2><span id="result-count" class="muted" aria-live="polite"></span></div><div class="view-actions"><button id="select-visible">Select visible</button><button id="rename-collection" hidden>Rename</button><button id="delete-collection" hidden>Delete collection</button></div></div>
+    <section id="grid" class="image-grid" aria-label="Reference images"></section>
+    <p id="empty" class="empty" hidden>No references here yet. Add a selection to this collection, or adjust your filters.</p>
+    <footer>Original pixels stay original. Regions are views, not corrections.<span>Prototype · no automatic commits or deployment</span></footer>
+  </main>
+  <section id="selection-bar" class="selection-bar" aria-label="Selected-image actions" hidden>
+    <strong id="selected-count"></strong><button id="clear-selection">Clear</button><button id="compare">Compare</button>
+    <label class="sr-only" for="assign-collection">Destination collection</label><select id="assign-collection"></select><button id="add-selection">Add to collection</button><button id="remove-selection" hidden>Remove from collection</button><button id="archive-selection" class="archive-button">Archive images</button><button id="restore-selection" hidden>Restore images</button>
+  </section>
+  <dialog id="viewer" aria-labelledby="viewer-title">
+    <div class="modal-header"><div><p id="viewer-id" class="eyebrow"></p><h2 id="viewer-title"></h2></div><button id="close-viewer" aria-label="Close image review">Close</button></div>
+    <div class="viewer-layout"><section class="image-workspace"><div class="image-tools"><label>Zoom<select id="zoom"><option value="fit">Fit</option><option value="1">100%</option><option value="2">200%</option></select></label><button id="draw-region">Draw detail region</button></div><p id="region-help" class="muted" hidden>Drag a box on the image, or enter precise bounds below. Escape cancels drawing.</p><div id="image-scroll"><div id="image-stage"><img id="full-image" alt=""><div id="region-box" hidden></div></div></div><div id="region-form" hidden><div class="region-coordinates"><label>Left %<input id="region-left" type="number" min="0" max="100" step="0.1"></label><label>Top %<input id="region-top" type="number" min="0" max="100" step="0.1"></label><label>Right %<input id="region-right" type="number" min="0" max="100" step="0.1"></label><label>Bottom %<input id="region-bottom" type="number" min="0" max="100" step="0.1"></label></div><label>Public detail title<input id="region-title" placeholder="e.g. Compact lichen — left panel" maxlength="160"></label><button id="save-region" class="primary">Save detail view</button><button id="cancel-region">Cancel</button></div></section>
+      <aside class="inspector"><div id="scope"></div><div id="memberships"></div><label class="note-label" for="private-note">Private review note <span>LOCAL ONLY</span></label><textarea id="private-note" rows="7" placeholder="Useful lichen texture. Cap too tall. Nothing here grants approval." maxlength="20000"></textarea><p id="note-status" class="muted" aria-live="polite">Notes autosave locally.</p><div id="viewer-actions"></div><details><summary>File identity and provenance</summary><div id="provenance"></div></details></aside>
+    </div>
+  </dialog>
+  <dialog id="comparison" aria-labelledby="comparison-title"><div class="modal-header"><div><p class="eyebrow">DECIDE PAIR BY PAIR</p><h2 id="comparison-title">Compare references</h2></div><button id="close-comparison">Close</button></div><p class="muted">Similar composition does not mean identical bytes. Archive only the versions you choose.</p><div id="compare-grid"></div></dialog>
+  <dialog id="text-dialog" aria-labelledby="text-title"><form id="text-form"><h2 id="text-title"></h2><label id="text-label" for="text-value">Public name</label><input id="text-value" maxlength="160" required><p class="muted">This label is publishable. Keep personal context in private notes.</p><div class="dialog-actions"><button type="button" id="text-cancel">Cancel</button><button type="submit" class="primary">Save</button></div></form></dialog>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

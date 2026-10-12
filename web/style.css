@@ -2,3 +2,5 @@
 @media(max-width:760px){main{padding:1.5rem 1rem}.hero{grid-template-columns:1fr;gap:1rem}.hero figure{max-width:560px}.hero img{max-height:360px}.overview-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.doc-links{columns:1}.site-header{gap:.75rem}.site-header nav{gap:.1rem 1rem}.filters{align-items:stretch;gap:.75rem}.filters div{width:100%;flex-basis:100%}.filters select{width:100%}.page{padding:1.1rem}.gallery-grid{grid-template-columns:1fr}.image-link img{height:280px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 .card-body{overflow-wrap:anywhere}.site-header nav a{display:inline-flex;align-items:center;min-height:44px}.original{min-height:44px}
+:root .saved-region{overflow:hidden;position:relative;aspect-ratio:1;background:#101a13;width:100%}
+:root .saved-region img{position:absolute;max-width:none;object-fit:fill;border-radius:0}
