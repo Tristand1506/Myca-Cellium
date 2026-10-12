@@ -1,6 +1,6 @@
 # Recovered Myca character library
 
-234 public assets: 232 unchanged originals and 2 clearly labeled sanitized metadata derivatives, with 285 current filename aliases. 46 of 49 reference IDs are recovered; R24–R26 remain missing or unmapped. The 15 detail crops match their recorded parent pixels. Inclusion is not whole-image approval.
+234 public assets: 232 unchanged originals and 2 clearly labeled sanitized metadata derivatives, with 315 current filename aliases. 46 of 49 reference IDs are recovered; R24–R26 remain missing or unmapped. The 15 detail crops match their recorded parent pixels. Inclusion is not whole-image approval.
 
 [All assets and filename aliases](Asset-Catalog.md) · [Separate membrane experiments](Experiments.md) · [Design history](Design-History.md) · [Coverage and validation](Recovery-Notes.md) · [Missing-resource records](Missing-Resources.json) · [Public recovery manifest](manifest.json)
 
@@ -26,7 +26,7 @@ The [current character brief](../../docs/Myca%20Character%20Design%20Brief.md), 
 | R14 | [R14 Initial animation sheet](resources/1513f32987d1ca0d/R14%20Initial%20animation%20sheet.png) | recovered | Expression drift identified. |
 | R15 | [R15 Restrained-acting revision](resources/fd32f07783a8aaae/R15%20Restrained-acting%20revision.png) | recovered | Acting revision attempt. |
 | R16 | [R16 Expression-only study](resources/ecb22672eae659f5/R16%20Expression-only%20study.png) | recovered | Working acting reference. |
-| R17 | [Locomotion Reference - Step Cycle](resources/0f487c7d03d6ff58/Myca%3A%20A%20Living%20Step%20Cycle.png) | recovered | Working sequence reference. |
+| R17 | [Locomotion Reference - Step Cycle](resources/0f487c7d03d6ff58/Myca%20-%20A%20Living%20Step%20Cycle.png) | recovered | Working sequence reference. |
 | R18 | [Locomotion Reference - Movement and Surfaces](resources/669aac8698cb30f5/Myca%E2%80%99s%20Fungal%20Locomotion%20Field%20Guide.png) | recovered | Working environment reference. |
 | R19 | [R19 Rejected-cap turnaround](resources/955b79c25e720e15/R19%20Rejected-cap%20turnaround.png) | recovered | Cap drift explicitly identified. |
 | R20 | [R20 Supplied material and pose interpretation](resources/39f8ae8b43bec9b6/R20%20Supplied%20material%20and%20pose%20interpretation.png) | recovered | Supporting image; no blanket approval. |
@@ -241,7 +241,7 @@ Original bytes: [R16 Expression-only study.png](resources/ecb22672eae659f5/R16%2
 
 ### R17 · Locomotion Reference - Step Cycle
 
-Original bytes: [Myca: A Living Step Cycle.png](resources/0f487c7d03d6ff58/Myca%3A%20A%20Living%20Step%20Cycle.png)
+Original bytes: [Myca - A Living Step Cycle.png](resources/0f487c7d03d6ff58/Myca%20-%20A%20Living%20Step%20Cycle.png)
 
 **Registry status:** Working sequence reference.
 
