@@ -148,3 +148,27 @@ Checksum checks and pinned metadata hashes remain unchanged.
 No document/video organization, uploads, similarity suggestions, freeform painting, new bitmap crops, Git controls or canon-approval controls. The image editor is loopback-only with per-session write tokens, Host/Origin checks, a single-process repo lock and a crash-recovery journal. It is not a multi-user service. Do not switch branches or edit organization files while it is running; a stale tab or external metadata edit is rejected.
 
 Automated tests cover data operations, byte identity, recovery, private-state exclusion, public links and UI logic. Browser layout and touch interaction still need a hands-on acceptance pass.
+
+## v0.3 · Private visual annotations
+
+Choose a mark tool in an image review, then drag a rectangle, ellipse, arrow or
+freehand stroke; click for a pin. Add a comment, feature, severity and workflow
+status, then Save mark. Select a mark in the list or on the image to move it.
+Drag its endpoint handles to edit geometry, or enter normalized points directly.
+Freehand endpoint handles edit the first/last points; the JSON field can edit
+every point. Save commits the whole edit; Cancel edit discards the draft.
+
+All coordinates refer to the full unchanged original, including marks attached
+to saved regions. Region focus clips the vector layer along with its parent
+image. Marks are local records in ignored `.review-desk/local.json`, never
+painted into source pixels and never copied into Pages. Legacy notes and Undo
+records remain readable. Each saved edit participates in atomic transactions,
+crash recovery, stale-tab checks and persistent Undo. Private-only saves do not
+rewrite public collection metadata. Deleting a detail view removes its attached
+private marks; Undo restores both.
+
+Run `python -m unittest discover -s tests -v`. The suite exercises a real
+headless Chrome/Edge browser when installed, using a temporary artwork fixture.
+`MYCA_BROWSER` can select its executable. Browser checks skip explicitly when no
+supported browser exists. The existing validation and authenticated canon
+approval workflows remain unchanged.

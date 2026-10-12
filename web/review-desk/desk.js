@@ -111,6 +111,7 @@ function render() {
   if (state.public.collections.some(c => c.id === chosen)) $("assign-collection").value = chosen;
   if (current) current = findItem(current.id) || null;
   selectionBar();
+  if (typeof refreshAnnotations === "function") refreshAnnotations();
 }
 function selectionBar() {
   $("selection-bar").hidden = selection.size === 0;
@@ -155,7 +156,9 @@ function memberships(item) {
   }
 }
 async function openViewer(id) {
+  if (typeof requireSavedMark === "function") requireSavedMark();
   await flushNote(); current = findItem(id); if (!current) return;
+  if (typeof resetAnnotations === "function") resetAnnotations();
   drawing = false; rect = current.detail ? [...current.detail.rect] : null;
   $("viewer-id").textContent = identity(current); $("viewer-title").textContent = current.title;
   $("scope").replaceChildren(scopeContent(current)); memberships(current);
@@ -185,6 +188,7 @@ function setZoom() {
     stage.style.height = image.style.height = `${image.naturalHeight * scale}px`;
   }
   stage.dataset.focused = "false"; showRect();
+  if (typeof renderAnnotations === "function") renderAnnotations();
 }
 function focusDetail(force = false) {
   if (!current?.detail) return;
@@ -198,6 +202,7 @@ function focusDetail(force = false) {
   image.style.width = `${image.naturalWidth * scale}px`; image.style.height = `${image.naturalHeight * scale}px`;
   image.style.left = `${-l * image.naturalWidth * scale}px`; image.style.top = `${-t * image.naturalHeight * scale}px`;
   stage.dataset.focused = "true"; $("region-box").hidden = true;
+  if (typeof renderAnnotations === "function") renderAnnotations();
 }
 function showRect() {
   const box = $("region-box"); box.hidden = !rect || $("image-stage").dataset.focused === "true";
@@ -206,6 +211,8 @@ function showRect() {
   ["left", "top", "right", "bottom"].forEach((name, i) => { $("region-" + name).value = (rect[i] * 100).toFixed(2); });
 }
 function startRegion() {
+  if (typeof requireSavedMark === "function") requireSavedMark();
+  if (typeof resetAnnotations === "function") resetAnnotations();
   if (!$("full-image").naturalWidth) { toast("Wait for the original image to load before drawing."); return; }
   setZoom(); drawing = true; rect = [.2, .2, .8, .8]; $("image-stage").classList.add("drawing"); $("region-form").hidden = $("region-help").hidden = false; $("region-title").value = ""; showRect();
 }
@@ -217,7 +224,7 @@ async function flushNote() {
   try { await mutate("note", pending); $("note-status").textContent = "Saved locally · excluded from Git and publication"; }
   catch (error) { if (!pendingNote) pendingNote = pending; $("note-status").textContent = "Not saved — " + error.message; throw error; }
 }
-async function closeViewer() { await flushNote(); $("viewer").close(); current = null; }
+async function closeViewer() { if (typeof requireSavedMark === "function") requireSavedMark(); await flushNote(); $("viewer").close(); current = null; }
 function openCompare() {
   const list = [...selection].map(findItem); if (list.length !== 2) return;
   $("compare-grid").replaceChildren();
@@ -233,6 +240,7 @@ function openCompare() {
 }
 
 function bind() {
+  if (typeof bindAnnotations === "function") bindAnnotations();
   for (const id of ["search", "kind", "sort"]) $(id).addEventListener(id === "search" ? "input" : "change", render);
   $("new-collection").onclick = () => run(async () => { const name = await requestText("Create a feature collection"); if (name) { await mutate("collection_create", {name}); toast("Collection created. Add any images or detail views."); } });
   $("rename-collection").onclick = () => run(async () => { const c = collection(), name = await requestText("Rename collection", c.name); if (name) await mutate("collection_rename", {id: c.id, name}); });

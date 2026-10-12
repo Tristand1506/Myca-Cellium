@@ -1,0 +1,16 @@
+/* Private local workspace only; intentionally excluded from Pages. */
+#annotation-layer{position:absolute;overflow:visible;pointer-events:none}
+#annotation-layer.mark-drawing{pointer-events:auto;touch-action:none;cursor:crosshair}
+.annotation-mark{stroke:var(--pink);stroke-width:2.5;pointer-events:stroke;cursor:move}
+.annotation-mark.severity-critical{stroke:#ff6666}.annotation-mark.severity-major{stroke:var(--amber)}
+.annotation-mark.severity-info{stroke:var(--sage)}.mark-resolved{opacity:.45;stroke-dasharray:5 4}
+.mark-handle{fill:var(--panel);stroke:var(--pink);stroke-width:2;pointer-events:all;cursor:crosshair}
+#image-stage:has(.mark-handle){touch-action:none}
+#annotation-form{margin:12px 0;padding:12px;background:var(--raised);border-radius:10px}
+#annotation-form label{display:block;margin-bottom:8px}#annotation-form button{margin:3px}
+.annotation-entry{display:block;width:100%;text-align:left;margin:5px 0;font-size:.75rem;overflow-wrap:anywhere}
+#mark-points{font-family:ui-monospace,monospace;font-size:.7rem}
+.image-tools{flex-wrap:wrap}.image-tools label{font-size:.8rem}#mark-tool{width:130px}
+#image-stage{isolation:isolate}#annotation-layer{z-index:2}#region-box{z-index:3}
+#annotation-inspector{border-bottom:1px solid var(--line);padding-bottom:15px}
+[hidden]{display:none!important}
