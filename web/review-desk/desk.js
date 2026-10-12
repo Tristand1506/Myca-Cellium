@@ -168,7 +168,11 @@ async function openViewer(id) {
   $("region-form").hidden = $("region-help").hidden = true;
   $("image-stage").classList.remove("drawing"); $("zoom").value = "fit";
   $("full-image").alt = current.title; $("full-image").src = current.asset.url;
-  $("full-image").onload = () => { setZoom(); showRect(); };
+  $("full-image").onload = () => {
+    setZoom(); showRect();
+    if (current?.detail) focusDetail(true);
+    if (typeof refreshAnnotations === "function") refreshAnnotations();
+  };
   $("viewer-actions").replaceChildren(button(current.asset.archived ? "Restore original" : "Archive original", async () => { if (typeof requireSavedMark === "function") requireSavedMark(); await flushNote(); await mutate(current.asset.archived ? "restore" : "archive", {assets: [current.asset.sha256]}); toast("File moved. Undo is available."); $("viewer").close(); current = null; }));
   if (typeof openReviewQueue === "function") $("viewer-actions").append(button("Review / nominate candidate", () => { requireSavedMark(); openReviewQueue(current.id); }));
   if (typeof editIteration === "function") $("viewer-actions").append(button("Record iteration", () => { requireSavedMark(); openHistory(current.asset.sha256); }));
