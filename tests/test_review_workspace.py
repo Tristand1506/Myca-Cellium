@@ -108,6 +108,34 @@ class WorkspaceTests(unittest.TestCase):
         self.assertNotIn('PRIVATE ANNOTATION SENTINEL', json.dumps(self.desk.public))
         self.assertNotIn('.review-desk', ' '.join(build_site.public_files(self.manifest, self.desk.public)))
 
+    def comparison(self, **values):
+        return {'name':'PRIVATE COMPARISON SENTINEL','items':[self.sha,self.second],
+                'transforms':[{'zoom':1,'pan':[0,0],'alignment':{'offset':[0,0],'scale':1,'rotation':0}}
+                              for _ in range(2)],
+                'synchronized':False,'mode':'side-by-side','opacity':.5,'split':.5, **values}
+
+    def test_comparison_sessions_validate_restore_undo_and_region_cleanup(self):
+        self.change('detail_save',title='detail',asset_sha256=self.sha,rect=[.1,.1,.6,.6])
+        region = self.desk.public['details'][0]['id']
+        record = self.comparison(items=[self.sha,region])
+        record['transforms'][1].update(zoom=2,pan=[.2,-.1])
+        record['transforms'][1]['alignment'].update(offset=[.1,.2],scale=.8,rotation=12)
+        self.change('comparison_save',record=record)
+        saved = copy.deepcopy(self.desk.state()['workspace']['comparisons'][0])
+        self.desk = review_desk.Desk(self.root,self.manifest)
+        self.assertEqual(self.desk.state()['workspace']['comparisons'][0],saved)
+        for values in [{'items':[self.sha]},{'items':[self.sha]*2},{'items':[self.sha,[]]},
+                       {'opacity':float('inf')},{'mode':'canon'},{'synchronized':1},
+                       {'transforms':[]},{'split':-1}]:
+            with self.subTest(values=values):
+                with self.assertRaises(ValueError):
+                    self.change('comparison_save',record=self.comparison(**values))
+        self.change('detail_delete',id=region)
+        self.assertEqual(self.desk.state()['workspace']['comparisons'],[])
+        self.change('undo');self.assertEqual(self.desk.state()['workspace']['comparisons'][0],saved)
+        self.change('comparison_delete',id=saved['id']);self.change('undo')
+        self.assertEqual(self.desk.state()['workspace']['comparisons'][0],saved)
+        self.assertNotIn('PRIVATE COMPARISON SENTINEL',json.dumps(self.desk.public))
 
 @unittest.skipUnless(browser_path(), 'Chrome or Edge required (MYCA_BROWSER can select it)')
 class WorkspaceBrowserTests(unittest.TestCase):
@@ -121,8 +149,8 @@ class WorkspaceBrowserTests(unittest.TestCase):
             return struct.pack('!I', len(data)) + kind + data + struct.pack('!I', zlib.crc32(kind+data))
         for index, asset in enumerate(self.manifest['assets']):
             header = struct.pack('!IIBBBBB', 600, 900, 8, 2, 0, 0, 0)
-            rows = b''.join(b'\\0' + bytes([80+index*40,130,100])*600 for _ in range(900))
-            raw = b'\\x89PNG\\r\\n\\x1a\\n' + chunk(b'IHDR',header) + chunk(b'IDAT',zlib.compress(rows)) + chunk(b'IEND',b'')
+            rows = b''.join(bytes([0]) + bytes([80+index*40,130,100])*600 for _ in range(900))
+            raw = bytes([137,80,78,71,13,10,26,10]) + chunk(b'IHDR',header) + chunk(b'IDAT',zlib.compress(rows)) + chunk(b'IEND',b'')
             old = asset['sha256']; asset['sha256'] = hashlib.sha256(raw).hexdigest(); asset['size_bytes'] = len(raw)
             (self.root / 'resources/character-library' / asset['resource_path']).write_bytes(raw)
             for ref in self.manifest['references']:
@@ -162,7 +190,27 @@ class WorkspaceBrowserTests(unittest.TestCase):
         self.assertEqual(browser.evaluate('marks()[0].points'), record['points'])
         self.assertFalse(browser.evaluate('document.documentElement.scrollWidth > innerWidth'))
         self.assertEqual(browser.evaluate('browserErrors'), [])
+
         browser.evaluate('closeViewer()')
+        browser.evaluate(f'selection=new Set([{json.dumps(self.sha)},{json.dumps(self.second)}]); openCompare()')
+        browser.wait('compareViews.length===2 && compareViews.every(p=>p.image.complete)')
+        browser.evaluate('zoomComparison(0,2)')
+        self.assertEqual(browser.evaluate('compareDraft.transforms.map(t=>t.zoom)'),[2,1])
+        browser.evaluate('compareDraft.synchronized=true;zoomComparison(0,1.5)')
+        self.assertEqual(browser.evaluate('compareDraft.transforms.map(t=>t.zoom)'),[3,1.5])
+        browser.evaluate('compareDraft.transforms[1].alignment={offset:[.1,-.1],scale:.9,rotation:12};'
+                         'compareDraft.mode="overlay";compareDraft.opacity=.3;applyComparison()')
+        self.assertEqual(browser.evaluate('compareViews[1].viewport.style.opacity'),'0.3')
+        browser.evaluate('compareDraft.mode="slider";compareDraft.split=.25;applyComparison()')
+        self.assertIn('75%',browser.evaluate('compareViews[1].viewport.style.clipPath'))
+        browser.evaluate('document.getElementById("compare-name").value="Saved browser comparison";'
+                         'document.getElementById("compare-save").click()')
+        browser.wait('compareSessions().length===1')
+        expected=browser.evaluate('compareSessions()[0]')
+        browser.evaluate('compareDraft.transforms[0].zoom=1;openAdvancedCompare(compareSessions()[0])')
+        self.assertEqual(browser.evaluate('compareDraft'),expected)
+        browser.evaluate('document.getElementById("comparison").close()')
+
         browser.call('Page.reload')
         browser.wait('typeof state !== "undefined" && state?.workspace?.annotations.length===5')
         self.assertEqual(self.desk.public_path.read_bytes(), self.public_bytes)

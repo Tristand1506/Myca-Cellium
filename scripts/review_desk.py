@@ -210,7 +210,7 @@ class Desk:
                              (set(self.images) | {d['id'] for d in public['details']}), 'Unknown note target')
                 meta.require(isinstance(note, str) and len(note) <= 20000, 'Notes are limited to 20,000 characters')
                 private['notes'][identity] = note
-            elif action in {'annotation_save', 'annotation_delete'}:
+            elif action in {'annotation_save', 'annotation_delete', 'comparison_save', 'comparison_delete'}:
                 workspace.mutate(private['workspace'], payload)
             else:
                 raise ValueError('Unknown review action')
@@ -261,7 +261,7 @@ class Handler(BaseHTTPRequestHandler):
                 source = self.server.desk.path(sha)
                 meta.require(source.is_file() and meta.digest(source) == sha, 'Image integrity check failed')
                 self.send(source.read_bytes(), mimetypes.guess_type(source.name)[0] or 'application/octet-stream')
-            elif path in {'/', '/desk.js', '/desk.css', '/annotations.js', '/workspace.css'}:
+            elif path in {'/', '/desk.js', '/desk.css', '/annotations.js', '/workspace.css', '/comparison.js'}:
                 source = Path(__file__).resolve().parents[1] / 'web/review-desk' / ({'/': 'index.html'}.get(path, path[1:]))
                 self.send(source.read_bytes(), {'.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
                                                '.css': 'text/css; charset=utf-8'}[source.suffix])

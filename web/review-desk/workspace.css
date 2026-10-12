@@ -14,3 +14,24 @@
 #image-stage{isolation:isolate}#annotation-layer{z-index:2}#region-box{z-index:3}
 #annotation-inspector{border-bottom:1px solid var(--line);padding-bottom:15px}
 [hidden]{display:none!important}
+
+.compare-controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:12px 0}
+.compare-controls label{font-size:.8rem;max-width:100%}.compare-controls input[type=checkbox]{width:auto}
+.compare-controls input[type=range]{width:140px}
+.compare-viewport{position:relative;height:360px;background:#0d150f;overflow:hidden;touch-action:none;cursor:grab;min-width:0;outline-offset:2px}
+.compare-plane{position:absolute;transform-origin:center center}.compare-crop{position:relative;overflow:hidden}
+.compare-crop img{position:absolute;max-width:none!important;max-height:none!important;user-select:none;pointer-events:none}
+.compare-pane-tools{display:flex;align-items:center;gap:10px;margin:10px 0}
+.alignment-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0}
+.alignment-fields input{width:100%}.comparison-alignment{font-size:.8rem}
+#compare-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+#compare-grid.layered-comparison{grid-template-columns:repeat(2,minmax(0,1fr))}
+.layered-comparison .compare-pane{display:contents}
+.layered-comparison .compare-viewport{grid-column:1/-1;grid-row:1}
+.layered-comparison .compare-pane:nth-child(2) .compare-viewport{z-index:2;background:transparent}
+.layered-comparison .compare-pane:nth-child(1)>:not(.compare-viewport){grid-column:1}
+.layered-comparison .compare-pane:nth-child(2)>:not(.compare-viewport){grid-column:2}
+@media(max-width:760px){.desk-header{flex-wrap:wrap}.compare-viewport{height:280px}
+#compare-grid.layered-comparison{grid-template-columns:minmax(0,1fr)}
+.layered-comparison .compare-pane:nth-child(n)>:not(.compare-viewport){grid-column:1}
+.compare-controls button{font-size:.75rem}.compare-controls input,.compare-controls select{max-width:100%}}

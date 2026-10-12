@@ -116,7 +116,7 @@ function render() {
 function selectionBar() {
   $("selection-bar").hidden = selection.size === 0;
   $("selected-count").textContent = `${selection.size} selected`;
-  $("compare").disabled = selection.size !== 2; $("compare").title = "Select exactly two images or detail views";
+  $("compare").disabled = selection.size < 2 || selection.size > 4; $("compare").title = "Select two to four images or detail views";
   $("add-selection").disabled = !state.public.collections.length;
   $("remove-selection").hidden = !collection();
   $("archive-selection").hidden = view === "archive";
@@ -226,6 +226,7 @@ async function flushNote() {
 }
 async function closeViewer() { if (typeof requireSavedMark === "function") requireSavedMark(); await flushNote(); $("viewer").close(); current = null; }
 function openCompare() {
+  if (typeof openAdvancedCompare === "function") return openAdvancedCompare();
   const list = [...selection].map(findItem); if (list.length !== 2) return;
   $("compare-grid").replaceChildren();
   for (const item of list) {
@@ -241,6 +242,7 @@ function openCompare() {
 
 function bind() {
   if (typeof bindAnnotations === "function") bindAnnotations();
+  if (typeof bindComparisons === "function") bindComparisons();
   for (const id of ["search", "kind", "sort"]) $(id).addEventListener(id === "search" ? "input" : "change", render);
   $("new-collection").onclick = () => run(async () => { const name = await requestText("Create a feature collection"); if (name) { await mutate("collection_create", {name}); toast("Collection created. Add any images or detail views."); } });
   $("rename-collection").onclick = () => run(async () => { const c = collection(), name = await requestText("Rename collection", c.name); if (name) await mutate("collection_rename", {id: c.id, name}); });

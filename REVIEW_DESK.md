@@ -172,3 +172,24 @@ headless Chrome/Edge browser when installed, using a temporary artwork fixture.
 `MYCA_BROWSER` can select its executable. Browser checks skip explicitly when no
 supported browser exists. The existing validation and authenticated canon
 approval workflows remain unchanged.
+
+## v0.3 · Advanced private comparisons
+
+Select two to four originals or saved regions and Compare. Side-by-side panes
+support wheel/buttons/keyboard zoom and pointer/arrow-key pan. Sync shares
+navigation changes across panes; each pane retains its own alignment. Manual
+alignment provides X/Y offsets (fractions of pane size), scale and rotation.
+These transforms affect display only. Fit resets a pane; Reset all transforms
+resets the entire comparison. Independent crop fitting preserves image aspect.
+
+With exactly two items, choose adjustable-opacity Overlay or Before / after.
+The split range reveals the second image over the first. Dragging the visible
+comparison navigates the first pane (and other panes when Sync is enabled).
+Use the second pane's buttons/alignment fields to adjust it independently.
+
+Give the session a private name and Save session. Saved comparisons can be
+restored or deleted from the header button and session selector. Saving a loaded
+session updates it; a new selection creates another. Changes remain temporary
+until saved. Delete and save participate in persistent Undo. Deleting a saved
+region removes sessions that depend on it; Undo restores both. Original scopes,
+known defects and experimental warnings remain visible in every mode.

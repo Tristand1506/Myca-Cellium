@@ -14,7 +14,7 @@ KINDS = {'rectangle', 'arrow', 'ellipse', 'pin', 'freehand'}
 
 
 def empty():
-    return {'schema_version': 1, 'annotations': []}
+    return {'schema_version': 1, 'annotations': [], 'comparisons': []}
 
 
 def fields(value, names, label):
@@ -44,7 +44,8 @@ def target(value, targets):
 
 
 def validate(workspace, public, images):
-    fields(workspace, 'schema_version annotations', 'workspace')
+    require(isinstance(workspace, dict) and {'schema_version','annotations'} <= set(workspace)
+            and set(workspace) <= {'schema_version','annotations','comparisons'}, 'Invalid workspace fields')
     require(type(workspace['schema_version']) is int and workspace['schema_version'] == 1,
             'Unsupported private workspace schema')
     targets = set(images) | {d['id'] for d in public['details']}
@@ -75,6 +76,35 @@ def validate(workspace, public, images):
                     'Mark must have positive area')
         if kind == 'arrow':
             require(points[0] != points[1], 'Arrow must have length')
+    comparisons = workspace.get('comparisons', [])
+    require(isinstance(comparisons, list) and len(comparisons) <= 1000, 'Invalid comparisons')
+    ids = set()
+    for comparison in comparisons:
+        fields(comparison, 'id name items transforms synchronized mode opacity split', 'comparison')
+        identity(comparison['id'])
+        require(comparison['id'] not in ids, 'Duplicate comparison ID'); ids.add(comparison['id'])
+        text(comparison['name'], 160, nonempty=True)
+        items = comparison['items']
+        require(isinstance(items, list) and 2 <= len(items) <= 4, 'Compare two to four items')
+        for item in items:
+            target(item, targets)
+        require(len(items) == len(set(items)), 'Duplicate comparison item')
+        require(type(comparison['synchronized']) is bool, 'Invalid synchronization setting')
+        member(comparison['mode'], {'side-by-side','overlay','slider'}, 'comparison mode')
+        require(comparison['mode'] == 'side-by-side' or len(items) == 2, 'Layered comparison needs two items')
+        number(comparison['opacity']); number(comparison['split'])
+        transforms = comparison['transforms']
+        require(isinstance(transforms, list) and len(transforms) == len(items), 'Invalid transforms')
+        for transform in transforms:
+            fields(transform, 'zoom pan alignment', 'transform')
+            number(transform['zoom'], .1, 16)
+            for pair in (transform['pan'], transform['alignment'].get('offset') if isinstance(transform['alignment'],dict) else None):
+                require(isinstance(pair,list) and len(pair)==2, 'Invalid transform offset')
+                for value in pair:
+                    number(value,-8,8)
+            fields(transform['alignment'], 'offset scale rotation', 'alignment')
+            number(transform['alignment']['scale'], .1, 10)
+            number(transform['alignment']['rotation'], -180, 180)
     return workspace
 
 
@@ -130,9 +160,15 @@ def mutate(workspace, payload):
         save_record(workspace['annotations'], payload, 'mark')
     elif action == 'annotation_delete':
         delete_record(workspace['annotations'], payload.get('id'))
+    elif action == 'comparison_save':
+        save_record(workspace.setdefault('comparisons', []), payload, 'compare')
+    elif action == 'comparison_delete':
+        delete_record(workspace.setdefault('comparisons', []), payload.get('id'))
     else:
         raise ValueError('Unknown workspace action')
 
 
 def remove_target(workspace, value):
     workspace['annotations'] = [a for a in workspace['annotations'] if a['target'] != value]
+
+    workspace['comparisons'] = [c for c in workspace.get('comparisons', []) if value not in c['items']]
