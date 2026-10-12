@@ -145,9 +145,9 @@ missing or moved files are not recreated. Staged changes in protected files
 must first be committed or unstaged. Omit `--apply` for a read-only preview.
 Checksum checks and pinned metadata hashes remain unchanged.
 
-No document/video organization, uploads, similarity suggestions, freeform painting, new bitmap crops, Git controls or canon-approval controls. The image editor is loopback-only with per-session write tokens, Host/Origin checks, a single-process repo lock and a crash-recovery journal. It is not a multi-user service. Do not switch branches or edit organization files while it is running; a stale tab or external metadata edit is rejected.
+No document/video organization, uploads, similarity suggestions, new bitmap crops, Git controls or canon-approval controls. The image editor is loopback-only with per-session write tokens, Host/Origin checks, a single-process repo lock and a crash-recovery journal. It is not a multi-user service. Do not switch branches or edit organization files while it is running; a stale tab or external metadata edit is rejected.
 
-Automated tests cover data operations, byte identity, recovery, private-state exclusion, public links and UI logic. Browser layout and touch interaction still need a hands-on acceptance pass.
+Automated tests cover data operations, byte identity, recovery, private-state exclusion, public links and UI logic. Browser regressions cover desktop/mobile layout; physical touch interaction still needs a hands-on acceptance pass.
 
 ## v0.3 · Private visual annotations
 
@@ -210,3 +210,37 @@ deleting participate in persistent Undo. A parent cannot be deleted while a
 child still references it: edit the child links first. Archiving an original
 does not break its history; links use stable SHA-256 identities. Records and
 prompts stay private, and review outcomes do not change canonical status.
+
+## v0.3 · Review queue and candidate nomination
+
+Review queue has lanes for unreviewed artwork, unresolved annotations,
+refinement candidates, nominated candidates and completed reviews. Filter by
+feature, severity, workflow status and experimental family. Archived artwork is
+hidden until Include archived is enabled; its archive decision stays intact.
+Family filters inherit existing membrane collection memberships and can also
+use a private review label. These labels classify work, not canonical design.
+
+Choose Review / nominate to set a workflow status and optional candidate
+nomination, with a private reason. Inspect image / annotations opens its existing
+reviewer so marks can be corrected or resolved. Completing a workflow review
+does not resolve outstanding marks automatically, so an image may appear in the
+completed and unresolved lanes. Iteration outcomes marked needs-refinement also
+appear in the refinement lane. Clear workflow record restores default unreviewed
+status; save, clear and nomination changes support persistent Undo.
+
+All new review data lives in ignored `.review-desk/`. No new field is accepted
+by the public organization schema. The Pages builder, artwork, R01–R34/C01–C15
+registry, canon ledgers and authenticated creator-approval workflow are unchanged.
+There is no database or framework migration, no automatic canon promotion,
+commit, merge or deployment. This is a single-user local workspace; back up the
+ignored private directory separately if its review history matters.
+
+### v0.3 validation and limits
+
+The Python suite includes real Chrome/Edge browser interactions using only the
+standard library and the browser's local DevTools interface. No browser testing
+dependency, workflow rewrite or server framework is required. A headless runner
+does not replace an actual Windows/touch acceptance pass. Full-corpus publication
+QA remains available through `MYCA_FULL_STORE_TEST=1` after installing the
+existing site dependencies (`mistune` and `Pillow`). Private comparison drafts
+are temporary until saved; alignment does not resample image pixels.

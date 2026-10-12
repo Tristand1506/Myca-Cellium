@@ -168,6 +168,57 @@ class WorkspaceTests(unittest.TestCase):
         self.assertEqual(self.desk.public_path.read_bytes(),self.public_bytes)
         self.assertNotIn('PRIVATE PROMPT SENTINEL',json.dumps(self.desk.public))
 
+    def review(self, **values):
+        return {'target':self.sha,'workflow_status':'needs-refinement','feature':'lichen',
+                'severity':'major','family':'none','candidate':True,
+                'nomination_reason':'PRIVATE NOMINATION SENTINEL',**values}
+
+    def test_review_queue_nomination_never_changes_public_or_canonical_status(self):
+        manifest_before=copy.deepcopy(self.manifest)
+        self.change('annotation_save',record=self.annotation())
+        self.change('review_save',record=self.review())
+        row=next(r for r in self.desk.state()['review_queue'] if r['target']==self.sha)
+        self.assertTrue(row['candidate']);self.assertTrue(row['needs_refinement'])
+        self.assertEqual(row['unresolved_annotations'],1)
+        saved=copy.deepcopy(self.desk.state()['workspace']['reviews'][0])
+        for values in [{'workflow_status':'canon'},{'candidate':'approved'},{'target':'R08'},
+                       {'feature':'unknown'},{'family':'canon'},{'canon_status':'canon'}]:
+            with self.assertRaises(ValueError):
+                self.change('review_save',record=self.review(**values))
+        with self.assertRaisesRegex(ValueError,'Duplicate review target'):
+            self.change('review_save',record=self.review())
+        self.change('review_save',record={**saved,'workflow_status':'completed'})
+        row=next(r for r in self.desk.state()['review_queue'] if r['target']==self.sha)
+        self.assertEqual(row['workflow_status'],'completed')
+        self.assertEqual(row['unresolved_annotations'],1)  # Completion never silently resolves marks.
+        self.change('archive',assets=[self.sha])
+        row=next(r for r in self.desk.state()['review_queue'] if r['target']==self.sha)
+        self.assertTrue(row['archived']);self.assertTrue(row['candidate'])
+        self.change('undo')
+        self.desk=review_desk.Desk(self.root,self.manifest)
+        self.change('review_delete',id=saved['id']);self.change('undo')
+        self.assertEqual(self.desk.state()['workspace']['reviews'][0]['candidate'],True)
+        self.assertEqual(self.manifest,manifest_before)
+        self.assertEqual(self.desk.public,meta.default_metadata()|{'collections':[{'id':'lichen','name':'Lichen','assets':[],'details':[]}],'revision':2})
+        self.assertNotIn('PRIVATE NOMINATION SENTINEL',json.dumps(self.desk.public))
+
+    def test_region_review_cleanup_and_experimental_family_membership_are_reversible(self):
+        self.change('collection_create',name='Shelf fungus')
+        collection=copy.deepcopy(self.desk.public['collections'][-1])
+        # Use a documented family ID in a fixture, without editing the real collection file.
+        public=copy.deepcopy(self.desk.public);public['collections'][-1]['id']='membrane-shelf-fungus'
+        self.desk.commit(public,copy.deepcopy(self.desk.private))
+        self.change('collection_assign',id='membrane-shelf-fungus',assets=[self.second])
+        row=next(r for r in self.desk.state()['review_queue'] if r['target']==self.second)
+        self.assertIn('shelf-fungus',row['families'])
+        self.change('detail_save',title='review region',asset_sha256=self.sha,rect=[.1,.1,.6,.6])
+        region=self.desk.public['details'][0]['id']
+        self.change('review_save',record=self.review(target=region))
+        self.change('detail_delete',id=region)
+        self.assertFalse(any(r['target']==region for r in self.desk.state()['workspace']['reviews']))
+        self.change('undo')
+        self.assertTrue(any(r['target']==region for r in self.desk.state()['workspace']['reviews']))
+
 @unittest.skipUnless(browser_path(), 'Chrome or Edge required (MYCA_BROWSER can select it)')
 class WorkspaceBrowserTests(unittest.TestCase):
     def setUp(self):
@@ -257,7 +308,28 @@ class WorkspaceBrowserTests(unittest.TestCase):
         self.assertEqual(browser.evaluate('document.querySelectorAll(".iteration-node").length'),2)
         self.assertEqual(browser.evaluate('document.querySelectorAll(".iteration-edges > path").length'),1)
         browser.evaluate('document.getElementById("history-dialog").close()')
+
+        browser.evaluate(f'openReviewQueue({json.dumps(self.sha)})')
+        browser.evaluate('document.getElementById("review-candidate").checked=true;'
+                         'document.getElementById("review-status").value="needs-refinement";'
+                         'document.getElementById("review-feature").value="lichen";'
+                         'document.getElementById("review-severity").value="major";'
+                         'document.getElementById("review-family").value="shelf-fungus";'
+                         'document.getElementById("review-reason").value="Candidate only";'
+                         'document.getElementById("review-save").click()')
+        browser.wait('reviewRecords().length===1 && !reviewDirty')
+        browser.evaluate('document.getElementById("queue-lane").value="candidates";'
+                         'document.getElementById("queue-feature").value="lichen";'
+                         'document.getElementById("queue-severity").value="major";'
+                         'document.getElementById("queue-family").value="shelf-fungus";renderReviewQueue()')
+        self.assertEqual(browser.evaluate('document.querySelectorAll(".queue-card").length'),1)
+        self.assertIn('no canon approval',browser.evaluate('document.getElementById("queue-results").textContent'))
+        browser.evaluate('document.getElementById("queue-status").value="completed";renderReviewQueue()')
+        self.assertEqual(browser.evaluate('document.querySelectorAll(".queue-card").length'),0)
+        browser.evaluate('document.getElementById("queue-status").value="";document.getElementById("queue-dialog").close()')
+        self.assertEqual(browser.evaluate('browserErrors'),[])
         browser.call('Page.reload')
+
 
         browser.wait('typeof state !== "undefined" && state?.workspace?.annotations.length===5')
         self.assertEqual(self.desk.public_path.read_bytes(), self.public_bytes)

@@ -124,7 +124,14 @@ class Browser:
 
     def wait(self, expression):
         deadline = time.monotonic() + 15
-        while not self.evaluate(expression):
+        while True:
+            try:
+                if self.evaluate(expression):
+                    return
+            except RuntimeError as error:
+                if not any(message in str(error) for message in
+                           ('Inspected target navigated','Execution context was destroyed','Cannot find context')):
+                    raise
             if time.monotonic() > deadline:
                 raise AssertionError('Timed out waiting for ' + expression)
             time.sleep(.05)

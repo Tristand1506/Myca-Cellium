@@ -113,6 +113,7 @@ function render() {
   selectionBar();
   if (typeof refreshAnnotations === "function") refreshAnnotations();
   if (typeof renderIterations === "function" && $("history-dialog").open) renderIterations();
+  if (typeof renderReviewQueue === "function" && $("queue-dialog").open) renderReviewQueue();
 }
 function selectionBar() {
   $("selection-bar").hidden = selection.size === 0;
@@ -168,15 +169,17 @@ async function openViewer(id) {
   $("image-stage").classList.remove("drawing"); $("zoom").value = "fit";
   $("full-image").alt = current.title; $("full-image").src = current.asset.url;
   $("full-image").onload = () => { setZoom(); showRect(); };
-  $("viewer-actions").replaceChildren(button(current.asset.archived ? "Restore original" : "Archive original", async () => { await flushNote(); await mutate(current.asset.archived ? "restore" : "archive", {assets: [current.asset.sha256]}); toast("File moved. Undo is available."); $("viewer").close(); current = null; }));
+  $("viewer-actions").replaceChildren(button(current.asset.archived ? "Restore original" : "Archive original", async () => { if (typeof requireSavedMark === "function") requireSavedMark(); await flushNote(); await mutate(current.asset.archived ? "restore" : "archive", {assets: [current.asset.sha256]}); toast("File moved. Undo is available."); $("viewer").close(); current = null; }));
+  if (typeof openReviewQueue === "function") $("viewer-actions").append(button("Review / nominate candidate", () => { requireSavedMark(); openReviewQueue(current.id); }));
   if (typeof editIteration === "function") $("viewer-actions").append(button("Record iteration", () => { requireSavedMark(); openHistory(current.asset.sha256); }));
-  if (current.detail) $("viewer-actions").append(button("Delete detail view", async () => { await flushNote(); await mutate("detail_delete", {id: current.id}); $("viewer").close(); current = null; toast("Detail view removed. Original unchanged; Undo available."); }));
+  if (current.detail) $("viewer-actions").append(button("Delete detail view", async () => { if (typeof requireSavedMark === "function") requireSavedMark(); await flushNote(); await mutate("detail_delete", {id: current.id}); $("viewer").close(); current = null; toast("Detail view removed. Original unchanged; Undo available."); }));
   $("provenance").replaceChildren(element("p", "hash", "SHA-256 " + current.asset.sha256), element("p", "muted", current.asset.stored_filename), element("p", "muted", size(current.asset.size_bytes)));
   const link = element("a", "", "Open preserved original ↗"); link.href = current.asset.url; link.target = "_blank"; link.rel = "noopener"; $("provenance").append(link);
   if (current.detail) { $("provenance").append(element("p", "muted", "Normalized region: " + current.detail.rect.map(n => n.toFixed(4)).join(", "))); $("viewer-actions").append(button("Focus detail / show parent", () => focusDetail())); }
   if (!$("viewer").open) $("viewer").showModal();
   if ($("full-image").complete) { setZoom(); showRect(); }
   if (current.detail) focusDetail(true);
+  if (typeof refreshAnnotations === "function") refreshAnnotations();
 }
 function setZoom() {
   const image = $("full-image"), stage = $("image-stage"), zoom = $("zoom").value;
@@ -246,13 +249,14 @@ function bind() {
   if (typeof bindAnnotations === "function") bindAnnotations();
   if (typeof bindComparisons === "function") bindComparisons();
   if (typeof bindIterations === "function") bindIterations();
+  if (typeof bindReviewQueue === "function") bindReviewQueue();
   for (const id of ["search", "kind", "sort"]) $(id).addEventListener(id === "search" ? "input" : "change", render);
   $("new-collection").onclick = () => run(async () => { const name = await requestText("Create a feature collection"); if (name) { await mutate("collection_create", {name}); toast("Collection created. Add any images or detail views."); } });
   $("rename-collection").onclick = () => run(async () => { const c = collection(), name = await requestText("Rename collection", c.name); if (name) await mutate("collection_rename", {id: c.id, name}); });
   $("delete-collection").onclick = () => run(async () => { const id = collection().id; await mutate("collection_delete", {id}); view = "active"; render(); toast("Collection removed; images unchanged. Undo available."); });
   $("text-form").onsubmit = event => { event.preventDefault(); textDone($("text-value").value.trim()); };
   $("text-cancel").onclick = () => textDone(null); $("text-dialog").addEventListener("cancel", event => { event.preventDefault(); textDone(null); });
-  $("undo").onclick = () => run(async () => { await flushNote(); await mutate("undo"); if (!state.public.collections.some(c => c.id === view) && !["active", "archive", "details", "unassigned"].includes(view)) view = "active"; render(); if (current) { memberships(current); $("private-note").value = state.notes[current.id] || ""; } toast("Last change undone."); });
+  $("undo").onclick = () => run(async () => { if (typeof requireSavedMark === "function") requireSavedMark(); await flushNote(); await mutate("undo"); if (typeof resetAnnotations === "function") { resetAnnotations(); refreshAnnotations(); } if (!state.public.collections.some(c => c.id === view) && !["active", "archive", "details", "unassigned"].includes(view)) view = "active"; render(); if (current) { memberships(current); $("private-note").value = state.notes[current.id] || ""; } toast("Last change undone."); });
   $("select-visible").onclick = () => { visible.forEach(item => selection.add(item.id)); render(); };
   $("clear-selection").onclick = () => { selection.clear(); render(); };
   $("add-selection").onclick = () => run(async () => { await mutate("collection_assign", {id: $("assign-collection").value, ...selectedItems()}); toast("Selection added to collection. Files stayed in place."); });

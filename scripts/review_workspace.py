@@ -11,10 +11,13 @@ FEATURES = {'cap', 'lichen', 'face', 'eyes', 'tissue', 'arms-hands', 'legs',
 SEVERITIES = {'info', 'minor', 'major', 'critical'}
 REVIEW_STATUSES = {'open', 'in-progress', 'resolved', 'dismissed'}
 KINDS = {'rectangle', 'arrow', 'ellipse', 'pin', 'freehand'}
+WORKFLOW_STATUSES = {'unreviewed','in-progress','needs-refinement','completed'}
+FAMILIES = {'none','layered-petal','single-sheet','vascular','gill-frill','veil-streamer',
+            'spore-lace','shelf-fungus','lily-bud','mixed','other'}
 
 
 def empty():
-    return {'schema_version': 1, 'annotations': [], 'comparisons': [], 'iterations': []}
+    return {'schema_version': 1, 'annotations': [], 'comparisons': [], 'iterations': [], 'reviews': []}
 
 
 def fields(value, names, label):
@@ -45,7 +48,7 @@ def target(value, targets):
 
 def validate(workspace, public, images):
     require(isinstance(workspace, dict) and {'schema_version','annotations'} <= set(workspace)
-            and set(workspace) <= {'schema_version','annotations','comparisons','iterations'}, 'Invalid workspace fields')
+            and set(workspace) <= {'schema_version','annotations','comparisons','iterations','reviews'}, 'Invalid workspace fields')
     require(type(workspace['schema_version']) is int and workspace['schema_version'] == 1,
             'Unsupported private workspace schema')
     targets = set(images) | {d['id'] for d in public['details']}
@@ -141,6 +144,22 @@ def validate(workspace, public, images):
             if indegree[child]==0:
                 ready.append(child)
     require(seen==len(nodes),'Iteration relationships must be acyclic')
+    reviews = workspace.get('reviews', [])
+    require(isinstance(reviews,list) and len(reviews)<=10000,'Invalid review records')
+    ids, reviewed_targets = set(), set()
+    for review in reviews:
+        fields(review,'id target workflow_status feature severity family candidate nomination_reason','review')
+        identity(review['id'])
+        require(review['id'] not in ids,'Duplicate review ID');ids.add(review['id'])
+        target(review['target'],targets)
+        require(review['target'] not in reviewed_targets,'Duplicate review target')
+        reviewed_targets.add(review['target'])
+        member(review['workflow_status'],WORKFLOW_STATUSES,'workflow status')
+        member(review['feature'],FEATURES,'review feature')
+        member(review['severity'],SEVERITIES,'review severity')
+        member(review['family'],FAMILIES,'experimental family')
+        require(type(review['candidate']) is bool,'Invalid candidate nomination')
+        text(review['nomination_reason'])
     return workspace
 
 
@@ -207,6 +226,10 @@ def mutate(workspace, payload):
         require(not any(value in node['parents'] for node in workspace.get('iterations', [])),
                 'Edit child relationships before deleting their parent')
         delete_record(workspace.setdefault('iterations', []), value)
+    elif action == 'review_save':
+        save_record(workspace.setdefault('reviews', []), payload, 'review')
+    elif action == 'review_delete':
+        delete_record(workspace.setdefault('reviews', []), payload.get('id'))
     else:
         raise ValueError('Unknown workspace action')
 
@@ -215,3 +238,34 @@ def remove_target(workspace, value):
     workspace['annotations'] = [a for a in workspace['annotations'] if a['target'] != value]
 
     workspace['comparisons'] = [c for c in workspace.get('comparisons', []) if value not in c['items']]
+
+    workspace['reviews'] = [r for r in workspace.get('reviews', []) if r['target'] != value]
+
+
+def queue_rows(workspace, public, images):
+    """Derive queue lanes without overwriting review outcomes or canonical status."""
+    reviews = {r['target']:r for r in workspace.get('reviews', [])}
+    targets = [(sha,sha) for sha in images] + [(d['id'],d['asset_sha256']) for d in public['details']]
+    rows = []
+    for value,sha in targets:
+        review = reviews.get(value,{})
+        annotations = [a for a in workspace['annotations'] if a['target']==value]
+        unresolved = [a for a in annotations if a['status'] in {'open','in-progress'}]
+        related = [n for n in workspace.get('iterations',[]) if n['asset_sha256']==sha]
+        families = {review.get('family','none')}
+        for collection in public['collections']:
+            if (value in collection['assets'] or value in collection['details']) and collection['id'].startswith('membrane-'):
+                family = collection['id'].removeprefix('membrane-')
+                if family in FAMILIES:
+                    families.add(family)
+        if len(families)>1:
+            families.discard('none')
+        status = review.get('workflow_status','unreviewed')
+        rows.append({'target':value,'asset_sha256':sha,'workflow_status':status,
+                     'candidate':review.get('candidate',False),'unresolved_annotations':len(unresolved),
+                     'needs_refinement':status=='needs-refinement' or any(n['outcome']=='needs-refinement' for n in related),
+                     'features':sorted({review.get('feature','other')} | {a['feature'] for a in annotations}
+                                       | {f for n in related for f in n['features']}),
+                     'severities':sorted({review.get('severity','info')} | {a['severity'] for a in unresolved}),
+                     'families':sorted(families),'archived':sha in public['archived']})
+    return rows
