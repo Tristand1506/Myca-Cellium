@@ -9,7 +9,6 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTECTED = ('resources/character-library', 'docs')
-TEXT_SUFFIXES = {'.md', '.json', '.html', '.txt', '.py', '.yml', '.yaml'}
 
 
 def git(root, *args):
@@ -26,8 +25,8 @@ def inspect(root):
         header, encoded_path = entry.split(b'\t', 1)
         mode, kind, sha = header.decode().split()
         relative = encoded_path.decode('utf-8'); path = root / relative
-        if path.suffix.lower() not in TEXT_SUFFIXES and path.name != 'SHA256SUMS':
-            continue
+        # Inspect all protected paths. Dotfiles and extensionless text assets
+        # can also be converted by Git; filename suffixes cannot classify them.
         # Never recreate a missing/moved file or follow a symlink.
         if not path.exists():
             continue
