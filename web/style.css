@@ -4,3 +4,5 @@
 .card-body{overflow-wrap:anywhere}.site-header nav a{display:inline-flex;align-items:center;min-height:44px}.original{min-height:44px}
 :root .saved-region{overflow:hidden;position:relative;aspect-ratio:1;background:#101a13;width:100%}
 :root .saved-region img{position:absolute;max-width:none;object-fit:fill;border-radius:0}
+
+.assignment-table{overflow-x:auto}.assignment-table table{display:table;width:100%;border-collapse:collapse}.assignment-table th,.assignment-table td{padding:1rem;text-align:left;vertical-align:top;border-bottom:1px solid #dce2d7;min-width:220px}.assignment-table td:first-child{min-width:190px}.assignment-table p{margin:.5rem 0}

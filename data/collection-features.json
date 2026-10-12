@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "collection_features": {
+    "cap": "cap",
+    "lichen": "lichen",
+    "face-eyes": "face-eyes",
+    "tissue": "tissue",
+    "legs": "legs-contact",
+    "membranes": "membrane-experiments"
+  }
+}

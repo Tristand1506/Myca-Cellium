@@ -1,4 +1,4 @@
-# Myca Review Desk · prototype
+# Myca Review Desk Â· prototype
 
 A local browser workspace for organizing the recovered image library. It does not connect to GitHub, commit, push, merge or deploy anything automatically.
 
@@ -60,6 +60,27 @@ Optional full-corpus regression (temporary copies require roughly 1 GB free; Pil
 ```sh
 MYCA_FULL_STORE_TEST=1 python -m unittest discover -s tests -p test_review_desk_integration.py -v
 ```
+
+## Feature-reference navigation
+
+The manual Pages build also generates **By feature** and `feature-references.json`.
+It uses the saved public sidecar, not private notes or Undo history. Explicit
+`data/collection-features.json` mappings associate stable collection IDs with review
+topics. New or unmapped collections stay organizational until a mapping is added;
+renaming does not infer a new topic, and deleting a collection creates no assignments.
+
+Every assigned item retains its recorded R/C identities, exact scope, status and
+classification. Registered crops also show their parent reference's limits; saved
+regions keep their original coordinates and receive no R/C ID. Archived memberships
+remain in the derived index and history view, with links to unchanged originals.
+
+**Selecting a reference for a topic does not approve that feature.** For example,
+placing a lichen-only crop into Face and eyes does not approve its facial anatomy.
+All existing written authority and specific creator approvals still control use.
+
+Saving in the Review Desk writes `data/review-desk.json` locally. Commit and push it
+through a PR before building Pages from the remote branch. A generated feature index
+is derived output, not a second editable source of memberships.
 
 ## Prototype limits
 
