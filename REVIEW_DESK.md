@@ -1,4 +1,4 @@
-# Myca Review Desk Â· prototype
+# Myca Review Desk · prototype
 
 A local browser workspace for organizing the recovered image library. It does not connect to GitHub, commit, push, merge or deploy anything automatically.
 

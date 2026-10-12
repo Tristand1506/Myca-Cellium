@@ -1,10 +1,10 @@
-# Myca Cellium Â· Character Design Repository
+# Myca Cellium · Character Design Repository
 
 A version-controlled, **feature-scoped** character reference with a read-only GitHub Pages publication workflow. Written approved design rules are authoritative; generated images are not blanket canon.
 
 ## Recovered character library
 
-The [recovered resource index](resources/character-library/Index.md) opens the original character images, reference sheets, detail crops, animation studies, and design-document snapshots. It contains 234 public assets: 232 unchanged originals and two clearly labeled sanitized metadata derivatives, with 315 current filename aliases. The unchanged source documents for those derivatives remain in the owner archive. Of the 49 R01â€“R34 and C01â€“C15 identifiers, 46 are recovered; R24â€“R26 remain missing or unmapped, and eight Page-linked binaries remain unavailable.
+The [recovered resource index](resources/character-library/Index.md) opens the original character images, reference sheets, detail crops, animation studies, and design-document snapshots. It contains 234 public assets: 232 unchanged originals and two clearly labeled sanitized metadata derivatives, with 315 current filename aliases. The unchanged source documents for those derivatives remain in the owner archive. Of the 49 R01–R34 and C01–C15 identifiers, 46 are recovered; R24–R26 remain missing or unmapped, and eight Page-linked binaries remain unavailable.
 
 [Browse all assets and aliases](resources/character-library/Asset-Catalog.md), [review the separate membrane experiments](resources/character-library/Experiments.md), or read the [sanitation report](resources/character-library/Sanitation-Report.md). SHA-256 fingerprints preserve byte identity. Supporting documents remain historical snapshots; the existing canon documents and feature-specific approvals remain authoritative.
 
@@ -12,9 +12,9 @@ Run `python scripts/resource_library.py validate` to check the complete recovery
 
 ## Original document import
 
-The existing source Markdown documents and the legacy embedded-preview HTML are preserved in `docs/` without rewriting their content. The initial attachment gaps are historical; the recovered artwork and document snapshots are now available. Current gaps are R24â€“R26 and eight unavailable binaries; see `data/resource-status.json`. Missing files are **not** represented as imported.
+The existing source Markdown documents and the legacy embedded-preview HTML are preserved in `docs/` without rewriting their content. The initial attachment gaps are historical; the recovered artwork and document snapshots are now available. Current gaps are R24–R26 and eight unavailable binaries; see `data/resource-status.json`. Missing files are **not** represented as imported.
 
-The preserved documents describe a fuller resource bundle. The original import lacked the original images and crops, acting guide, review checklist, decision log, and archived S01â€“S03 source documents. Those recovered files now have links in the resource index above. Prior-layout links in downloadable historical snapshots remain unchanged. The rendered website resolves verified references; ambiguous historical document versions link to the catalog. The illustrated guide and its 49 embedded previews retain their exact source bytes, with verified compatibility paths for its original-file links.
+The preserved documents describe a fuller resource bundle. The original import lacked the original images and crops, acting guide, review checklist, decision log, and archived S01–S03 source documents. Those recovered files now have links in the resource index above. Prior-layout links in downloadable historical snapshots remain unchanged. The rendered website resolves verified references; ambiguous historical document versions link to the catalog. The illustrated guide and its 49 embedded previews retain their exact source bytes, with verified compatibility paths for its original-file links.
 
 ## How to use
 
@@ -69,7 +69,7 @@ for changing groups and regions.
 
 ## GitHub Pages deployment
 
-The `.github/workflows/pages.yml` workflow builds and deploys the site only when manually run from the Actions tab. Commits to `main` validate the repository but do not publish the site. In GitHub repository **Settings â†’ Pages â†’ Build and deployment**, select **GitHub Actions** when you are ready to enable hosting, then manually run **Publish Myca library**. Pages hosting is public to website visitors: do not put private or sensitive resources in the published source. This repository should be configured deliberately as public or private depending on desired visibility and plan support.
+The `.github/workflows/pages.yml` workflow builds and deploys the site only when manually run from the Actions tab. Commits to `main` validate the repository but do not publish the site. In GitHub repository **Settings → Pages → Build and deployment**, select **GitHub Actions** when you are ready to enable hosting, then manually run **Publish Myca library**. Pages hosting is public to website visitors: do not put private or sensitive resources in the published source. This repository should be configured deliberately as public or private depending on desired visibility and plan support.
 
 ## Important
 
