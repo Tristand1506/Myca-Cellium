@@ -63,6 +63,26 @@ MYCA_FULL_STORE_TEST=1 python -m unittest discover -s tests -p test_review_desk_
 
 ## Prototype limits
 
+### Windows line endings and checksum startup errors
+
+The repository's `.gitattributes` disables Git text conversion for the recovered
+library and preserved source documents. This retains exact original bytes,
+including historical files that intentionally use CRLF.
+
+If an older checkout reports `Reviewed snapshot changed: SHA256SUMS`, pull this
+branch's latest changes, then run:
+
+```sh
+python scripts/repair_checkout_bytes.py --apply
+python scripts/review_desk.py
+```
+
+The repair restores a file only when its bytes exactly equal the committed
+original with LF converted to CRLF. Other edits are reported and left alone;
+missing or moved files are not recreated. Staged changes in protected files
+must first be committed or unstaged. Omit `--apply` for a read-only preview.
+Checksum checks and pinned metadata hashes remain unchanged.
+
 No document/video organization, uploads, similarity suggestions, freeform painting, new bitmap crops, Git controls or canon-approval controls. The image editor is loopback-only with per-session write tokens, Host/Origin checks, a single-process repo lock and a crash-recovery journal. It is not a multi-user service. Do not switch branches or edit organization files while it is running; a stale tab or external metadata edit is rejected.
 
 Automated tests cover data operations, byte identity, recovery, private-state exclusion, public links and UI logic. Browser layout and touch interaction still need a hands-on acceptance pass.
