@@ -323,8 +323,10 @@ class WorkspaceBrowserTests(unittest.TestCase):
         self.assertEqual(browser.evaluate('compareDraft'),expected)
 
         browser.evaluate('document.getElementById("comparison").close()')
+        self.assertEqual(self.desk.public_path.read_bytes(),self.public_bytes)
         browser.evaluate(f'mutate("detail_save",{{title:"Browser linked region",asset_sha256:{json.dumps(self.sha)},rect:[.1,.2,.6,.7]}})')
         browser.evaluate(f'mutate("detail_save",{{title:"Second region",asset_sha256:{json.dumps(self.second)},rect:[.2,.1,.8,.8]}})')
+        public_after_regions=self.desk.public_path.read_bytes()
         browser.evaluate('selection=new Set([state.assets[0].sha256,state.assets[1].sha256,...state.public.details.map(d=>d.id)]);openCompare()')
         browser.wait('compareViews.length===4 && compareViews.every(p=>p.image.complete)')
         self.assertEqual(browser.evaluate('compareViews.length'),4)
@@ -384,7 +386,7 @@ class WorkspaceBrowserTests(unittest.TestCase):
 
 
         browser.wait('typeof state !== "undefined" && state?.workspace?.annotations.length===6')
-        self.assertEqual(self.desk.public_path.read_bytes(), self.public_bytes)
+        self.assertEqual(self.desk.public_path.read_bytes(), public_after_regions)
 
 
 if __name__ == '__main__':
