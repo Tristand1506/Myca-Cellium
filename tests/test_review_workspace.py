@@ -137,6 +137,37 @@ class WorkspaceTests(unittest.TestCase):
         self.assertEqual(self.desk.state()['workspace']['comparisons'][0],saved)
         self.assertNotIn('PRIVATE COMPARISON SENTINEL',json.dumps(self.desk.public))
 
+    def iteration(self, **values):
+        return {'asset_sha256':self.sha,'title':'Source study','relationship':'source','parents':[],
+                'features':['lichen'],'corrections':'PRIVATE CORRECTION SENTINEL',
+                'prompt':'PRIVATE PROMPT SENTINEL','outcome':'unreviewed',**values}
+
+    def test_iteration_branches_cycle_prevention_invalid_assets_and_restarted_undo(self):
+        self.change('iteration_save',record=self.iteration())
+        source = copy.deepcopy(self.desk.state()['workspace']['iterations'][0])
+        self.change('iteration_save',record=self.iteration(title='Revision',relationship='revision',parents=[source['id']]))
+        revision = copy.deepcopy(self.desk.state()['workspace']['iterations'][1])
+        self.change('iteration_save',record=self.iteration(title='Alternate',relationship='alternative',parents=[source['id']]))
+        alternative = copy.deepcopy(self.desk.state()['workspace']['iterations'][2])
+        for record in [self.iteration(asset_sha256='R08'),self.iteration(asset_sha256=[]),
+                       self.iteration(relationship='revision',parents=['missing']),
+                       self.iteration(relationship='revision'),
+                       {**source,'relationship':'revision','parents':[revision['id']]},
+                       {**revision,'parents':[revision['id']]},
+                       self.iteration(outcome='canon')]:
+            with self.subTest(record=record):
+                before = copy.deepcopy(self.desk.private)
+                with self.assertRaises(ValueError):
+                    self.change('iteration_save',record=record)
+                self.assertEqual(before,self.desk.private)
+        with self.assertRaisesRegex(ValueError,'child relationships'):
+            self.change('iteration_delete',id=source['id'])
+        self.desk=review_desk.Desk(self.root,self.manifest)
+        self.change('iteration_delete',id=alternative['id']);self.change('undo')
+        self.assertEqual(self.desk.state()['workspace']['iterations'][2],alternative)
+        self.assertEqual(self.desk.public_path.read_bytes(),self.public_bytes)
+        self.assertNotIn('PRIVATE PROMPT SENTINEL',json.dumps(self.desk.public))
+
 @unittest.skipUnless(browser_path(), 'Chrome or Edge required (MYCA_BROWSER can select it)')
 class WorkspaceBrowserTests(unittest.TestCase):
     def setUp(self):
@@ -211,7 +242,23 @@ class WorkspaceBrowserTests(unittest.TestCase):
         self.assertEqual(browser.evaluate('compareDraft'),expected)
         browser.evaluate('document.getElementById("comparison").close()')
 
+
+        browser.evaluate(f'openHistory({json.dumps(self.sha)})')
+        browser.evaluate('document.getElementById("iteration-title").value="Browser source";'
+                         'document.getElementById("iteration-features").options[0].selected=true;'
+                         'document.getElementById("iteration-save").click()')
+        browser.wait('iterations().length===1')
+        browser.evaluate('iterationFormDirty=false;editIteration();'
+                         'document.getElementById("iteration-title").value="Browser revision";'
+                         'document.getElementById("iteration-relationship").value="revision";'
+                         'document.getElementById("iteration-parents").options[0].selected=true;'
+                         'document.getElementById("iteration-save").click()')
+        browser.wait('iterations().length===2')
+        self.assertEqual(browser.evaluate('document.querySelectorAll(".iteration-node").length'),2)
+        self.assertEqual(browser.evaluate('document.querySelectorAll(".iteration-edges > path").length'),1)
+        browser.evaluate('document.getElementById("history-dialog").close()')
         browser.call('Page.reload')
+
         browser.wait('typeof state !== "undefined" && state?.workspace?.annotations.length===5')
         self.assertEqual(self.desk.public_path.read_bytes(), self.public_bytes)
 

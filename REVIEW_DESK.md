@@ -193,3 +193,20 @@ session updates it; a new selection creates another. Changes remain temporary
 until saved. Delete and save participate in persistent Undo. Deleting a saved
 region removes sessions that depend on it; Undo restores both. Original scopes,
 known defects and experimental warnings remain visible in every mode.
+
+## v0.3 · Iteration history
+
+Open Iteration history, or Record iteration from an image review. A source node
+has no parents. A revision or alternative branch has one or more existing
+parents. Each record links an unchanged registered image and can retain targeted
+features, requested corrections, a source prompt when known, and review outcome.
+The server validates all asset/parent references and uses a nonrecursive
+topological check to prevent cycles, including cycles introduced by edits.
+
+The graph shows directed parent-to-child links, with a text list below for
+keyboard access. Select a node to inspect its image scopes and edit its record.
+Record iteration starts a fresh record and discards an unsaved form. Saving and
+deleting participate in persistent Undo. A parent cannot be deleted while a
+child still references it: edit the child links first. Archiving an original
+does not break its history; links use stable SHA-256 identities. Records and
+prompts stay private, and review outcomes do not change canonical status.

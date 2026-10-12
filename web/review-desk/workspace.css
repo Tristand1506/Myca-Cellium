@@ -35,3 +35,12 @@
 #compare-grid.layered-comparison{grid-template-columns:minmax(0,1fr)}
 .layered-comparison .compare-pane:nth-child(n)>:not(.compare-viewport){grid-column:1}
 .compare-controls button{font-size:.75rem}.compare-controls input,.compare-controls select{max-width:100%}}
+
+.history-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px}
+#iteration-graph{overflow:auto;max-height:55vh;border:1px solid var(--line);border-radius:10px;margin:15px 0}
+.iteration-canvas{position:relative}.iteration-edges{position:absolute;left:0;top:0}
+.iteration-node{position:absolute;width:240px;height:158px;display:flex;flex-direction:column;align-items:flex-start;gap:3px;text-align:left;overflow:hidden;background:var(--raised)}
+.iteration-node img{height:55px;width:100%;object-fit:contain}.iteration-node strong{overflow-wrap:anywhere;font-size:.8rem}.iteration-node small{font-size:.65rem}
+#iteration-form label{display:block;margin:10px 0}#iteration-form button{margin:4px}
+#iteration-list li{font-size:.8rem;margin:8px 0}#iteration-list button{font-size:.8rem}
+@media(max-width:760px){.history-layout{grid-template-columns:1fr}#iteration-form{border-top:1px solid var(--line);padding-top:14px}}

@@ -142,15 +142,26 @@ class Browser:
 
     def close(self):
         if self.sock:
+            try:
+                self.send(json.dumps({'id':self.sequence+1,'method':'Browser.close'}).encode())
+            except (OSError,RuntimeError):
+                pass
             self.sock.close()
         if self.process:
-            self.process.terminate()
             try:
                 self.process.wait(timeout=10)
             except subprocess.TimeoutExpired:
-                self.process.kill(); self.process.wait()
-        # Browsers can briefly retain profile files on Windows after termination.
-        try:
-            self.profile.cleanup()
-        except PermissionError:
-            pass
+                self.process.terminate()
+                try:
+                    self.process.wait(timeout=5)
+                except subprocess.TimeoutExpired:
+                    self.process.kill(); self.process.wait()
+        # Wait briefly for browser subprocesses to release their profile files.
+        for attempt in range(20):
+            try:
+                self.profile.cleanup()
+                break
+            except OSError:
+                if attempt==19:
+                    raise
+                time.sleep(.05)

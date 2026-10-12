@@ -14,7 +14,7 @@ KINDS = {'rectangle', 'arrow', 'ellipse', 'pin', 'freehand'}
 
 
 def empty():
-    return {'schema_version': 1, 'annotations': [], 'comparisons': []}
+    return {'schema_version': 1, 'annotations': [], 'comparisons': [], 'iterations': []}
 
 
 def fields(value, names, label):
@@ -45,7 +45,7 @@ def target(value, targets):
 
 def validate(workspace, public, images):
     require(isinstance(workspace, dict) and {'schema_version','annotations'} <= set(workspace)
-            and set(workspace) <= {'schema_version','annotations','comparisons'}, 'Invalid workspace fields')
+            and set(workspace) <= {'schema_version','annotations','comparisons','iterations'}, 'Invalid workspace fields')
     require(type(workspace['schema_version']) is int and workspace['schema_version'] == 1,
             'Unsupported private workspace schema')
     targets = set(images) | {d['id'] for d in public['details']}
@@ -105,6 +105,42 @@ def validate(workspace, public, images):
             fields(transform['alignment'], 'offset scale rotation', 'alignment')
             number(transform['alignment']['scale'], .1, 10)
             number(transform['alignment']['rotation'], -180, 180)
+    iterations = workspace.get('iterations', [])
+    require(isinstance(iterations,list) and len(iterations) <= 1000, 'Invalid iterations')
+    nodes = {}
+    for iteration in iterations:
+        fields(iteration,'id asset_sha256 title relationship parents features corrections prompt outcome','iteration')
+        identity(iteration['id'])
+        require(iteration['id'] not in nodes,'Duplicate iteration ID')
+        nodes[iteration['id']] = iteration
+        target(iteration['asset_sha256'], set(images))
+        text(iteration['title'],160,nonempty=True)
+        member(iteration['relationship'], {'source','revision','alternative'}, 'iteration relationship')
+        require(isinstance(iteration['parents'],list) and all(isinstance(p,str) for p in iteration['parents'])
+                and len(iteration['parents']) == len(set(iteration['parents'])), 'Invalid parents')
+        require((iteration['relationship']=='source' and not iteration['parents']) or
+                (iteration['relationship']!='source' and bool(iteration['parents'])),
+                'Sources have no parents; revisions and alternatives need a parent')
+        features = iteration['features']
+        require(isinstance(features,list) and all(isinstance(f,str) and f in FEATURES for f in features)
+                and len(features)==len(set(features)), 'Invalid targeted features')
+        text(iteration['corrections']); text(iteration['prompt'])
+        member(iteration['outcome'], {'unreviewed','needs-refinement','reviewed','rejected'}, 'review outcome')
+    indegree = {key:len(node['parents']) for key,node in nodes.items()}
+    children = {key:[] for key in nodes}
+    for key,node in nodes.items():
+        for parent in node['parents']:
+            require(parent in nodes and parent != key,'Missing or self-referencing iteration parent')
+            children[parent].append(key)
+    ready = [key for key,count in indegree.items() if count==0]
+    seen = 0
+    while ready:
+        key = ready.pop(); seen += 1
+        for child in children[key]:
+            indegree[child] -= 1
+            if indegree[child]==0:
+                ready.append(child)
+    require(seen==len(nodes),'Iteration relationships must be acyclic')
     return workspace
 
 
@@ -164,6 +200,13 @@ def mutate(workspace, payload):
         save_record(workspace.setdefault('comparisons', []), payload, 'compare')
     elif action == 'comparison_delete':
         delete_record(workspace.setdefault('comparisons', []), payload.get('id'))
+    elif action == 'iteration_save':
+        save_record(workspace.setdefault('iterations', []), payload, 'iteration')
+    elif action == 'iteration_delete':
+        value = payload.get('id')
+        require(not any(value in node['parents'] for node in workspace.get('iterations', [])),
+                'Edit child relationships before deleting their parent')
+        delete_record(workspace.setdefault('iterations', []), value)
     else:
         raise ValueError('Unknown workspace action')
 

@@ -112,6 +112,7 @@ function render() {
   if (current) current = findItem(current.id) || null;
   selectionBar();
   if (typeof refreshAnnotations === "function") refreshAnnotations();
+  if (typeof renderIterations === "function" && $("history-dialog").open) renderIterations();
 }
 function selectionBar() {
   $("selection-bar").hidden = selection.size === 0;
@@ -168,6 +169,7 @@ async function openViewer(id) {
   $("full-image").alt = current.title; $("full-image").src = current.asset.url;
   $("full-image").onload = () => { setZoom(); showRect(); };
   $("viewer-actions").replaceChildren(button(current.asset.archived ? "Restore original" : "Archive original", async () => { await flushNote(); await mutate(current.asset.archived ? "restore" : "archive", {assets: [current.asset.sha256]}); toast("File moved. Undo is available."); $("viewer").close(); current = null; }));
+  if (typeof editIteration === "function") $("viewer-actions").append(button("Record iteration", () => { requireSavedMark(); openHistory(current.asset.sha256); }));
   if (current.detail) $("viewer-actions").append(button("Delete detail view", async () => { await flushNote(); await mutate("detail_delete", {id: current.id}); $("viewer").close(); current = null; toast("Detail view removed. Original unchanged; Undo available."); }));
   $("provenance").replaceChildren(element("p", "hash", "SHA-256 " + current.asset.sha256), element("p", "muted", current.asset.stored_filename), element("p", "muted", size(current.asset.size_bytes)));
   const link = element("a", "", "Open preserved original ↗"); link.href = current.asset.url; link.target = "_blank"; link.rel = "noopener"; $("provenance").append(link);
@@ -243,6 +245,7 @@ function openCompare() {
 function bind() {
   if (typeof bindAnnotations === "function") bindAnnotations();
   if (typeof bindComparisons === "function") bindComparisons();
+  if (typeof bindIterations === "function") bindIterations();
   for (const id of ["search", "kind", "sort"]) $(id).addEventListener(id === "search" ? "input" : "change", render);
   $("new-collection").onclick = () => run(async () => { const name = await requestText("Create a feature collection"); if (name) { await mutate("collection_create", {name}); toast("Collection created. Add any images or detail views."); } });
   $("rename-collection").onclick = () => run(async () => { const c = collection(), name = await requestText("Rename collection", c.name); if (name) await mutate("collection_rename", {id: c.id, name}); });
