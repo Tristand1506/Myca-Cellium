@@ -8,7 +8,7 @@
     "checksums": "resources/character-library/SHA256SUMS",
     "original_asset_count": 232,
     "asset_bytes": 421015862,
-    "filename_alias_count": 285,
+    "filename_alias_count": 315,
     "reference_record_count": 49,
     "recovered_reference_count": 46,
     "missing_or_unmapped_reference_ids": [
@@ -30,8 +30,8 @@
     "public_asset_count": 234,
     "sanitized_metadata_derivative_count": 2,
     "original_asset_bytes": 421013796,
-    "original_filename_alias_count": 283,
-    "publication_revision": 3
+    "original_filename_alias_count": 313,
+    "publication_revision": 4
   },
   "original_import_gaps": [
     "Myca Expression and Acting Guide.md",

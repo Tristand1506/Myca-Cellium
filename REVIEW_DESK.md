@@ -12,7 +12,7 @@ python scripts/review_desk.py
 
 Open **http://127.0.0.1:8765**. Use `--port 8766` if that port is occupied. Stop with Ctrl+C. The editor needs no third-party Python packages. Startup verifies the public recovery snapshot and artwork; the large collection can take a few seconds to check.
 
-On Windows, use a checkout inside **WSL's Linux filesystem** if Git reports invalid filenames. The existing preserved library includes names containing `:`, which native Windows filesystems cannot represent. This prototype does not rename originals to work around that limitation.
+Windows checkouts are supported by the storage-path fix merged in PR #6. Thirty colon-containing storage labels use a portable separator; previous source labels remain alias metadata, and artwork bytes and hashes are unchanged. The Review Desk uses the current manifest paths for image lookup, archive moves and Undo. No WSL filename workaround is required.
 
 ## Review workflow
 

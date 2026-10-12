@@ -4,6 +4,7 @@ import os
 from pathlib import Path
 import shutil
 import sys
+import subprocess
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -24,7 +25,9 @@ class FullStoreTests(unittest.TestCase):
             root = Path(temp)
             for name in ('resources', 'docs', 'data', 'web', 'automation'):
                 shutil.copytree(source / name, root / name)
-            (root / '.gitignore').write_text('.review-desk/\n', encoding='utf-8')
+            (root / '.gitignore').write_text('.review-desk/\n_site/\n', encoding='utf-8')
+            subprocess.run(['git', 'init', '--quiet', str(root)], check=True)
+            subprocess.run(['git', '-C', str(root), 'add', '.'], check=True)
             library = root / 'resources/character-library'
             snapshot = {name: (library / name).read_bytes() for name in ('manifest.json', 'SHA256SUMS')}
             with patch.object(resource_library, 'ROOT', root), patch.object(resource_library, 'LIBRARY', library):
@@ -37,7 +40,14 @@ class FullStoreTests(unittest.TestCase):
                 change('collection_assign', id='lichen', assets=[sha], details=[desk.public['details'][0]['id']])
                 build_site.build(root=root, out=root / '_site'); validate_site.validate(root=root, out=root / '_site')
                 self.assertIn('Lichen QA region', (root / '_site/gallery/collections.html').read_text())
-                change('archive', assets=[sha])
+                renamed = next(a for a in manifest['assets'] if any(
+                    ':' in alias and alias.replace(':', ' -') == a['stored_filename']
+                    for alias in a['filename_aliases']))
+                renamed_sha = renamed['sha256']; renamed_bytes = desk.path(renamed_sha).read_bytes()
+                self.assertNotIn(':', desk.path(renamed_sha).name)
+                change('archive', assets=[sha, renamed_sha])
+                self.assertNotIn(':', desk.path(renamed_sha).name)
+                self.assertEqual(desk.path(renamed_sha).read_bytes(), renamed_bytes)
                 resource_library.validate(manifest)
                 build_site.build(root=root, out=root / '_site'); validate_site.validate(root=root, out=root / '_site')
                 for path in (root / '_site').rglob('*'):
@@ -47,6 +57,7 @@ class FullStoreTests(unittest.TestCase):
                 self.assertIn('id="R08"', (root / '_site/gallery/archive.html').read_text())
                 desk = review_desk.Desk(root, manifest); change('undo')
                 self.assertEqual(desk.public['archived'], [])
+                self.assertEqual(desk.path(renamed_sha).read_bytes(), renamed_bytes)
                 resource_library.validate(manifest, images=True)
 
 

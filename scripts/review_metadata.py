@@ -4,6 +4,7 @@ import json
 import math
 from pathlib import Path
 import re
+from windows_paths import path_errors
 
 PUBLIC_PATH = 'data/review-desk.json'
 ARCHIVE = 'Archive/ReviewDesk'
@@ -24,6 +25,7 @@ def safe_path(base, relative):
             and '\x00' not in relative and not re.match(r'^[A-Za-z]:', relative)
             and all(p not in {'', '.', '..'} for p in relative.split('/')),
             'Unsafe relative path')
+    require(not path_errors([relative]), 'Windows-incompatible relative path')
     base = Path(base)
     require(not base.is_symlink(), 'Symlink base is not supported')
     target = base / relative

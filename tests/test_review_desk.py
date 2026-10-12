@@ -31,7 +31,7 @@ def fixture(root):
     assets, refs = [], []
     for index, (rid, name, classification) in enumerate([
         ('R08', 'R08 lichen.png', ['supporting historical reference; no whole-sheet canon approval']),
-        ('R33', 'R33 Myca: membrane.png', ['experiment', 'experimental membrane design'])]):
+        ('R33', 'R33 Myca - membrane.png', ['experiment', 'experimental membrane design'])]):
         raw = PNG + bytes([index])
         sha = hashlib.sha256(raw).hexdigest()
         relative = f'resources/{sha[:16]}/{name}'
@@ -43,6 +43,9 @@ def fixture(root):
                      'design_registry': {'reference_id': rid, 'title': rid + ' selected features',
                                          'status': 'Experimental' if rid == 'R33' else 'Selected lichen only',
                                          'approved_scope': 'Use lichen only', 'known_defects': 'Do not inherit cap height'}})
+        if rid == 'R33':
+            assets[-1]['original_filename'] = 'R33 Myca: membrane.png'
+            assets[-1]['filename_aliases'].append('R33 Myca: membrane.png')
     manifest = {'schema_version': '1.0', 'assets': assets, 'references': refs}
     (library / 'manifest.json').write_text(json.dumps(manifest), encoding='utf-8')
     data = meta.default_metadata(); data['collections'] = [{'id': 'lichen', 'name': 'Lichen', 'assets': [], 'details': []}]
@@ -137,10 +140,23 @@ class DeskTests(unittest.TestCase):
         self.assertEqual(self.desk.private['version'], 0)
 
     def test_paths_and_symlinks_cannot_escape(self):
-        for path in ('../outside', '/outside', 'resources/../outside', 'C:/outside', 'x\\y'):
+        for path in ('../outside', '/outside', 'resources/../outside', 'C:/outside', 'x\\y',
+                     'resources/Myca: membrane.png', 'Archive/NUL.png'):
             with self.assertRaises(ValueError): meta.safe_path(self.root, path)
         (self.root / 'shortcut').symlink_to(self.root / 'data', target_is_directory=True)
         with self.assertRaises(ValueError): meta.safe_path(self.root, 'shortcut/review-desk.json')
+
+    def test_renamed_membrane_image_archives_and_undoes_with_original_alias(self):
+        asset = self.manifest['assets'][1]; sha = asset['sha256']
+        source = self.desk.path(sha); raw = source.read_bytes()
+        self.assertNotIn(':', source.name)
+        self.assertIn('R33 Myca: membrane.png', asset['filename_aliases'])
+        self.change('archive', assets=[sha])
+        self.assertNotIn(':', self.desk.path(sha).name)
+        self.assertEqual(self.desk.path(sha).read_bytes(), raw)
+        self.desk = review_desk.Desk(self.root, self.manifest)
+        self.change('undo')
+        self.assertEqual(source.read_bytes(), raw)
 
     def test_archive_public_links_and_scopes_work(self):
         self.change('archive', assets=[self.sha])
