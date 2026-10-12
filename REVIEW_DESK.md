@@ -97,10 +97,10 @@ working direction, not a new canon candidate. Vascular currently has no clearly
 assigned representative; ambiguous studies stay Unsorted.
 
 Use the existing Review Desk collection actions to add or remove members, and draw
-or adjust linked regions without changing artwork. One source may belong to
+additional linked regions without changing artwork. One source may belong to
 multiple directions. The original broad Membrane experiments collection and all
-other existing memberships are preserved. Region changes keep their existing view
-IDs; these presentation views receive no R/C IDs.
+other existing memberships are preserved. Existing R/C identifiers remain intact; these presentation regions use view IDs
+and receive no R/C identifiers.
 
 `data/membrane-layout.json` maps stable collection IDs to direction headings.
 Adding another direction requires a matching collection and a layout entry.
