@@ -104,14 +104,27 @@ class DesignBrowserTests(unittest.TestCase):
         self.assertEqual(browser.evaluate('designModel().checkpoints[0]'),first)
         self.assertEqual(browser.evaluate('designModel().checkpoints[2]'),experiment)
 
+        # Combining creates one new idea iteration with explicit contributions.
+        browser.evaluate('document.getElementById("design-idea").value='+json.dumps(idea_ids['Membrane skirt'])+';resetDesignDraft();document.getElementById("design-branch").value=""')
+        fill('design-title','Combined membrane construction')
+        browser.evaluate('for(const option of document.getElementById("design-parents").options)option.selected='+json.dumps([first['selections'][idea_ids['Membrane skirt']],node])+'.includes(option.value);document.getElementById("design-parents").dispatchEvent(new Event("change"))')
+        browser.evaluate('for(const t of document.querySelectorAll("#design-contributions textarea")){t.value="Preserve the documented construction from this contributor";t.dispatchEvent(new Event("input",{bubbles:true}))}document.getElementById("design-form").requestSubmit()')
+        fill('checkpoint-name','Combined membrane candidate')
+        browser.evaluate('document.getElementById("checkpoint-record").click()')
+        browser.wait('designModel().nodes.length===7 && designStaged.length===0')
+        self.assertEqual(len(browser.evaluate('designModel().nodes.at(-1).contributions')),2)
+        browser.evaluate('document.querySelectorAll(".idea-container")[2].open=false')
+        browser.wait('!document.querySelectorAll(".idea-container")[2].open')
+        browser.evaluate('document.querySelectorAll(".idea-container")[2].open=true')
+
         browser.evaluate(f'inspectCheckpoint({json.dumps(first["id"])});'
                          '[...document.querySelectorAll("#design-inspector button")].find(b=>b.textContent==="Restore these choices as a new checkpoint").click()')
         fill('checkpoint-name','Return to earlier choices')
         browser.evaluate('document.getElementById("checkpoint-record").click()')
-        browser.wait('designModel().checkpoints.length===5 && designBase===null')
+        browser.wait('designModel().checkpoints.length===6 && designBase===null')
         self.assertEqual(browser.evaluate('designModel().checkpoints.at(-1).selections'),first['selections'])
         browser.evaluate('document.getElementById("undo").click()')
-        browser.wait('designModel().checkpoints.length===4')
+        browser.wait('designModel().checkpoints.length===5')
         if os.environ.get('MYCA_REVIEW_SCREENSHOT'):
             browser.evaluate('window.scrollTo(0,0)')
             raw=browser.call('Page.captureScreenshot',format='png',captureBeyondViewport=True,clip={'x':0,'y':0,'width':1280,'height':1600,'scale':1})
@@ -124,6 +137,6 @@ class DesignBrowserTests(unittest.TestCase):
             self.assertEqual(self.desk.path(sha).read_bytes(),raw)
         browser.evaluate('window.rdBeforeReload=true')
         browser.call('Page.reload')
-        browser.wait('typeof designModel==="function" && typeof window.rdBeforeReload==="undefined" && state?.workspace?.design?.nodes.length===6')
+        browser.wait('typeof designModel==="function" && typeof window.rdBeforeReload==="undefined" && state?.workspace?.design?.nodes.length===7')
         self.assertEqual(browser.evaluate('designModel().metadata['+json.dumps(node)+'].notes'),'PRIVATE DESIGN BROWSER NOTES')
-        self.assertEqual(browser.evaluate('designModel().checkpoints.length'),4)
+        self.assertEqual(browser.evaluate('designModel().checkpoints.length'),5)

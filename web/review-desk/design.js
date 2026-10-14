@@ -29,12 +29,12 @@ function renderDesign(){
   renderDesignStages();
   const timeline=$("design-lanes"),header=element("div","design-time-header");
   header.append(element("strong","design-lane-label","Idea / direction"));
-  for(const cp of model.checkpoints){const column=button(cp.name+" · "+cp.updates.length+" new",()=>inspectCheckpoint(cp.id),"checkpoint-column");if(cp.updates.length>1)column.classList.add("shared-checkpoint");header.append(column);}
+  for(const cp of model.checkpoints){const column=button(cp.name+" · "+cp.updates.length+" new",()=>inspectCheckpoint(cp.id),"checkpoint-column");if(cp.updates.length>1)column.classList.add("shared-checkpoint");if(cp.id===model.head)column.classList.add("working-head");header.append(column);}
   const content=element("div","design-time-content");content.append(header);
   
   for(const idea of model.ideas){
     const group=element("details","idea-container");
-    group.open=!collapsedIdeas.has(idea.id);
+    group.dataset.idea=idea.id;group.open=!collapsedIdeas.has(idea.id);
     const summary=element("summary","",idea.name+(idea.experimental?" · experimental":""));
     group.append(summary);group.addEventListener("toggle",()=>{group.open?collapsedIdeas.delete(idea.id):collapsedIdeas.add(idea.id);requestAnimationFrame(redraw);});
     const lanes=[{id:"mainline",name:"Working design"},...model.branches.filter(b=>b.idea_id===idea.id)];
@@ -45,12 +45,13 @@ function renderDesign(){
       label.append(button("Iterate",()=>{if(designDirty)throw new Error("Stage or discard the draft first.");setDesignRoute(lane.id);$("design-idea").value=idea.id;resetDesignDraft();},"compact"));
       line.append(label);let carried=null;
       for(let index=0;index<model.checkpoints.length;index++){
-        const cp=model.checkpoints[index],cell=element("div","design-time-cell");cell.dataset.checkpoint=cp.id;cell.dataset.route=lane.id;
+        const previous=carried,cp=model.checkpoints[index],cell=element("div","design-time-cell");cell.dataset.checkpoint=cp.id;cell.dataset.route=lane.id;
         const born=cp.updates.map(id=>nodes.get(id)).find(n=>n.idea_id===idea.id&&(n.branch_id||"mainline")===lane.id);
         if(cp.route===lane.id&&cp.selections[idea.id])carried=cp.selections[idea.id];
         if(born){
           const meta=model.metadata[born.id],card=button("",()=>inspectDesignNode(born.id),"design-node");
-          card.dataset.node=born.id;card.append(element("strong","",born.title),element("small","",meta.outcome+" · "+meta.lifecycle));
+          const isChoice=designContext(lane.id)[idea.id]===born.id;
+          card.dataset.node=born.id;card.append(element("strong","",born.title),element("small","",meta.outcome+" · "+(meta.lifecycle==="current"?(isChoice?"current choice":"history"):meta.lifecycle)));
           if(meta.candidate)card.append(element("small","badge candidate","Nominated · no canon approval"));
           const target=born.targets.map(findItem).find(Boolean);
           if(target){const preview=element("div","design-preview");preview.append(regionImage(target));card.prepend(preview);}
@@ -59,7 +60,7 @@ function renderDesign(){
           const ref=nodes.get(carried);cell.classList.add("carried-version");
           cell.append(button("Continue: "+ref.title,()=>inspectDesignNode(ref.id),"carried-label"));
         }
-        if(cp.route===lane.id&&cp.selections[idea.id]&&!cp.updates.includes(cp.selections[idea.id])){
+        if(cp.route===lane.id&&cp.selections[idea.id]!==previous&&!cp.updates.includes(cp.selections[idea.id])){
           const selected=nodes.get(cp.selections[idea.id]);
           if(!born)cell.append(element("small","selection-label","Selected existing version"));
           if(selected?.branch_id&&lane.id==="mainline"){cell.classList.add("adopted-version");cell.dataset.adopted=selected.id;}

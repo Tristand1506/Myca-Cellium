@@ -147,7 +147,7 @@ Checksum checks and pinned metadata hashes remain unchanged.
 
 No document/video organization, uploads, similarity suggestions, new bitmap crops, Git controls or canon-approval controls. The image editor is loopback-only with per-session write tokens, Host/Origin checks, a single-process repo lock and a crash-recovery journal. It is not a multi-user service. Do not switch branches or edit organization files while it is running; a stale tab or external metadata edit is rejected.
 
-Automated tests cover data operations, byte identity, recovery, private-state exclusion, public links and UI logic. Browser regressions cover desktop/mobile layout; physical touch interaction still needs a hands-on acceptance pass.
+Automated tests cover data operations, byte identity, recovery, private-state exclusion, public links and UI logic. Browser regressions cover desktop and narrow-screen layout. Physical touch interaction is optional hardware acceptance on the same computer.
 
 ## v0.3 · Private visual annotations
 
@@ -237,10 +237,91 @@ ignored private directory separately if its review history matters.
 
 ### v0.3 validation and limits
 
-The Python suite validates the full registered corpus against its pinned SHA-256\nmetadata and preserved R/C reservations. It also verifies every new private\nrecord type is excluded from publication. It includes real Chrome/Edge browser\ninteractions using only the
+The Python suite validates the full registered corpus against its pinned SHA-256
+metadata and preserved R/C reservations. It also verifies every new private
+record type is excluded from publication. It includes real Chrome/Edge browser
+interactions using only the
 standard library and the browser's local DevTools interface. No browser testing
-dependency, workflow rewrite or server framework is required. A headless runner
-does not replace an actual Windows/touch acceptance pass. Full-corpus publication
+dependency, workflow rewrite or server framework is required. Physical touchscreen acceptance remains optional when that hardware is available. Full-corpus publication
 QA remains available through `MYCA_FULL_STORE_TEST=1` after installing the
 existing site dependencies (`mistune` and `Pillow`). Private comparison drafts
 are temporary until saved; alignment does not resample image pixels.
+
+## v0.3 · Idea containers and shared checkpoints
+
+The design timeline is the primary development view above the artwork library.
+It is a local, private history of working choices; it does not replace the
+written character rules or authenticated GitHub canon approval.
+
+1. **Create an idea container**, such as Legs, Eyes, or Membrane skirt. Choose
+   its feature and optional experimental family explicitly. Existing collections
+   and artwork stay where they are.
+2. **Create directions inside that idea** to explore alternatives. A direction
+   may be experimental and may derive from other directions, including a
+   different feature's direction. Choose an earlier checkpoint as its starting
+   context when needed.
+3. **Develop one idea** and Stage iteration. An iteration may contain only text
+   or several existing images and saved regions describing the same design.
+   Choose earlier iterations as parents. For a combination, describe exactly
+   what comes from each contributor.
+4. **Stage other ideas at the same checkpoint**, then name and Record checkpoint.
+   The save records all new iterations together, atomically. Each new node
+   belongs to one idea; unchanged idea versions are reused without new nodes.
+   A contained branch changes only its own idea; the working mainline can
+   record several idea changes together.
+5. **Inspect a node** to annotate its attached artwork, compare it with its
+   parents, or revise it. Recorded design content stays fixed. Revise creates
+   a new node; metadata notes, review outcomes, legacy/obsolete labels and
+   candidate nominations have an audit trail and Undo.
+6. **Select an existing version on mainline** to reuse a preferred candidate.
+   Only that idea's choice changes when the new checkpoint is recorded.
+   Combining parts creates a new iteration instead. Experimental labels
+   are retained; neither action approves canon.
+7. **Inspect a checkpoint** to see its historical choices, start a direction
+   there, or restore its choices at the end of the timeline. Restore creates
+   a new checkpoint and preserves the intervening history.
+
+The timeline has collapsible idea containers and direction lanes, recorded
+parent links, branch origins and selection links back into mainline. Green
+checkpoint markers identify several new iterations saved together. Continued
+versions are visibly references rather than duplicate iteration nodes.
+
+Experimental directions use the latest working choices for other ideas while
+keeping their own current iteration. Historical checkpoints retain their
+original selections. Following newer context never regenerates or modifies the
+artwork recorded in an earlier iteration.
+
+Existing v0.3 iteration records remain in **Unassigned history** with their
+original IDs and parent relationships. **Link to an idea** copies their recorded
+content into a staged, explicitly assigned iteration and retains the original
+record. No ancestry, initial mainline, or idea organization is inferred from
+filenames, collection membership or resemblance.
+
+Review queue also lists idea iterations, including text-only studies. Its
+feature, family, outcome, candidate and annotation-severity filters apply to
+these records. Workflow outcomes and nominations grant no canonical approval.
+Legacy/obsolete labels do not archive files. A saved region referenced by a
+recorded iteration cannot be deleted; Undo its checkpoint first if removal
+is intentional. Archiving a source image preserves its history links.
+
+All design records live in ignored `.review-desk/local.json`, using the existing
+schema envelope, atomic writes, crash recovery, stale-version guards, Windows /
+Linux locking and persistent Undo. Earlier private states need no migration.
+The public collection schema, saved regions, archive decisions, reference IDs,
+original bytes, Pages allowlist and canon approval workflow remain unchanged.
+
+### Input and regression coverage
+
+The server binds to `127.0.0.1`: use a browser on the same computer. A touchscreen
+on that computer can use pointer controls; a phone cannot reach this loopback
+server. Mouse and keyboard operation are supported. Physical touch testing is
+optional hardware acceptance, not a requirement for using the local desk.
+
+Run `python -m unittest discover -s tests -v`. Set `MYCA_BROWSER` to a Chrome or
+Edge executable if browser discovery needs help. The new regressions cover
+multi-idea checkpoints, carry-forward, experimental context, scoped adoption,
+combinations and contributions, historical restore, immutable node content,
+audited reviews, saved-region references, invalid/cyclic references, restart,
+Undo, private/public separation, desktop and narrow-screen Chromium workflows.
+On Windows without symlink privileges, the two existing filesystem-symlink
+tests cannot run; the Linux CI suite exercises those checks.
