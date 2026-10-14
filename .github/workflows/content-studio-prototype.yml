@@ -1,0 +1,28 @@
+name: Content Studio prototype checks
+on:
+  push:
+    branches: [prototype/content-studio]
+    paths:
+      - 'prototypes/content-studio/**'
+      - '.github/workflows/content-studio-prototype.yml'
+  pull_request:
+    paths:
+      - 'prototypes/content-studio/**'
+      - '.github/workflows/content-studio-prototype.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  prototype:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    env:
+      CONTENT_STUDIO_REQUIRE_BROWSER: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s prototypes/content-studio/tests -v
