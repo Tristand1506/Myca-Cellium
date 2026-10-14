@@ -1,4 +1,5 @@
 """Strict private Review Desk records; never consumed by the Pages builder."""
+import review_design as design
 import copy
 import math
 import re
@@ -48,7 +49,7 @@ def target(value, targets):
 
 def validate(workspace, public, images):
     require(isinstance(workspace, dict) and {'schema_version','annotations'} <= set(workspace)
-            and set(workspace) <= {'schema_version','annotations','comparisons','iterations','reviews'}, 'Invalid workspace fields')
+            and set(workspace) <= {'schema_version','annotations','comparisons','iterations','reviews','design'}, 'Invalid workspace fields')
     require(type(workspace['schema_version']) is int and workspace['schema_version'] == 1,
             'Unsupported private workspace schema')
     targets = set(images) | {d['id'] for d in public['details']}
@@ -160,6 +161,8 @@ def validate(workspace, public, images):
         member(review['family'],FAMILIES,'experimental family')
         require(type(review['candidate']) is bool,'Invalid candidate nomination')
         text(review['nomination_reason'])
+    if 'design' in workspace:
+        design.validate(workspace['design'], targets, {n['id'] for n in iterations})
     return workspace
 
 
@@ -211,7 +214,9 @@ def delete_record(records, value):
 
 def mutate(workspace, payload):
     action = payload['action']
-    if action == 'annotation_save':
+    if action in design.ACTIONS:
+        design.mutate(workspace.setdefault('design', design.empty()), payload)
+    elif action == 'annotation_save':
         save_record(workspace['annotations'], payload, 'mark')
     elif action == 'annotation_delete':
         delete_record(workspace['annotations'], payload.get('id'))
@@ -223,6 +228,8 @@ def mutate(workspace, payload):
         save_record(workspace.setdefault('iterations', []), payload, 'iteration')
     elif action == 'iteration_delete':
         value = payload.get('id')
+        require(not any(n['legacy_id'] == value for n in workspace.get('design', {}).get('nodes', [])),
+                'Unassigned record is linked to design history')
         require(not any(value in node['parents'] for node in workspace.get('iterations', [])),
                 'Edit child relationships before deleting their parent')
         delete_record(workspace.setdefault('iterations', []), value)
@@ -235,6 +242,8 @@ def mutate(workspace, payload):
 
 
 def remove_target(workspace, value):
+    require(not any(value in node['targets'] for node in workspace.get('design', {}).get('nodes', [])),
+            'Saved region is referenced by design history; preserve it or Undo its checkpoint first')
     workspace['annotations'] = [a for a in workspace['annotations'] if a['target'] != value]
 
     workspace['comparisons'] = [c for c in workspace.get('comparisons', []) if value not in c['items']]

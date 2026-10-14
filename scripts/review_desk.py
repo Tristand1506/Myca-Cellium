@@ -212,7 +212,7 @@ class Desk:
                              (set(self.images) | {d['id'] for d in public['details']}), 'Unknown note target')
                 meta.require(isinstance(note, str) and len(note) <= 20000, 'Notes are limited to 20,000 characters')
                 private['notes'][identity] = note
-            elif action in {'annotation_save', 'annotation_delete', 'comparison_save', 'comparison_delete', 'iteration_save', 'iteration_delete', 'review_save', 'review_delete'}:
+            elif action in workspace.design.ACTIONS or action in {'annotation_save', 'annotation_delete', 'comparison_save', 'comparison_delete', 'iteration_save', 'iteration_delete', 'review_save', 'review_delete'}:
                 workspace.mutate(private['workspace'], payload)
             else:
                 raise ValueError('Unknown review action')
