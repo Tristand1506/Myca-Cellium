@@ -31,6 +31,24 @@ def browser_path():
     return None
 
 
+def wait_for_debug_port(port_file, process, timeout=15):
+    """Chrome may expose its port file before finishing or releasing it."""
+    deadline = time.monotonic() + timeout
+    while True:
+        try:
+            lines = port_file.read_text(encoding='utf-8').splitlines()
+            if len(lines) >= 2 and lines[1].startswith('/devtools/'):
+                port = int(lines[0])
+                if 0 < port < 65536:
+                    return port
+        except (OSError, ValueError):
+            # A Windows sharing lock, missing file, or partial write is transient.
+            pass
+        if time.monotonic() >= deadline or process.poll() is not None:
+            raise RuntimeError('Browser did not expose a complete DevTools port file')
+        time.sleep(.05)
+
+
 class Browser:
     def __init__(self):
         self.profile = tempfile.TemporaryDirectory()
@@ -43,12 +61,7 @@ class Browser:
                 '--user-data-dir=' + self.profile.name, 'about:blank'],
                 stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             port_file = Path(self.profile.name) / 'DevToolsActivePort'
-            deadline = time.monotonic() + 15
-            while not port_file.exists():
-                if time.monotonic() > deadline or self.process.poll() is not None:
-                    raise RuntimeError('Browser did not start')
-                time.sleep(.05)
-            port = int(port_file.read_text().splitlines()[0])
+            port = wait_for_debug_port(port_file, self.process)
             with urlopen(f'http://127.0.0.1:{port}/json/list', timeout=10) as response:
                 pages = json.load(response)
             url = next(p['webSocketDebuggerUrl'] for p in pages if p['type'] == 'page')
