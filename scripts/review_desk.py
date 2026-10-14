@@ -14,6 +14,7 @@ from urllib.parse import urlsplit
 import uuid
 
 import review_metadata as meta
+import review_workspace as workspace
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -60,12 +61,16 @@ class Desk:
             'version': 0, 'notes': {}, 'history': []}
         if self.journal.exists():
             self.recover()
+        workspace.validate_private(self.private, self.public, self.images)
         meta.validate_locations(self.library, self.manifest, self.public)
 
     def current(self):
         # External changes must not be silently overwritten by a running desk.
         meta.require(meta.load_metadata(self.root, self.manifest) == self.public,
                      'Organization changed outside this session. Restart the Review Desk.')
+        if self.private_path.exists():
+            meta.require(json.loads(self.private_path.read_text(encoding='utf-8')) == self.private,
+                         'Private records changed outside this session. Restart the Review Desk.')
 
     def path(self, sha, state=None):
         return meta.locate(self.library, self.images[sha]['resource_path'], self.manifest, state or self.public)
@@ -81,6 +86,7 @@ class Desk:
         record = json.loads(self.journal.read_text(encoding='utf-8'))
         before, after = record['before'], record['after']
         meta.validate_metadata(before, self.manifest); meta.validate_metadata(after, self.manifest)
+        workspace.validate_private(record['private_before'], before, self.images)
         # A crash rolls the entire pending operation back to its recorded start.
         for sha in sorted(set(before['archived']) ^ set(after['archived'])):
             source, target = self.path(sha, before), self.path(sha, after)
@@ -88,7 +94,8 @@ class Desk:
                 meta.require(not source.exists() and meta.digest(target) == sha, 'Cannot safely recover archive transaction')
                 source.parent.mkdir(parents=True, exist_ok=True); target.rename(source)
             meta.require(source.is_file() and meta.digest(source) == sha, 'Recovery source missing or changed')
-        atomic_json(self.public_path, before)
+        if meta.load_metadata(self.root, self.manifest) != before:
+            atomic_json(self.public_path, before)
         atomic_json(self.private_path, record['private_before'])
         self.public = before; self.private = record['private_before']
         self.refresh_indexes()
@@ -110,6 +117,7 @@ class Desk:
 
     def commit(self, public, private):
         meta.validate_metadata(public, self.manifest)
+        workspace.validate_private(private, public, self.images)
         operations = list(self.moves(self.public, public))
         meta.require(not self.journal.exists(), 'A pending transaction needs recovery before another change')
         atomic_json(self.journal, {'before': self.public, 'after': public, 'private_before': self.private})
@@ -118,7 +126,8 @@ class Desk:
                 target.parent.mkdir(parents=True, exist_ok=True)
                 meta.safe_path(self.library, target.relative_to(self.library).as_posix())
                 source.rename(target)
-            atomic_json(self.public_path, public)
+            if public != self.public:
+                atomic_json(self.public_path, public)
             atomic_json(self.private_path, private)
             self.public, self.private = public, private
             if operations:
@@ -138,11 +147,14 @@ class Desk:
             assets.append({**asset, 'references': refs.get(sha, []), 'url': '/image/' + sha,
                            'archived': sha in self.public['archived']})
         return {'public': self.public, 'notes': self.private['notes'], 'assets': assets,
+                'workspace': self.private.get('workspace', workspace.empty()),
+                'review_queue': workspace.queue_rows(self.private.get('workspace', workspace.empty()), self.public, self.images),
                 'version': self.private['version'], 'undo_count': len(self.private['history'])}
 
     def mutate(self, payload):
         self.current()
-        meta.require(isinstance(payload, dict) and payload.get('version') == self.private['version'],
+        meta.require(isinstance(payload, dict) and type(payload.get('version')) is int
+                     and payload.get('version') == self.private['version'],
                      'Stale tab. Reload before making another change.')
         action = payload.get('action')
         public, private = copy.deepcopy(self.public), copy.deepcopy(self.private)
@@ -150,8 +162,11 @@ class Desk:
             meta.require(bool(private['history']), 'Nothing to undo')
             last = private['history'].pop()
             public = last['public']; private['notes'] = last['notes']
+            private['workspace'] = last.get('workspace', workspace.empty())
         else:
-            private['history'].append({'public': copy.deepcopy(self.public), 'notes': copy.deepcopy(private['notes'])})
+            private['history'].append({'public': copy.deepcopy(self.public), 'notes': copy.deepcopy(private['notes']),
+                                       'workspace': copy.deepcopy(private.get('workspace', workspace.empty()))})
+            private.setdefault('workspace', workspace.empty())
             private['history'] = private['history'][-100:]
             if action == 'collection_create':
                 public['collections'].append({'id': 'collection-' + uuid.uuid4().hex,
@@ -182,6 +197,7 @@ class Desk:
                 for collection in public['collections']:
                     collection['details'] = [d for d in collection['details'] if d != identity]
                 private['notes'].pop(identity, None)
+                workspace.remove_target(private['workspace'], identity)
             elif action in {'archive', 'restore'}:
                 ids = payload.get('assets')
                 meta.require(isinstance(ids, list) and ids and all(isinstance(v, str) for v in ids)
@@ -196,6 +212,8 @@ class Desk:
                              (set(self.images) | {d['id'] for d in public['details']}), 'Unknown note target')
                 meta.require(isinstance(note, str) and len(note) <= 20000, 'Notes are limited to 20,000 characters')
                 private['notes'][identity] = note
+            elif action in workspace.design.ACTIONS or action in {'annotation_save', 'annotation_delete', 'comparison_save', 'comparison_delete', 'iteration_save', 'iteration_delete', 'review_save', 'review_delete'}:
+                workspace.mutate(private['workspace'], payload)
             else:
                 raise ValueError('Unknown review action')
         public['revision'] = self.public['revision'] + (public != self.public)
@@ -245,7 +263,7 @@ class Handler(BaseHTTPRequestHandler):
                 source = self.server.desk.path(sha)
                 meta.require(source.is_file() and meta.digest(source) == sha, 'Image integrity check failed')
                 self.send(source.read_bytes(), mimetypes.guess_type(source.name)[0] or 'application/octet-stream')
-            elif path in {'/', '/desk.js', '/desk.css'}:
+            elif path in {'/', '/desk.js', '/desk.css', '/annotations.js', '/workspace.css', '/comparison.js', '/iterations.js', '/review-queue.js', '/design.js'}:
                 source = Path(__file__).resolve().parents[1] / 'web/review-desk' / ({'/': 'index.html'}.get(path, path[1:]))
                 self.send(source.read_bytes(), {'.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
                                                '.css': 'text/css; charset=utf-8'}[source.suffix])

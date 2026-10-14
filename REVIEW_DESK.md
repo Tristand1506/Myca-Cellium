@@ -145,6 +145,183 @@ missing or moved files are not recreated. Staged changes in protected files
 must first be committed or unstaged. Omit `--apply` for a read-only preview.
 Checksum checks and pinned metadata hashes remain unchanged.
 
-No document/video organization, uploads, similarity suggestions, freeform painting, new bitmap crops, Git controls or canon-approval controls. The image editor is loopback-only with per-session write tokens, Host/Origin checks, a single-process repo lock and a crash-recovery journal. It is not a multi-user service. Do not switch branches or edit organization files while it is running; a stale tab or external metadata edit is rejected.
+No document/video organization, uploads, similarity suggestions, new bitmap crops, Git controls or canon-approval controls. The image editor is loopback-only with per-session write tokens, Host/Origin checks, a single-process repo lock and a crash-recovery journal. It is not a multi-user service. Do not switch branches or edit organization files while it is running; a stale tab or external metadata edit is rejected.
 
-Automated tests cover data operations, byte identity, recovery, private-state exclusion, public links and UI logic. Browser layout and touch interaction still need a hands-on acceptance pass.
+Automated tests cover data operations, byte identity, recovery, private-state exclusion, public links and UI logic. Browser regressions cover desktop and narrow-screen layout. Physical touch interaction is optional hardware acceptance on the same computer.
+
+## v0.3 · Private visual annotations
+
+Choose a mark tool in an image review, then drag a rectangle, ellipse, arrow or
+freehand stroke; click for a pin. Add a comment, feature, severity and workflow
+status, then Save mark. Select a mark in the list or on the image to move it.
+Drag its endpoint handles to edit geometry, or enter normalized points directly.
+Freehand endpoint handles edit the first/last points; the JSON field can edit
+every point. Save commits the whole edit; Cancel edit discards the draft.
+
+All coordinates refer to the full unchanged original, including marks attached
+to saved regions. Region focus clips the vector layer along with its parent
+image. Marks are local records in ignored `.review-desk/local.json`, never
+painted into source pixels and never copied into Pages. Legacy notes and Undo
+records remain readable. Each saved edit participates in atomic transactions,
+crash recovery, stale-tab checks and persistent Undo. Private-only saves do not
+rewrite public collection metadata. Deleting a detail view removes its attached
+private marks; Undo restores both.
+
+Run `python -m unittest discover -s tests -v`. The suite exercises a real
+headless Chrome/Edge browser when installed, using a temporary artwork fixture.
+`MYCA_BROWSER` can select its executable. Browser checks skip explicitly when no
+supported browser exists. The existing validation and authenticated canon
+approval workflows remain unchanged.
+
+## v0.3 · Advanced private comparisons
+
+Select two to four originals or saved regions and Compare. Side-by-side panes
+support wheel/buttons/keyboard zoom and pointer/arrow-key pan. Sync shares
+navigation changes across panes; each pane retains its own alignment. Manual
+alignment provides X/Y offsets (fractions of pane size), scale and rotation.
+These transforms affect display only. Fit resets a pane; Reset all transforms
+resets the entire comparison. Independent crop fitting preserves image aspect.
+
+With exactly two items, choose adjustable-opacity Overlay or Before / after.
+The split range reveals the second image over the first. Dragging the visible
+comparison navigates the first pane (and other panes when Sync is enabled).
+Use the second pane's buttons/alignment fields to adjust it independently.
+
+Give the session a private name and Save session. Saved comparisons can be
+restored or deleted from the header button and session selector. Saving a loaded
+session updates it; a new selection creates another. Changes remain temporary
+until saved. Delete and save participate in persistent Undo. Deleting a saved
+region removes sessions that depend on it; Undo restores both. Original scopes,
+known defects and experimental warnings remain visible in every mode.
+
+## v0.3 · Iteration history
+
+Open Iteration history, or Record iteration from an image review. A source node
+has no parents. A revision or alternative branch has one or more existing
+parents. Each record links an unchanged registered image and can retain targeted
+features, requested corrections, a source prompt when known, and review outcome.
+The server validates all asset/parent references and uses a nonrecursive
+topological check to prevent cycles, including cycles introduced by edits.
+
+The graph shows directed parent-to-child links, with a text list below for
+keyboard access. Select a node to inspect its image scopes and edit its record.
+Record iteration starts a fresh record and discards an unsaved form. Saving and
+deleting participate in persistent Undo. A parent cannot be deleted while a
+child still references it: edit the child links first. Archiving an original
+does not break its history; links use stable SHA-256 identities. Records and
+prompts stay private, and review outcomes do not change canonical status.
+
+## v0.3 · Review queue and candidate nomination
+
+Review queue has lanes for unreviewed artwork, unresolved annotations,
+refinement candidates, nominated candidates and completed reviews. Filter by
+feature, severity, workflow status and experimental family. Archived artwork is
+hidden until Include archived is enabled; its archive decision stays intact.
+Family filters inherit existing membrane collection memberships and can also
+use a private review label. These labels classify work, not canonical design.
+
+Choose Review / nominate to set a workflow status and optional candidate
+nomination, with a private reason. Inspect image / annotations opens its existing
+reviewer so marks can be corrected or resolved. Completing a workflow review
+does not resolve outstanding marks automatically, so an image may appear in the
+completed and unresolved lanes. Iteration outcomes marked needs-refinement also
+appear in the refinement lane. Clear workflow record restores default unreviewed
+status; save, clear and nomination changes support persistent Undo.
+
+All new review data lives in ignored `.review-desk/`. No new field is accepted
+by the public organization schema. The Pages builder, artwork, R01–R34/C01–C15
+registry, canon ledgers and authenticated creator-approval workflow are unchanged.
+There is no database or framework migration, no automatic canon promotion,
+commit, merge or deployment. This is a single-user local workspace; back up the
+ignored private directory separately if its review history matters.
+
+### v0.3 validation and limits
+
+The Python suite validates the full registered corpus against its pinned SHA-256
+metadata and preserved R/C reservations. It also verifies every new private
+record type is excluded from publication. It includes real Chrome/Edge browser
+interactions using only the
+standard library and the browser's local DevTools interface. No browser testing
+dependency, workflow rewrite or server framework is required. Physical touchscreen acceptance remains optional when that hardware is available. Full-corpus publication
+QA remains available through `MYCA_FULL_STORE_TEST=1` after installing the
+existing site dependencies (`mistune` and `Pillow`). Private comparison drafts
+are temporary until saved; alignment does not resample image pixels.
+
+## v0.3 · Idea containers and shared checkpoints
+
+The design timeline is the primary development view above the artwork library.
+It is a local, private history of working choices; it does not replace the
+written character rules or authenticated GitHub canon approval.
+
+1. **Create an idea container**, such as Legs, Eyes, or Membrane skirt. Choose
+   its feature and optional experimental family explicitly. Existing collections
+   and artwork stay where they are.
+2. **Create directions inside that idea** to explore alternatives. A direction
+   may be experimental and may derive from other directions, including a
+   different feature's direction. Choose an earlier checkpoint as its starting
+   context when needed.
+3. **Develop one idea** and Stage iteration. An iteration may contain only text
+   or several existing images and saved regions describing the same design.
+   Choose earlier iterations as parents. For a combination, describe exactly
+   what comes from each contributor.
+4. **Stage other ideas at the same checkpoint**, then name and Record checkpoint.
+   The save records all new iterations together, atomically. Each new node
+   belongs to one idea; unchanged idea versions are reused without new nodes.
+   A contained branch changes only its own idea; the working mainline can
+   record several idea changes together.
+5. **Inspect a node** to annotate its attached artwork, compare it with its
+   parents, or revise it. Recorded design content stays fixed. Revise creates
+   a new node; metadata notes, review outcomes, legacy/obsolete labels and
+   candidate nominations have an audit trail and Undo.
+6. **Select an existing version on mainline** to reuse a preferred candidate.
+   Only that idea's choice changes when the new checkpoint is recorded.
+   Combining parts creates a new iteration instead. Experimental labels
+   are retained; neither action approves canon.
+7. **Inspect a checkpoint** to see its historical choices, start a direction
+   there, or restore its choices at the end of the timeline. Restore creates
+   a new checkpoint and preserves the intervening history.
+
+The timeline has collapsible idea containers and direction lanes, recorded
+parent links, branch origins and selection links back into mainline. Green
+checkpoint markers identify several new iterations saved together. Continued
+versions are visibly references rather than duplicate iteration nodes.
+
+Experimental directions use the latest working choices for other ideas while
+keeping their own current iteration. Historical checkpoints retain their
+original selections. Following newer context never regenerates or modifies the
+artwork recorded in an earlier iteration.
+
+Existing v0.3 iteration records remain in **Unassigned history** with their
+original IDs and parent relationships. **Link to an idea** copies their recorded
+content into a staged, explicitly assigned iteration and retains the original
+record. No ancestry, initial mainline, or idea organization is inferred from
+filenames, collection membership or resemblance.
+
+Review queue also lists idea iterations, including text-only studies. Its
+feature, family, outcome, candidate and annotation-severity filters apply to
+these records. Workflow outcomes and nominations grant no canonical approval.
+Legacy/obsolete labels do not archive files. A saved region referenced by a
+recorded iteration cannot be deleted; Undo its checkpoint first if removal
+is intentional. Archiving a source image preserves its history links.
+
+All design records live in ignored `.review-desk/local.json`, using the existing
+schema envelope, atomic writes, crash recovery, stale-version guards, Windows /
+Linux locking and persistent Undo. Earlier private states need no migration.
+The public collection schema, saved regions, archive decisions, reference IDs,
+original bytes, Pages allowlist and canon approval workflow remain unchanged.
+
+### Input and regression coverage
+
+The server binds to `127.0.0.1`: use a browser on the same computer. A touchscreen
+on that computer can use pointer controls; a phone cannot reach this loopback
+server. Mouse and keyboard operation are supported. Physical touch testing is
+optional hardware acceptance, not a requirement for using the local desk.
+
+Run `python -m unittest discover -s tests -v`. Set `MYCA_BROWSER` to a Chrome or
+Edge executable if browser discovery needs help. The new regressions cover
+multi-idea checkpoints, carry-forward, experimental context, scoped adoption,
+combinations and contributions, historical restore, immutable node content,
+audited reviews, saved-region references, invalid/cyclic references, restart,
+Undo, private/public separation, desktop and narrow-screen Chromium workflows.
+On Windows without symlink privileges, the two existing filesystem-symlink
+tests cannot run; the Linux CI suite exercises those checks.
