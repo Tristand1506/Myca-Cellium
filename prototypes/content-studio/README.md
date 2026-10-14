@@ -76,4 +76,7 @@ Set `CONTENT_STUDIO_BROWSER` to a browser executable if automatic discovery
 does not find one. Browser tests report a skip when no browser is installed;
 set `CONTENT_STUDIO_REQUIRE_BROWSER=1` to make that a failure, as in CI.
 
+The existing repository validation workflow discovers these checks through
+tests/test_content_studio_prototype.py; no workflow changes are required.
+
 Tests create synthetic PNGs in a temporary folder. No character artwork is used.
