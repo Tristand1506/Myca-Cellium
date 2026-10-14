@@ -263,7 +263,7 @@ class Handler(BaseHTTPRequestHandler):
                 source = self.server.desk.path(sha)
                 meta.require(source.is_file() and meta.digest(source) == sha, 'Image integrity check failed')
                 self.send(source.read_bytes(), mimetypes.guess_type(source.name)[0] or 'application/octet-stream')
-            elif path in {'/', '/desk.js', '/desk.css', '/annotations.js', '/workspace.css', '/comparison.js', '/iterations.js', '/review-queue.js'}:
+            elif path in {'/', '/desk.js', '/desk.css', '/annotations.js', '/workspace.css', '/comparison.js', '/iterations.js', '/review-queue.js', '/design.js'}:
                 source = Path(__file__).resolve().parents[1] / 'web/review-desk' / ({'/': 'index.html'}.get(path, path[1:]))
                 self.send(source.read_bytes(), {'.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
                                                '.css': 'text/css; charset=utf-8'}[source.suffix])

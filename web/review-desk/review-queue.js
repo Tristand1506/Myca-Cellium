@@ -28,6 +28,7 @@ function queueMatches(row){
   return !$("queue-status").value||row.workflow_status===$("queue-status").value;
 }
 function renderReviewQueue(){
+  if(typeof renderDesignQueue==="function")renderDesignQueue();
   const rows=reviewRows().filter(queueMatches),cards=[];
   for(const row of rows){
     const item=findItem(row.target);if(!item)continue;

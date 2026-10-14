@@ -53,7 +53,7 @@ function regionImage(item) {
     frame.style.width = `${width}px`; frame.style.height = `${width / ratio}px`; frame.style.aspectRatio = `${ratio}`;
   };
   image.addEventListener("load", fit);
-  if (typeof ResizeObserver !== "undefined") new ResizeObserver(fit).observe(frame);
+  if (typeof ResizeObserver !== "undefined") new ResizeObserver(() => requestAnimationFrame(fit)).observe(frame);
   image.src = item.asset.url; frame.append(image); return frame;
 }
 
@@ -74,6 +74,7 @@ function card(item) {
 }
 
 function render() {
+  if (typeof renderDesign === "function") renderDesign();
   const all = items(), activeCollection = collection();
   for (const id of selection) if (!findItem(id)) selection.delete(id);
   $("library-summary").textContent = `${state.assets.length} preserved images · ${state.assets.filter(a => a.references.length).length} mapped files · ${state.public.details.length} saved detail views`;
@@ -253,6 +254,7 @@ function bind() {
   if (typeof bindAnnotations === "function") bindAnnotations();
   if (typeof bindComparisons === "function") bindComparisons();
   if (typeof bindIterations === "function") bindIterations();
+  if (typeof bindDesign === "function") bindDesign();
   if (typeof bindReviewQueue === "function") bindReviewQueue();
   for (const id of ["search", "kind", "sort"]) $(id).addEventListener(id === "search" ? "input" : "change", render);
   $("new-collection").onclick = () => run(async () => { const name = await requestText("Create a feature collection"); if (name) { await mutate("collection_create", {name}); toast("Collection created. Add any images or detail views."); } });
